@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Light Mode.
+ *
+ */
+.lumeno.ui.writer .content .preview h1 { @apply text-[30px] text-black font-bold mb-7 }
+.lumeno.ui.writer .content .preview h2 { @apply text-[26px] text-black font-bold mb-6 }
+.lumeno.ui.writer .content .preview h3 { @apply text-[24px] text-black font-semibold mb-5 }
+.lumeno.ui.writer .content .preview h4 { @apply text-[22px] text-black font-semibold mb-4 }
+.lumeno.ui.writer .content .preview h5 { @apply text-[20px] text-black font-medium mb-3 }
+.lumeno.ui.writer .content .preview h6 { @apply text-[18px] text-black font-medium mb-3 }
+.lumeno.ui.writer .content .preview p { @apply text-[16px] text-black font-normal mb-6 }
+.lumeno.ui.writer .content .preview p + pre { @apply -mt-6 }
+.lumeno.ui.writer .content .preview a { @apply text-sky-600 hover:text-rose-700 transition duration-300 }
+.lumeno.ui.writer .content .preview ol { @apply pl-11 list-decimal }
+.lumeno.ui.writer .content .preview ul { @apply pl-11 list-disc }
+.lumeno.ui.writer .content .preview li { @apply text-gray-700 leading-normal mb-2 first-of-type:mt-5 last-of-type:mb-6 }
+.lumeno.ui.writer .content .preview li a { @apply text-sky-600 hover:text-rose-700 }
+.lumeno.ui.writer .content .preview hr { @apply w-1/2 border-dashed border-gray-400 mx-auto my-12 md:my-16 }
+.lumeno.ui.writer .content .preview img { @apply my-12 }
+.lumeno.ui.writer .content .preview table:not(.code-block) { @apply my-8 w-full border-separate border-spacing-0 }
+.lumeno.ui.writer .content .preview table:not(.code-block) thead th { @apply table-cell align-middle text-[13px] font-bold uppercase text-gray-700 p-4 bg-gray-100 text-left border border-b-gray-300 border-l-0 border-r-0 border-t-gray-300 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 }
+.lumeno.ui.writer .content .preview table:not(.code-block) tbody tr td { @apply align-middle text-gray-700 p-4 table-cell border border-t-0 border-l-0 border-r-0 border-b-gray-200 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 }
+.lumeno.ui.writer .content .preview table:not(.code-block) tr:last-of-type td { @apply border-b-gray-300 }
+.lumeno.ui.writer .content .preview blockquote { @apply my-6 border-l-4 rounded-r px-6 py-5 bg-orange-100 border-yellow-500 }
+.lumeno.ui.writer .content .preview blockquote p { @apply mb-0 }
+.lumeno.ui.writer .content .preview p code { @apply bg-gray-200 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.lumeno.ui.writer .content .preview li code { @apply bg-gray-200 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.lumeno.ui.writer .content .preview .hljs { @apply rounded border bg-white overflow-x-auto text-[15px] -my-3 ; border-color: #e2e8f0 }
+.lumeno.ui.writer .content .preview .hljs .code-block { @apply w-full table-fixed -my-[45px] ; background: #f7fafc40 }
+.lumeno.ui.writer .content .preview .hljs .code-block .line-number { @apply w-[50px] text-center select-none ; background: #edf2f799; color: #a0aec0 }
+.lumeno.ui.writer .content .preview .hljs .code-block .line-number-hidden { @apply invisible w-0 }
+.lumeno.ui.writer .content .preview .hljs .code-block .line-number-hidden + .code-line { @apply pl-2 }
+.lumeno.ui.writer .content .preview .hljs .code-block .code-line { @apply pl-[11px] opacity-80 text-gray-700 }
+.lumeno.ui.writer .content .preview .hljs .code-block .code-line .hljs-comment { @apply text-gray-700 }
+.lumeno.ui.writer .content .preview .hljs .code-block tr:first-of-type .line-number { @apply pt-2 }
+.lumeno.ui.writer .content .preview .hljs .code-block tr:first-of-type .code-line { @apply pt-2 }
+.lumeno.ui.writer .content .preview .hljs .code-block tr:last-of-type .line-number { @apply pb-2 }
+.lumeno.ui.writer .content .preview .hljs .code-block tr:last-of-type .code-line { @apply pb-2 }
+
+/**
+ * Light Mode - Syntax Highlighting.
+ *
+ */
+.lumeno.ui.writer .content .preview
+{
+    .hljs-subst { color: #2f3337 }
+    .hljs-comment { color: #656e77 }
+    .hljs-attr, .hljs-doctag, .hljs-keyword, .hljs-meta .hljs-keyword, .hljs-section, .hljs-selector-tag { color: #015692 }
+    .hljs-attribute { color: #803378 }
+    .hljs-name, .hljs-number, .hljs-quote, .hljs-selector-id, .hljs-template-tag, .hljs-type { color: #b75501 }
+    .hljs-selector-class { color: #015692 }
+    .hljs-link, .hljs-regexp, .hljs-selector-attr, .hljs-string, .hljs-symbol, .hljs-template-variable, .hljs-variable { color: #54790d }
+    .hljs-meta, .hljs-selector-pseudo { color: #015692 }
+    .hljs-built_in, .hljs-literal, .hljs-title { color: #b75501 }
+    .hljs-bullet, .hljs-code { color: #535a60 }
+    .hljs-meta .hljs-string { color: #54790d }
+    .hljs-deletion { color: #c02d2e }
+    .hljs-addition { color: #2f6f44 }
+    .hljs-emphasis { font-style: italic }
+    .hljs-strong { font-weight: 700 }
+}
+
+/**
+ * Dark Mode.
+ *
+ */
+.lumeno.ui.writer.dark .content .preview h1 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview h2 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview h3 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview h4 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview h5 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview h6 { @apply text-white }
+.lumeno.ui.writer.dark .content .preview p { @apply text-gray-400 }
+.lumeno.ui.writer.dark .content .preview a { @apply hover:text-rose-400 }
+.lumeno.ui.writer.dark .content .preview li { @apply text-gray-400 }
+.lumeno.ui.writer.dark .content .preview li a { @apply text-sky-600 hover:text-rose-400 }
+.lumeno.ui.writer.dark .content .preview hr { @apply border-gray-600 }
+.lumeno.ui.writer.dark .content .preview p code { @apply bg-gray-700 }
+.lumeno.ui.writer.dark .content .preview li code { @apply bg-gray-700 }
+.lumeno.ui.writer.dark .content .preview table:not(.code-block) thead th { @apply bg-gray-700 text-white border-b-0 border-t-gray-500 first-of-type:border-l-gray-500 last-of-type:border-r-gray-500 }
+.lumeno.ui.writer.dark .content .preview table:not(.code-block) tbody tr td { @apply text-gray-400 border-b-gray-500 first-of-type:border-l-gray-500 last-of-type:border-r-gray-500 }
+.lumeno.ui.writer.dark .content .preview table:not(.code-block) tr:last-of-type td { @apply border-b-gray-500 }
+.lumeno.ui.writer.dark .content .preview blockquote { @apply bg-yellow-700 bg-opacity-50 border-yellow-600 }
+.lumeno.ui.writer.dark .content .preview .hljs { @apply border-none ; background: #0d131f }
+.lumeno.ui.writer.dark .content .preview .hljs .code-block .code-line { @apply text-gray-400 ; background: #0d131f }
+.lumeno.ui.writer.dark .content .preview .hljs .code-block .line-number { @apply opacity-80 ; background: #080c12; color: #464d56 }
+
+/**
+ * Dark Mode - Syntax Highlighting.
+ *
+ */
+.lumeno.ui.writer.dark .content .preview
+{
+    .hljs-comment, .hljs-quote { color: #5c6370; font-style: italic }
+    .hljs-doctag, .hljs-formula, .hljs-keyword { color: #c678dd }
+    .hljs-deletion, .hljs-name, .hljs-section, .hljs-selector-tag, .hljs-subst { color: #e06c75 }
+    .hljs-literal { color: #56b6c2 }
+    .hljs-addition, .hljs-attribute, .hljs-meta .hljs-string, .hljs-regexp, .hljs-string { color: #98c379 }
+    .hljs-attr, .hljs-number, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-pseudo, .hljs-template-variable, .hljs-type, .hljs-variable { color: #d19a66 }
+    .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-symbol, .hljs-title { color: #61aeee }
+    .hljs-built_in, .hljs-class .hljs-title, .hljs-title.class_ { color: #e6c07b }
+    .hljs-emphasis { font-style: italic }
+    .hljs-strong { font-weight: 700 }
+    .hljs-link { text-decoration: underline }
+}

@@ -1,0 +1,44 @@
+{
+    "name": "@lumeno/ui",
+    "author": "Lumeno",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "A library of UI widgets built using Vue.js and TailwindCSS.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LumenoDev/ui.git"
+    },
+    "keywords": [
+        "ui",
+        "vue",
+        "widget",
+        "library",
+        "tailwind",
+        "component"
+    ],
+    "scripts": {
+        "watch": "vite"
+    },
+    "dependencies": {
+        "highlight.js": "^11.6.0",
+        "markdown-it": "^13.0.1",
+        "undo-manager": "^1.0.5"
+    },
+    "peerDependencies": {
+        "vue": "^3.0.0",
+        "tailwindcss": "^3.0.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^2.3.3",
+        "autoprefixer": "^10.4.7",
+        "postcss": "^8.4.14",
+        "vite": "^2.9.13"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {},
+            "tailwindcss/nesting" : {},
+            "tailwindcss": {}
+        }
+    }
+}
