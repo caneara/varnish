@@ -33,7 +33,7 @@ A demo is available for this widget. To view it, complete the following steps:
 First, install the Lumeno UI library via NPM:
 
 ```bash
-npm i @lumenodev/ui
+npm install @lumeno.dev/ui
 ```
 
 Then, within your Vue component, import the widget:

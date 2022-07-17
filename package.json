@@ -1,7 +1,7 @@
 {
-    "name": "@lumeno/ui",
+    "name": "@lumeno.dev/ui",
     "author": "Lumeno",
-    "version": "1.0.0",
+    "version": "0.1.1",
     "license": "MIT",
     "description": "A library of UI widgets built using Vue.js and TailwindCSS.",
     "repository": {
