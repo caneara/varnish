@@ -7,8 +7,8 @@
 
 <!-- Badges -->
 <p align="center">
-    <img src="https://img.shields.io/npm/v/@lumeno/ui.svg" alt="Latest Release" />
-    <img src="https://img.shields.io/npm/l/@lumeno/ui.svg" alt="License" />
+    <img src="https://img.shields.io/npm/v/@lumeno.dev/ui.svg" alt="Latest Release" />
+    <img src="https://img.shields.io/npm/l/@lumeno.dev/ui.svg" alt="License" />
 </p>
 
 # Lumeno UI
