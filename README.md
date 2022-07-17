@@ -1,7 +1,7 @@
 <!-- Banner -->
 <p align="center">
-    <a target="_blank" href="https://lumeno.dev">
-        <img src="resources/banner.png" alt="Lumeno" style="max-height: 170px; border-radius: 10px">
+    <a href="https://lumeno.dev">
+        <img src="resources/banner.png" />
     </a>
 </p>
 
