@@ -1,7 +1,7 @@
 <!-- Banner -->
 <p align="center">
     <a target="_blank" href="https://lumeno.dev">
-        <img src="resources/banner.png" alt="Lumeno" style="max-height: 170px">
+        <img src="resources/banner.png" alt="Lumeno" style="max-height: 170px; border-radius: 10px">
     </a>
 </p>
 
@@ -19,7 +19,7 @@ This library contains a set of UI widgets / components. They range from somethin
 
 ## Requirements
 
-To use Lumeno UI your project will require the following dependencies:
+To use Lumeno UI, your project will require the following dependencies:
 
 * Vue.js (v3+)
 * TailwindCSS (v3+)
