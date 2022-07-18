@@ -4,14 +4,14 @@ title: "Lumeno UI - Writer"
 permalink: /widgets/writer/
 ---
 
+# Writer
+
+A minimal, Markdown-based text editor with HTML rendering and code syntax highlighting.
+
 <!-- Screenshot -->
 <p align="center">
     <img src="/assets/img/writer.png" alt="Screenshot" />
 </p>
-
-# Writer
-
-A minimal, Markdown-based text editor with HTML rendering and code syntax highlighting.
 
 ## Features
 
