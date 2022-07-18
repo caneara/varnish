@@ -21,7 +21,7 @@ You should then follow the individual documentation pages for each of the widget
 
 ## Widgets
 
-* [Writer](/widgets/writer) - a Markdown-based text editor
+* [Writer](/pages/writer) - a Markdown-based text editor
 
 ... we've got more coming!
 
