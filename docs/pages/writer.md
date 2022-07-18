@@ -1,17 +1,12 @@
 ---
 layout: default
 title: "Lumeno UI - Writer"
-permalink: /widgets/writer/
+permalink: /pages/writer/
 ---
 
 # Writer
 
 A minimal, Markdown-based text editor with HTML rendering and code syntax highlighting.
-
-<!-- Screenshot -->
-<p align="center">
-    <img src="/assets/img/writer.png" alt="Screenshot" />
-</p>
 
 ## Features
 
@@ -25,14 +20,7 @@ A minimal, Markdown-based text editor with HTML rendering and code syntax highli
 
 ## Demo
 
-A demo is available for this widget. To view it, complete the following steps:
-
-1. Download or clone the repository.
-2. Open a terminal window to the root directory.
-3. Execute the `npm install` command to download the dependencies.
-4. Execute the `npm run watch` command to start a Vite server.
-5. Click the link in the terminal to open the home page.
-6. Click the 'writer' link within the list of available demos.
+You can view a working demo of the widget courtesy of [CodeSandbox](https://codesandbox.io).
 
 ## Installation
 
@@ -50,7 +38,7 @@ Then, within your Vue component, import the widget:
 </template>
 
 <script>
-    import Writer from '@lumeno/ui/widgets/writer.vue';
+    import Writer from '@lumeno.dev/ui/widgets/writer.vue';
 
     export default
     {
@@ -79,7 +67,7 @@ Writer is designed to require minimal, even zero-configuration. However, if you 
 
 | Name         | Type    | Summary                                                                      |
 | ------------ | ------- | ---------------------------------------------------------------------------- |
-| darkMode     | Boolean | Toggle whether the editor uses dark mode CSS styling (default is false)      |
+| darkMode     | Boolean | Toggle whether to use dark mode (see 'Dark Mode' below, default is false)    |
 | height       | Number  | Set the minimum height in pixels (default is 300, less may create UI quirks) |
 | html         | Boolean | Enable or disable HTML tags (default is false for [security reasons](https://github.com/markdown-it/markdown-it/blob/master/docs/security.md)) |
 | lineNumbers  | Boolean | Toggle whether code blocks have line numbers (default is true)               |
@@ -87,6 +75,16 @@ Writer is designed to require minimal, even zero-configuration. However, if you 
 | progress     | Number  | Set the percentage (0 - 100) on the image uploading progress bar             |
 | placeholder  | String  | Set the default placeholder text to display when the editor is empty         |
 | uploads      | Boolean | Toggle whether the user can upload images (default is false)                 |
+
+## Dark Mode
+
+In order for Writer to actually use dark mode styles, you will need to configure Tailwind to use the [class-based strategy](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) for dark mode e.g.
+
+```js
+module.exports = {
+    darkMode : 'class',
+}
+```
 
 ## Localization
 

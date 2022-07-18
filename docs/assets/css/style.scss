@@ -12,8 +12,7 @@
 .page-header h1 { font-size: 2.5rem }
 .page-header h2 { font-size: 1.1rem }
 .page-header .btn { padding: 0.5rem 1rem; font-size: 15px }
-.main-content { padding: 50px 0 }
-.main-content img { max-height: 300px; margin: 0 auto }
+.main-content { padding: 70px 0 50px }
 .main-content h1 { font-family: 'Inter'; color: #1a202c; font-size: 30px; margin-bottom: 30px; font-weight: 600 }
 .main-content h2 { font-family: 'Inter'; color: #1a202c; font-size: 21px; margin-bottom: 24px; font-weight: 600; letter-spacing: -0.015em }
 .main-content h3 { font-family: 'Inter'; color: #1a202c; font-size: 18px; margin-bottom: 20px; font-weight: 500; letter-spacing: -0.015em }
@@ -31,7 +30,7 @@
 .main-content td { font-family: 'Nunito Sans' }
 .main-content code { background-color: #eceff4; color: #384f59 }
 .main-content blockquote {  padding: 1.25rem 1.5rem; margin: 1.5rem auto; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;  border-left: solid 3px #ca8a0473; background: #ffedd58c }
-.main-content blockquote p { margin-bottom: 0 }
+.main-content blockquote p { margin-bottom: 0; color: #384f59 }
 .main-content blockquote + h1 { margin-top: 48px }
 .main-content blockquote + h2 { margin-top: 48px }
 .main-content blockquote + h3 { margin-top: 48px }

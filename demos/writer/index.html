@@ -13,26 +13,30 @@
     </title>
 
     <!-- Styles -->
-    <style>
-        #app { margin: 70px }
-        .lumeno.ui.writer .content .preview img { width: 70% }
+    <style type="text/tailwindcss">
+        @import 'styles.css';
     </style>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode : 'class' }</script>
 
 </head>
 <body>
 
     <!-- Entrypoint -->
-    <div id="app"></div>
+    <div id="app" class="m-[70px]"></div>
 
     <!-- Setup -->
     <script type="module">
-        import './styles.css';
         import Writer from '../../src/widgets/writer.vue';
         import { createApp } from 'vue/dist/vue.esm-bundler.js';
 
-        fetch('/docs/writer/index.md')
+        fetch('/docs/pages/writer.md')
             .then(response => response.text())
-            .then(content => createVueApp(content));
+            .then(content => createVueApp(
+                `# Writer${content.split('# Writer')[1]}`
+            ));
 
         function createVueApp(content)
         {

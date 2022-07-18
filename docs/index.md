@@ -17,7 +17,7 @@ To begin, install the Lumeno UI library via NPM:
 npm install @lumeno.dev/ui
 ```
 
-You should then follow the individual documentation steps for each of the widgets that you intend to use...
+You should then follow the individual documentation pages for each of the widgets that you intend to use...
 
 ## Widgets
 
@@ -27,4 +27,4 @@ You should then follow the individual documentation steps for each of the widget
 
 ## License
 
-The MIT License (MIT). Please see license file contained within the code repository for more information.
+The MIT License (MIT). Please see the license file contained within the code repository for more information.
