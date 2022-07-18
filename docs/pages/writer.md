@@ -20,7 +20,15 @@ A minimal, Markdown-based text editor with HTML rendering and code syntax highli
 
 ## Demo
 
-You can view a working demo of the widget courtesy of [CodeSandbox](https://codesandbox.io).
+You can view a working demo of the widget (courtesy of [CodeSandbox](https://codesandbox.io)) below. If you experience any errors, click the refresh button at the bottom left of the embedded frame to rebuild the widget:
+
+<!-- Demo -->
+<iframe src="https://codesandbox.io/embed/lumeno-ui-writer-demo-ytvo84?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="Lumeno UI - Writer Demo"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
 ## Installation
 
