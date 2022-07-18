@@ -1,0 +1,27 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+/* Custom Styling */
+.page-header { background: #003352 }
+.page-header h1 { font-size: 2.5rem }
+.page-header h2 { font-size: 1.1rem }
+.main-content { max-height: 300px; margin: 0 auto }
+.main-content h1 { font-family: 'Inter'; font-size: 30px; margin-bottom: 40px; font-weight: 700 }
+.main-content h2 { font-family: 'Inter'; font-size: 21px; margin-bottom: 24px; font-weight: 700; letter-spacing: -0.015em }
+.main-content h3 { font-family: 'Inter'; font-size: 18px; margin-bottom: 20px; font-weight: 500; letter-spacing: -0.015em }
+.main-content h4 { font-family: 'Inter'; font-size: 17px; margin-bottom: 16px; font-weight: 500; letter-spacing: -0.015em }
+.main-content h5 { font-family: 'Inter'; font-size: 16px; margin-bottom: 12px; font-weight: 500; letter-spacing: -0.015em }
+.main-content h6 { font-family: 'Inter'; font-size: 15px; margin-bottom: 12px; font-weight: 500; letter-spacing: -0.015em }
+.main-content p { line-height: 1.5; margin-bottom: 24px }
+.main-content p + h1 { margin-top: 40px }
+.main-content p + h2 { margin-top: 40px }
+.main-content p + h3 { margin-top: 40px }
+.main-content p + h4 { margin-top: 40px }
+.main-content p + h5 { margin-top: 40px }
+.main-content p + h6 { margin-top: 40px }
+.page-footer { display: none }

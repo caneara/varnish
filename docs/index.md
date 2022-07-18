@@ -9,9 +9,19 @@ To use Lumeno UI, your project will require the following dependencies:
 * Vue.js (v3+)
 * TailwindCSS (v3+)
 
+## Installation
+
+To begin, install the Lumeno UI library via NPM:
+
+```bash
+npm install @lumeno.dev/ui
+```
+
+You should then follow the individual documentation steps for each of the widgets that you intend to use...
+
 ## Widgets
 
-* [Writer](/writer) - a Markdown-based text editor
+* [Writer](/widgets/writer) - a Markdown-based text editor
 
 ... we've got more coming!
 

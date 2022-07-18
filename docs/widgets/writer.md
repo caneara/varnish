@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lumeno UI - Writer"
-permalink: /writer/
+permalink: /widgets/writer/
 ---
 
 <!-- Screenshot -->
@@ -36,7 +36,7 @@ A demo is available for this widget. To view it, complete the following steps:
 
 ## Installation
 
-First, install the Lumeno UI library via NPM:
+If you haven't already done so, install the Lumeno UI library via NPM:
 
 ```bash
 npm install @lumeno.dev/ui
