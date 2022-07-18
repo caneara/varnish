@@ -1,0 +1,11 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom Styling */
+.page-header { background: #003352 }
+.page-header h1 { font-size: 2.5rem }
+.page-header h2 { font-size: 1.1rem }
+.main-content { max-height: 300px; margin: 0 auto }
+.page-footer { display: none }

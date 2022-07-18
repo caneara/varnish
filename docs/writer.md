@@ -1,6 +1,12 @@
+---
+layout: page
+title: "Lumeno UI - Writer"
+permalink: /writer/
+---
+
 <!-- Screenshot -->
 <p align="center">
-    <img src="/docs/writer/screenshot.png" alt="Screenshot" />
+    <img src="/assets/img/writer.png" alt="Screenshot" />
 </p>
 
 # Writer
@@ -204,7 +210,3 @@ This stylesheet also includes support for dark mode, as well as syntax highlight
 ## Syntax highlighting
 
 Under the hood, Writer uses 'Highlight.js' to add syntax highlighting to your code blocks. In order to reduce the size of the generated bundle, Writer uses the common set of languages, which should be sufficient for most scenarios. However, if your desired language is not included, then you will need to import it.
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
