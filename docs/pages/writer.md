@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lumeno UI - Writer"
+title: "Writer"
 permalink: /pages/writer/
 ---
 

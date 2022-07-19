@@ -1,3 +1,8 @@
 theme: jekyll-theme-cayman
 title: Lumeno UI
+url: ui.lumeno.dev
 description: A library of UI widgets built using Vue.js and TailwindCSS.
+logo: /assets/img/logo.png
+twitter:
+  username: LumenoDev
+  card: summary_large_image
