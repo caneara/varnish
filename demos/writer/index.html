@@ -32,11 +32,9 @@
         import Writer from '../../src/widgets/writer.vue';
         import { createApp } from 'vue/dist/vue.esm-bundler.js';
 
-        fetch('/docs/pages/writer.md')
+        fetch('/docs/writer.md')
             .then(response => response.text())
-            .then(content => createVueApp(
-                `# Writer${content.split('# Writer')[1]}`
-            ));
+            .then(content => createVueApp(content));
 
         function createVueApp(content)
         {

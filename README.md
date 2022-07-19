@@ -17,9 +17,28 @@ This library contains a set of UI widgets / components. They range from somethin
 
 > [Lumeno](https://lumeno.dev) allows you to centralize your IT résumé, project portfolio and blog content. It aids in building a following, helps you to discover other creatives, and gets you invited to relevant jobs that match your personal requirements, such as minimum salary, availability, location, commute distance, technical skills, and much more... [sign up for free!](https://lumeno.dev)
 
-## Documentation
+## Requirements
 
-Please visit the [official site](https://ui.lumeno.dev) for documentation and demos.
+To use Lumeno UI, your project will require the following dependencies:
+
+* Vue.js (v3+)
+* TailwindCSS (v3+)
+
+## Installation
+
+To begin, install the Lumeno UI library via NPM:
+
+```bash
+npm install @lumeno.dev/ui
+```
+
+You should then follow the individual documentation pages for each of the widgets that you intend to use...
+
+## Widgets
+
+* [Writer](/docs/writer.md) - a Markdown-based text editor
+
+... we've got more coming!
 
 ## Credits
 

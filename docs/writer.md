@@ -1,10 +1,3 @@
----
-layout: default
-title: "Writer"
-image: /assets/img/card.png
-permalink: /pages/writer/
----
-
 # Writer
 
 A minimal, Markdown-based text editor with HTML rendering and code syntax highlighting.
@@ -210,7 +203,7 @@ If you want to create custom styling for the rendered HTML elements, then you sh
 .lumeno.ui.writer .content .preview h1 { color: red }
 ```
 
-While you can create styles using this approach, you'll probably find it much faster to simply copy the stylesheet used by the demo and make adjustments to it. You can find it here: `./demos/writer/styles.css`
+While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](/demos/writer/styles.css) used by the demo and make adjustments to it.
 
 This stylesheet also includes support for dark mode, as well as syntax highlighting.
 
