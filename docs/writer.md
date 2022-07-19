@@ -189,15 +189,19 @@ If you want to customize the styling that is used when Writer is in dark mode, t
 
 In order to respect your application's styling, Writer does not apply any styles to the HTML that it renders. This puts you in a position where you can either leave it as-is (because it already looks how you want it to), or you can develop your own set of styles.
 
-If you want to create custom styling for the rendered HTML elements, then you should prefix them with the following CSS specificity: `.lumeno.ui.writer .content .preview`. For example, to style a rendered `h1` tag so that its color is red, you'd write the following CSS:
+If you want to create custom styling for the rendered HTML elements, then you should prefix them with the following CSS specificity:
+
+```css
+.lumeno.ui.writer .content .preview
+```
+
+For example, to style a rendered `h1` tag so that its color is red, you'd write the following CSS:
 
 ```css
 .lumeno.ui.writer .content .preview h1 { color: red }
 ```
 
-While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](/demos/writer/styles.css) used by the demo and make adjustments to it.
-
-This stylesheet also includes support for dark mode, as well as syntax highlighting.
+While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](/demos/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
 
 ## Syntax highlighting
 
