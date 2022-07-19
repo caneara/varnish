@@ -11,12 +11,13 @@
 
         <!-- SEO -->
         {% seo %}
-        <meta property="og:image" content="{{ '/assets/img/card.png' }}">
         <meta property="og:secure_url" content="{{ '/assets/img/card.png' }}">
-        <meta name="twitter:image" content="{{ '/assets/img/card.png' }}">
 
         <!-- Links -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ '/assets/img/logo.png' }}">
 
     </head>
     <body>
@@ -24,9 +25,18 @@
         <!-- Header -->
         <header class="page-header">
 
+            <!-- Overlay -->
+            <div class="overlay"></div>
+
             <!-- Name -->
             <h1 class="project-name">
+
+                <!-- Logo -->
+                <img src="/assets/img/logo.png" />
+
+                <!-- Text-->
                 {{ page.title | default: site.title | default: site.github.repository_name }}
+
             </h1>
 
             <!-- Description -->

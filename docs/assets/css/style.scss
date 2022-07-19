@@ -8,10 +8,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 /* Custom Styling */
-.page-header { background: #003352; padding: 4rem 6rem }
-.page-header h1 { font-size: 2.5rem }
-.page-header h2 { font-size: 1.1rem }
-.page-header .btn { padding: 0.5rem 1rem; font-size: 15px }
+.page-header { background: linear-gradient(125deg, #0e1f52, #2c5da1, #00a8f1, #004176); position: relative; padding: 4rem 6rem }
+.page-header .overlay { background: #00000080; position: absolute; top: 0; left: 0; right: 0; bottom: 0 }
+.page-header h1 { font-size: 2.5rem; position: relative; display: flex; justify-content: center; align-items: center }
+.page-header h1 img { height: 35px; margin-right: 15px }
+.page-header h2 { font-size: 1.1rem; position: relative }
+.page-header .btn { padding: 0.5rem 1rem; font-size: 15px; position: relative }
 .main-content { padding: 70px 0 50px }
 .main-content h1 { font-family: 'Inter'; color: #1a202c; font-size: 30px; margin-bottom: 30px; font-weight: 600 }
 .main-content h2 { font-family: 'Inter'; color: #1a202c; font-size: 21px; margin-bottom: 24px; font-weight: 600; letter-spacing: -0.015em }
