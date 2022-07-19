@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Writer"
+image: /assets/img/card.png
 permalink: /pages/writer/
 ---
 
