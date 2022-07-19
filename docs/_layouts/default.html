@@ -35,13 +35,13 @@
                 <img src="/assets/img/logo.png" />
 
                 <!-- Text-->
-                {{ page.title | default: site.title | default: site.github.repository_name }}
+                {{ site.title }}
 
             </h1>
 
             <!-- Description -->
             <h2 class="project-tagline">
-                {{ page.description | default: site.description | default: site.github.project_tagline }}
+                {{ site.description }}
             </h2>
 
             <!-- Link -->
