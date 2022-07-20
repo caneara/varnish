@@ -36,7 +36,8 @@ You should then follow the individual documentation pages for each of the widget
 
 ## Widgets
 
-* [Writer](/docs/writer.md) - a Markdown-based text editor
+* [Error](/docs/error.md) - a simple error message e.g. for fields.
+* [Writer](/docs/writer.md) - a Markdown-based text editor.
 
 ... we've got more coming!
 

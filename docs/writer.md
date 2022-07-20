@@ -14,7 +14,7 @@ A minimal, Markdown-based text editor with HTML rendering and code syntax highli
 
 ## Demo
 
-A working demo of the widget is available on [CodeSandbox](https://codesandbox.io/s/lumeno-ui-writer-demo-ytvo84). If you experience errors while CodeSandbox is rendering the widget, then you should click the refresh button within the sandbox's browser panel to rebuild the widget.
+A working demo of the writer widget is available on [CodeSandbox](https://codesandbox.io/s/lumeno-ui-writer-demo-ytvo84). If you experience errors while CodeSandbox is rendering the widget, then you should click the refresh button within the sandbox's browser panel to rebuild the widget.
 
 ## Installation
 
@@ -28,16 +28,16 @@ Then, within your Vue component, import the widget:
 
 ```html
 <template>
-    <writer></writer>
+    <v-writer></v-writer>
 </template>
 
 <script>
-    import Writer from '@lumeno.dev/ui/widgets/writer.vue';
+    import WriterWidget from '@lumeno.dev/ui/widgets/writer.vue';
 
     export default
     {
         components : {
-            'writer' : Writer,
+            'v-writer' : WriterWidget,
         },
     }
 </script>
@@ -45,7 +45,7 @@ Then, within your Vue component, import the widget:
 
 ## Usage
 
-To set Writer's content, assign it using `v-model`. This ensures proper two-way data binding and eliminates the need to listen for a 'change' or 'input' event.
+To set the writer widget's content, assign it using `v-model`. This ensures proper two-way data binding and eliminates the need to listen for a 'change' or 'input' event.
 
 ```js
 data() {
@@ -54,14 +54,14 @@ data() {
     }
 },
 
-<writer v-model="content"></writer>
+<v-writer v-model="content"></v-writer>
 ```
 
-Writer is designed to require minimal, even zero-configuration. However, if you want to customize it, then you can do so using the following `props`:
+The writer widget is designed to require minimal, even zero-configuration. However, if you want to customize it, then you can do so using the following `props`:
 
 | Name         | Type    | Summary                                                                      |
 | ------------ | ------- | ---------------------------------------------------------------------------- |
-| darkMode     | Boolean | Toggle whether to use dark mode (see 'Dark Mode' below, default is false)    |
+| error        | String  | Display a message at the bottom of the component (useful for validation)     |
 | height       | Number  | Set the minimum height in pixels (default is 300, less may create UI quirks) |
 | html         | Boolean | Enable or disable HTML tags (default is false for [security reasons](https://github.com/markdown-it/markdown-it/blob/master/docs/security.md)) |
 | lineNumbers  | Boolean | Toggle whether code blocks have line numbers (default is true)               |
@@ -70,19 +70,20 @@ Writer is designed to require minimal, even zero-configuration. However, if you 
 | placeholder  | String  | Set the default placeholder text to display when the editor is empty         |
 | uploads      | Boolean | Toggle whether the user can upload images (default is false)                 |
 
-## Dark Mode
+## Light / Dark mode
 
-In order for Writer to actually use dark mode styles, you will need to configure Tailwind to use the [class-based strategy](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) for dark mode e.g.
+By default, the writer widget respects the light or dark mode setting that the user has enabled within their operating system. However, you can override this in order to force either light or dark mode:
 
-```js
-module.exports = {
-    darkMode : 'class',
-}
+```html
+<v-writer mode="dark"></v-writer>
+<v-writer mode="light"></v-writer>
 ```
+
+Note that for this to work, you will need to configure Tailwind to use the [class-based strategy](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually).
 
 ## Localization
 
-Writer allows you to customize the message prompts that are displayed when adding links or code blocks. If your intended audience speaks English, then there is no need to review this section. Otherwise, you can use the props below to alter the displayed text.
+The writer widget allows you to customize the message prompts that are displayed when adding links or code blocks. If your intended audience speaks English, then there is no need to review this section. Otherwise, you can use the props below to alter the displayed text.
 
 | Name         | Type   | Summary                                                                          |
 | ------------ | ------ | -------------------------------------------------------------------------------- |
@@ -92,21 +93,21 @@ Writer allows you to customize the message prompts that are displayed when addin
 
 ## Uploading images
 
-Writer includes a mechanism to facilitate image uploading and insertion of the resulting link. To use this mechanism, first enable uploads, then add a listener for the `upload` event:
+The writer widget includes a mechanism to facilitate image uploading and insertion of the resulting link. To use this mechanism, first enable uploads, then add a listener for the `upload` event:
 
 ```html
-<writer :uploads="true"
-        @upload="uploadImage($event)">
-</writer>
+<v-writer :uploads="true"
+          @upload="uploadImage($event)">
+</v-writer>
 ```
 
 Next, within the `uploadImage` method (or whatever method name you provided), you should execute your own code to select a file and upload it to your server. If you are tracking the upload status and wish to present it to the user, then supply the value using the `progress` prop:
 
 ```html
-<writer :uploads="true"
-        :progress="status"
-        @upload="uploadImage($event)">
-</writer>
+<v-writer :uploads="true"
+          :progress="status"
+          @upload="uploadImage($event)">
+</v-writer>
 
 <script>
 let status = 0;
@@ -125,7 +126,7 @@ function uploadImage(hook)
 </script>
 ```
 
-Writer will automatically display a progress bar beneath the toolbar if `progress` is set to anything other than zero.
+The writer widget will automatically display a progress bar beneath the toolbar if `progress` is set to anything other than zero.
 
 When the file has been uploaded and you have a link to it, simply call `hook` and supply the url as a `string` parameter:
 
@@ -137,17 +138,17 @@ function uploadImage(hook)
 }
 ```
 
-Writer will insert the link into the editor, hide the progress bar, and re-enable the image toolbar button so that additional files can be uploaded.
+The writer widget will insert the link into the editor, hide the progress bar, and re-enable the image toolbar button so that additional files can be uploaded.
 
 ### Cancelling uploads
 
-Since Writer doesn't actually have anything to do with the uploading process, you should cancel the upload yourself and then call `hook` without any parameters. Alternatively, supplying `undefined`, `null` or `''` as the parameter will achieve the same result.
+Since the writer widget doesn't actually have anything to do with the uploading process, you should cancel the upload yourself and then call `hook` without any parameters. Alternatively, supplying `undefined`, `null` or `''` as the parameter will achieve the same result.
 
 ## Styling
 
 ### Interface
 
-Writer's user interface uses a neutral style that should be suitable for most applications. However, should you wish to create your own look, you can easily do so using the following self-explanatory CSS classes:
+The writer widget's user interface uses a neutral style that should be suitable for most applications. However, should you wish to create your own look, you can easily do so using the following self-explanatory CSS classes:
 
 ```css
 .lumeno.ui.writer { }
@@ -177,9 +178,10 @@ Writer's user interface uses a neutral style that should be suitable for most ap
 .lumeno.ui.writer .content .preview { }
 .lumeno.ui.writer .content .progress { }
 .lumeno.ui.writer .content .progress .position { }
+.lumeno.ui.writer .content .error { }
 ```
 
-If you want to customize the styling that is used when Writer is in dark mode, then append the `.dark` class to the main `.writer` class e.g.
+If you want to customize the styling that is used when the writer widget is in dark mode, then append the `.dark` class to the main `.writer` class e.g.
 
 ```css
 .lumeno.ui.writer.dark .toolbar .toolbar-button { }
@@ -187,7 +189,7 @@ If you want to customize the styling that is used when Writer is in dark mode, t
 
 ### Styling - Rendered HTML
 
-In order to respect your application's styling, Writer does not apply any styles to the HTML that it renders. This puts you in a position where you can either leave it as-is (because it already looks how you want it to), or you can develop your own set of styles.
+In order to respect your application's styling, the writer widget does not apply any styles to the HTML that it renders. This puts you in a position where you can either leave it as-is (because it already looks how you want it to), or you can develop your own set of styles.
 
 If you want to create custom styling for the rendered HTML elements, then you should prefix them with the following CSS specificity:
 
@@ -205,4 +207,4 @@ While you can create styles using this approach, you'll probably find it much fa
 
 ## Syntax highlighting
 
-Under the hood, Writer uses 'Highlight.js' to add syntax highlighting to your code blocks. In order to reduce the size of the generated bundle, Writer uses the common set of languages, which should be sufficient for most scenarios. However, if your desired language is not included, then you will need to import it.
+Under the hood, the writer widget uses 'Highlight.js' to add syntax highlighting to your code blocks. In order to reduce the size of the generated bundle, only the common set of languages is included, which should be sufficient for most scenarios. However, if your desired language is not included, then you will need to import it.

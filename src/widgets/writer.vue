@@ -395,17 +395,40 @@
 
         </div>
 
+        <!-- Error -->
+        <v-error :message="message"></v-error>
+
     </div>
 </template>
 
 <!-- Script -->
 <script>
 import markdownit from 'markdown-it';
+import ErrorWidget from './error.vue';
 import UndoManager from 'undo-manager';
 import hljs from 'highlight.js/lib/common';
+import Utilities from '../mixins/Utilities';
+import Foundation from '../mixins/Foundation';
 
 export default
 {
+    /**
+     * Define the mixins.
+     *
+     */
+    mixins : [
+        Utilities,
+        Foundation,
+    ],
+
+    /**
+     * Define the components.
+     *
+     */
+    components : {
+        'v-error' : ErrorWidget,
+    },
+
     /**
      * Define the data model.
      *
@@ -415,7 +438,6 @@ export default
         fullscreen : false,
         headings   : false,
         history    : new UndoManager(),
-        mode       : this.darkMode ? 'dark' : 'light',
         renderer   : null,
         selection  : { start : 0, end : 0 },
         step       : this.progress,
@@ -426,7 +448,6 @@ export default
      *
      */
     emits : [
-        'update:modelValue',
         'upload',
     ],
 
@@ -435,7 +456,6 @@ export default
      *
      */
     props : {
-        'darkMode'     : { type : Boolean, default : false },
         'displayText'  : { type : String,  default : "Specify the display text e.g 'home'." },
         'height'       : { type : Number,  default : 300 },
         'html'         : { type : Boolean, default : false },
@@ -443,7 +463,7 @@ export default
         'lineNumbers'  : { type : Boolean, default : true },
         'linkText'     : { type : String,  default : "Specify the url e.g. 'https://google.com'." },
         'maxUndo'      : { type : Number,  default : 20 },
-        'modelValue'   : { type : String,  default : '' },
+        'mode'         : { type : String,  default : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' },
         'placeholder'  : { type : String,  default : 'Write something amazing...' },
         'progress'     : { type : Number,  default : 0 },
         'uploads'      : { type : Boolean, default : false },
@@ -508,6 +528,8 @@ export default
          */
         change(content = undefined)
         {
+            this.message = '';
+
             if (content === undefined) return;
 
             this.logHistoryState(this.modelValue, content);
@@ -578,9 +600,9 @@ export default
          */
         highlightCodeBlock(source, language)
         {
-            if ([undefined, null, ''].includes(language)) return source;
+            if (this.blank(language)) return source;
 
-            if ([undefined, null, ''].includes(hljs.getLanguage(language))) return source;
+            if (this.blank(hljs.getLanguage(language))) return source;
 
             return this.convertToLines(this.renderCodeBlock(source, language));
         },
@@ -624,7 +646,7 @@ export default
             let selected = this.modelValue.substring(this.selection.start, this.selection.end);
 
             let link = prompt(this.linkText, '');
-            let text = selected !== '' ? null : prompt(this.displayText, '');
+            let text = this.filled(selected) ? null : prompt(this.displayText, '');
 
             text ? this.prependText(`[${text}](${link})`) : this.wrapText(['[', `](${link})`]);
         },
@@ -715,7 +737,10 @@ export default
         {
             if (this.fullscreen) return;
 
-            this.$refs.editor.style.height = `${this.$refs.editor.scrollHeight}px`;
+            this.$nextTick(() => {
+                this.$refs.editor.style.height = 0;
+                this.$refs.editor.style.height = `${this.$refs.editor.scrollHeight}px`;
+            });
         },
 
         /**
@@ -760,7 +785,7 @@ export default
         {
             this.step = 0;
 
-            if ([undefined, null, ''].includes(url)) return;
+            if (this.blank(url)) return;
 
             this.prependText(`\n\n![](${url})\n\n`);
         },

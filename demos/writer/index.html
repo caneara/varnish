@@ -29,7 +29,7 @@
 
     <!-- Setup -->
     <script type="module">
-        import Writer from '../../src/widgets/writer.vue';
+        import WriterWidget from '../../src/widgets/writer.vue';
         import { createApp } from 'vue/dist/vue.esm-bundler.js';
 
         fetch('/docs/writer.md')
@@ -39,16 +39,16 @@
         function createVueApp(content)
         {
             let config = {
-                components : { 'writer' : Writer },
+                components : { 'v-writer' : WriterWidget },
                 template   : `
-                    <writer :html="true"
-                            v-model="text"
-                            :uploads="true"
-                            :darkMode="false"
-                            :lineNumbers="true"
-                            :progress="progress"
-                            @upload="upload($event)">
-                    </writer>
+                    <v-writer :html="true"
+                              v-model="text"
+                              :uploads="true"
+                              :darkMode="false"
+                              :lineNumbers="true"
+                              :progress="progress"
+                              @upload="upload($event)">
+                    </v-writer>
                 `,
                 data() {
                     return {
