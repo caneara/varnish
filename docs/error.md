@@ -11,7 +11,7 @@ A simple error message component. Its most common usage would involve it being p
 
 ## Demo
 
-A working demo of the error widget is available on [CodeSandbox](https://codesandbox.io/s/lumeno-ui-writer-demo-ytvo84). If you experience errors while CodeSandbox is rendering the widget, then you should click the refresh button within the sandbox's browser panel to rebuild the widget.
+A working demo of the error widget is available on [CodeSandbox](https://codesandbox.io/s/lumeno-ui-error-demo-4op8ef). If you experience errors while CodeSandbox is rendering the widget, then you should click the refresh button within the sandbox's browser panel to rebuild the widget.
 
 ## Installation
 
