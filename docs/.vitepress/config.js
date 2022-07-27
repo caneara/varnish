@@ -53,6 +53,7 @@ let theme = {
     logo        : '/logo.png',
     sidebar     : sidebar,
     socialLinks : [
+        { icon : 'github',   link : 'https://github.com/LumenoDev/ui' },
         { icon : 'twitter',  link : 'https://twitter.com/LumenoDev' },
         { icon : 'linkedin', link : 'https://www.linkedin.com/company/lumeno/' },
     ],
