@@ -24,12 +24,12 @@ export default
      *
      */
     props : {
-        'id'         : { type : String,                    default : '' },
-        'fill'       : { type : String,                    default : 'off' },
-        'icon'       : { type : String,                    default : '' },
-        'error'      : { type : String,                    default : '' },
-        'label'      : { type : String,                    default : 'Component' },
-        'modelValue' : { type : [String, Number, Boolean], default : '' },
+        'id'           : { type : String,                    default : '' },
+        'icon'         : { type : String,                    default : '' },
+        'error'        : { type : String,                    default : '' },
+        'label'        : { type : String,                    default : 'Label' },
+        'modelValue'   : { type : [String, Number, Boolean], default : '' },
+        'autocomplete' : { type : String,                    default : 'off' },
     },
 
     /**
@@ -39,12 +39,12 @@ export default
     computed :
     {
         /**
-         * Create an identifier for the component.
+         * Create a unique identifier for the component.
          *
          */
         name()
         {
-            return this.id ? this.id : this.label.toLowerCase().replace(' ', '-');
+            return this.id ? this.id : `id-${parseInt(window.performance.now())}`;
         },
     },
 

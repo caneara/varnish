@@ -1,7 +1,7 @@
 <!-- Banner -->
 <p align="center">
-    <a href="https://lumeno.dev">
-        <img src="resources/banner.png" />
+    <a href="https://ui.lumeno.dev">
+        <img src="docs/public/banner.png" />
     </a>
 </p>
 
@@ -13,33 +13,13 @@
 
 # Lumeno UI
 
-This library contains a set of UI widgets / components. They range from something as simple as a button, to as complex as a fully-featured Markdown-based text editor. Originally, these components were exclusively part of Lumeno's codebase, however they have since been extracted, extended and made available for open-source use.
+This library contains a set of UI components. They range from something as simple as a button, to as complex as a fully-featured, Markdown-based text editor. Originally, these components were part of Lumeno's codebase, however they have since been extracted, extended and made available for open-source use.
 
-> [Lumeno](https://lumeno.dev) allows you to centralize your IT résumé, project portfolio and blog content. It aids in building a following, helps you to discover other creatives, and gets you invited to relevant jobs that match your personal requirements, such as minimum salary, availability, location, commute distance, technical skills, and much more... [sign up for free!](https://lumeno.dev)
+> [Lumeno](https://lumeno.dev) centralizes your IT résumé, project portfolio and blog content. It aids in building a following, helps you to discover other creatives, and gets you invited to relevant jobs that match your personal requirements, such as minimum salary, availability, location, commute distance, technical skills, and more... [sign up for free!](https://lumeno.dev)
 
-## Requirements
+## Getting Started
 
-To use Lumeno UI, your project will require the following dependencies:
-
-* Vue.js (v3+)
-* TailwindCSS (v3+)
-
-## Installation
-
-To begin, install the Lumeno UI library via NPM:
-
-```bash
-npm install @lumeno.dev/ui
-```
-
-You should then follow the individual documentation pages for each of the widgets that you intend to use...
-
-## Widgets
-
-* [Error](/docs/error.md) - a simple error message e.g. for fields.
-* [Writer](/docs/writer.md) - a Markdown-based text editor.
-
-... we've got more coming!
+View the [official documentation](https://ui.lumeno.dev).
 
 ## Credits
 
