@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as r}from"./app.22ac541c.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"pages/shared-props.md","lastUpdated":1658920819000}'),t={name:"pages/shared-props.md"};function s(o,p,c,d,n,_){return a(),r("div")}var f=e(t,[["render",s]]);export{m as __pageData,f as default};
