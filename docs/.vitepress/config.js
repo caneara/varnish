@@ -67,7 +67,7 @@ export default {
     head            : head,
     title           : 'Lumeno UI',
     description     : 'A library of UI components built using Vue.js and TailwindCSS.',
-    lastUpdated     : true,
+    lastUpdated     : false,
     themeConfig     : theme,
     ignoreDeadLinks : true,
 }

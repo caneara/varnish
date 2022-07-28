@@ -4,7 +4,8 @@
          :class="[fullscreen ? 'fullscreen fixed inset-0 z-[1000]' : '']">
 
         <!-- Toolbar -->
-        <div :class="[editing ? 'justify-between' : 'justify-end', fullscreen ? 'border-t-0' : 'rounded-t']"
+        <div v-if="! readingMode"
+             :class="[editing ? 'justify-between' : 'justify-end', fullscreen ? 'border-t-0' : 'rounded-t']"
              class="toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex flex-wrap px-2">
 
             <!-- Left Side -->
@@ -193,8 +194,8 @@
 
         <!-- Content -->
         <div :style="`min-height: ${height}px`"
-             :class="fullscreen ? '' : 'rounded-b'"
-             class="content flex flex-1 relative bg-white border border-gray-300 border-t-0 dark:border-none dark:bg-gray-800">
+             class="content flex flex-1 relative bg-white dark:bg-gray-800"
+             :class="[fullscreen ? '' : 'rounded-b', readingMode ? '' : 'border border-gray-300 border-t-0 dark:border-none']">
 
             <!-- Progress Bar -->
             <div ref="progress"
@@ -214,6 +215,7 @@
                       v-show="editing"
                       autocomplete="off"
                       :value="modelValue"
+                      v-if="! readingMode"
                       @click="hideOverlays()"
                       :placeholder="placeholder"
                       @input="change($event.target.value)"
@@ -224,8 +226,9 @@
 
             <!-- Preview -->
             <div ref="preview"
-                 v-show="! editing"
-                 class="preview p-6 overflow-scroll rounded-b">
+                 v-show="! editing || readingMode"
+                 :class="readingMode ? '' : 'p-6'"
+                 class="preview overflow-scroll rounded-b">
 
                 <!-- Slot -->
 
@@ -303,6 +306,7 @@ export default
         'maxUndo'      : { type : Number,  default : 20 },
         'placeholder'  : { type : String,  default : 'Write something amazing...' },
         'progress'     : { type : Number,  default : 0 },
+        'readingMode'  : { type : Boolean, default : false },
         'uploads'      : { type : Boolean, default : false },
     },
 
@@ -324,6 +328,8 @@ export default
     mounted()
     {
         this.resizeEditorToContent();
+
+        if (this.readingMode) this.renderMarkdown();
     },
 
     /**
@@ -340,7 +346,7 @@ export default
         {
             if (current) return;
 
-            this.$refs.preview.innerHTML = this.renderer.render(this.modelValue);
+            this.renderMarkdown();
         },
 
         /**
@@ -564,6 +570,15 @@ export default
             } catch {
                 return source;
             }
+        },
+
+        /**
+         * Convert the raw Markdown text into rendered HTML.
+         *
+         */
+        renderMarkdown()
+        {
+            this.$refs.preview.innerHTML = this.renderer.render(this.modelValue);
         },
 
         /**

@@ -183,6 +183,21 @@ Set the default placeholder text to display when the editor is empty.
 <v-writer placeholder="Escribe algo increíble..."></v-writer>
 ```
 
+### readingMode
+
+- Type: `Boolean`
+- Default: `false`
+
+Toggle whether to display only the rendered HTML.
+
+When set to `false`, the full editing experience is available. When set to `true`, only the rendered HTML is shown (all UI, including the toolbar is hidden).
+
+You'll likely want to enable reading mode when you need to display read-only, rendered content e.g. for a blog post.
+
+```html
+<v-writer :readingMode="true"></v-writer>
+```
+
 ### uploads
 
 - Type: `Boolean`
