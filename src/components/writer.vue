@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-    <div class="lumeno ui writer flex flex-col"
+    <div class="lumeno-ui-writer lumeno-ui-font flex flex-col"
          :class="[fullscreen ? 'fullscreen fixed inset-0 z-[1000]' : '']">
 
         <!-- Toolbar -->
@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="toolbar-divider hidden md:block border-l border-gray-300/70 dark:border-gray-600 mx-3"></div>
+                <div class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
 
                 <!-- Headings -->
                 <div title="Headings"
@@ -122,7 +122,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="toolbar-divider hidden md:block border-l border-gray-300/70 dark:border-gray-600 mx-3"></div>
+                <div class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
 
                 <!-- Blockquote -->
                 <div title="Blockquote"
@@ -139,7 +139,7 @@
                 <!-- Link -->
                 <div title="Insert Link"
                      @click="insertLink()"
-                     class="fa-solid fa-link toolbar-button toolbar-button-link flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-700 dark:text-sky-500/80 dark:hover:text-white">
+                     class="fa-solid fa-link toolbar-button toolbar-button-link flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-700 dark:text-sky-500/[.80] dark:hover:text-white">
                 </div>
 
                 <!-- Image -->
@@ -147,7 +147,7 @@
                      title="Upload Image"
                      :class="step ? 'opacity-20 pointer-events-none' : ''"
                      @click="! step ? $emit('upload', (url) => uploaded(url)) : null"
-                     class="fa-solid fa-image toolbar-button toolbar-button-upload-image flex items-center p-3 cursor-pointer transition duration-300 text-purple-700/60 hover:text-purple-800 dark:text-purple-400/80 dark:hover:text-white">
+                     class="fa-solid fa-image toolbar-button toolbar-button-upload-image flex items-center p-3 cursor-pointer transition duration-300 text-purple-700/[.60] hover:text-purple-800 dark:text-purple-400/[.80] dark:hover:text-white">
                 </div>
 
             </div>
@@ -157,7 +157,7 @@
 
                 <!-- Divider -->
                 <div v-if="editing"
-                     class="toolbar-divider hidden md:block border-l border-gray-300/70 dark:border-gray-600 mx-3">
+                     class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3">
                 </div>
 
                 <!-- Edit -->

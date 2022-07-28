@@ -17,9 +17,20 @@
 }
 
 /**
+ * Fonts.
+ *
+ */
+@font-face { font-family: 'Metropolis'; font-style: normal; font-weight: 300; src: url('/Metropolis-Light.woff2') format('woff2') }
+@font-face { font-family: 'Metropolis'; font-style: normal; font-weight: 400; src: url('/Metropolis-Regular.woff2') format('woff2') }
+@font-face { font-family: 'Metropolis'; font-style: normal; font-weight: 500; src: url('/Metropolis-Medium.woff2') format('woff2') }
+@font-face { font-family: 'Metropolis'; font-style: normal; font-weight: 600; src: url('/Metropolis-SemiBold.woff2') format('woff2') }
+@font-face { font-family: 'Metropolis'; font-style: normal; font-weight: 700; src: url('/Metropolis-Bold.woff2') format('woff2') }
+
+/**
  * General.
  *
  */
+.lumeno-ui-font { font-family: 'Metropolis' }
 .VPNav .title .logo { @apply mr-[15px] }
 .VPSidebar .nav .group .VPSidebarGroup { @apply pt-[20px] pb-[6px] }
 .VPContent .vp-doc h2 { @apply pt-[35px] mt-[40px] }
@@ -38,8 +49,8 @@
 .VPContent.is-home .VPHome .VPHomeHero .container .main .tagline { @apply tracking-[-0.6px] }
 .VPContent.is-home .VPHome .VPHomeHero .container .main .action .VPButton { @apply min-w-[130px] rounded px-[15px] py-[10px] leading-none }
 .VPContent.is-home .VPHome .VPHomeHero .container .main .action .VPButton.brand { @apply border-transparent bg-sky-600 hover:bg-sky-700 }
-.VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature { @apply bg-gray-400/5 }
-.VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature .icon { @apply bg-gray-500/5 }
+.VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature { @apply bg-gray-400/[.05] }
+.VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature .icon { @apply bg-gray-500/[.05] }
 .VPContent.is-home .VPHome .VPFeatures + div { @apply flex justify-center items-end flex-1 pt-[100px] }
 .VPContent.is-home .VPHome .VPFooter { @apply text-[12px] text-gray-400 }
 
@@ -47,7 +58,7 @@
  * Dark Mode.
  *
  */
-.dark .VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature .icon { @apply bg-gray-100/5 }
+.dark .VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature .icon { @apply bg-gray-100/[.05] }
 .dark .VPContent.is-home .VPHome .VPFooter { @apply text-gray-500 }
-.dark .VPContent .vp-doc blockquote { @apply bg-yellow-900/40 border-yellow-700 }
+.dark .VPContent .vp-doc blockquote { @apply bg-yellow-900/[.40] border-yellow-700 }
 .dark .VPContent .vp-doc blockquote p { @apply text-yellow-500 }

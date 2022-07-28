@@ -12,4 +12,4 @@ Next, you will need to install the library (also via NPM):
 npm install @lumeno.dev/ui
 ```
 
-You can now being using Lumeno UI's components. However, before doing so, it is recommended that you review the 'Getting Started' section of the documentation.
+You can now begin using Lumeno UI. Before diving in though, be sure to review the 'Getting Started' area of the documentation (especially the section on [fonts](/pages/fonts)).

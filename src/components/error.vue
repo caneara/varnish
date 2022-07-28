@@ -1,7 +1,7 @@
 <template>
     <label v-html="content"
            v-if="filled(message)"
-           class="lumeno ui error block font-semibold text-[13px] text-red-700 dark:text-red-300 text-right uppercase my-2">
+           class="lumeno-ui-error lumeno-ui-font block font-semibold text-[13px] text-red-700 dark:text-red-300 text-right uppercase my-2">
     </label>
 </template>
 
@@ -90,7 +90,7 @@
              */
             isFirstErrorOnPage()
             {
-                return document.querySelector('.lumeno.ui.error').isSameNode(this.$el);
+                return document.querySelector('.lumeno-ui-error').isSameNode(this.$el);
             },
 
             /**

@@ -13,7 +13,7 @@
         </v-error>
 
         <!-- Gap -->
-        <div class="gap bg-green-700/30 min-h-[1500px] p-6">
+        <div class="gap bg-green-700/[.30] min-h-[1500px] p-6">
             This is a gap created to test scrolling to the first error.
             Scroll to the bottom of the page to find the test button.
         </div>
@@ -22,7 +22,7 @@
         <v-error :message="second_error"></v-error>
 
         <!-- Gap -->
-        <div class="gap bg-green-700/30 min-h-[1500px] p-6">
+        <div class="gap bg-green-700/[.30] min-h-[1500px] p-6">
             This is a gap created to test scrolling to the first error.
             Scroll to the bottom of the page to find the test button.
         </div>
@@ -64,7 +64,7 @@
             beforeScroll()
             {
                 document.querySelectorAll('.gap').forEach(
-                    element => element.classList.add('bg-purple-700/30')
+                    element => element.classList.add('bg-purple-700/[.30]')
                 );
             },
 

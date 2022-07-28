@@ -9,12 +9,14 @@ let sidebar = [
     }, {
         text  : 'Getting Started',
         items : [
+            { text : 'Fonts',        link : '/pages/fonts' },
             { text : 'Light / Dark', link : '/pages/dark-mode' },
             { text : 'Shared API',   link : '/pages/shared-api' },
         ],
     }, {
         text  : 'Components',
         items : [
+            { text : 'Badge',  link : '/pages/badge' },
             { text : 'Error',  link : '/pages/error' },
             { text : 'Writer', link : '/pages/writer' },
         ],

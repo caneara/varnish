@@ -98,11 +98,11 @@ When the component is assigned a value, it will check to see if it is the first 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
 
 ```css
-.lumeno.ui.error { }
+.lumeno-ui-error { }
 ```
 
 Here's an example that changes the text color to purple:
 
 ```css
-.lumeno.ui.error { @apply text-purple-700 dark:text-purple-400 }
+.lumeno-ui-error { @apply text-purple-700 dark:text-purple-400 }
 ```

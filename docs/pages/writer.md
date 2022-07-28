@@ -26,12 +26,12 @@ You can use the toggle at the top right of the page to switch between light and 
 
 <!-- Styles -->
 <style>
-    .vp-doc .lumeno.ui.writer h2 { @apply border-none py-1 mt-0 mb-1 }
-    .vp-doc .lumeno.ui.writer h3 { @apply py-1 mt-0 mb-1 }
-    .vp-doc .lumeno.ui.writer .content .preview .hljs .code-block { @apply -my-[90px] }
-    .vp-doc .lumeno.ui.writer .content .preview .hljs .code-block tr { @apply border-none }
-    .vp-doc .lumeno.ui.writer .content .preview .hljs .code-block tr td { @apply border-none }
-    .vp-doc .lumeno.ui.writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }
+    .vp-doc .lumeno-ui-writer h2 { @apply border-none py-1 mt-0 mb-1 }
+    .vp-doc .lumeno-ui-writer h3 { @apply py-1 mt-0 mb-1 }
+    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block { @apply -my-[90px] }
+    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr { @apply border-none }
+    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr td { @apply border-none }
+    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }
 </style>
 
 <!-- Demo -->
@@ -306,33 +306,33 @@ function uploadImage(callback)
 The component's user interface uses a neutral style that should be suitable for most applications. However, should you wish to create your own look, you can do so using the following self-explanatory CSS classes:
 
 ```css
-.lumeno.ui.writer { }
-.lumeno.ui.writer.fullscreen { }
-.lumeno.ui.writer .toolbar { }
-.lumeno.ui.writer .toolbar .toolbar-button { }
-.lumeno.ui.writer .toolbar .toolbar-divider { }
-.lumeno.ui.writer .toolbar .toolbar-left { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-undo { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-redo { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-headings { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-bold { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-italic { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-list { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-blockquote { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-code { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-link { }
-.lumeno.ui.writer .toolbar .toolbar-left .toolbar-button-upload-image { }
-.lumeno.ui.writer .toolbar .toolbar-right { }
-.lumeno.ui.writer .toolbar .toolbar-right .toolbar-button-edit { }
-.lumeno.ui.writer .toolbar .toolbar-right .toolbar-button-preview { }
-.lumeno.ui.writer .toolbar .toolbar-right .toolbar-button-fullscreen { }
-.lumeno.ui.writer .toolbar .toolbar-right .toolbar-button-compact { }
-.lumeno.ui.writer .content { }
-.lumeno.ui.writer .content .editor { }
-.lumeno.ui.writer .content .preview { }
-.lumeno.ui.writer .content .progress { }
-.lumeno.ui.writer .content .progress .position { }
-.lumeno.ui.writer .content .error { }
+.lumeno-ui-writer { }
+.lumeno-ui-writer.fullscreen { }
+.lumeno-ui-writer .toolbar { }
+.lumeno-ui-writer .toolbar .toolbar-button { }
+.lumeno-ui-writer .toolbar .toolbar-divider { }
+.lumeno-ui-writer .toolbar .toolbar-left { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-undo { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-redo { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-headings { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-bold { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-italic { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-list { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-blockquote { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-code { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-link { }
+.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-upload-image { }
+.lumeno-ui-writer .toolbar .toolbar-right { }
+.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-edit { }
+.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-preview { }
+.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-fullscreen { }
+.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-compact { }
+.lumeno-ui-writer .content { }
+.lumeno-ui-writer .content .editor { }
+.lumeno-ui-writer .content .preview { }
+.lumeno-ui-writer .content .progress { }
+.lumeno-ui-writer .content .progress .position { }
+.lumeno-ui-writer .content .error { }
 ```
 
 ### Rendered HTML
@@ -342,13 +342,13 @@ In order to respect your application's styling, the component does not apply any
 If you want to create custom styling for the rendered HTML elements, then you can do so by using the following root CSS selector:
 
 ```css
-.lumeno.ui.writer .content .preview
+.lumeno-ui-writer .content .preview
 ```
 
 For example, to style a rendered `h1` tag, you'd write the following CSS:
 
 ```css
-.lumeno.ui.writer .content .preview h1 { color: red }
+.lumeno-ui-writer .content .preview h1 { color: red }
 ```
 
 While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/LumenoDev/ui/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
