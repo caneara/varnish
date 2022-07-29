@@ -14,9 +14,11 @@ Lumeno UI adds a blank `lumeno-ui-font` CSS class to each component. You can use
 .lumeno-ui-font { font-family: 'Roboto' }
 ```
 
-While you are free to assign any font that you wish, you might want to consider using the free and open-source [Metropolis](https://github.com/dw5/Metropolis) font.
+While you are free to assign any font that you wish, you might want to consider using the open-source [Metropolis](https://github.com/dw5/Metropolis) font.
 
 Lumeno UI uses Metropolis during the design and development process, as well as for the demos on this site. As a result, each component's font size, weight, padding and spacing has been chosen accordingly.
+
+Alternatively, if you are prepared to pay for a commercial font, then [Proxima Vara](https://www.marksimonson.com/fonts/view/proxima-vara) is recommended, as it is the same font used by Lumeno itself.
 
 ## Further tweaking
 
