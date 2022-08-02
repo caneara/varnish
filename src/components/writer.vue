@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-    <div class="lumeno-ui-writer lumeno-ui-font flex flex-col"
+    <div class="varnish-writer varnish-font flex flex-col"
          :class="[fullscreen ? 'fullscreen fixed inset-0 z-[1000]' : '']">
 
         <!-- Toolbar -->

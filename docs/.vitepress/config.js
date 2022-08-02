@@ -21,28 +21,23 @@ let sidebar = [
             { text : 'Notice', link : '/pages/notice' },
             { text : 'Writer', link : '/pages/writer' },
         ],
-    }, {
-        text  : 'Miscellanous',
-        items : [
-            { text : 'Credits', link : '/pages/credits' },
-        ],
     },
 ];
 
 let head = [
 
     // Meta
-    ['meta', { property : 'og:title',            content : 'Lumeno UI' }],
+    ['meta', { property : 'og:title',            content : 'Varnish' }],
     ['meta', { property : 'og:description',      content : 'A library of UI components built using Vue.js and TailwindCSS.' }],
-    ['meta', { property : 'og:url',              content : 'https://ui.lumeno.dev' }],
-    ['meta', { property : 'og:image',            content : 'https://ui.lumeno.dev/card.png' }],
-    ['meta', { property : 'og:secure_url',       content : 'https://ui.lumeno.dev/card.png' }],
+    ['meta', { property : 'og:url',              content : 'https://varnish.caneara.com' }],
+    ['meta', { property : 'og:image',            content : 'https://varnish.caneara.com/card.png' }],
+    ['meta', { property : 'og:secure_url',       content : 'https://varnish.caneara.com/card.png' }],
     ['meta', { name     : 'twitter:card',        content : 'summary_large_image' }],
-    ['meta', { name     : 'twitter:title',       content : 'Lumeno UI' }],
+    ['meta', { name     : 'twitter:title',       content : 'Varnish' }],
     ['meta', { name     : 'twitter:description', content : 'A library of UI components built using Vue.js and TailwindCSS.' }],
-    ['meta', { name     : 'twitter:image',       content : 'https://ui.lumeno.dev/card.png' }],
-    ['meta', { name     : 'twitter:creator',     content : '@LumenoDev' }],
-    ['meta', { name     : 'twitter:site',        content : '@LumenoDev' }],
+    ['meta', { name     : 'twitter:image',       content : 'https://varnish.caneara.com/card.png' }],
+    ['meta', { name     : 'twitter:creator',     content : '@CanearaHQ' }],
+    ['meta', { name     : 'twitter:site',        content : '@CanearaHQ' }],
 
     // Icons
     ['link', { rel : 'icon', href : '/logo.png', type : 'image/png' }],
@@ -56,19 +51,18 @@ let theme = {
     logo        : '/logo.png',
     sidebar     : sidebar,
     socialLinks : [
-        { icon : 'github',   link : 'https://github.com/LumenoDev/ui' },
-        { icon : 'twitter',  link : 'https://twitter.com/LumenoDev' },
-        { icon : 'linkedin', link : 'https://www.linkedin.com/company/lumeno/' },
+        { icon : 'github',   link : 'https://github.com/caneara/varnish' },
+        { icon : 'twitter',  link : 'https://twitter.com/CanearaHQ' },
     ],
     editLink    : {
         text    : 'Edit page',
-        pattern : 'https://github.com/LumenoDev/ui/edit/main/docs/:path',
+        pattern : 'https://github.com/caneara/varnish/edit/main/docs/:path',
     },
 };
 
 export default {
     head            : head,
-    title           : 'Lumeno UI',
+    title           : 'Varnish',
     description     : 'A library of UI components built using Vue.js and TailwindCSS.',
     lastUpdated     : false,
     themeConfig     : theme,

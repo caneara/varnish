@@ -26,12 +26,12 @@ You can use the toggle at the top right of the page to switch between light and 
 
 <!-- Styles -->
 <style>
-    .vp-doc .lumeno-ui-writer h2 { @apply border-none py-1 mt-0 mb-1 }
-    .vp-doc .lumeno-ui-writer h3 { @apply py-1 mt-0 mb-1 }
-    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block { @apply -my-[90px] }
-    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr { @apply border-none }
-    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr td { @apply border-none }
-    .vp-doc .lumeno-ui-writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }
+    .vp-doc .varnish-writer h2 { @apply border-none py-1 mt-0 mb-1 }
+    .vp-doc .varnish-writer h3 { @apply py-1 mt-0 mb-1 }
+    .vp-doc .varnish-writer .content .preview .hljs .code-block { @apply -my-[90px] }
+    .vp-doc .varnish-writer .content .preview .hljs .code-block tr { @apply border-none }
+    .vp-doc .varnish-writer .content .preview .hljs .code-block tr td { @apply border-none }
+    .vp-doc .varnish-writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }
 </style>
 
 <!-- Demo -->
@@ -51,7 +51,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import WriterComponent from '@lumeno.dev/ui/components/writer.vue';
+    import WriterComponent from '@caneara/varnish/components/writer.vue';
 
     export default
     {
@@ -306,33 +306,33 @@ function uploadImage(callback)
 The component's user interface uses a neutral style that should be suitable for most applications. However, should you wish to create your own look, you can do so using the following self-explanatory CSS classes:
 
 ```css
-.lumeno-ui-writer { }
-.lumeno-ui-writer.fullscreen { }
-.lumeno-ui-writer .toolbar { }
-.lumeno-ui-writer .toolbar .toolbar-button { }
-.lumeno-ui-writer .toolbar .toolbar-divider { }
-.lumeno-ui-writer .toolbar .toolbar-left { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-undo { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-redo { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-headings { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-bold { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-italic { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-list { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-blockquote { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-code { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-link { }
-.lumeno-ui-writer .toolbar .toolbar-left .toolbar-button-upload-image { }
-.lumeno-ui-writer .toolbar .toolbar-right { }
-.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-edit { }
-.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-preview { }
-.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-fullscreen { }
-.lumeno-ui-writer .toolbar .toolbar-right .toolbar-button-compact { }
-.lumeno-ui-writer .content { }
-.lumeno-ui-writer .content .editor { }
-.lumeno-ui-writer .content .preview { }
-.lumeno-ui-writer .content .progress { }
-.lumeno-ui-writer .content .progress .position { }
-.lumeno-ui-writer .content .error { }
+.varnish-writer { }
+.varnish-writer.fullscreen { }
+.varnish-writer .toolbar { }
+.varnish-writer .toolbar .toolbar-button { }
+.varnish-writer .toolbar .toolbar-divider { }
+.varnish-writer .toolbar .toolbar-left { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-undo { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-redo { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-headings { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-bold { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-italic { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-list { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-blockquote { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-code { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-link { }
+.varnish-writer .toolbar .toolbar-left .toolbar-button-upload-image { }
+.varnish-writer .toolbar .toolbar-right { }
+.varnish-writer .toolbar .toolbar-right .toolbar-button-edit { }
+.varnish-writer .toolbar .toolbar-right .toolbar-button-preview { }
+.varnish-writer .toolbar .toolbar-right .toolbar-button-fullscreen { }
+.varnish-writer .toolbar .toolbar-right .toolbar-button-compact { }
+.varnish-writer .content { }
+.varnish-writer .content .editor { }
+.varnish-writer .content .preview { }
+.varnish-writer .content .progress { }
+.varnish-writer .content .progress .position { }
+.varnish-writer .content .error { }
 ```
 
 ### Rendered HTML
@@ -342,16 +342,16 @@ In order to respect your application's styling, the component does not apply any
 If you want to create custom styling for the rendered HTML elements, then you can do so by using the following root CSS selector:
 
 ```css
-.lumeno-ui-writer .content .preview
+.varnish-writer .content .preview
 ```
 
 For example, to style a rendered `h1` tag, you'd write the following CSS:
 
 ```css
-.lumeno-ui-writer .content .preview h1 { color: red }
+.varnish-writer .content .preview h1 { color: red }
 ```
 
-While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/LumenoDev/ui/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
+While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/caneara/varnish/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
 
 ## Syntax highlighting
 

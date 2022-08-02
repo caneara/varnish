@@ -1,12 +1,12 @@
 {
-    "name": "@lumeno.dev/ui",
-    "author": "Lumeno",
-    "version": "0.4.0",
+    "name": "@caneara/varnish",
+    "author": "Caneara",
+    "version": "0.5.0",
     "license": "MIT",
     "description": "A library of UI components built using Vue.js and TailwindCSS.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/LumenoDev/ui.git"
+        "url": "https://github.com/caneara/varnish.git"
     },
     "keywords": [
         "ui",

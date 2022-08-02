@@ -1,107 +1,107 @@
-.lumeno-ui-writer .content .preview h1 { @apply text-[30px] text-black dark:text-white font-bold mb-7 }
-.lumeno-ui-writer .content .preview h2 { @apply text-[26px] text-black dark:text-white font-bold mb-6 }
-.lumeno-ui-writer .content .preview h3 { @apply text-[24px] text-black dark:text-white font-semibold mb-5 }
-.lumeno-ui-writer .content .preview h4 { @apply text-[22px] text-black dark:text-white font-semibold mb-4 }
-.lumeno-ui-writer .content .preview h5 { @apply text-[20px] text-black dark:text-white font-medium mb-3 }
-.lumeno-ui-writer .content .preview h6 { @apply text-[18px] text-black dark:text-white font-medium mb-3 }
-.lumeno-ui-writer .content .preview p { @apply text-[16px] font-medium text-black dark:text-gray-400 mb-6 }
-.lumeno-ui-writer .content .preview p + pre { @apply -mt-6 }
-.lumeno-ui-writer .content .preview a { @apply text-sky-600 hover:text-rose-700 dark:hover:text-rose-400 transition duration-300 }
-.lumeno-ui-writer .content .preview ol { @apply pl-11 list-decimal }
-.lumeno-ui-writer .content .preview ul { @apply pl-11 list-disc }
-.lumeno-ui-writer .content .preview li { @apply text-gray-700 dark:text-gray-400 leading-normal mb-2 first-of-type:mt-5 last-of-type:mb-6 }
-.lumeno-ui-writer .content .preview li a { @apply text-sky-600 hover:text-rose-700 dark:text-sky-600 dark:hover:text-rose-400 }
-.lumeno-ui-writer .content .preview hr { @apply w-1/2 border-dashed border-gray-400 dark:border-gray-600 mx-auto my-12 md:my-16 }
-.lumeno-ui-writer .content .preview img { @apply my-12 }
-.lumeno-ui-writer .content .preview table:not(.code-block) { @apply my-8 w-full border-separate border-spacing-0 }
-.lumeno-ui-writer .content .preview table:not(.code-block) thead th { @apply table-cell align-middle text-[13px] font-bold uppercase text-gray-700 p-4 bg-gray-100 text-left border border-b-gray-300 border-l-0 border-r-0 border-t-gray-300 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:bg-gray-700 dark:text-white dark:border-b-0 dark:border-t-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
-.lumeno-ui-writer .content .preview table:not(.code-block) tbody tr td { @apply align-middle text-gray-700 p-4 table-cell border border-t-0 border-l-0 border-r-0 border-b-gray-200 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:text-gray-400 dark:border-b-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
-.lumeno-ui-writer .content .preview table:not(.code-block) tr:last-of-type td { @apply border-b-gray-300 dark:border-b-gray-500 }
-.lumeno-ui-writer .content .preview blockquote { @apply my-6 border-l-4 rounded-r px-6 py-5 bg-orange-100 border-yellow-500 dark:bg-yellow-700 dark:bg-opacity-50 dark:border-yellow-600 }
-.lumeno-ui-writer .content .preview blockquote p { @apply mb-0 }
-.lumeno-ui-writer .content .preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
-.lumeno-ui-writer .content .preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
-.lumeno-ui-writer .content .preview .hljs { @apply rounded border dark:border-none bg-white overflow-x-auto overflow-y-hidden text-[15px] -my-3 ; border-color: #e2e8f0 }
-.lumeno-ui-writer .content .preview .hljs .code-block { @apply w-full table-fixed -my-[45px] ; background: #f7fafc40 }
-.lumeno-ui-writer .content .preview .hljs .code-block .line-number { @apply w-[50px] text-center select-none dark:opacity-80 ; background: #edf2f799; color: #a0aec0 }
-.lumeno-ui-writer .content .preview .hljs .code-block .line-number-hidden { @apply invisible w-0 }
-.lumeno-ui-writer .content .preview .hljs .code-block .line-number-hidden + .code-line { @apply pl-2 }
-.lumeno-ui-writer .content .preview .hljs .code-block .code-line { @apply pl-[11px] opacity-80 text-gray-700 dark:text-gray-400 }
-.lumeno-ui-writer .content .preview .hljs .code-block .code-line .hljs-comment { @apply text-gray-700 }
-.lumeno-ui-writer .content .preview .hljs .code-block tr:first-of-type .line-number { @apply pt-2 }
-.lumeno-ui-writer .content .preview .hljs .code-block tr:first-of-type .code-line { @apply pt-2 }
-.lumeno-ui-writer .content .preview .hljs .code-block tr:last-of-type .line-number { @apply pb-2 }
-.lumeno-ui-writer .content .preview .hljs .code-block tr:last-of-type .code-line { @apply pb-2 }
-.dark .lumeno-ui-writer .content .preview .hljs { background: #0d131f }
-.dark .lumeno-ui-writer .content .preview .hljs .code-block .code-line { background: #0d131f }
-.dark .lumeno-ui-writer .content .preview .hljs .code-block .line-number { background: #080c12; color: #464d56 }
-.lumeno-ui-writer .content .preview .hljs-subst { color: #2f3337 }
-.lumeno-ui-writer .content .preview .hljs-comment { @apply dark:italic ; color: #656e77 }
-.lumeno-ui-writer .content .preview .hljs-attr { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-doctag { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-keyword { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-meta { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-keyword { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-section { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-selector-tag { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-attribute { color: #803378 }
-.lumeno-ui-writer .content .preview .hljs-name { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-number { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-quote { @apply dark:italic ; color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-selector-id { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-template-tag { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-type { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-selector-class { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-link { @apply dark:underline ; color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-regexp { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-selector-attr { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-string { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-symbol { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-template-variable { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-variable { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-meta { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-selector-pseudo { color: #015692 }
-.lumeno-ui-writer .content .preview .hljs-built_in { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-literal { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-title { color: #b75501 }
-.lumeno-ui-writer .content .preview .hljs-bullet { color: #535a60 }
-.lumeno-ui-writer .content .preview .hljs-code { color: #535a60 }
-.lumeno-ui-writer .content .preview .hljs-meta { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-string { color: #54790d }
-.lumeno-ui-writer .content .preview .hljs-deletion { color: #c02d2e }
-.lumeno-ui-writer .content .preview .hljs-addition { color: #2f6f44 }
-.lumeno-ui-writer .content .preview .hljs-emphasis { @apply italic }
-.lumeno-ui-writer .content .preview .hljs-strong { @apply font-bold }
-.dark .lumeno-ui-writer .content .preview .hljs-comment { color: #5c6370 }
-.dark .lumeno-ui-writer .content .preview .hljs-quote { color: #5c6370 }
-.dark .lumeno-ui-writer .content .preview .hljs-doctag { color: #c678dd }
-.dark .lumeno-ui-writer .content .preview .hljs-formula { color: #c678dd }
-.dark .lumeno-ui-writer .content .preview .hljs-keyword { color: #c678dd }
-.dark .lumeno-ui-writer .content .preview .hljs-deletion { color: #e06c75 }
-.dark .lumeno-ui-writer .content .preview .hljs-name { color: #e06c75 }
-.dark .lumeno-ui-writer .content .preview .hljs-section { color: #e06c75 }
-.dark .lumeno-ui-writer .content .preview .hljs-selector-tag { color: #e06c75 }
-.dark .lumeno-ui-writer .content .preview .hljs-subst { color: #e06c75 }
-.dark .lumeno-ui-writer .content .preview .hljs-literal { color: #56b6c2 }
-.dark .lumeno-ui-writer .content .preview .hljs-addition { color: #98c379 }
-.dark .lumeno-ui-writer .content .preview .hljs-attribute { color: #98c379 }
-.dark .lumeno-ui-writer .content .preview .hljs-meta .hljs-string { color: #98c379 }
-.dark .lumeno-ui-writer .content .preview .hljs-regexp { color: #98c379 }
-.dark .lumeno-ui-writer .content .preview .hljs-string { color: #98c379 }
-.dark .lumeno-ui-writer .content .preview .hljs-attr { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-number { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-selector-attr { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-selector-class { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-selector-pseudo { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-template-variable { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-type { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-variable { color: #d19a66 }
-.dark .lumeno-ui-writer .content .preview .hljs-bullet { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-link { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-meta { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-selector-id { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-symbol { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-title { color: #61aeee }
-.dark .lumeno-ui-writer .content .preview .hljs-built_in { color: #e6c07b }
-.dark .lumeno-ui-writer .content .preview .hljs-class .hljs-title { color: #e6c07b }
-.dark .lumeno-ui-writer .content .preview .hljs-title.class_ { color: #e6c07b }
+.varnish-writer .content .preview h1 { @apply text-[30px] text-black dark:text-white font-bold mb-7 }
+.varnish-writer .content .preview h2 { @apply text-[26px] text-black dark:text-white font-bold mb-6 }
+.varnish-writer .content .preview h3 { @apply text-[24px] text-black dark:text-white font-semibold mb-5 }
+.varnish-writer .content .preview h4 { @apply text-[22px] text-black dark:text-white font-semibold mb-4 }
+.varnish-writer .content .preview h5 { @apply text-[20px] text-black dark:text-white font-medium mb-3 }
+.varnish-writer .content .preview h6 { @apply text-[18px] text-black dark:text-white font-medium mb-3 }
+.varnish-writer .content .preview p { @apply text-[16px] font-medium text-black dark:text-gray-400 mb-6 }
+.varnish-writer .content .preview p + pre { @apply -mt-6 }
+.varnish-writer .content .preview a { @apply text-sky-600 hover:text-rose-700 dark:hover:text-rose-400 transition duration-300 }
+.varnish-writer .content .preview ol { @apply pl-11 list-decimal }
+.varnish-writer .content .preview ul { @apply pl-11 list-disc }
+.varnish-writer .content .preview li { @apply text-gray-700 dark:text-gray-400 leading-normal mb-2 first-of-type:mt-5 last-of-type:mb-6 }
+.varnish-writer .content .preview li a { @apply text-sky-600 hover:text-rose-700 dark:text-sky-600 dark:hover:text-rose-400 }
+.varnish-writer .content .preview hr { @apply w-1/2 border-dashed border-gray-400 dark:border-gray-600 mx-auto my-12 md:my-16 }
+.varnish-writer .content .preview img { @apply my-12 }
+.varnish-writer .content .preview table:not(.code-block) { @apply my-8 w-full border-separate border-spacing-0 }
+.varnish-writer .content .preview table:not(.code-block) thead th { @apply table-cell align-middle text-[13px] font-bold uppercase text-gray-700 p-4 bg-gray-100 text-left border border-b-gray-300 border-l-0 border-r-0 border-t-gray-300 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:bg-gray-700 dark:text-white dark:border-b-0 dark:border-t-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
+.varnish-writer .content .preview table:not(.code-block) tbody tr td { @apply align-middle text-gray-700 p-4 table-cell border border-t-0 border-l-0 border-r-0 border-b-gray-200 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:text-gray-400 dark:border-b-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
+.varnish-writer .content .preview table:not(.code-block) tr:last-of-type td { @apply border-b-gray-300 dark:border-b-gray-500 }
+.varnish-writer .content .preview blockquote { @apply my-6 border-l-4 rounded-r px-6 py-5 bg-orange-100 border-yellow-500 dark:bg-yellow-700 dark:bg-opacity-50 dark:border-yellow-600 }
+.varnish-writer .content .preview blockquote p { @apply mb-0 }
+.varnish-writer .content .preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.varnish-writer .content .preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.varnish-writer .content .preview .hljs { @apply rounded border dark:border-none bg-white overflow-x-auto overflow-y-hidden text-[15px] -my-3 ; border-color: #e2e8f0 }
+.varnish-writer .content .preview .hljs .code-block { @apply w-full table-fixed -my-[45px] ; background: #f7fafc40 }
+.varnish-writer .content .preview .hljs .code-block .line-number { @apply w-[50px] text-center select-none dark:opacity-80 ; background: #edf2f799; color: #a0aec0 }
+.varnish-writer .content .preview .hljs .code-block .line-number-hidden { @apply invisible w-0 }
+.varnish-writer .content .preview .hljs .code-block .line-number-hidden + .code-line { @apply pl-2 }
+.varnish-writer .content .preview .hljs .code-block .code-line { @apply pl-[11px] opacity-80 text-gray-700 dark:text-gray-400 }
+.varnish-writer .content .preview .hljs .code-block .code-line .hljs-comment { @apply text-gray-700 }
+.varnish-writer .content .preview .hljs .code-block tr:first-of-type .line-number { @apply pt-2 }
+.varnish-writer .content .preview .hljs .code-block tr:first-of-type .code-line { @apply pt-2 }
+.varnish-writer .content .preview .hljs .code-block tr:last-of-type .line-number { @apply pb-2 }
+.varnish-writer .content .preview .hljs .code-block tr:last-of-type .code-line { @apply pb-2 }
+.dark .varnish-writer .content .preview .hljs { background: #0d131f }
+.dark .varnish-writer .content .preview .hljs .code-block .code-line { background: #0d131f }
+.dark .varnish-writer .content .preview .hljs .code-block .line-number { background: #080c12; color: #464d56 }
+.varnish-writer .content .preview .hljs-subst { color: #2f3337 }
+.varnish-writer .content .preview .hljs-comment { @apply dark:italic ; color: #656e77 }
+.varnish-writer .content .preview .hljs-attr { color: #015692 }
+.varnish-writer .content .preview .hljs-doctag { color: #015692 }
+.varnish-writer .content .preview .hljs-keyword { color: #015692 }
+.varnish-writer .content .preview .hljs-meta { color: #015692 }
+.varnish-writer .content .preview .hljs-keyword { color: #015692 }
+.varnish-writer .content .preview .hljs-section { color: #015692 }
+.varnish-writer .content .preview .hljs-selector-tag { color: #015692 }
+.varnish-writer .content .preview .hljs-attribute { color: #803378 }
+.varnish-writer .content .preview .hljs-name { color: #b75501 }
+.varnish-writer .content .preview .hljs-number { color: #b75501 }
+.varnish-writer .content .preview .hljs-quote { @apply dark:italic ; color: #b75501 }
+.varnish-writer .content .preview .hljs-selector-id { color: #b75501 }
+.varnish-writer .content .preview .hljs-template-tag { color: #b75501 }
+.varnish-writer .content .preview .hljs-type { color: #b75501 }
+.varnish-writer .content .preview .hljs-selector-class { color: #015692 }
+.varnish-writer .content .preview .hljs-link { @apply dark:underline ; color: #54790d }
+.varnish-writer .content .preview .hljs-regexp { color: #54790d }
+.varnish-writer .content .preview .hljs-selector-attr { color: #54790d }
+.varnish-writer .content .preview .hljs-string { color: #54790d }
+.varnish-writer .content .preview .hljs-symbol { color: #54790d }
+.varnish-writer .content .preview .hljs-template-variable { color: #54790d }
+.varnish-writer .content .preview .hljs-variable { color: #54790d }
+.varnish-writer .content .preview .hljs-meta { color: #015692 }
+.varnish-writer .content .preview .hljs-selector-pseudo { color: #015692 }
+.varnish-writer .content .preview .hljs-built_in { color: #b75501 }
+.varnish-writer .content .preview .hljs-literal { color: #b75501 }
+.varnish-writer .content .preview .hljs-title { color: #b75501 }
+.varnish-writer .content .preview .hljs-bullet { color: #535a60 }
+.varnish-writer .content .preview .hljs-code { color: #535a60 }
+.varnish-writer .content .preview .hljs-meta { color: #54790d }
+.varnish-writer .content .preview .hljs-string { color: #54790d }
+.varnish-writer .content .preview .hljs-deletion { color: #c02d2e }
+.varnish-writer .content .preview .hljs-addition { color: #2f6f44 }
+.varnish-writer .content .preview .hljs-emphasis { @apply italic }
+.varnish-writer .content .preview .hljs-strong { @apply font-bold }
+.dark .varnish-writer .content .preview .hljs-comment { color: #5c6370 }
+.dark .varnish-writer .content .preview .hljs-quote { color: #5c6370 }
+.dark .varnish-writer .content .preview .hljs-doctag { color: #c678dd }
+.dark .varnish-writer .content .preview .hljs-formula { color: #c678dd }
+.dark .varnish-writer .content .preview .hljs-keyword { color: #c678dd }
+.dark .varnish-writer .content .preview .hljs-deletion { color: #e06c75 }
+.dark .varnish-writer .content .preview .hljs-name { color: #e06c75 }
+.dark .varnish-writer .content .preview .hljs-section { color: #e06c75 }
+.dark .varnish-writer .content .preview .hljs-selector-tag { color: #e06c75 }
+.dark .varnish-writer .content .preview .hljs-subst { color: #e06c75 }
+.dark .varnish-writer .content .preview .hljs-literal { color: #56b6c2 }
+.dark .varnish-writer .content .preview .hljs-addition { color: #98c379 }
+.dark .varnish-writer .content .preview .hljs-attribute { color: #98c379 }
+.dark .varnish-writer .content .preview .hljs-meta .hljs-string { color: #98c379 }
+.dark .varnish-writer .content .preview .hljs-regexp { color: #98c379 }
+.dark .varnish-writer .content .preview .hljs-string { color: #98c379 }
+.dark .varnish-writer .content .preview .hljs-attr { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-number { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-selector-attr { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-selector-class { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-selector-pseudo { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-template-variable { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-type { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-variable { color: #d19a66 }
+.dark .varnish-writer .content .preview .hljs-bullet { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-link { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-meta { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-selector-id { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-symbol { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-title { color: #61aeee }
+.dark .varnish-writer .content .preview .hljs-built_in { color: #e6c07b }
+.dark .varnish-writer .content .preview .hljs-class .hljs-title { color: #e6c07b }
+.dark .varnish-writer .content .preview .hljs-title.class_ { color: #e6c07b }

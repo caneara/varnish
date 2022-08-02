@@ -35,7 +35,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ErrorComponent from '@lumeno.dev/ui/components/error.vue';
+    import ErrorComponent from '@caneara/varnish/components/error.vue';
 
     export default
     {
@@ -98,11 +98,11 @@ When the component is assigned a value, it will check to see if it is the first 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
 
 ```css
-.lumeno-ui-error { }
+.varnish-error { }
 ```
 
 Here's an example that changes the text color to purple:
 
 ```css
-.lumeno-ui-error { @apply text-purple-700 dark:text-purple-400 }
+.varnish-error { @apply text-purple-700 dark:text-purple-400 }
 ```

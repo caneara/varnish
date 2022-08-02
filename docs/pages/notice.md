@@ -44,7 +44,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import NoticeComponent from '@lumeno.dev/ui/components/notice.vue';
+    import NoticeComponent from '@caneara/varnish/components/notice.vue';
 
     export default
     {
@@ -104,18 +104,18 @@ See the [demo](#demo) for the color schemes associated with each type.
 If you want to override any of the component's default styling, then you can do so by using the following CSS selectors:
 
 ```css
-.lumeno-ui-notice .notice-container { }
-.lumeno-ui-notice .notice-container.notice-info { }
-.lumeno-ui-notice .notice-container.notice-success { }
-.lumeno-ui-notice .notice-container.notice-warning { }
-.lumeno-ui-notice .notice-container.notice-danger { }
-.lumeno-ui-notice .notice-container .notice-tab { }
-.lumeno-ui-notice .notice-container .notice-content { }
-.lumeno-ui-notice .notice-container .notice-content .notice-icon { }
+.varnish-notice .notice-container { }
+.varnish-notice .notice-container.notice-info { }
+.varnish-notice .notice-container.notice-success { }
+.varnish-notice .notice-container.notice-warning { }
+.varnish-notice .notice-container.notice-danger { }
+.varnish-notice .notice-container .notice-tab { }
+.varnish-notice .notice-container .notice-content { }
+.varnish-notice .notice-container .notice-content .notice-icon { }
 ```
 
 Here's an example that changes the tab text size to 30px:
 
 ```css
-.lumeno-ui-notice .notice-container .notice-tab { @apply text-[30px] }
+.varnish-notice .notice-container .notice-tab { @apply text-[30px] }
 ```

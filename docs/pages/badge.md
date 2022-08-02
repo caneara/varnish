@@ -44,7 +44,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import BadgeComponent from '@lumeno.dev/ui/components/badge.vue';
+    import BadgeComponent from '@caneara/varnish/components/badge.vue';
 
     export default
     {
@@ -132,11 +132,11 @@ Toggle whether the content of the badge should be mixed-case or uppercase.
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
 
 ```css
-.lumeno-ui-badge .badge-content { }
+.varnish-badge .badge-content { }
 ```
 
 Here's an example that changes the text size to 30px:
 
 ```css
-.lumeno-ui-badge .badge-content { @apply text-[30px] }
+.varnish-badge .badge-content { @apply text-[30px] }
 ```

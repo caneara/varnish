@@ -1,7 +1,7 @@
 <template>
     <div :title="tooltip"
          v-if="$slots.default"
-         class="lumeno-ui-badge lumeno-ui-font">
+         class="varnish-badge varnish-font">
 
         <!-- Content -->
         <div :class="[filled(scheme) ? scheme : modes[mode][color], uppercase ? 'uppercase' : '']"

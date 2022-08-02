@@ -1,6 +1,6 @@
 # Requirements
 
-To use Lumeno UI, your project will require the following dependencies:
+To use Varnish, your project will require the following dependencies:
 
 * Vue.js (v3+)
 * TailwindCSS (v3+)
@@ -10,7 +10,7 @@ Any other dependencies will be automatically installed by the library itself.
 
 ## Caveats
 
-Lumeno UI does not currently support the use of [prefixes](https://tailwindcss.com/docs/configuration#prefix) within Tailwind. In other words, it expects the generated utility classes to match the defaults e.g.
+Varnish does not currently support the use of [prefixes](https://tailwindcss.com/docs/configuration#prefix) within Tailwind. In other words, it expects the generated utility classes to match the defaults e.g.
 
 ```html
 <!-- Supported -->

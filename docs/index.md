@@ -1,10 +1,10 @@
 ---
 layout: home
-title: 'Lumeno UI'
+title: 'Varnish'
 titleTemplate: false
 
 hero:
-  name: Lumeno UI
+  name: Varnish
   text: Supercharge your front-end
   tagline: A library of elegant, yet powerful UI components built using Vue.js and TailwindCSS.
   actions:
@@ -13,7 +13,7 @@ hero:
       link: /pages/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/LumenoDev/ui
+      link: https://github.com/caneara/varnish
 
 features:
   - icon: 💪🏻
@@ -38,5 +38,5 @@ features:
 
 <!-- Footer -->
 <div class="VPFooter">
-    Copyright &copy; {{ new Date().getFullYear() }} Lumeno | MIT License
+    Copyright &copy; {{ new Date().getFullYear() }} Caneara | MIT License
 </div>

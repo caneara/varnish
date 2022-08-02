@@ -1,17 +1,17 @@
 <!-- Banner -->
 <p align="center">
-    <a href="https://ui.lumeno.dev">
+    <a href="https://varnish.caneara.com">
         <img src="docs/public/banner.png" />
     </a>
 </p>
 
 <!-- Badges -->
 <p align="center">
-    <img src="https://img.shields.io/npm/v/@lumeno.dev/ui.svg" alt="Latest Release" />
-    <img src="https://img.shields.io/npm/l/@lumeno.dev/ui.svg" alt="License" />
+    <img src="https://img.shields.io/npm/v/@caneara/varnish.svg" alt="Latest Release" />
+    <img src="https://img.shields.io/npm/l/@caneara/varnish.svg" alt="License" />
 </p>
 
-# Lumeno UI
+# Varnish
 
 This library contains a set of UI components. They range from something as simple as a button, to as complex as a fully-featured, Markdown-based text editor. Originally, these components were part of Lumeno's codebase, however they have since been extracted, extended and made available for open-source use.
 
@@ -19,11 +19,7 @@ This library contains a set of UI components. They range from something as simpl
 
 ## Getting Started
 
-View the [official documentation](https://ui.lumeno.dev).
-
-## Credits
-
-Paint icon by [FreePik](https://www.flaticon.com/free-icon/art-and-design_3528221).
+View the [official documentation](https://varnish.caneara.com).
 
 ## License
 

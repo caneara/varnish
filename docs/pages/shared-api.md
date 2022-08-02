@@ -1,6 +1,6 @@
 # Shared API
 
-Many components within Lumeno UI make use of a `Foundation` mixin, which provides a minimal set of `properties` and `events`.
+Many Varnish components make use of a `Foundation` mixin, which provides a minimal set of `properties` and `events`.
 
 This shared API enables you to perform common tasks, such as setting a component's ID, or listening for changes to the component's state.
 

@@ -1,6 +1,6 @@
 <template>
     <div v-if="$slots.default"
-         class="lumeno-ui-notice lumeno-ui-font">
+         class="varnish-notice varnish-font">
 
         <!-- Container -->
         <div class="notice-container border rounded-md relative"
