@@ -2,7 +2,7 @@
 
 This library contains a complete set of UI components. They range from something as simple as a button, to as complex as a Markdown-based text editor.
 
-Originally, these components were part of Lumeno's codebase, however they have since been extracted, extended and made available for [open-source](https://varnish.caneara.com/LICENSE.md) use.
+Originally, these components were part of the [Lumeno](https://lumeno.dev) codebase, however they have since been extracted, extended and made available for [open-source](https://varnish.caneara.com/LICENSE.md) use.
 
 > Varnish is in early development and only has a handful of components at this time. Feel free to follow [@mattkingshott](https://twitter.com/mattkingshott) to receive updates.
 

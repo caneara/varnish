@@ -21,6 +21,12 @@ let sidebar = [
             { text : 'Notice', link : '/pages/notice' },
             { text : 'Writer', link : '/pages/writer' },
         ],
+    }, {
+        text  : 'Products',
+        items : [
+            { text : 'Lumeno', link : 'https://lumeno.dev' },
+            { text : 'TipSea', link : 'https://tipsea.app' },
+        ],
     },
 ];
 
