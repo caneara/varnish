@@ -21,14 +21,14 @@ You can use the toggle at the top right of the page to switch between light and 
     import '../playgrounds/writer/styles.css';
     import WriterComponent from '../../src/components/writer.vue';
 
-    let content = ref("Opportunities don't happen, you create them...");
+    let content = ref("Opportunities don't *happen*, you **create** them...");
 </script>
 
 <!-- Styles -->
 <style>
     .vp-doc .varnish-writer h2 { @apply border-none py-1 mt-0 mb-1 }
     .vp-doc .varnish-writer h3 { @apply py-1 mt-0 mb-1 }
-    .vp-doc .varnish-writer .content .preview .hljs .code-block { @apply -my-[90px] }
+    .vp-doc .varnish-writer .content .preview .hljs .code-block { @apply -my-[60px] }
     .vp-doc .varnish-writer .content .preview .hljs .code-block tr { @apply border-none }
     .vp-doc .varnish-writer .content .preview .hljs .code-block tr td { @apply border-none }
     .vp-doc .varnish-writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }

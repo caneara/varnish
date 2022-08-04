@@ -9,7 +9,7 @@
             <!-- Tab -->
             <span v-if="format === 'tab'"
                   :class="modes[mode][type].tab"
-                  class="notice-tab absolute top-0 left-3 rounded-b font-bold text-[9px] text-white dark:text-gray-300 uppercase tracking-wider px-2 pt-[2px] pb-[1px]">
+                  class="notice-tab absolute top-0 left-3 rounded-b font-[650] text-[9.5px] text-white dark:text-gray-300 uppercase tracking-wider px-2 pt-[3px] pb-1">
 
                 <!-- Text -->
                 {{ type }}
@@ -17,7 +17,7 @@
             </span>
 
             <!-- Content -->
-            <div class="notice-content rounded-md font-medium flex items-center"
+            <div class="notice-content rounded-md font-medium flex items-center leading-normal"
                  :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']">
 
                 <!-- Icon -->
@@ -75,7 +75,7 @@
                         icon    : 'fa-check-circle',
                     },
                     warning : {
-                        content : 'bg-yellow-500/[.05] dark:bg-yellow-700/[0.30] text-yellow-700/[.90] dark:text-orange-300',
+                        content : 'bg-yellow-500/[.05] dark:bg-yellow-700/[0.30] text-yellow-700 dark:text-orange-300',
                         border  : 'border-yellow-600/[.40] dark:border-none',
                         tab     : 'bg-yellow-600/[.40] dark:bg-yellow-700/[.30]',
                         icon    : 'fa-triangle-exclamation',

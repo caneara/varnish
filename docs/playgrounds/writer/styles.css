@@ -13,6 +13,7 @@
 .varnish-writer .content .preview li a { @apply text-sky-600 hover:text-rose-700 dark:text-sky-600 dark:hover:text-rose-400 }
 .varnish-writer .content .preview hr { @apply w-1/2 border-dashed border-gray-400 dark:border-gray-600 mx-auto my-12 md:my-16 }
 .varnish-writer .content .preview img { @apply my-12 }
+.varnish-writer .content .preview strong { @apply font-bold }
 .varnish-writer .content .preview table:not(.code-block) { @apply my-8 w-full border-separate border-spacing-0 }
 .varnish-writer .content .preview table:not(.code-block) thead th { @apply table-cell align-middle text-[13px] font-bold uppercase text-gray-700 p-4 bg-gray-100 text-left border border-b-gray-300 border-l-0 border-r-0 border-t-gray-300 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:bg-gray-700 dark:text-white dark:border-b-0 dark:border-t-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
 .varnish-writer .content .preview table:not(.code-block) tbody tr td { @apply align-middle text-gray-700 p-4 table-cell border border-t-0 border-l-0 border-r-0 border-b-gray-200 first-of-type:border-l first-of-type:border-l-gray-300 last-of-type:border-r last-of-type:border-r-gray-300 dark:text-gray-400 dark:border-b-gray-500 dark:first-of-type:border-l-gray-500 dark:last-of-type:border-r-gray-500 }
@@ -22,7 +23,7 @@
 .varnish-writer .content .preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .content .preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .content .preview .hljs { @apply rounded border dark:border-none bg-white overflow-x-auto overflow-y-hidden text-[15px] -my-3 ; border-color: #e2e8f0 }
-.varnish-writer .content .preview .hljs .code-block { @apply w-full table-fixed -my-[45px] ; background: #f7fafc40 }
+.varnish-writer .content .preview .hljs .code-block { @apply w-full table-fixed -my-[30px] ; background: #f7fafc40 }
 .varnish-writer .content .preview .hljs .code-block .line-number { @apply w-[50px] text-center select-none dark:opacity-80 ; background: #edf2f799; color: #a0aec0 }
 .varnish-writer .content .preview .hljs .code-block .line-number-hidden { @apply invisible w-0 }
 .varnish-writer .content .preview .hljs .code-block .line-number-hidden + .code-line { @apply pl-2 }

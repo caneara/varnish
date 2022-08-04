@@ -5,7 +5,7 @@
 
         <!-- Content -->
         <div :class="[filled(scheme) ? scheme : modes[mode][color], uppercase ? 'uppercase' : '']"
-             class="badge-content inline-block rounded-full font-semibold text-[12px] select-none tracking-[0.3px] whitespace-nowrap px-[10px] pt-[2px] pb-[1px]">
+             class="badge-content inline-block rounded-full font-[630] text-[12px] select-none whitespace-nowrap px-[10px] py-[4.5px] pb-1">
 
             <!-- Slot -->
             <slot></slot>

@@ -4,7 +4,13 @@ This library contains a complete set of UI components. They range from something
 
 Originally, these components were part of the [Lumeno](https://lumeno.dev) codebase, however they have since been extracted, extended and made available for [open-source](https://varnish.caneara.com/LICENSE.md) use.
 
-> Varnish is in early development and only has a handful of components at this time. Feel free to follow [@mattkingshott](https://twitter.com/mattkingshott) to receive updates.
+## Breaking changes
+
+Varnish is in the early stages of development and is pre version 1.0. Therefore, major breaking changes are likely ahead of its official release.
+
+Since these changes are not usually documented, using Varnish in production is not recommended at this time. Instead, it should be used for prototyping and experimentation. Once version 1 has been released, full semantic versioning will be used to ensure that your projects have protection against breaking changes.
+
+> Follow [@mattkingshott](https://twitter.com/mattkingshott) to receive updates.
 
 ## What is Lumeno?
 

@@ -47,6 +47,7 @@
 
                         <!-- Heading #1 -->
                         <h1 @click="prependText('\n\n# ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[25px] px-6 py-1 mb-1 font-bold cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -56,6 +57,7 @@
 
                         <!-- Heading #2 -->
                         <h2 @click="prependText('\n\n## ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[23px] px-6 py-1 mb-1 font-bold cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -65,6 +67,7 @@
 
                         <!-- Heading #3 -->
                         <h3 @click="prependText('\n\n### ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[21px] px-6 py-1 mb-1 font-semibold cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -74,6 +77,7 @@
 
                         <!-- Heading #4 -->
                         <h4 @click="prependText('\n\n#### ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[19px] px-6 py-1 mb-1 font-semibold cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -83,6 +87,7 @@
 
                         <!-- Heading #5 -->
                         <h5 @click="prependText('\n\n##### ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[17px] px-6 py-1 mb-1 font-medium cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -92,6 +97,7 @@
 
                         <!-- Heading #6 -->
                         <h6 @click="prependText('\n\n###### ')"
+                            style="font-family: Arial, sans-serif"
                             class="text-[15px] px-6 py-1 font-medium cursor-pointer transition duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">
 
                             <!-- Text -->
@@ -221,7 +227,7 @@
                       @input="change($event.target.value)"
                       @keydown="interceptKeystroke($event)"
                       :class="fullscreen ? '' : 'rounded-b'"
-                      class="editor appearance-none outline-none focus:outline-none active:outline-none bg-inherit w-full text-gray-900 dark:text-gray-400 resize-none font-mono p-6">
+                      class="editor appearance-none outline-none focus:outline-none active:outline-none bg-inherit w-full font-mono text-gray-900 dark:text-gray-400 leading-normal resize-none p-6">
             </textarea>
 
             <!-- Preview -->
@@ -388,6 +394,8 @@ export default
         {
             this.fullscreen = false;
 
+            document.body.style.overflow = 'auto';
+
             setTimeout(() => this.resizeEditorToContent(), 10);
         },
 
@@ -424,6 +432,8 @@ export default
         fullScreenMode()
         {
             this.fullscreen = true;
+
+            document.body.style.overflow = 'hidden';
 
             this.$refs.editor.style.removeProperty('height');
         },

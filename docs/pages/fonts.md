@@ -14,9 +14,35 @@ Varnish adds a blank `varnish-font` CSS class to each component. You can use thi
 .varnish-font { font-family: 'Roboto' }
 ```
 
-While you are free to assign any font that you wish, you might want to consider using the open-source [Metropolis](https://github.com/dw5/Metropolis) font.
+## Recommendations
 
-Varnish uses Metropolis during the design and development process, as well as for the demos on this site. As a result, each component's font size, weight, padding and spacing has been chosen accordingly.
+Caneara uses [Proxima Vara](https://www.marksimonson.com/fonts/view/proxima-vara) as its standard font, and this has been carried forward into Varnish so that the library can be used in future Caneara projects. The only downside to this, is that Proxima Vara is a commercial font and requires a license.
+
+If you are unwilling or unable to use a commercial font, then we recommend using the [Raleway](https://www.theleagueofmoveabletype.com/raleway) font. While not indentical, with a few CSS tweaks, they are similar.
+
+When using Proxima Vara, the following CSS is recommended:
+
+```css
+.varnish-font {
+    font-family: 'Proxima Vara';
+    font-synthesis: weight style small-caps;
+    line-height: 1;
+}
+```
+
+When using Raleway, the following CSS is recommended:
+
+```css
+.varnish-font {
+    font-family: 'Raleway';
+    font-synthesis: weight style small-caps;
+    line-height: 1;
+}
+```
+
+Since this library is open-source, the demos on this site use Raleway.
+
+> It is strongly recommended that you use a variable font. Using a non-variable font will still work, however it may require extra tweaking.
 
 ## Further tweaking
 
