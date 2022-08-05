@@ -2,13 +2,13 @@
     <div class="varnish-notice varnish-font">
 
         <!-- Container -->
-        <div class="varnish-notice-container border rounded-md relative"
-             :class="[modes[mode][type].border, `varnish-notice-${type}`]">
+        <div class="varnish-container border rounded-md relative"
+             :class="[modes[mode][type].border, `varnish-${type}`]">
 
             <!-- Tab -->
             <span v-if="format === 'tab'"
                   :class="modes[mode][type].tab"
-                  class="varnish-notice-tab absolute top-0 left-3 rounded-b font-[650] text-[9.5px] text-white dark:text-gray-300 uppercase tracking-wider px-2 pt-[3px] pb-1">
+                  class="varnish-tab absolute top-0 left-3 rounded-b font-[650] text-[9.5px] text-white dark:text-gray-300 uppercase tracking-wider px-2 pt-[3px] pb-1">
 
                 <!-- Text -->
                 {{ type }}
@@ -16,13 +16,13 @@
             </span>
 
             <!-- Content -->
-            <div class="varnish-notice-content rounded-md font-medium flex items-center leading-normal"
+            <div class="varnish-content rounded-md font-medium flex items-center leading-normal"
                  :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']">
 
                 <!-- Icon -->
                 <i v-if="format === 'icon'"
                    :class="modes[mode][type].icon"
-                   class="varnish-notice-icon fas text-[26px] opacity-[0.50] ml-1 mr-[22px]">
+                   class="varnish-icon fas text-[26px] opacity-[0.50] ml-1 mr-[22px]">
                 </i>
 
                 <!-- Value -->

@@ -145,12 +145,14 @@ If you want to override any of the component's default styling, then you can do 
 
 ```css
 .varnish-label { }
-.varnish-label .varnish-label-icon { }
-.varnish-label .varnish-label-value { }
+.varnish-label .varnish-icon { }
+.varnish-label .varnish-value { }
 ```
 
 Here's an example that changes the icon size to 30px:
 
 ```css
-.varnish-label .varnish-label-icon { @apply text-[30px] }
+.varnish-label .varnish-icon { @apply text-[30px] }
 ```
+
+> Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

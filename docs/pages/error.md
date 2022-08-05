@@ -108,3 +108,5 @@ Here's an example that changes the text color to purple:
 ```css
 .varnish-error { @apply text-purple-700 dark:text-purple-400 }
 ```
+
+> Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

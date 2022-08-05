@@ -112,18 +112,20 @@ Specify the text to display within the component.
 If you want to override any of the component's default styling, then you can do so by using the following CSS selectors:
 
 ```css
-.varnish-notice .varnish-notice-container { }
-.varnish-notice .varnish-notice-container.varnish-notice-info { }
-.varnish-notice .varnish-notice-container.varnish-notice-success { }
-.varnish-notice .varnish-notice-container.varnish-notice-warning { }
-.varnish-notice .varnish-notice-container.varnish-notice-danger { }
-.varnish-notice .varnish-notice-container .varnish-notice-tab { }
-.varnish-notice .varnish-notice-container .varnish-notice-content { }
-.varnish-notice .varnish-notice-container .varnish-notice-content .varnish-notice-icon { }
+.varnish-notice .varnish-container { }
+.varnish-notice .varnish-container.varnish-info { }
+.varnish-notice .varnish-container.varnish-success { }
+.varnish-notice .varnish-container.varnish-warning { }
+.varnish-notice .varnish-container.varnish-danger { }
+.varnish-notice .varnish-container .varnish-tab { }
+.varnish-notice .varnish-container .varnish-content { }
+.varnish-notice .varnish-container .varnish-content .varnish-icon { }
 ```
 
 Here's an example that changes the tab text size to 30px:
 
 ```css
-.varnish-notice .varnish-notice-container .varnish-notice-tab { @apply text-[30px] }
+.varnish-notice .varnish-container .varnish-tab { @apply text-[30px] }
 ```
+
+> Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

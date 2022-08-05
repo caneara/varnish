@@ -18,6 +18,7 @@ let sidebar = [
         items : [
             { text : 'Badge',    link : '/pages/badge' },
             { text : 'Button',   link : '/pages/button' },
+            { text : 'CheckBox', link : '/pages/checkbox' },
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Writer',   link : '/pages/writer' },
         ],

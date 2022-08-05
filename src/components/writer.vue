@@ -198,9 +198,9 @@
 
         </div>
 
-        <!-- Content -->
+        <!-- Container -->
         <div :style="`min-height: ${height}px`"
-             class="varnish-content flex flex-1 relative bg-white dark:bg-gray-800"
+             class="varnish-container flex flex-1 relative bg-white dark:bg-gray-800"
              :class="[fullscreen ? '' : 'rounded-b', readingMode ? '' : 'border border-gray-300 border-t-0 dark:border-none']">
 
             <!-- Progress Bar -->
@@ -245,7 +245,7 @@
         </div>
 
         <!-- Error -->
-        <v-error :message="message"></v-error>
+        <v-error :value="message"></v-error>
 
     </div>
 </template>

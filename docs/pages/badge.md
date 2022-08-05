@@ -116,14 +116,17 @@ The content that should be displayed by the component.
 
 ## Custom styling
 
-If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
+If you want to override any of the component's default styling, then you can do so by using the following CSS selectors:
 
 ```css
-.varnish-badge .varnish-badge-content { }
+.varnish-badge { }
+.varnish-badge .varnish-content { }
 ```
 
 Here's an example that changes the text size to 30px:
 
 ```css
-.varnish-badge .varnish-badge-content { @apply text-[30px] }
+.varnish-badge .varnish-content { @apply text-[30px] }
 ```
+
+> Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

@@ -52,7 +52,7 @@ Begin by importing the component and registering it like so:
 
 ## Shared API
 
-This component makes use of one or more parts of the [shared API](/pages/shared-api).
+This component makes use of one or more parts of the [shared API](/pages/shared-api). Review this component's playground for further guidance.
 
 ## Properties
 
@@ -122,18 +122,20 @@ Fired when the component is clicked by the user.
 
 ## Custom styling
 
-If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
+If you want to override any of the component's default styling, then you can do so by using the following CSS selectors:
 
 ```css
 .varnish-button { }
-.varnish-button .varnish-button-label { }
-.varnish-button .varnish-button-label .varnish-button-icon { }
-.varnish-button .varnish-button-label .varnish-button-text { }
-.varnish-button .varnish-button-spinner { }
+.varnish-button .varnish-label { }
+.varnish-button .varnish-label .varnish-icon { }
+.varnish-button .varnish-label .varnish-text { }
+.varnish-button .varnish-spinner { }
 ```
 
 Here's an example that changes the icon size to 30px:
 
 ```css
-.varnish-button .varnish-button-label .varnish-button-icon { @apply text-[30px] }
+.varnish-button .varnish-label .varnish-icon { @apply text-[30px] }
 ```
+
+> Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

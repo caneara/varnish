@@ -7,16 +7,16 @@
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"
-             class="varnish-button-label text-[14px] whitespace-nowrap select-none px-5">
+             class="varnish-label text-[14px] whitespace-nowrap select-none px-5">
 
             <!-- Icon -->
             <i v-if="icon"
                :class="icon"
-               class="varnish-button-label varnish-button-icon mr-3 opacity-50">
+               class="varnish-icon mr-3 opacity-50">
             </i>
 
             <!-- Text -->
-            <span class="varnish-button-label varnish-button-text font-semibold uppercase">
+            <span class="varnish-text font-semibold uppercase">
                 {{ label }}
             </span>
 
@@ -25,7 +25,7 @@
         <!-- Animation -->
         <div style="animation: varnish-button-spin 750ms infinite linear"
              :class="[processing ? '' : 'hidden', modes[mode][color].spinner]"
-             class="varnish-button-spinner h-[15px] w-[15px] rounded-full border-2 border-r-transparent border-t-transparent">
+             class="varnish-spinner h-[15px] w-[15px] rounded-full border-2 border-r-transparent border-t-transparent">
         </div>
 
     </button>

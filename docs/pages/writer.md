@@ -70,7 +70,7 @@ Begin by importing the component and registering it like so:
 
 ## Shared API
 
-This component makes use of one or more parts of the [shared API](/pages/shared-api).
+This component makes use of one or more parts of the [shared API](/pages/shared-api). Review this component's playground for further guidance.
 
 ## Properties
 
@@ -302,7 +302,6 @@ function uploadImage(callback)
 
 ### Interface
 
-
 The component's user interface uses a neutral style that should be suitable for most applications. However, should you wish to create your own look, you can do so using the following self-explanatory CSS classes:
 
 ```css
@@ -327,12 +326,12 @@ The component's user interface uses a neutral style that should be suitable for 
 .varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-preview { }
 .varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-fullscreen { }
 .varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-compact { }
-.varnish-writer .varnish-content { }
-.varnish-writer .varnish-content .varnish-editor { }
-.varnish-writer .varnish-content .varnish-preview { }
-.varnish-writer .varnish-content .varnish-progress { }
-.varnish-writer .varnish-content .varnish-progress .varnish-position { }
-.varnish-writer .varnish-content .varnish-error { }
+.varnish-writer .varnish-container { }
+.varnish-writer .varnish-container .varnish-editor { }
+.varnish-writer .varnish-container .varnish-preview { }
+.varnish-writer .varnish-container .varnish-progress { }
+.varnish-writer .varnish-container .varnish-progress .varnish-position { }
+.varnish-writer .varnish-container .varnish-error { }
 ```
 
 ### Rendered HTML
@@ -342,13 +341,13 @@ In order to respect your application's styling, the component does not apply any
 If you want to create custom styling for the rendered HTML elements, then you can do so by using the following root CSS selector:
 
 ```css
-.varnish-writer .varnish-content .varnish-preview
+.varnish-writer .varnish-container .varnish-preview
 ```
 
 For example, to style a rendered `h1` tag, you'd write the following CSS:
 
 ```css
-.varnish-writer .varnish-content .varnish-preview h1 { color: red }
+.varnish-writer .varnish-container .varnish-preview h1 { color: red }
 ```
 
 While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/caneara/varnish/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
