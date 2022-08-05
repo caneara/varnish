@@ -1,0 +1,30 @@
+<template>
+    <div class="demo py-[40px] px-[64px]">
+
+        <!-- Title -->
+        <h1 class="text-[32px] font-semibold tracking-[-0.7px] mb-12">
+            Optional - Playground
+        </h1>
+
+        <!-- Optional -->
+        <v-optional :message="message"></v-optional>
+
+    </div>
+</template>
+
+<script>
+    import OptionalComponent from '../../../src/components/optional.vue';
+
+    export default
+    {
+        components : {
+            'v-optional' : OptionalComponent,
+        },
+
+        data() {
+            return {
+                message : 'Field is not required',
+            }
+        },
+    }
+</script>

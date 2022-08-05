@@ -16,10 +16,11 @@ let sidebar = [
     }, {
         text  : 'Components',
         items : [
-            { text : 'Badge',  link : '/pages/badge' },
-            { text : 'Error',  link : '/pages/error' },
-            { text : 'Notice', link : '/pages/notice' },
-            { text : 'Writer', link : '/pages/writer' },
+            { text : 'Badge',    link : '/pages/badge' },
+            { text : 'Error',    link : '/pages/error' },
+            { text : 'Notice',   link : '/pages/notice' },
+            { text : 'Optional', link : '/pages/optional' },
+            { text : 'Writer',   link : '/pages/writer' },
         ],
     }, {
         text  : 'Products',
