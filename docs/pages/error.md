@@ -23,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex justify-center rounded-md p-6 mt-8">
     <ClientOnly>
-        <ErrorComponent text="This is a test error"></ErrorComponent>
+        <ErrorComponent value="This is a test error"></ErrorComponent>
     </ClientOnly>
 </div>
 
@@ -78,7 +78,7 @@ A common scenario where you might want to use this, is if the page takes time to
 <v-error :scrollDelay="100"></v-error>
 ```
 
-### text
+### value
 
 - Type: `String`
 - Default: `''`
@@ -88,7 +88,7 @@ The error message that should be displayed.
 If it is set to a non-empty string, then the component will be visible. If it is set to either `''`, `null` or `undefined`, then it will automatically hide itself.
 
 ```html
-<v-error text="Something went wrong..."></v-error>
+<v-error value="Something went wrong..."></v-error>
 ```
 
 ## Automatic scrolling

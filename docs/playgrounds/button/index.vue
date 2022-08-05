@@ -13,12 +13,12 @@
 
         <!-- Badges -->
         <div class="flex flex-col gap-y-2 max-w-[200px] ml-4">
-            <v-button color="blue" text="Button"></v-button>
-            <v-button color="green" text="Button" icon="fas fa-home"></v-button>
-            <v-button color="red" text="Button" icon="fas fa-cog"></v-button>
-            <v-button color="orange" text="Button"></v-button>
-            <v-button color="purple" text="Button" :processing="true"></v-button>
-            <v-button color="gray" text="Disabled" :disabled="true"></v-button>
+            <v-button color="blue" label="Button"></v-button>
+            <v-button color="green" label="Button" icon="fas fa-home"></v-button>
+            <v-button color="red" label="Button" icon="fas fa-cog"></v-button>
+            <v-button color="orange" label="Button"></v-button>
+            <v-button color="purple" label="Button" :processing="true"></v-button>
+            <v-button color="gray" label="Disabled" :disabled="true"></v-button>
         </div>
 
         <!-- Header -->
@@ -28,12 +28,12 @@
 
         <!-- Badges -->
         <div class="flex flex-col gap-y-2 max-w-[200px] ml-4">
-            <v-button mode="outline" color="blue" text="Button"></v-button>
-            <v-button mode="outline" color="green" text="Button" icon="fas fa-home"></v-button>
-            <v-button mode="outline" color="red" text="Button" icon="fas fa-cog"></v-button>
-            <v-button mode="outline" color="orange" text="Button"></v-button>
-            <v-button mode="outline" color="purple" text="Button" :processing="true"></v-button>
-            <v-button mode="outline" color="gray" text="Disabled" :disabled="true"></v-button>
+            <v-button mode="outline" color="blue" label="Button"></v-button>
+            <v-button mode="outline" color="green" label="Button" icon="fas fa-home"></v-button>
+            <v-button mode="outline" color="red" label="Button" icon="fas fa-cog"></v-button>
+            <v-button mode="outline" color="orange" label="Button"></v-button>
+            <v-button mode="outline" color="purple" label="Button" :processing="true"></v-button>
+            <v-button mode="outline" color="gray" label="Disabled" :disabled="true"></v-button>
         </div>
 
     </div>

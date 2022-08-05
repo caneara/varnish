@@ -13,12 +13,12 @@
 
         <!-- Badges -->
         <div class="flex flex-col gap-y-2 ml-4">
-            <v-badge tooltip="Hello there!">Blue</v-badge>
-            <v-badge color="green">Green</v-badge>
-            <v-badge color="red" :uppercase="false">Red</v-badge>
-            <v-badge color="yellow">Yellow</v-badge>
-            <v-badge color="purple">Purple</v-badge>
-            <v-badge color="gray">Gray</v-badge>
+            <v-badge tooltip="Hello there!" value="Blue"></v-badge>
+            <v-badge color="green" value="Green"></v-badge>
+            <v-badge color="red" :uppercase="false" value="Red"></v-badge>
+            <v-badge color="yellow" value="Yellow"></v-badge>
+            <v-badge color="purple" value="Purple"></v-badge>
+            <v-badge color="gray" value="Gray"></v-badge>
         </div>
 
         <!-- Header -->
@@ -28,12 +28,12 @@
 
         <!-- Badges -->
         <div class="flex flex-col gap-y-2 ml-4">
-            <v-badge mode="transparent" color="blue">Blue</v-badge>
-            <v-badge mode="transparent" color="green">Green</v-badge>
-            <v-badge mode="transparent" color="red" :uppercase="false">Red</v-badge>
-            <v-badge mode="transparent" color="yellow">Yellow</v-badge>
-            <v-badge mode="transparent" color="purple">Purple</v-badge>
-            <v-badge mode="transparent" color="gray">Gray</v-badge>
+            <v-badge mode="transparent" color="blue" value="Blue"></v-badge>
+            <v-badge mode="transparent" color="green" value="Green"></v-badge>
+            <v-badge mode="transparent" color="red" :uppercase="false" value="Red"></v-badge>
+            <v-badge mode="transparent" color="yellow" value="Yellow"></v-badge>
+            <v-badge mode="transparent" color="purple" value="Purple"></v-badge>
+            <v-badge mode="transparent" color="gray" value="Gray"></v-badge>
         </div>
 
         <!-- No Content -->

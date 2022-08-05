@@ -6,16 +6,16 @@
         <!-- Icon -->
         <i :class="icon"
            v-if="! filled && ! focus && icon"
-           class="icon fa-fw text-14px text-gray-500/[.60] dark:text-gray-400/[.60] mr-2">
+           class="varnish-label-icon fa-fw text-14px text-gray-500/[.60] dark:text-gray-400/[.60] mr-2">
         </i>
 
-        <!-- Text -->
-        <span class="text">
-            {{ text }}
+        <!-- Value -->
+        <span class="varnish-label-value">
+            {{ value }}
         </span>
 
         <!-- Optional -->
-        <v-optional :text="optionalText"
+        <v-optional :value="optionalText"
                     class="relative top-[1px] ml-3"
                     v-if="optional && ! filled && ! focus">
         </v-optional>
@@ -41,8 +41,8 @@
          *
          */
         data() { return {
-            small : 'text-[12px] pr-3 pt-[10px] pb-[5px]',
             large : 'text-[16px] pr-4 pt-[18px]',
+            small : 'text-[12px] pr-3 pt-[10px] pb-[5px]',
         }},
 
         /**
@@ -50,12 +50,12 @@
          *
          */
         props : {
-            'icon'         : { type : String,  default : 'fas fa-terminal' },
-            'text'         : { type : String,  default : 'Label' },
-            'focus'        : { type : Boolean, default : false },
             'filled'       : { type : Boolean, default : false },
+            'focus'        : { type : Boolean, default : false },
+            'icon'         : { type : String,  default : 'fas fa-terminal' },
             'optional'     : { type : Boolean, default : false },
             'optionalText' : { type : String,  default : 'Optional' },
+            'value'        : { type : String,  default : 'Label' },
         },
     }
 </script>

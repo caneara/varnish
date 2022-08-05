@@ -24,12 +24,12 @@ export default
      *
      */
     props : {
-        'id'           : { type : String,                    default : '' },
-        'icon'         : { type : String,                    default : '' },
+        'autocomplete' : { type : String,                    default : 'off' },
         'error'        : { type : String,                    default : '' },
+        'icon'         : { type : String,                    default : '' },
+        'id'           : { type : String,                    default : '' },
         'label'        : { type : String,                    default : 'Label' },
         'modelValue'   : { type : [String, Number, Boolean], default : '' },
-        'autocomplete' : { type : String,                    default : 'off' },
     },
 
     /**

@@ -7,17 +7,17 @@
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"
-             class="label text-[14px] whitespace-nowrap select-none px-5">
+             class="varnish-button-label text-[14px] whitespace-nowrap select-none px-5">
 
             <!-- Icon -->
             <i v-if="icon"
                :class="icon"
-               class="icon mr-3 opacity-50">
+               class="varnish-button-label varnish-button-icon mr-3 opacity-50">
             </i>
 
             <!-- Text -->
-            <span class="text font-semibold uppercase">
-                {{ text }}
+            <span class="varnish-button-label varnish-button-text font-semibold uppercase">
+                {{ label }}
             </span>
 
         </div>
@@ -25,7 +25,7 @@
         <!-- Animation -->
         <div style="animation: varnish-button-spin 750ms infinite linear"
              :class="[processing ? '' : 'hidden', modes[mode][color].spinner]"
-             class="spinner h-[15px] w-[15px] rounded-full border-2 border-r-transparent border-t-transparent">
+             class="varnish-button-spinner h-[15px] w-[15px] rounded-full border-2 border-r-transparent border-t-transparent">
         </div>
 
     </button>
@@ -39,8 +39,18 @@
 </style>
 
 <script>
+    import Foundation from '../mixins/Foundation';
+
     export default
     {
+        /**
+         * Define the mixins.
+         *
+         */
+        mixins : [
+            Foundation,
+        ],
+
         /**
          * Define the data model.
          *
@@ -79,12 +89,9 @@
          *
          */
         props : {
-            'id'         : { type : String,  default : '' },
-            'icon'       : { type : String,  default : '' },
-            'mode'       : { type : String,  default : 'opaque' },
-            'text'       : { type : String,  default : 'Button' },
             'color'      : { type : String,  default : 'blue' },
             'disabled'   : { type : Boolean, default : false },
+            'mode'       : { type : String,  default : 'opaque' },
             'processing' : { type : Boolean, default : false },
         },
 
@@ -94,15 +101,6 @@
          */
         computed :
         {
-            /**
-             * Create a unique identifier for the component.
-             *
-             */
-            name()
-            {
-                return this.id ? this.id : `id-${parseInt(window.performance.now())}`;
-            },
-
             /**
              * Determine the appropriate styles for the component.
              *

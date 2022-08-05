@@ -1,14 +1,14 @@
 <template>
     <div :title="tooltip"
-         v-if="$slots.default"
+         v-if="filled(value)"
          class="varnish-badge varnish-font">
 
         <!-- Content -->
         <div :class="[modes[mode][color], uppercase ? 'uppercase' : '']"
-             class="badge-content inline-block rounded-full font-[630] text-[12px] select-none whitespace-nowrap px-[10px] py-[4.5px] pb-1">
+             class="varnish-badge-content inline-block rounded-full font-[630] text-[12px] select-none whitespace-nowrap px-[10px] py-[4.5px] pb-1">
 
-            <!-- Slot -->
-            <slot></slot>
+            <!-- Text -->
+            {{ value }}
 
         </div>
 
@@ -59,10 +59,11 @@
          *
          */
         props : {
-            'mode'      : { type : String,  default : 'opaque' },
             'color'     : { type : String,  default : 'blue' },
+            'mode'      : { type : String,  default : 'opaque' },
             'tooltip'   : { type : String,  default : '' },
             'uppercase' : { type : Boolean, default : true },
+            'value'     : { type : String,  default : '' },
         },
     }
 </script>

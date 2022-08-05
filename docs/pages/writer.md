@@ -307,32 +307,32 @@ The component's user interface uses a neutral style that should be suitable for 
 
 ```css
 .varnish-writer { }
-.varnish-writer.fullscreen { }
-.varnish-writer .toolbar { }
-.varnish-writer .toolbar .toolbar-button { }
-.varnish-writer .toolbar .toolbar-divider { }
-.varnish-writer .toolbar .toolbar-left { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-undo { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-redo { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-headings { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-bold { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-italic { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-list { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-blockquote { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-code { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-link { }
-.varnish-writer .toolbar .toolbar-left .toolbar-button-upload-image { }
-.varnish-writer .toolbar .toolbar-right { }
-.varnish-writer .toolbar .toolbar-right .toolbar-button-edit { }
-.varnish-writer .toolbar .toolbar-right .toolbar-button-preview { }
-.varnish-writer .toolbar .toolbar-right .toolbar-button-fullscreen { }
-.varnish-writer .toolbar .toolbar-right .toolbar-button-compact { }
-.varnish-writer .content { }
-.varnish-writer .content .editor { }
-.varnish-writer .content .preview { }
-.varnish-writer .content .progress { }
-.varnish-writer .content .progress .position { }
-.varnish-writer .content .error { }
+.varnish-writer.varnish-fullscreen { }
+.varnish-writer .varnish-toolbar { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-button { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-divider { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-undo { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-redo { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-headings { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-bold { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-italic { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-list { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-blockquote { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-code { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-link { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-left .varnish-toolbar-button-upload-image { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-right { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-edit { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-preview { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-fullscreen { }
+.varnish-writer .varnish-toolbar .varnish-toolbar-right .varnish-toolbar-button-compact { }
+.varnish-writer .varnish-content { }
+.varnish-writer .varnish-content .varnish-editor { }
+.varnish-writer .varnish-content .varnish-preview { }
+.varnish-writer .varnish-content .varnish-progress { }
+.varnish-writer .varnish-content .varnish-progress .varnish-position { }
+.varnish-writer .varnish-content .varnish-error { }
 ```
 
 ### Rendered HTML
@@ -342,13 +342,13 @@ In order to respect your application's styling, the component does not apply any
 If you want to create custom styling for the rendered HTML elements, then you can do so by using the following root CSS selector:
 
 ```css
-.varnish-writer .content .preview
+.varnish-writer .varnish-content .varnish-preview
 ```
 
 For example, to style a rendered `h1` tag, you'd write the following CSS:
 
 ```css
-.varnish-writer .content .preview h1 { color: red }
+.varnish-writer .varnish-content .varnish-preview h1 { color: red }
 ```
 
 While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/caneara/varnish/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.

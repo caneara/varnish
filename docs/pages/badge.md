@@ -7,7 +7,6 @@ A simple badge or pill component, usually used to indicate status.
 * Available in six colors.
 * Uppercase or mixed-case content.
 * Opaque and transparent backgrounds.
-* Content is set via the default slot.
 * Allows for setting tooltips to display on hover.
 
 ## Demo
@@ -22,12 +21,12 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="border border-dashed border-gray-300 dark:border-gray-600 flex justify-center rounded-md gap-x-3 p-6 mt-8">
     <ClientOnly>
-        <BadgeComponent color="blue">Blue</BadgeComponent>
-        <BadgeComponent color="green">Green</BadgeComponent>
-        <BadgeComponent color="red">Red</BadgeComponent>
-        <BadgeComponent color="yellow">Yellow</BadgeComponent>
-        <BadgeComponent color="purple">Purple</BadgeComponent>
-        <BadgeComponent color="gray">Gray</BadgeComponent>
+        <BadgeComponent color="blue" value="Blue"></BadgeComponent>
+        <BadgeComponent color="green" value="Green"></BadgeComponent>
+        <BadgeComponent color="red" value="Red"></BadgeComponent>
+        <BadgeComponent color="yellow" value="Yellow"></BadgeComponent>
+        <BadgeComponent color="purple" value="Purple"></BadgeComponent>
+        <BadgeComponent color="gray" value="Gray"></BadgeComponent>
     </ClientOnly>
 </div>
 
@@ -37,9 +36,7 @@ Begin by importing the component and registering it like so:
 
 ```html
 <template>
-    <v-badge>
-        I'm a blue badge
-    </v-badge>
+    <v-badge></v-badge>
 </template>
 
 <script>
@@ -106,16 +103,27 @@ Toggle whether the content of the badge should be mixed-case or uppercase.
 <v-badge :uppercase="false"></v-badge>
 ```
 
+### value
+
+- Type: `String`
+- Default: `''`
+
+The content that should be displayed by the component.
+
+```html
+<v-badge value="1000"></v-badge>
+```
+
 ## Custom styling
 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:
 
 ```css
-.varnish-badge .badge-content { }
+.varnish-badge .varnish-badge-content { }
 ```
 
 Here's an example that changes the text size to 30px:
 
 ```css
-.varnish-badge .badge-content { @apply text-[30px] }
+.varnish-badge .varnish-badge-content { @apply text-[30px] }
 ```

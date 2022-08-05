@@ -14,7 +14,7 @@
         <!-- No Icon, Required -->
         <div class="relative min-h-[50px]">
             <v-label icon=""
-                     text="First name">
+                     value="First name">
             </v-label>
         </div>
 
@@ -25,7 +25,7 @@
 
         <!-- Icon, Required -->
         <div class="relative min-h-[50px]">
-            <v-label text="First name"
+            <v-label value="First name"
                      icon="fas fa-user">
             </v-label>
         </div>
@@ -39,7 +39,7 @@
         <div class="relative min-h-[50px]">
             <v-label icon=""
                      :optional="true"
-                     text="First name">
+                     value="First name">
             </v-label>
         </div>
 
@@ -51,7 +51,7 @@
         <!-- Icon, Optional -->
         <div class="relative min-h-[50px]">
             <v-label :optional="true"
-                     text="First name"
+                     value="First name"
                      icon="fas fa-user">
             </v-label>
         </div>
@@ -64,7 +64,7 @@
         <!-- Icon, Optional, Custom Text -->
         <div class="relative min-h-[50px]">
             <v-label :optional="true"
-                     text="First name"
+                     value="First name"
                      icon="fas fa-user"
                      optionalText="Not Required">
             </v-label>
@@ -79,7 +79,7 @@
         <div class="relative min-h-[50px]">
             <v-label :focus="true"
                      :optional="true"
-                     text="First name"
+                     value="First name"
                      icon="fas fa-user">
             </v-label>
         </div>
@@ -93,7 +93,7 @@
         <div class="relative min-h-[50px]">
             <v-label :filled="true"
                      :optional="true"
-                     text="First name"
+                     value="First name"
                      icon="fas fa-user">
             </v-label>
         </div>

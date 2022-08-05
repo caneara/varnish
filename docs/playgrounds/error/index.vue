@@ -8,7 +8,7 @@
 
         <!-- First Error -->
         <v-error :scrollDelay="1000"
-                 :text="first_error"
+                 :value="first_error"
                  :beforeScroll="beforeScroll()">
         </v-error>
 
@@ -19,7 +19,7 @@
         </div>
 
         <!-- Second Error -->
-        <v-error :text="second_error"></v-error>
+        <v-error :value="second_error"></v-error>
 
         <!-- Gap -->
         <div class="gap bg-green-700/[.30] min-h-[1500px] p-6">
@@ -28,7 +28,7 @@
         </div>
 
         <!-- Third Error -->
-        <v-error :text="third_error"></v-error>
+        <v-error :value="third_error"></v-error>
 
         <!-- Button -->
         <button @click="scrollToFirstError()"

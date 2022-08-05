@@ -7,7 +7,6 @@ A simple notice or alert component, usually used to advise the user of something
 * Available in four colors.
 * Tab or icon-based format.
 * Opaque and transparent backgrounds.
-* Content is set via the default slot.
 
 ## Demo
 
@@ -21,14 +20,14 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="flex flex-col gap-y-6 mt-8">
     <ClientOnly>
-        <NoticeComponent type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent type="danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent format="icon" type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent format="icon" type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent format="icon" type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
-        <NoticeComponent format="icon" type="danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent type="danger" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent format="icon" type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent format="icon" type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent format="icon" type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent format="icon" type="danger" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
     </ClientOnly>
 </div>
 
@@ -38,9 +37,7 @@ Begin by importing the component and registering it like so:
 
 ```html
 <template>
-    <v-notice>
-        I'm an informational message
-    </v-notice>
+    <v-notice></v-notice>
 </template>
 
 <script>
@@ -99,23 +96,34 @@ See the [demo](#demo) for the color schemes associated with each type.
 <v-notice type="success"></v-notice>
 ```
 
+### value
+
+- Type: `String`
+- Default: `''`
+
+Specify the text to display within the component.
+
+```html
+<v-notice value="Welcome to your dashboard"></v-notice>
+```
+
 ## Custom styling
 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selectors:
 
 ```css
-.varnish-notice .notice-container { }
-.varnish-notice .notice-container.notice-info { }
-.varnish-notice .notice-container.notice-success { }
-.varnish-notice .notice-container.notice-warning { }
-.varnish-notice .notice-container.notice-danger { }
-.varnish-notice .notice-container .notice-tab { }
-.varnish-notice .notice-container .notice-content { }
-.varnish-notice .notice-container .notice-content .notice-icon { }
+.varnish-notice .varnish-notice-container { }
+.varnish-notice .varnish-notice-container.varnish-notice-info { }
+.varnish-notice .varnish-notice-container.varnish-notice-success { }
+.varnish-notice .varnish-notice-container.varnish-notice-warning { }
+.varnish-notice .varnish-notice-container.varnish-notice-danger { }
+.varnish-notice .varnish-notice-container .varnish-notice-tab { }
+.varnish-notice .varnish-notice-container .varnish-notice-content { }
+.varnish-notice .varnish-notice-container .varnish-notice-content .varnish-notice-icon { }
 ```
 
 Here's an example that changes the tab text size to 30px:
 
 ```css
-.varnish-notice .notice-container .notice-tab { @apply text-[30px] }
+.varnish-notice .varnish-notice-container .varnish-notice-tab { @apply text-[30px] }
 ```

@@ -1,37 +1,37 @@
 <!-- Template -->
 <template>
     <div class="varnish-writer varnish-font flex flex-col"
-         :class="[fullscreen ? 'fullscreen fixed inset-0 z-[1000]' : '']">
+         :class="[fullscreen ? 'varnish-fullscreen fixed inset-0 z-[1000]' : '']">
 
         <!-- Toolbar -->
         <div v-if="! readingMode"
              :class="[editing ? 'justify-between' : 'justify-end', fullscreen ? 'border-t-0' : 'rounded-t']"
-             class="toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex flex-wrap px-2">
+             class="varnish-toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex flex-wrap px-2">
 
             <!-- Left Side -->
-            <div class="toolbar-left flex flex-wrap justify-start"
+            <div class="varnish-toolbar-left flex flex-wrap justify-start"
                  :class="editing ? '' : 'hidden md:flex invisible pointer-events-none'">
 
                 <!-- Undo -->
                 <div title="Undo"
                      @click="history.hasUndo() ? history.undo() : null"
-                     class="fa-solid fa-rotate-left toolbar-button toolbar-button-undo flex items-center p-3 cursor-pointer transition duration-300"
-                     :class="history.hasUndo() ? 'text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white' : 'text-gray-300 dark:text-gray-500'">
+                     :class="history.hasUndo() ? 'text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white' : 'text-gray-300 dark:text-gray-500'"
+                     class="fa-solid fa-rotate-left varnish-toolbar-button varnish-toolbar-button-undo flex items-center p-3 cursor-pointer transition duration-300">
                 </div>
 
                 <!-- Redo -->
                 <div title="Redo"
                      @click="history.hasRedo() ? history.red() : null"
-                     class="fa-solid fa-rotate-right toolbar-button toolbar-button-redo flex items-center p-3 cursor-pointer transition duration-300"
-                     :class="history.hasRedo() ? 'text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white' : 'text-gray-300 dark:text-gray-500'">
+                     :class="history.hasRedo() ? 'text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white' : 'text-gray-300 dark:text-gray-500'"
+                     class="fa-solid fa-rotate-right varnish-toolbar-button varnish-toolbar-button-redo flex items-center p-3 cursor-pointer transition duration-300">
                 </div>
 
                 <!-- Divider -->
-                <div class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
+                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
 
                 <!-- Headings -->
                 <div title="Headings"
-                     class="toolbar-button toolbar-button-headings flex items-center p-3 relative">
+                     class="varnish-toolbar-button varnish-toolbar-button-headings flex items-center p-3 relative">
 
                     <!-- Icon -->
                     <div title="Headings"
@@ -112,40 +112,40 @@
                 <!-- Bold -->
                 <div title="Bold"
                      @click="wrapText('**')"
-                     class="fa-solid fa-bold toolbar-button toolbar-button-bold flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
+                     class="fa-solid fa-bold varnish-toolbar-button varnish-toolbar-button-bold flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
                 </div>
 
                 <!-- Italic -->
                 <div title="Italic"
                      @click="wrapText('*')"
-                     class="fa-solid fa-italic toolbar-button toolbar-button-italic flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
+                     class="fa-solid fa-italic varnish-toolbar-button varnish-toolbar-button-italic flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
                 </div>
 
                 <!-- List -->
                 <div title="List"
                      @click="prependText('\n\n* ')"
-                     class="fa-solid fa-list toolbar-button toolbar-button-list flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
+                     class="fa-solid fa-list varnish-toolbar-button varnish-toolbar-button-list flex items-center p-3 cursor-pointer transition duration-300 text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
                 </div>
 
                 <!-- Divider -->
-                <div class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
+                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
 
                 <!-- Blockquote -->
                 <div title="Blockquote"
                      @click="prependText('\n\n> ')"
-                     class="fa-solid fa-quote-left toolbar-button toolbar-button-blockquote flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
+                     class="fa-solid fa-quote-left varnish-toolbar-button varnish-toolbar-button-blockquote flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-sky-700 dark:text-gray-400 dark:hover:text-white">
                 </div>
 
                 <!-- Code -->
                 <div title="Code"
                      @click="insertCodeBlock()"
-                     class="fa-solid fa-code toolbar-button toolbar-button-code flex items-center p-3 cursor-pointer transition duration-300 text-emerald-600 hover:text-emerald-700 dark:hover:text-white">
+                     class="fa-solid fa-code varnish-toolbar-button varnish-toolbar-button-code flex items-center p-3 cursor-pointer transition duration-300 text-emerald-600 hover:text-emerald-700 dark:hover:text-white">
                 </div>
 
                 <!-- Link -->
                 <div title="Insert Link"
                      @click="insertLink()"
-                     class="fa-solid fa-link toolbar-button toolbar-button-link flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-700 dark:text-sky-500/[.80] dark:hover:text-white">
+                     class="fa-solid fa-link varnish-toolbar-button varnish-toolbar-button-link flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-700 dark:text-sky-500/[.80] dark:hover:text-white">
                 </div>
 
                 <!-- Image -->
@@ -153,45 +153,45 @@
                      title="Upload Image"
                      :class="step ? 'opacity-20 pointer-events-none' : ''"
                      @click="! step ? $emit('upload', (url) => uploaded(url)) : null"
-                     class="fa-solid fa-image toolbar-button toolbar-button-upload-image flex items-center p-3 cursor-pointer transition duration-300 text-purple-700/[.60] hover:text-purple-800 dark:text-purple-400/[.80] dark:hover:text-white">
+                     class="fa-solid fa-image varnish-toolbar-button varnish-toolbar-button-upload-image flex items-center p-3 cursor-pointer transition duration-300 text-purple-700/[.60] hover:text-purple-800 dark:text-purple-400/[.80] dark:hover:text-white">
                 </div>
 
             </div>
 
             <!-- Right Side -->
-            <div class="toolbar-right flex justify-end">
+            <div class="varnish-toolbar-right flex justify-end">
 
                 <!-- Divider -->
                 <div v-if="editing"
-                     class="toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3">
+                     class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3">
                 </div>
 
                 <!-- Edit -->
                 <div title="Edit"
                      v-if="! editing"
                      @click="editing = true"
-                     class="fa-solid fa-edit toolbar-button toolbar-button-edit flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-800 dark:hover:text-white">
+                     class="fa-solid fa-edit varnish-toolbar-button varnish-toolbar-button-edit flex items-center p-3 cursor-pointer transition duration-300 text-sky-600 hover:text-sky-800 dark:hover:text-white">
                 </div>
 
                 <!-- Preview -->
                 <div v-if="editing"
                      title="Preview HTML"
                      @click="editing = false"
-                     class="fa-solid fa-eye toolbar-button toolbar-button-preview flex items-center p-3 cursor-pointer transition duration-300 text-emerald-600 hover:text-emerald-800 dark:hover:text-white">
+                     class="fa-solid fa-eye varnish-toolbar-button varnish-toolbar-button-preview flex items-center p-3 cursor-pointer transition duration-300 text-emerald-600 hover:text-emerald-800 dark:hover:text-white">
                 </div>
 
                 <!-- Fullscreen -->
                 <div title="Fullscreen"
                      v-if="! fullscreen"
                      @click="fullScreenMode()"
-                     class="fa-solid fa-up-right-and-down-left-from-center toolbar-button toolbar-button-fullscreen flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-gray-800 dark:hover:text-white">
+                     class="fa-solid fa-up-right-and-down-left-from-center varnish-toolbar-button varnish-toolbar-button-fullscreen flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-gray-800 dark:hover:text-white">
                 </div>
 
                 <!-- Compact -->
                 <div v-if="fullscreen"
                      @click="compactMode()"
                      title="Exit Fullscreen"
-                     class="fa-solid fa-down-left-and-up-right-to-center toolbar-button toolbar-button-fullscreen flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-gray-800 dark:hover:text-white">
+                     class="fa-solid fa-down-left-and-up-right-to-center varnish-toolbar-button varnish-toolbar-button-fullscreen flex items-center p-3 cursor-pointer transition duration-300 text-gray-400 hover:text-gray-800 dark:hover:text-white">
                 </div>
 
             </div>
@@ -200,25 +200,27 @@
 
         <!-- Content -->
         <div :style="`min-height: ${height}px`"
-             class="content flex flex-1 relative bg-white dark:bg-gray-800"
+             class="varnish-content flex flex-1 relative bg-white dark:bg-gray-800"
              :class="[fullscreen ? '' : 'rounded-b', readingMode ? '' : 'border border-gray-300 border-t-0 dark:border-none']">
 
             <!-- Progress Bar -->
             <div ref="progress"
                  v-show="step !== 0"
-                 class="progress bg-gray-200 h-1 w-full absolute -top-[1px] left-0 right-0 z-1 overflow-hidden">
+                 class="varnish-progress bg-gray-200 h-1 w-full absolute -top-[1px] left-0 right-0 z-1 overflow-hidden">
 
                 <!-- Position -->
                 <div ref="position"
                      :style="`width: ${step}%`"
-                     class="position bg-teal-600 h-1 absolute top-0 left-0 transition-all duration-200">
+                     class="varnish-position bg-teal-600 h-1 absolute top-0 left-0 transition-all duration-200">
                 </div>
 
             </div>
 
             <!-- Editor -->
-            <textarea ref="editor"
+            <textarea :dusk="name"
+                      ref="editor"
                       v-show="editing"
+                      :id="`id-${name}`"
                       autocomplete="off"
                       :value="modelValue"
                       v-if="! readingMode"
@@ -227,14 +229,14 @@
                       @input="change($event.target.value)"
                       @keydown="interceptKeystroke($event)"
                       :class="fullscreen ? '' : 'rounded-b'"
-                      class="editor appearance-none outline-none focus:outline-none active:outline-none bg-inherit w-full font-mono text-gray-900 dark:text-gray-400 leading-normal resize-none p-6">
+                      class="varnish-editor appearance-none outline-none focus:outline-none active:outline-none bg-inherit w-full font-mono text-gray-900 dark:text-gray-400 leading-normal resize-none p-6">
             </textarea>
 
             <!-- Preview -->
             <div ref="preview"
                  v-show="! editing || readingMode"
                  :class="readingMode ? '' : 'p-6'"
-                 class="preview overflow-auto rounded-b">
+                 class="varnish-preview overflow-auto rounded-b">
 
                 <!-- Slot -->
 

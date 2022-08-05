@@ -23,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <div class="border border-dashed border-gray-300 dark:border-gray-600 flex justify-center rounded-md p-3 mt-8">
     <div class="relative min-h-[50px] min-w-[210px]">
         <ClientOnly>
-            <LabelComponent text="Feedback"
+            <LabelComponent value="Feedback"
                             :optional="true">
             </LabelComponent>
         </ClientOnly>
@@ -36,7 +36,7 @@ Begin by importing the component and registering it like so:
 
 ```html
 <template>
-    <v-label text="Label text"></v-label>
+    <v-label></v-label>
 </template>
 
 <script>
@@ -128,7 +128,7 @@ This property is only relevant when `optional` is set to `true`.
 <v-label optionalText="Not Required"></v-label>
 ```
 
-### text
+### value
 
 - Type: `String`
 - Default: `'Label'`
@@ -136,7 +136,7 @@ This property is only relevant when `optional` is set to `true`.
 Specify the text to display within the component.
 
 ```html
-<v-label text="First name"></v-label>
+<v-label value="First name"></v-label>
 ```
 
 ## Custom styling
@@ -145,13 +145,12 @@ If you want to override any of the component's default styling, then you can do 
 
 ```css
 .varnish-label { }
-.varnish-label .icon { }
-.varnish-label .text { }
-.varnish-label .varnish-optional { }
+.varnish-label .varnish-label-icon { }
+.varnish-label .varnish-label-value { }
 ```
 
 Here's an example that changes the icon size to 30px:
 
 ```css
-.varnish-label .icon { @apply text-[30px] }
+.varnish-label .varnish-label-icon { @apply text-[30px] }
 ```

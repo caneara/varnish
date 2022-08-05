@@ -14,15 +14,19 @@ let sidebar = [
             { text : 'Shared API',   link : '/pages/shared-api' },
         ],
     }, {
-        text  : 'Components',
+        text  : 'Main Components',
         items : [
             { text : 'Badge',    link : '/pages/badge' },
             { text : 'Button',   link : '/pages/button' },
+            { text : 'Notice',   link : '/pages/notice' },
+            { text : 'Writer',   link : '/pages/writer' },
+        ],
+    }, {
+        text  : 'Sub Components',
+        items : [
             { text : 'Error',    link : '/pages/error' },
             { text : 'Label',    link : '/pages/label' },
-            { text : 'Notice',   link : '/pages/notice' },
             { text : 'Optional', link : '/pages/optional' },
-            { text : 'Writer',   link : '/pages/writer' },
         ],
     }, {
         text  : 'Products',

@@ -21,11 +21,11 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex flex-wrap justify-center gap-x-3 rounded-md p-6 mt-8">
     <ClientOnly>
-        <ButtonComponent text="Submit" color="blue" icon="fas fa-home"></ButtonComponent>
-        <ButtonComponent text="Submit" color="green"></ButtonComponent>
-        <ButtonComponent text="Submit" color="red" :processing="true"></ButtonComponent>
-        <ButtonComponent text="Submit" color="orange" mode="outline"></ButtonComponent>
-        <ButtonComponent text="Submit" color="purple" mode="outline" :processing="true"></ButtonComponent>
+        <ButtonComponent label="Submit" color="blue" icon="fas fa-home"></ButtonComponent>
+        <ButtonComponent label="Submit" color="green"></ButtonComponent>
+        <ButtonComponent label="Submit" color="red" :processing="true"></ButtonComponent>
+        <ButtonComponent label="Submit" color="orange" mode="outline"></ButtonComponent>
+        <ButtonComponent label="Submit" color="purple" mode="outline" :processing="true"></ButtonComponent>
     </ClientOnly>
 </div>
 
@@ -49,6 +49,10 @@ Begin by importing the component and registering it like so:
     }
 </script>
 ```
+
+## Shared API
+
+This component makes use of one or more parts of the [shared API](/pages/shared-api).
 
 ## Properties
 
@@ -77,32 +81,6 @@ Specify whether the component should be enabled or disabled.
 <v-button :disabled="true"></v-button>
 ```
 
-### id
-
-- Type: `String`
-- Default: `''`
-
-The unique identifier used by the component.
-
-If left blank, `window.performance.now` is used to generate a unique identifier using the format `id-{number}`.
-
-```html
-<v-button id="first_name"></v-button>
-```
-
-### icon
-
-- Type: `String`
-- Default: `''`
-
-Specify the FontAwesome icon to display alongside the component's text.
-
-When set to `''`, the icon will be hidden.
-
-```html
-<v-button icon="fas fa-home"></v-button>
-```
-
 ### mode
 
 - Type: `Enum - String`
@@ -128,17 +106,6 @@ Specify whether the component should indicate that a task is running and that th
 <v-button :processing="true"></v-button>
 ```
 
-### text
-
-- Type: `String`
-- Default: `''`
-
-Specify the text to display within the component.
-
-```html
-<v-button text="Click me!"></v-button>
-```
-
 ## Events
 
 The following `events` are exposed by the component.
@@ -159,14 +126,14 @@ If you want to override any of the component's default styling, then you can do 
 
 ```css
 .varnish-button { }
-.varnish-button .label { }
-.varnish-button .label .icon { }
-.varnish-button .label .text { }
-.varnish-button .spinner { }
+.varnish-button .varnish-button-label { }
+.varnish-button .varnish-button-label .varnish-button-icon { }
+.varnish-button .varnish-button-label .varnish-button-text { }
+.varnish-button .varnish-button-spinner { }
 ```
 
 Here's an example that changes the icon size to 30px:
 
 ```css
-.varnish-button .label .icon { @apply text-[30px] }
+.varnish-button .varnish-button-label .varnish-button-icon { @apply text-[30px] }
 ```

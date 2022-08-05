@@ -7,7 +7,7 @@
         </h1>
 
         <!-- Optional -->
-        <v-optional :text="text"></v-optional>
+        <v-optional :value="value"></v-optional>
 
     </div>
 </template>
@@ -23,7 +23,7 @@
 
         data() {
             return {
-                text : 'Field is not required',
+                value : 'Field is not required',
             }
         },
     }

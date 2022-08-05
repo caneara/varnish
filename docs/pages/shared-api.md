@@ -10,45 +10,6 @@ This shared API enables you to perform common tasks, such as setting a component
 
 The following `props` are exposed by the shared API.
 
-### id
-
-- Type: `String`
-- Default: `''`
-
-The identifier used by the component. If left blank, `window.performance.now` is used to generate a unique identifier using the format `id-{number}`.
-
-When the component serves as a wrapper for an `input` or other HTML element that could be used within a `form`, it will also be assigned to the `name` attribute.
-
-```html
-<v-component id="first_name"></v-component>
-```
-
-### label
-
-- Type: `String`
-- Default: `'Label'`
-
-The text used for the component's label.
-
-When left blank, any padding and spacing is removed.
-
-```html
-<v-component label="First name"></v-component>
-```
-
-### icon
-
-- Type: `String`
-- Default: `''`
-
-The FontAwesome icon to display within the component's label.
-
-When left blank, no icon is shown and any padding & spacing is removed.
-
-```html
-<v-component icon="fas fa-user"></v-component>
-```
-
 ### autocomplete
 
 - Type: `String`
@@ -73,6 +34,45 @@ When left blank, no message is shown and any padding & spacing is removed.
 
 ```html
 <v-component error="First name is required"></v-component>
+```
+
+### icon
+
+- Type: `String`
+- Default: `''`
+
+The FontAwesome icon to display within the component's label.
+
+When left blank, no icon is shown and any padding & spacing is removed.
+
+```html
+<v-component icon="fas fa-user"></v-component>
+```
+
+### id
+
+- Type: `String`
+- Default: `''`
+
+The identifier used by the component. If left blank, `window.performance.now` is used to generate a unique identifier using the format `id-{number}`.
+
+When the component serves as a wrapper for an `input` or other HTML element that could be used within a `form`, it will also be assigned to the `name` attribute.
+
+```html
+<v-component id="first_name"></v-component>
+```
+
+### label
+
+- Type: `String`
+- Default: `'Label'`
+
+The text used for the component's label.
+
+When left blank, any padding and spacing is removed.
+
+```html
+<v-component label="First name"></v-component>
 ```
 
 ### v-model

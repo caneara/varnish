@@ -49,7 +49,7 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
-### text
+### value
 
 - Type: `String`
 - Default: `'Optional'`
@@ -57,7 +57,7 @@ The following `props` are exposed by the component.
 The message that should be displayed.
 
 ```html
-<v-optional text="Not required"></v-optional>
+<v-optional value="Not required"></v-optional>
 ```
 
 ## Custom styling
