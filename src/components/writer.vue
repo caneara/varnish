@@ -234,7 +234,7 @@
             <div ref="preview"
                  v-show="! editing || readingMode"
                  :class="readingMode ? '' : 'p-6'"
-                 class="preview overflow-scroll rounded-b">
+                 class="preview overflow-auto rounded-b">
 
                 <!-- Slot -->
 
