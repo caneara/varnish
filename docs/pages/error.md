@@ -1,6 +1,8 @@
 # Error
 
-A simple error message component used to indicate the presence of a problem (usually in another component) e.g. after failing form validation.
+An error message component used to indicate the presence of a problem (usually in a parent component) e.g. after failing form validation.
+
+> This is a sub-component and is not really intended for direct use as-is. If you're only intending to use Varnish's 'full' components e.g. a textbox or dropdown, then you can skip this section. However, if you want to augment Varnish with your own components, then you can make use of it if you wish.
 
 ## Features
 
@@ -21,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex justify-center rounded-md p-6 mt-8">
     <ClientOnly>
-        <ErrorComponent message="This is a test error"></ErrorComponent>
+        <ErrorComponent text="This is a test error"></ErrorComponent>
     </ClientOnly>
 </div>
 
@@ -50,19 +52,6 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
-### message
-
-- Type: `String`
-- Default: `''`
-
-The error message that should be displayed.
-
-If it is set to a non-empty string, then the component will be visible. If it is set to either `''`, `null` or `undefined`, then it will automatically hide itself.
-
-```html
-<v-error message="Something went wrong..."></v-error>
-```
-
 ### beforeScroll
 
 - Type: `Function`
@@ -87,6 +76,19 @@ A common scenario where you might want to use this, is if the page takes time to
 
 ```html
 <v-error :scrollDelay="100"></v-error>
+```
+
+### text
+
+- Type: `String`
+- Default: `''`
+
+The error message that should be displayed.
+
+If it is set to a non-empty string, then the component will be visible. If it is set to either `''`, `null` or `undefined`, then it will automatically hide itself.
+
+```html
+<v-error text="Something went wrong..."></v-error>
 ```
 
 ## Automatic scrolling

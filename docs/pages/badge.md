@@ -4,8 +4,7 @@ A simple badge or pill component, usually used to indicate status.
 
 ## Features
 
-* Available in six default colors.
-* Custom colors via CSS classes.
+* Available in six colors.
 * Uppercase or mixed-case content.
 * Opaque and transparent backgrounds.
 * Content is set via the default slot.
@@ -67,8 +66,6 @@ The following `props` are exposed by the component.
 
 The color scheme that should be used.
 
-Has no effect when `scheme` is used.
-
 ```html
 <v-badge color="red"></v-badge>
 ```
@@ -81,28 +78,10 @@ Has no effect when `scheme` is used.
 
 Control whether the badge should display a background color.
 
-Has no effect when `scheme` is used.
-
 When set to `'opaque'`, the background is shown. When set to `'transparent'`, the background is hidden.
 
 ```html
 <v-badge mode="transparent"></v-badge>
-```
-
-### scheme
-
-- Type: `String`
-- Default: `''`
-
-The custom colors that should be used.
-
-Overrides the `mode` and `color` properties.
-
-You can use a custom CSS class, or you can use Tailwind CSS classes.
-
-```html
-<v-badge scheme="my-custom-badge-color"></v-badge>
-<v-badge scheme="bg-teal-500 text-teal-900"></v-badge>
 ```
 
 ### tooltip

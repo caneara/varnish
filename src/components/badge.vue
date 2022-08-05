@@ -4,7 +4,7 @@
          class="varnish-badge varnish-font">
 
         <!-- Content -->
-        <div :class="[filled(scheme) ? scheme : modes[mode][color], uppercase ? 'uppercase' : '']"
+        <div :class="[modes[mode][color], uppercase ? 'uppercase' : '']"
              class="badge-content inline-block rounded-full font-[630] text-[12px] select-none whitespace-nowrap px-[10px] py-[4.5px] pb-1">
 
             <!-- Slot -->
@@ -61,7 +61,6 @@
         props : {
             'mode'      : { type : String,  default : 'opaque' },
             'color'     : { type : String,  default : 'blue' },
-            'scheme'    : { type : String,  default : '' },
             'tooltip'   : { type : String,  default : '' },
             'uppercase' : { type : Boolean, default : true },
         },

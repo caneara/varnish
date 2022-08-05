@@ -17,7 +17,9 @@ let sidebar = [
         text  : 'Components',
         items : [
             { text : 'Badge',    link : '/pages/badge' },
+            { text : 'Button',   link : '/pages/button' },
             { text : 'Error',    link : '/pages/error' },
+            { text : 'Label',    link : '/pages/label' },
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Optional', link : '/pages/optional' },
             { text : 'Writer',   link : '/pages/writer' },

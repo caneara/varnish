@@ -1,6 +1,6 @@
 <template>
     <label v-html="content"
-           v-if="filled(message)"
+           v-if="filled(text)"
            class="varnish-error varnish-font block font-[650] text-[13px] text-red-700 dark:text-red-300 text-right uppercase my-2">
     </label>
 </template>
@@ -23,7 +23,7 @@
          *
          */
         props : {
-            'message'      : { type : String,   default : '' },
+            'text'         : { type : String,   default : '' },
             'scrollDelay'  : { type : Number,   default : 0 },
             'beforeScroll' : { type : Function, default : null },
         },
@@ -40,7 +40,7 @@
              */
             content()
             {
-                return this.message
+                return this.text
                            .replaceAll(/</g, '&lt;')
                            .replaceAll(/>/g, '&gt;')
                            .replaceAll("\n", '<br />');
@@ -54,10 +54,10 @@
         watch :
         {
             /**
-             * Watch the 'message' property.
+             * Watch the 'text' property.
              *
              */
-            message : function(current, previous)
+            text : function(current, previous)
             {
                 if (this.blank(current)) return;
 
@@ -72,7 +72,7 @@
 		methods :
         {
             /**
-             * Respond to the component's message being changed.
+             * Respond to the component's text being changed.
              *
              */
             handleRevisedContent()
