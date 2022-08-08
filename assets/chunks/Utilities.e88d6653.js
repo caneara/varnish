@@ -1,1 +1,0 @@
-var e={methods:{blank(t){return Array.isArray(t)?t.length===0:t instanceof Date?!1:typeof t=="object"&&t!==null?Object.keys(t).length===0&&Object.getOwnPropertyNames(t).length===0:["",null,void 0].includes(t)},filled(t){return!this.blank(t)}}};export{e as U};
