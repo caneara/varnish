@@ -226,9 +226,9 @@
                       v-if="! readingMode"
                       @click="hideOverlays()"
                       :placeholder="placeholder"
-                      @input="change($event.target.value)"
                       @keydown="interceptKeystroke($event)"
-                      :class="fullscreen ? '' : 'rounded-b'"
+                      @input="textChanged($event.target.value)"
+                      :class="fullscreen ? '' : 'rounded-b overflow-y-hidden'"
                       class="varnish-editor appearance-none outline-none focus:outline-none active:outline-none bg-inherit w-full font-mono text-gray-900 dark:text-gray-400 leading-normal resize-none p-6">
             </textarea>
 
@@ -625,6 +625,20 @@ export default
             this.$refs.editor.focus();
 
             setTimeout(() => this.$refs.editor.setSelectionRange(start, finish ?? start), 50);
+        },
+
+        /**
+         * Respond to an alteration of the editor's content.
+         *
+         */
+        textChanged(content)
+        {
+            this.change(content);
+
+            if (this.fullscreen) return;
+
+            this.$refs.editor.style.height = 'auto';
+            this.$refs.editor.style.height = `${this.$refs.editor.scrollHeight}px`;
         },
 
         /**
