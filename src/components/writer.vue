@@ -501,7 +501,7 @@ export default
             let selected = this.modelValue.substring(this.selection.start, this.selection.end);
 
             let link = prompt(this.linkText, '');
-            let text = this.filled(selected) ? null : prompt(this.displayText, '');
+            let text = this.blank(selected) ? prompt(this.displayText, '') : null;
 
             text ? this.prependText(`[${text}](${link})`) : this.wrapText(['[', `](${link})`]);
         },

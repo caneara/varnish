@@ -1,6 +1,6 @@
 <template>
     <div :title="tooltip"
-         v-if="filled(value)"
+         v-if="! blank(value)"
          class="varnish-badge varnish-font">
 
         <!-- Content -->

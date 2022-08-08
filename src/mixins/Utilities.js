@@ -7,6 +7,23 @@ export default
     methods :
     {
         /**
+         * Determine if an automated testing framework is running.
+         *
+         */
+        automated()
+        {
+            let platforms = ['cypress', 'dusk'];
+
+            for (const platform of platforms) {
+                if (document.body.classList.contains(platform)) {
+                    return true;
+                }
+            }
+
+            return false;
+        },
+
+        /**
          * Determine if the given value is empty.
          *
          */
@@ -26,15 +43,6 @@ export default
             }
 
             return ['', null, undefined].includes(value);
-        },
-
-        /**
-         * Determine if the given value is not empty.
-         *
-         */
-        filled(value)
-        {
-            return ! this.blank(value);
         },
     }
 }

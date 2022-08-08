@@ -9,9 +9,10 @@ let sidebar = [
     }, {
         text  : 'Getting Started',
         items : [
-            { text : 'Fonts',        link : '/pages/fonts' },
-            { text : 'Light / Dark', link : '/pages/dark-mode' },
-            { text : 'Shared API',   link : '/pages/shared-api' },
+            { text : 'Fonts',              link : '/pages/fonts' },
+            { text : 'Light / Dark',       link : '/pages/dark-mode' },
+            { text : 'Shared API',         link : '/pages/shared-api' },
+            { text : 'Browser Automation', link : '/pages/browser-automation' },
         ],
     }, {
         text  : 'Main Components',
@@ -25,6 +26,7 @@ let sidebar = [
     }, {
         text  : 'Sub Components',
         items : [
+            { text : 'Clear',    link : '/pages/clear' },
             { text : 'Error',    link : '/pages/error' },
             { text : 'Label',    link : '/pages/label' },
             { text : 'Optional', link : '/pages/optional' },
