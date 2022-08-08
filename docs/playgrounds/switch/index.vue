@@ -3,25 +3,25 @@
 
         <!-- Title -->
         <h1 class="text-[32px] font-semibold tracking-[-0.7px] mb-12">
-            CheckBox - Playground
+            Switch - Playground
         </h1>
 
-        <!-- CheckBoxes -->
+        <!-- Switches -->
         <div class="flex flex-col gap-y-6 max-w-[150px]">
-            <v-checkbox label="On" v-model="first"></v-checkbox>
-            <v-checkbox label="Off" v-model="second"></v-checkbox>
+            <v-switch label="On" v-model="first"></v-switch>
+            <v-switch label="Off" v-model="second"></v-switch>
         </div>
 
     </div>
 </template>
 
 <script>
-    import CheckBoxComponent from '../../../src/components/checkbox.vue';
+    import SwitchComponent from '../../../src/components/switch.vue';
 
     export default
     {
         components : {
-            'v-checkbox' : CheckBoxComponent,
+            'v-switch' : SwitchComponent,
         },
 
         /**

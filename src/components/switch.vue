@@ -1,5 +1,5 @@
 <template>
-    <div class="varnish-checkbox varnish-font">
+    <div class="varnish-switch varnish-font">
 
         <!-- Container -->
         <div class="varnish-container flex justify-between items-center">
