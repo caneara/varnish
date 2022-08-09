@@ -7,9 +7,9 @@ A minimal, Markdown-based text editor with HTML rendering, fullscreen-mode and c
 * HTML rendering of Markdown (via [markdown-it](https://github.com/markdown-it/markdown-it))
 * Code block syntax highlighting (via [Highlight.js](https://highlightjs.org))
 * Undo / redo support (via [Arthur Clemens](https://github.com/ArthurClemens/Javascript-Undo-Manager))
-* Interactive toolbar
-* Image uploading
-* Fullscreen-mode
+* Interactive toolbar and keyboard shortcuts
+* Easy mechanism to handle image uploading
+* Fullscreen zen-like writing experience
 
 ## Demo
 
