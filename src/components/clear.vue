@@ -2,7 +2,7 @@
     <div v-if="! automated()"
          style="transition: all 0.4s ease, background-color 0s"
          :class="(focus && filled) || (hover && filled) ? 'opacity-100 z-[2]' : 'opacity-0 pointer-events-none'"
-         class="varnish-clear varnish-font w-[50px] h-[50px] flex justify-center items-center absolute top-0 right-0 rounded-r">
+         class="varnish-clear varnish-font w-[50px] h-[51px] flex justify-center items-center absolute top-0 right-0 rounded-r">
 
         <!-- Icon -->
         <i title="Clear this field"
