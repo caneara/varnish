@@ -7,6 +7,7 @@ A simple notice or alert component, usually used to advise the user of something
 * Available in four colors.
 * Tab or icon-based format.
 * Opaque and transparent backgrounds.
+* Optionally dismissable (with browser persistence)
 
 ## Demo
 
@@ -56,6 +57,21 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
+### dismiss
+
+- Type: `Boolean`
+- Default: `false`
+
+Toggle whether the user is allowed to hide the component.
+
+When a user dismisses a component instance, its 'dismissed' status is saved within the browser's `localStorage`.
+
+To prevent collisions, you must assign a unique [id](#id) to the component.
+
+```html
+<v-notice :dismiss="true"></v-notice>
+```
+
 ### format
 
 - Type: `Enum - String`
@@ -66,6 +82,19 @@ Control whether the notice should use tabs or icons.
 
 ```html
 <v-notice format="icon"></v-notice>
+```
+
+### id
+
+- Type: `String`
+- Default: `''`
+
+The unique identifier used by the component.
+
+When enabling [dismiss](#dismiss), this property must be set. Failure to do so, may lead to collisions within the browser's `localStorage`.
+
+```html
+<v-notice id="first_name"></v-notice>
 ```
 
 ### mode

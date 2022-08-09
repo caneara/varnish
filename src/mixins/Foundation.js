@@ -47,7 +47,7 @@ export default
          */
         name()
         {
-            return this.id ? this.id : `id-${parseInt(window.performance.now())}`;
+            return this.id ? this.id : `id-${parseInt(performance.now())}`;
         },
     },
 

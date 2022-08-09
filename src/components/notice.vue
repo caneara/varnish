@@ -1,5 +1,6 @@
 <template>
-    <div class="varnish-notice varnish-font">
+    <div v-if="display"
+         class="varnish-notice varnish-font">
 
         <!-- Container -->
         <div class="varnish-container border rounded-md relative"
@@ -30,6 +31,13 @@
 
             </div>
 
+            <!-- Dismiss -->
+            <i v-if="dismiss"
+               @click="hide()"
+               title="Hide this notice"
+               class="fas fa-times text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 absolute top-3 right-3 transition duration-300 cursor-pointer">
+            </i>
+
         </div>
 
     </div>
@@ -53,7 +61,8 @@
          *
          */
         data() { return {
-            modes : {
+            display : true,
+            modes   : {
                 opaque : {
                     danger : {
                         content : 'bg-red-500/[.05] dark:bg-red-700/[.30] text-red-700/[.90] dark:text-red-300',
@@ -106,7 +115,7 @@
                         icon    : 'fa-triangle-exclamation',
                     },
                 }
-            }
+            },
         }},
 
         /**
@@ -114,10 +123,41 @@
          *
          */
         props : {
-            'format' : { type : String, default : 'tab' },
-            'mode'   : { type : String, default : 'opaque' },
-            'type'   : { type : String, default : 'info' },
-            'value'  : { type : String, default : '' },
+            'dismiss' : { type : Boolean, default : false },
+            'format'  : { type : String,  default : 'tab' },
+            'id'      : { type : String,  default : '' },
+            'mode'    : { type : String,  default : 'opaque' },
+            'type'    : { type : String,  default : 'info' },
+            'value'   : { type : String,  default : '' },
+        },
+
+        /**
+         * Execute actions when the component is instantiated.
+         *
+         */
+        created()
+        {
+            this.display = ! localStorage.getItem(`varnish_hide_notice_${this.id}`);
+        },
+
+        /**
+         * Define the supporting methods.
+         *
+         */
+        methods :
+        {
+            /**
+             * Dismiss the notice from appearing again.
+             *
+             */
+            hide()
+            {
+                if (! this.dismiss) return;
+
+                this.display = false;
+
+                localStorage.setItem(`varnish_hide_notice_${this.id}`, 1);
+            }
         },
     }
 </script>
