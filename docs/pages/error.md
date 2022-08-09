@@ -2,7 +2,7 @@
 
 An error message component used to indicate the presence of a problem (usually in a parent component) e.g. after failing form validation.
 
-> This is a sub-component and is not really intended for direct use as-is. If you're only intending to use Varnish's 'full' components e.g. a textbox or dropdown, then you can skip this section. However, if you want to augment Varnish with your own components, then you can make use of it if you wish.
+> This is a sub-component and is not really intended for direct use as-is. If you're only intending to use Varnish's 'full' components e.g. a TextBox or DropDown, then you can skip this section. However, if you want to augment Varnish with your own components, then you can make use of it if you wish.
 
 ## Features
 
