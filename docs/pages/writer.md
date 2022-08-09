@@ -68,9 +68,9 @@ Begin by importing the component and registering it like so:
 </script>
 ```
 
-## Shared API
+## Mixins
 
-This component makes use of one or more parts of the [shared API](/pages/shared-api). Review this component's playground for further guidance.
+This component makes use of one or more parts of the [Foundation](/pages/foundation) mixin. Review the component's playground for further guidance.
 
 ## Properties
 
@@ -170,17 +170,6 @@ When set to zero, the progress bar is automatically hidden.
 
 ```html
 <v-writer :progress="44"></v-writer>
-```
-
-### placeholder
-
-- Type: `String`
-- Default: `'Write something amazing...'`
-
-Set the default placeholder text to display when the editor is empty.
-
-```html
-<v-writer placeholder="Escribe algo increíble..."></v-writer>
 ```
 
 ### readingMode

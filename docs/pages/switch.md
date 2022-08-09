@@ -47,9 +47,9 @@ Begin by importing the component and registering it like so:
 </script>
 ```
 
-## Shared API
+## Mixins
 
-This component makes use of one or more parts of the [shared API](/pages/shared-api). Review this component's playground for further guidance.
+This component makes use of one or more parts of the [Foundation](/pages/foundation) mixin. Review the component's playground for further guidance.
 
 ## Custom styling
 

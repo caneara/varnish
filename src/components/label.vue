@@ -1,16 +1,17 @@
 <template>
-    <label :class="filled ? small : (focus ? small : large)"
+    <label v-if="! automated()"
+           :class="filled ? small : (focus ? small : large)"
            style="width: calc(100% - 19px); transition: all 0.1s ease, background-color 0s"
-           class="varnish-label varnish-font text-gray-600 dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-0 left-1 pl-2">
+           class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-0 left-1">
 
         <!-- Icon -->
         <i :class="icon"
            v-if="! filled && ! focus && icon"
-           class="varnish-icon fa-fw text-14px text-gray-500/[.60] dark:text-gray-400/[.60] mr-2">
+           class="varnish-icon fa-fw text-14px text-gray-500/[.40] dark:text-gray-500/[.50] mr-3">
         </i>
 
         <!-- Value -->
-        <span class="varnish-value">
+        <span class="varnish-value font-[450]">
             {{ value }}
         </span>
 
@@ -24,10 +25,19 @@
 </template>
 
 <script>
+    import Utilities from '../mixins/Utilities';
     import OptionalComponent from './optional.vue';
 
     export default
     {
+        /**
+         * Define the mixins.
+         *
+         */
+        mixins : [
+            Utilities,
+        ],
+
         /**
          * Define the components.
          *
@@ -41,8 +51,8 @@
          *
          */
         data() { return {
-            large : 'text-[16px] pr-4 pt-[18px]',
-            small : 'text-[12px] pr-3 pt-[10px] pb-[5px]',
+            large : 'text-[16px] pl-3 pr-4 pt-[18px]',
+            small : 'text-[12px] pl-2 pr-3 pt-[10px] pb-[5px]',
         }},
 
         /**

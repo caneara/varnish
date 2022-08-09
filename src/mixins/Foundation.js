@@ -5,9 +5,9 @@ export default
      *
      */
     data() { return {
-        focus   : false,
-        hover   : false,
-        message : this.error,
+        fault : this.error,
+        focus : false,
+        hover : false,
     }},
 
     /**
@@ -30,6 +30,9 @@ export default
         'id'           : { type : String,                    default : '' },
         'label'        : { type : String,                    default : 'Label' },
         'modelValue'   : { type : [String, Number, Boolean], default : '' },
+        'optional'     : { type : Boolean,                   default : false },
+        'optionalText' : { type : String,                    default : '' },
+        'placeholder'  : { type : String,                    default : '' },
     },
 
     /**
@@ -60,7 +63,7 @@ export default
          */
         error : function(current, previous)
         {
-            return this.message = current;
+            return this.fault = current;
         }
     },
 
@@ -76,7 +79,7 @@ export default
          */
         change(payload = undefined)
         {
-            this.message = '';
+            this.fault = '';
 
             if (payload === undefined) return;
 

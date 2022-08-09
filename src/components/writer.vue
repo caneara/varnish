@@ -245,7 +245,7 @@
         </div>
 
         <!-- Error -->
-        <v-error :value="message"></v-error>
+        <v-error :value="fault"></v-error>
 
     </div>
 </template>
@@ -312,7 +312,6 @@ export default
         'lineNumbers'  : { type : Boolean, default : true },
         'linkText'     : { type : String,  default : "Specify the url e.g. 'https://google.com'." },
         'maxUndo'      : { type : Number,  default : 20 },
-        'placeholder'  : { type : String,  default : 'Write something amazing...' },
         'progress'     : { type : Number,  default : 0 },
         'readingMode'  : { type : Boolean, default : false },
         'uploads'      : { type : Boolean, default : false },
@@ -379,7 +378,7 @@ export default
          */
         change(content = undefined)
         {
-            this.message = '';
+            this.fault = '';
 
             if (content === undefined) return;
 

@@ -27,7 +27,7 @@
         </div>
 
         <!-- Error -->
-        <v-error :value="error"></v-error>
+        <v-error :value="fault"></v-error>
 
     </div>
 </template>

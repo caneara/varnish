@@ -96,6 +96,8 @@ When set to `''`, the icon will be hidden.
 
 The icon is hidden when either `filled` or `focus` are set to `true`.
 
+In most cases, the parent component should use the `Foundation` mixin and simply pass the corresponding data attribute down.
+
 ```html
 <v-label icon="fas fa-home"></v-label>
 ```
@@ -111,6 +113,8 @@ When set to `true`, an [optional](/pages/optional) component will be shown next 
 
 The optional component is hidden when either `filled` or `focus` are set to `true`, regardless of whether it is enabled or not.
 
+In most cases, the parent component should use the `Foundation` mixin and simply pass the corresponding data attribute down.
+
 ```html
 <v-label :optional="true"></v-label>
 ```
@@ -123,6 +127,8 @@ The optional component is hidden when either `filled` or `focus` are set to `tru
 Specify the text that the optional component should display.
 
 This property is only relevant when `optional` is set to `true`.
+
+In most cases, the parent component should use the `Foundation` mixin and simply pass the corresponding data attribute down.
 
 ```html
 <v-label optionalText="Not Required"></v-label>

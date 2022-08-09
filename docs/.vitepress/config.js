@@ -11,17 +11,18 @@ let sidebar = [
         items : [
             { text : 'Fonts',              link : '/pages/fonts' },
             { text : 'Light / Dark',       link : '/pages/dark-mode' },
-            { text : 'Shared API',         link : '/pages/shared-api' },
+            { text : 'Foundation',         link : '/pages/foundation' },
             { text : 'Browser Automation', link : '/pages/browser-automation' },
         ],
     }, {
         text  : 'Main Components',
         items : [
-            { text : 'Badge',  link : '/pages/badge' },
-            { text : 'Button', link : '/pages/button' },
-            { text : 'Notice', link : '/pages/notice' },
-            { text : 'Switch', link : '/pages/switch' },
-            { text : 'Writer', link : '/pages/writer' },
+            { text : 'Badge',   link : '/pages/badge' },
+            { text : 'Button',  link : '/pages/button' },
+            { text : 'Notice',  link : '/pages/notice' },
+            { text : 'Switch',  link : '/pages/switch' },
+            { text : 'TextBox', link : '/pages/textbox' },
+            { text : 'Writer',  link : '/pages/writer' },
         ],
     }, {
         text  : 'Sub Components',
