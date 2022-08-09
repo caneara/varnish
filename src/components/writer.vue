@@ -521,6 +521,21 @@ export default
                 this.prependText('\t');
             }
 
+            // Bold
+            if (event.key === 'b' && command) {
+                this.wrapText('**');
+            }
+
+            // Italics
+            if (event.key === 'i' && command) {
+                this.wrapText('*');
+            }
+
+            // Links
+            if (event.key === 'k' && command) {
+                this.insertLink();
+            }
+
             // Undo
             if (event.key === 'z' && command && ! shift) {
                 if (this.history.hasUndo()) {
