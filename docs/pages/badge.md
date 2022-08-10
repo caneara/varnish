@@ -57,7 +57,7 @@ The following `props` are exposed by the component.
 
 ### color
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'blue'`
 - Options: `'blue'`, `'green'`, `'red'`, `'yellow'`, `'purple'`, `'gray'`
 
@@ -69,7 +69,7 @@ The color scheme that should be used.
 
 ### mode
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'opaque'`
 - Options: `'opaque'`, `'transparent'`
 

@@ -74,7 +74,7 @@ To prevent collisions, you must assign a unique [id](#id) to the component.
 
 ### format
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'tab'`
 - Options: `'tab'`, `'icon'`
 
@@ -99,7 +99,7 @@ When enabling [dismiss](#dismiss), this property must be set. Failure to do so, 
 
 ### mode
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'opaque'`
 - Options: `'opaque'`, `'transparent'`
 
@@ -113,7 +113,7 @@ When set to `'opaque'`, the background is shown. When set to `'transparent'`, th
 
 ### type
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'info'`
 - Options: `'info'`, `'success'`, `'warning'`, `'danger'`
 

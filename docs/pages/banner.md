@@ -50,7 +50,7 @@ The following `props` are exposed by the component.
 
 ### color
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'blue'`
 - Options: `'blue'`, `'green'`, `'red'`, `'orange'`
 

@@ -21,6 +21,7 @@ let sidebar = [
             { text : 'Banner',   link : '/pages/banner' },
             { text : 'Button',   link : '/pages/button' },
             { text : 'DropDown', link : '/pages/dropdown' },
+            { text : 'Metric',   link : '/pages/metric' },
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Password', link : '/pages/password' },
             { text : 'Switch',   link : '/pages/switch' },

@@ -12,7 +12,7 @@
             </i>
 
             <!-- Title -->
-            <span class="varnish-title font-[600] text-[22px] -tracking-[.4px] text-white mb-4">
+            <span class="varnish-title font-semibold text-[22px] -tracking-[.4px] text-white mb-4">
                 {{ title }}
             </span>
 

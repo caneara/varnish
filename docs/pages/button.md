@@ -60,7 +60,7 @@ The following `props` are exposed by the component.
 
 ### color
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'blue'`
 - Options: `'blue'`, `'green'`, `'red'`, `'yellow'`, `'purple'`, `'teal'`, `'gray'`
 
@@ -83,7 +83,7 @@ Specify whether the component should be enabled or disabled.
 
 ### mode
 
-- Type: `Enum - String`
+- Type: `Enum (String)`
 - Default: `'opaque'`
 - Options: `'opaque'`, `'outline'`
 
