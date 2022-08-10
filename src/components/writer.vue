@@ -524,16 +524,22 @@ export default
 
             // Bold
             if (event.key === 'b' && command) {
+                event.preventDefault();
+
                 this.wrapText('**');
             }
 
             // Italics
             if (event.key === 'i' && command) {
+                event.preventDefault();
+
                 this.wrapText('*');
             }
 
             // Links
             if (event.key === 'k' && command) {
+                event.preventDefault();
+
                 this.insertLink();
             }
 
