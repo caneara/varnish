@@ -484,7 +484,7 @@ export default
          */
         insertCodeBlock()
         {
-            let language = prompt(this.languageText, '')
+            let language = this.requestInput(this.languageText, '');
 
             this.wrapText(['\n\n```' + `${language}\n`, '\n```\n\n']);
         },
@@ -499,8 +499,9 @@ export default
 
             let selected = this.modelValue.substring(this.selection.start, this.selection.end);
 
-            let link = prompt(this.linkText, '');
-            let text = this.blank(selected) ? prompt(this.displayText, '') : null;
+            let link = this.requestInput(this.linkText, '');
+
+            let text = this.blank(selected) ? this.requestInput(this.displayText, '') : null;
 
             text ? this.prependText(`[${text}](${link})`) : this.wrapText(['[', `](${link})`]);
         },
@@ -605,6 +606,19 @@ export default
         renderMarkdown()
         {
             this.$refs.preview.innerHTML = this.renderer.render(this.modelValue);
+        },
+
+        /**
+         * Prompt the user to provide input.
+         *
+         */
+        requestInput(message, fallback = '')
+        {
+            let result = prompt(message, fallback);
+
+            this.$refs.editor.focus();
+
+            return result;
         },
 
         /**
