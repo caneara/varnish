@@ -18,12 +18,12 @@
 
             <!-- Content -->
             <div :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']"
-                 class="varnish-content rounded-md font-medium flex items-center -tracking-[0.2px]">
+                 class="varnish-content rounded-md font-medium flex items-center -tracking-[.2px]">
 
                 <!-- Icon -->
                 <i v-if="format === 'icon'"
                    :class="modes[mode][type].icon"
-                   class="varnish-icon fas text-[26px] opacity-[0.50] ml-1 mr-[22px]">
+                   class="varnish-icon fas text-[26px] opacity-[.50] ml-1 mr-[22px]">
                 </i>
 
                 <!-- Value -->
@@ -41,7 +41,7 @@
             <i v-if="dismiss"
                @click="hide()"
                title="Hide this notice"
-               class="fas fa-times text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 absolute top-3 right-3 transition duration-300 cursor-pointer">
+               class="varnish-dismiss fas fa-times text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 absolute top-3 right-3 transition duration-300 cursor-pointer">
             </i>
 
         </div>
@@ -71,28 +71,28 @@
             modes   : {
                 opaque : {
                     danger : {
-                        content : 'bg-red-500/[.05] dark:bg-red-700/[.30] text-red-700/[.90] dark:text-red-300',
                         border  : 'border-red-600/[.40] dark:border-none',
-                        tab     : 'bg-red-600/[.40] dark:bg-red-700/[.30]',
+                        content : 'bg-red-500/[.05] dark:bg-red-700/[.30] text-red-700/[.90] dark:text-red-300',
                         icon    : 'fa-circle-exclamation',
+                        tab     : 'bg-red-600/[.40] dark:bg-red-700/[.30]',
                     },
                     info : {
-                        content : 'bg-sky-500/[.05] dark:bg-sky-700/[.30] border-sky-500 text-sky-700/[.90] dark:text-blue-300',
                         border  : 'border-sky-600/[.40] dark:border-none',
-                        tab     : 'bg-sky-600/[.40] dark:bg-sky-700/[.30]',
+                        content : 'bg-sky-500/[.05] dark:bg-sky-700/[.30] border-sky-500 text-sky-700/[.90] dark:text-blue-300',
                         icon    : 'fa-circle-info',
+                        tab     : 'bg-sky-600/[.40] dark:bg-sky-700/[.30]',
                     },
                     success : {
-                        content : 'bg-emerald-500/[.05] dark:bg-emerald-700/[.30] text-emerald-700/[.90] dark:text-emerald-400',
                         border  : 'border-emerald-600/[.40] dark:border-none',
-                        tab     : 'bg-emerald-600/[.40] dark:bg-emerald-700/[.30]',
+                        content : 'bg-emerald-500/[.05] dark:bg-emerald-700/[.30] text-emerald-700/[.90] dark:text-emerald-400',
                         icon    : 'fa-check-circle',
+                        tab     : 'bg-emerald-600/[.40] dark:bg-emerald-700/[.30]',
                     },
                     warning : {
-                        content : 'bg-yellow-500/[.05] dark:bg-yellow-700/[.30] text-yellow-700 dark:text-orange-300',
                         border  : 'border-yellow-600/[.40] dark:border-none',
-                        tab     : 'bg-yellow-600/[.40] dark:bg-yellow-700/[.30]',
+                        content : 'bg-yellow-500/[.05] dark:bg-yellow-700/[.30] text-yellow-700 dark:text-orange-300',
                         icon    : 'fa-triangle-exclamation',
+                        tab     : 'bg-yellow-600/[.40] dark:bg-yellow-700/[.30]',
                     },
                 },
                 transparent : {
@@ -103,22 +103,22 @@
                         icon    : 'fa-circle-exclamation',
                     },
                     info : {
-                        content : 'bg-transparent text-sky-700 dark:text-blue-300',
                         border  : 'border-sky-600/[.40] dark:border-sky-700/[.60]',
-                        tab     : 'bg-sky-600/[.40]',
+                        content : 'bg-transparent text-sky-700 dark:text-blue-300',
                         icon    : 'fa-circle-info',
+                        tab     : 'bg-sky-600/[.40]',
                     },
                     success : {
-                        content : 'bg-transparent text-emerald-700 dark:text-emerald-400',
                         border  : 'border-emerald-600/[.40] dark:border-emerald-700/[.60]',
-                        tab     : 'bg-emerald-600/[.40]',
+                        content : 'bg-transparent text-emerald-700 dark:text-emerald-400',
                         icon    : 'fa-check-circle',
+                        tab     : 'bg-emerald-600/[.40]',
                     },
                     warning : {
-                        content : 'bg-transparent text-yellow-700 dark:text-orange-300',
                         border  : 'border-yellow-600/[.40] dark:border-yellow-700/[.60]',
-                        tab     : 'bg-yellow-600/[.40]',
+                        content : 'bg-transparent text-yellow-700 dark:text-orange-300',
                         icon    : 'fa-triangle-exclamation',
+                        tab     : 'bg-yellow-600/[.40]',
                     },
                 }
             },

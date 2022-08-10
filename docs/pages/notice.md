@@ -4,9 +4,9 @@ A simple notice or alert component, usually used to advise the user of something
 
 ## Features
 
-* Available in four colors.
-* Tab or icon-based format.
-* Opaque and transparent backgrounds.
+* Available in four colors
+* Tab or icon-based format
+* Opaque and transparent backgrounds
 * Optionally dismissable (with browser persistence)
 
 ## Demo
@@ -149,6 +149,7 @@ If you want to override any of the component's default styling, then you can do 
 .varnish-notice .varnish-container .varnish-tab { }
 .varnish-notice .varnish-container .varnish-content { }
 .varnish-notice .varnish-container .varnish-content .varnish-icon { }
+.varnish-notice .varnish-container .varnish-dismiss { }
 ```
 
 Here's an example that changes the tab text size to 30px:

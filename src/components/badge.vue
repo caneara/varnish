@@ -35,21 +35,20 @@
         data() { return {
             modes : {
                 opaque : {
-                    gray   : 'bg-gray-500/[.10] dark:bg-gray-700 text-gray-700/[.90] dark:text-gray-200',
-                    red    : 'bg-red-500/[.15] dark:bg-red-700 text-red-800/[.90] dark:text-red-200',
                     blue   : 'bg-sky-500/[.15] dark:bg-sky-700 text-sky-700/[.90] dark:text-sky-200',
                     green  : 'bg-emerald-500/[.15] dark:bg-emerald-700 text-emerald-700/[.90] dark:text-emerald-200',
-                    yellow : 'bg-yellow-500/[.15] dark:bg-yellow-700 text-yellow-700/[.90] dark:text-yellow-200',
+                    gray   : 'bg-gray-500/[.10] dark:bg-gray-700 text-gray-700/[.90] dark:text-gray-200',
                     purple : 'bg-purple-500/[.15] dark:bg-purple-700 text-purple-900/[.70] dark:text-purple-200',
+                    red    : 'bg-red-500/[.15] dark:bg-red-700 text-red-800/[.90] dark:text-red-200',
+                    yellow : 'bg-yellow-500/[.15] dark:bg-yellow-700 text-yellow-700/[.90] dark:text-yellow-200',
                 },
                 transparent : {
-                    gray   : 'bg-transparent text-gray-600 dark:text-gray-400',
-                    red    : 'bg-transparent text-red-700 dark:text-red-400',
                     blue   : 'bg-transparent text-sky-600 dark:text-sky-400',
                     green  : 'bg-transparent text-emerald-600 dark:text-emerald-400',
-                    orange : 'bg-transparent text-amber-600 dark:text-amber-400',
-                    yellow : 'bg-transparent text-yellow-700 dark:text-yellow-400',
+                    gray   : 'bg-transparent text-gray-600 dark:text-gray-400',
                     purple : 'bg-transparent text-purple-700 dark:text-purple-400',
+                    red    : 'bg-transparent text-red-700 dark:text-red-400',
+                    yellow : 'bg-transparent text-yellow-700 dark:text-yellow-400',
                 }
             }
         }},

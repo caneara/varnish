@@ -18,6 +18,7 @@ let sidebar = [
         text  : 'Main Components',
         items : [
             { text : 'Badge',    link : '/pages/badge' },
+            { text : 'Banner',   link : '/pages/banner' },
             { text : 'Button',   link : '/pages/button' },
             { text : 'DropDown', link : '/pages/dropdown' },
             { text : 'Notice',   link : '/pages/notice' },

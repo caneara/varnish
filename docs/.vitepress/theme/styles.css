@@ -36,7 +36,7 @@
 .VPContent.is-home { @apply flex }
 .VPContent.is-home .VPHome { @apply flex flex-col flex-1 pb-[30px] }
 .VPContent.is-home .VPHome .VPHomeHero .container .main .text { @apply text-[40px] }
-.VPContent.is-home .VPHome .VPHomeHero .container .main .tagline { @apply tracking-[-0.6px] }
+.VPContent.is-home .VPHome .VPHomeHero .container .main .tagline { @apply -tracking-[.6px] }
 .VPContent.is-home .VPHome .VPHomeHero .container .main .action .VPButton { @apply min-w-[130px] rounded px-[15px] py-[10px] leading-none }
 .VPContent.is-home .VPHome .VPHomeHero .container .main .action .VPButton.brand { @apply border-transparent bg-sky-600 hover:bg-sky-700 }
 .VPContent.is-home .VPHome .VPFeatures .container .items .VPFeature { @apply bg-gray-400/[.05] }

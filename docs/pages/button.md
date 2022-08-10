@@ -4,10 +4,10 @@ A button component that the user may click or tap on to initiate an action.
 
 ## Features
 
-* Opaque or outline format.
-* Available in seven colors.
-* Supports setting an icon.
-* Disabled mode and processing mode (with spinner).
+* Opaque or outline format
+* Available in seven colors
+* Supports setting an icon
+* Disabled mode and processing mode (with spinner)
 
 ## Demo
 

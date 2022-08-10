@@ -7,11 +7,11 @@
         <!-- Icon -->
         <i :class="icon"
            v-if="! filled && ! focus && icon"
-           class="varnish-icon fa-fw text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] relative top-[0.75px] mr-3">
+           class="varnish-icon fa-fw text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] relative top-[.75px] mr-3">
         </i>
 
         <!-- Value -->
-        <span class="varnish-value font-[450] -tracking-[0.2px]">
+        <span class="varnish-value font-[450] -tracking-[.2px]">
             {{ value }}
         </span>
 

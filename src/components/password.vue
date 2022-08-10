@@ -53,7 +53,7 @@
 
         <!-- Generated -->
         <div v-if="! blank(password)"
-             class="varnish-generated font-[650] text-[14px] text-emerald-700 dark:text-emerald-300 -tracking-[0.2px] mt-2">
+             class="varnish-generated font-[650] text-[14px] text-emerald-700 dark:text-emerald-300 -tracking-[.2px] mt-2">
 
             <!-- Text -->
             <span class="mr-1">

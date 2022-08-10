@@ -4,10 +4,10 @@ A simple badge or pill component, usually used to indicate status.
 
 ## Features
 
-* Available in six colors.
-* Uppercase or mixed-case content.
-* Opaque and transparent backgrounds.
-* Allows for setting tooltips to display on hover.
+* Available in six colors
+* Uppercase or mixed-case content
+* Opaque and transparent backgrounds
+* Allows for setting tooltips to display on hover
 
 ## Demo
 

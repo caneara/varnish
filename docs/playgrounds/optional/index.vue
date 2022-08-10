@@ -2,7 +2,7 @@
     <div class="demo py-[40px] px-[64px]">
 
         <!-- Title -->
-        <h1 class="text-[32px] font-semibold tracking-[-0.7px] mb-12">
+        <h1 class="text-[32px] font-semibold -tracking-[.7px] mb-12">
             Optional - Playground
         </h1>
 

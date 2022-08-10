@@ -11,7 +11,7 @@
                    :value="active ? 1 : 0">
 
             <!-- Label -->
-            <label class="varnish-label font-semibold text-[13px] text-gray-600/[.75] dark:text-gray-400 tracking-[0.3px] uppercase relative top-[0.3px] mr-5">
+            <label class="varnish-label font-semibold text-[13px] text-gray-600/[.75] dark:text-gray-400 tracking-[.3px] uppercase relative top-[.3px] mr-5">
                 {{ label }}
             </label>
 

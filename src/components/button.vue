@@ -16,7 +16,7 @@
             </i>
 
             <!-- Text -->
-            <span class="varnish-text font-[650] uppercase relative top-[0.5px]">
+            <span class="varnish-text font-[650] uppercase relative top-[.5px]">
                 {{ label }}
             </span>
 
@@ -59,21 +59,21 @@
             modes : {
                 opaque : {
                     blue   : { button : 'border-transparent bg-sky-600 hover:bg-sky-700 text-white',       spinner : 'border-l-white border-b-white' },
-                    red    : { button : 'border-transparent bg-red-700 hover:bg-red-800 text-white',       spinner : 'border-l-white border-b-white' },
-                    orange : { button : 'border-transparent bg-orange-600 hover:bg-orange-700 text-white', spinner : 'border-l-white border-b-white' },
-                    green  : { button : 'border-transparent bg-green-700 hover:bg-green-800 text-white',   spinner : 'border-l-white border-b-white' },
-                    purple : { button : 'border-transparent bg-purple-600 hover:bg-purple-700 text-white', spinner : 'border-l-white border-b-white' },
-                    teal   : { button : 'border-transparent bg-teal-600 hover:bg-teal-700 text-white',     spinner : 'border-l-white border-b-white' },
                     gray   : { button : 'border-transparent bg-gray-500 hover:bg-gray-600 text-white',     spinner : 'border-l-white border-b-white' },
+                    green  : { button : 'border-transparent bg-green-700 hover:bg-green-800 text-white',   spinner : 'border-l-white border-b-white' },
+                    orange : { button : 'border-transparent bg-orange-600 hover:bg-orange-700 text-white', spinner : 'border-l-white border-b-white' },
+                    purple : { button : 'border-transparent bg-purple-600 hover:bg-purple-700 text-white', spinner : 'border-l-white border-b-white' },
+                    red    : { button : 'border-transparent bg-red-700 hover:bg-red-800 text-white',       spinner : 'border-l-white border-b-white' },
+                    teal   : { button : 'border-transparent bg-teal-600 hover:bg-teal-700 text-white',     spinner : 'border-l-white border-b-white' },
                 },
                 outline : {
                     blue   : { button : 'border-sky-600 hover:bg-sky-600 text-sky-600 hover:text-white',          spinner : 'border-l-sky-600 border-b-sky-600' },
-                    red    : { button : 'border-red-700 hover:bg-red-700 text-red-700 hover:text-white',          spinner : 'border-l-red-700 border-b-red-700' },
-                    orange : { button : 'border-orange-600 hover:bg-orange-600 text-orange-600 hover:text-white', spinner : 'border-l-orange-600 border-b-orange-600' },
-                    green  : { button : 'border-green-700 hover:bg-green-700 text-green-700 hover:text-white',    spinner : 'border-l-green-700 border-b-green-700' },
-                    purple : { button : 'border-purple-600 hover:bg-purple-600 text-purple-600 hover:text-white', spinner : 'border-l-purple-600 border-b-purple-600' },
-                    teal   : { button : 'border-teal-600 hover:bg-teal-600 text-teal-600 hover:text-white',       spinner : 'border-l-teal-600 border-b-teal-600' },
                     gray   : { button : 'border-gray-500 hover:bg-gray-500 text-gray-500 hover:text-white',       spinner : 'border-l-gray-500 border-b-gray-500' },
+                    green  : { button : 'border-green-700 hover:bg-green-700 text-green-700 hover:text-white',    spinner : 'border-l-green-700 border-b-green-700' },
+                    orange : { button : 'border-orange-600 hover:bg-orange-600 text-orange-600 hover:text-white', spinner : 'border-l-orange-600 border-b-orange-600' },
+                    purple : { button : 'border-purple-600 hover:bg-purple-600 text-purple-600 hover:text-white', spinner : 'border-l-purple-600 border-b-purple-600' },
+                    red    : { button : 'border-red-700 hover:bg-red-700 text-red-700 hover:text-white',          spinner : 'border-l-red-700 border-b-red-700' },
+                    teal   : { button : 'border-teal-600 hover:bg-teal-600 text-teal-600 hover:text-white',       spinner : 'border-l-teal-600 border-b-teal-600' },
                 }
             }
         }},
