@@ -7,7 +7,7 @@
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"
-             class="varnish-label text-[14px] whitespace-nowrap select-none px-5">
+             class="varnish-label text-[12.2px] whitespace-nowrap select-none px-5">
 
             <!-- Icon -->
             <i v-if="icon"
@@ -16,7 +16,7 @@
             </i>
 
             <!-- Text -->
-            <span class="varnish-text font-semibold uppercase">
+            <span class="varnish-text font-[650] uppercase relative top-[0.5px]">
                 {{ label }}
             </span>
 

@@ -2,16 +2,16 @@
     <label v-if="! automated()"
            :class="filled ? small : (focus ? small : large)"
            style="width: calc(100% - 19px); transition: all 0.1s ease, background-color 0s"
-           class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-0 left-1">
+           class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-[1px] left-1">
 
         <!-- Icon -->
         <i :class="icon"
            v-if="! filled && ! focus && icon"
-           class="varnish-icon fa-fw text-14px text-gray-500/[.40] dark:text-gray-500/[.50] mr-3">
+           class="varnish-icon fa-fw text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] relative top-[0.75px] mr-3">
         </i>
 
         <!-- Value -->
-        <span class="varnish-value font-[450]">
+        <span class="varnish-value font-[450] -tracking-[0.2px]">
             {{ value }}
         </span>
 
@@ -51,8 +51,8 @@
          *
          */
         data() { return {
-            large : 'text-[16px] pl-3 pr-4 pt-[18px]',
-            small : 'text-[12px] pl-2 pr-3 pt-[10px] pb-[5px]',
+            large : 'text-[15px] pl-3 pr-4 pt-[18px]',
+            small : 'text-[12px] pl-2 pr-3 pt-[8px] pb-[5px]',
         }},
 
         /**

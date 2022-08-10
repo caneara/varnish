@@ -17,8 +17,8 @@
             </span>
 
             <!-- Content -->
-            <div class="varnish-content rounded-md font-medium flex items-center leading-normal"
-                 :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']">
+            <div :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']"
+                 class="varnish-content rounded-md font-medium flex items-center -tracking-[0.2px]">
 
                 <!-- Icon -->
                 <i v-if="format === 'icon'"
@@ -27,7 +27,13 @@
                 </i>
 
                 <!-- Value -->
-                {{ value }}
+                <div class="leading-normal relative"
+                     :class="format === 'tab' ? '' : 'top-[1px]'">
+
+                    <!-- Text -->
+                    {{ value }}
+
+                </div>
 
             </div>
 

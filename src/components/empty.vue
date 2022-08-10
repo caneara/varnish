@@ -1,6 +1,6 @@
 <template>
     <div v-if="visible"
-         class="varnish-empty varnish-font border border-dashed border-gray-300 dark:border-gray-500 w-full flex flex-col justify-center items-center rounded p-8 md:p-10">
+         class="varnish-empty varnish-font border border-dashed border-gray-300 dark:border-gray-500 w-full flex flex-col justify-center items-center rounded p-8 md:p-12">
 
         <!-- Icon -->
         <i :class="icon"
@@ -9,19 +9,19 @@
         </i>
 
         <!-- Title -->
-        <span class="varnish-title font-semibold text-[20px] text-gray-900 dark:text-gray-300 tracking-tight mb-[5px]">
+        <span class="varnish-title font-semibold text-[19px] text-gray-800 dark:text-gray-300 -tracking-[0.6px] mb-[5px]">
             {{ title }}
         </span>
 
         <!-- Message -->
-        <span class="varnish-message text-15px text-gray-700 dark:text-gray-400 text-center leading-normal max-w-450px">
+        <span class="varnish-message text-[15px] text-gray-600 dark:text-gray-400 text-center leading-normal -tracking-[0.2px] max-w-450px">
             {{ message }}
         </span>
 
         <!-- Action -->
         <span @click="actionCommand()"
               v-if="! blank(actionLabel) && ! blank(actionCommand)"
-              class="varnish-action font-semibold text-sky-600 dark:text-sky-400 hover:text-rose-700 dark:hover:text-rose-400 cursor-pointer transition duration-300 mt-4">
+              class="varnish-action font-semibold text-[14px] text-sky-600 dark:text-sky-400 hover:text-rose-700 dark:hover:text-rose-400 -tracking-[0.2px] uppercase cursor-pointer transition duration-300 mt-5">
 
             <!-- Text -->
             {{ actionLabel }}

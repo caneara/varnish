@@ -1,7 +1,7 @@
 <template>
     <label v-html="content"
            v-if="! blank(value)"
-           class="varnish-error varnish-font block font-[650] text-[13px] text-red-700 dark:text-red-300 text-right uppercase my-2">
+           class="varnish-error varnish-font block font-[650] text-[13px] text-red-700 dark:text-red-300 text-right tracking-[0.2px] uppercase my-2">
     </label>
 </template>
 

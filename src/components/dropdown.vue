@@ -16,7 +16,7 @@
 					@change="change($event.target.value)"
                     :class="blank(modelValue) ? '' : 'pt-[25px] pb-[6px]'"
 					style="line-height: 1.3; padding-right: 50px; -webkit-padding-end: 50px !important"
-					class="varnish-input w-full h-[51px] bg-inherit font-[470] text-gray-900 dark:text-gray-400 align-middle text-ellipsis overflow-hidden rounded appearance-none cursor-pointer pl-3">
+					class="varnish-input w-full h-[51px] bg-inherit font-[470] text-gray-900 dark:text-gray-400 -tracking-[0.2px] align-middle text-ellipsis overflow-hidden rounded appearance-none cursor-pointer pl-3">
 
 				<!-- Items -->
 				<option v-for="item in items"

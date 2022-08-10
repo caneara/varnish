@@ -4,7 +4,7 @@ Varnish's components include text in their markup. This text is not assigned a `
 
 Most of the time, you probably don't want this, as it would require you to spend time tweaking a component's styling before you could start using it.
 
-The solution to this problem, is to instruct Varnish to use a custom font.
+The solution to this problem, is to instruct Varnish to use a custom font...
 
 ## Setting a custom font
 
@@ -14,35 +14,34 @@ Varnish adds a blank `varnish-font` CSS class to each component. You can use thi
 .varnish-font { font-family: 'Roboto' }
 ```
 
-## Recommendations
+## Recommendation
 
-Caneara uses [Proxima Vara](https://www.marksimonson.com/fonts/view/proxima-vara) as its standard font, and this has been carried forward into Varnish so that the library can be used in future Caneara projects. The only downside to this, is that Proxima Vara is a commercial font and requires a license.
+Varnish is designed and built using the free, open-source [Inter webfont](https://rsms.me/inter/).
 
-If you are unwilling or unable to use a commercial font, then we recommend using the [Raleway](https://www.theleagueofmoveabletype.com/raleway) font. While not indentical, with a few CSS tweaks, they are similar.
+This font was chosen because it is specifically designed for use on computer screens, making it ideal for UI components.
 
-When using Proxima Vara, the following CSS is recommended:
+[Download it here](https://github.com/rsms/inter/raw/master/docs/font-files/Inter.var.woff2), then use the following CSS:
 
 ```css
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-variant-numeric: proportional-nums;
+    src: url('/path/to/fonts/Inter.var.woff2') format('woff2')
+}
+
 .varnish-font {
-    font-family: 'Proxima Vara';
-    font-synthesis: weight style small-caps;
+    font-family: 'Inter';
     line-height: 1;
 }
 ```
 
-When using Raleway, the following CSS is recommended:
+### Can I use another font?
 
-```css
-.varnish-font {
-    font-family: 'Raleway';
-    font-synthesis: weight style small-caps;
-    line-height: 1;
-}
-```
+Yes, however you should be aware that each of the Varnish components have been styled (padding, spacing, size etc.) in such a way as to take advantage of Inter's features, as well as to address its minor quirks.
 
-Since this library is open-source, the demos on this site use Raleway.
-
-> It is strongly recommended that you use a variable font. Using a non-variable font will still work, however it may require extra tweaking.
+Using another font will likely require that you spend additional time tweaking the styling so that it looks right. However, if you stick with Inter, it will just work.
 
 ## Further tweaking
 

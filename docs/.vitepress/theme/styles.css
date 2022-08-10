@@ -17,18 +17,10 @@
 }
 
 /**
- * Fonts.
- *
- */
-@font-face { font-family: 'Raleway'; font-style: normal; font-weight: 100 900; font-variant-numeric: proportional-nums; src: url('/Raleway-Normal.woff2') format('woff2') }
-@font-face { font-family: 'Raleway'; font-style: italic; font-weight: 100 900; font-variant-numeric: proportional-nums; src: url('/Raleway-Italic.woff2') format('woff2') }
-@font-face { font-family: 'Proxima Vara'; font-style: normal; font-weight: 100 900; font-variant-numeric: proportional-nums; src: url('http://fonts.test/ProximaVara.woff2') format('woff2') }
-
-/**
  * General.
  *
  */
-.varnish-font { @apply leading-none ; font-family: 'Proxima Vara', 'Raleway', sans-serif; font-synthesis: weight style small-caps }
+.varnish-font { @apply leading-none ; font-family: var(--vp-font-family-base) }
 .VPNav .title .logo { @apply mr-3 }
 .VPSidebar .nav .group .VPSidebarGroup { @apply pt-[20px] pb-[6px] }
 .VPContent .vp-doc h2 { @apply pt-[35px] mt-[40px] }
