@@ -11,7 +11,7 @@ A card-like component that can be used to summarize a statistic, as well as its 
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/metric/index).
+You can use the toggle at the top right of the page to switch between light and dark-modes. Owing to its simplicity, no component playground is provided.
 
 <!-- Setup -->
 <script setup>
@@ -98,6 +98,19 @@ The text used for the component's label.
 
 ```html
 <v-metric label="Current MRR"></v-metric>
+```
+
+### locale
+
+- Type: `String`
+- Default: `'en-US'`
+
+The locale that should be used by the underlying instance of `NumberFormatter`.
+
+More details can be found on [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+
+```html
+<v-metric locale="de-AT"></v-metric>
 ```
 
 ### period

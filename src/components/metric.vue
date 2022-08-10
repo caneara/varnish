@@ -71,6 +71,7 @@
             'currency' : { type : String, default : 'USD' },
             'current'  : { type : Number, default : 0 },
             'label'    : { type : String, default : 'Label' },
+            'locale'   : { type : String, default : 'en-US' },
             'period'   : { type : String, default : '' },
             'previous' : { type : Number, default : 0 },
             'type'     : { type : String, default : 'integer' },
@@ -107,7 +108,7 @@
                     options.style    = 'currency';
                 }
 
-                return new Intl.NumberFormat('en-US', options).format(this.current);
+                return new Intl.NumberFormat(this.locale, options).format(this.current);
             },
 
             /**
