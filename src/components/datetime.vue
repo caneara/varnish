@@ -448,7 +448,7 @@
              */
             goToNextMonth()
             {
-                this.goToMonth(this.calendar.startOf('month').plus({ months : 1 }));
+                this.goToMonth(this.calendar.plus({ months : 1 }));
             },
 
             /**
@@ -457,7 +457,7 @@
              */
             goToPreviousMonth()
             {
-                this.goToMonth(this.calendar.startOf('month').minus({ months : 1 }));
+                this.goToMonth(this.calendar.minus({ months : 1 }));
             },
 
 	    	/**
@@ -489,7 +489,7 @@
                     return this.change(date);
                 }
 
-                this.selectTime(DateTime.fromISO(date).setZone('UTC'));
+                this.selectTime(DateTime.fromISO(date));
             },
 
             /**
@@ -507,7 +507,7 @@
                     changes.seconds = this.$refs.selector_second.value;
                 }
 
-                date = date ?? this.value.set(changes).setZone('UTC');
+                date = (date ?? this.value).set(changes).setZone('UTC');
 
                 this.change(this.type === 'time' ? date.toISOTime() : date.toISO());
             },
