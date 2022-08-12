@@ -108,7 +108,6 @@
                     <div v-for="day in daysInMonth"
                          @click="selectDate(day.date)"
                          class="varnish-day flex justify-center"
-                         :key="`${day.year}_${day.month}_${day.ordinal}`"
                          :class="day.enabled ? 'text-gray-700 dark:text-gray-400 cursor-pointer group' : 'text-gray-300 dark:text-gray-700 pointer-events-none'">
 
                         <!-- Ordinal -->
@@ -306,11 +305,11 @@
             {
                 let days = [];
 
-                for (let ordinal = 0; ordinal < (this.calendar.weekday - 1); ordinal++) {
+                for (let ordinal = this.calendar.startOf('month').weekday; ordinal > 1; ordinal--) {
                     days.push({
                         date     : null,
                         enabled  : false,
-                        ordinal  : this.calendar.startOf('month').minus({ months : 1 }).endOf('month').minus({ days : this.calendar.weekday - ordinal - 2 }).day,
+                        ordinal  : this.calendar.startOf('month').minus({ days : ordinal - 1 }).day,
                         selected : false,
                         today    : false,
                     });
