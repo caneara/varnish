@@ -20,6 +20,7 @@ let sidebar = [
             { text : 'Badge',    link : '/pages/badge' },
             { text : 'Banner',   link : '/pages/banner' },
             { text : 'Button',   link : '/pages/button' },
+            { text : 'DateTime', link : '/pages/datetime' },
             { text : 'DropDown', link : '/pages/dropdown' },
             { text : 'Metric',   link : '/pages/metric' },
             { text : 'Notice',   link : '/pages/notice' },

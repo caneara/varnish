@@ -1,5 +1,5 @@
 ---
-title: Metric Playground
+title: DateTime Playground
 layout: page
 ---
 

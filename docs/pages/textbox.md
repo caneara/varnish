@@ -70,6 +70,17 @@ When set to `1`, an `input` is used. When set to `2+`, a `textarea` is used.
 <v-textbox :lines="6"></v-textbox>
 ```
 
+### readOnly
+
+- Type: `Boolean`
+- Default: `false`
+
+Specify whether the component's content can be edited by the user.
+
+```html
+<v-textbox :readOnly="true"></v-textbox>
+```
+
 ## Custom styling
 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:

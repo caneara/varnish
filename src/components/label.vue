@@ -7,7 +7,7 @@
         <!-- Icon -->
         <i :class="icon"
            v-if="! filled && ! focus && icon"
-           class="varnish-icon fa-fw text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] relative top-[.75px] mr-3">
+           class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] text-center relative top-[.5px] mr-[6px]">
         </i>
 
         <!-- Value -->
@@ -51,7 +51,7 @@
          *
          */
         data() { return {
-            large : 'text-[15px] pl-3 pr-4 pt-[18px]',
+            large : 'text-[15px] pl-[6px] pr-4 pt-[18px]',
             small : 'text-[12px] pl-2 pr-3 pt-[8px] pb-[5px]',
         }},
 

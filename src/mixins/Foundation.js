@@ -24,15 +24,15 @@ export default
      *
      */
     props : {
-        'autocomplete' : { type : String,                    default : 'off' },
-        'error'        : { type : String,                    default : '' },
-        'icon'         : { type : String,                    default : '' },
-        'id'           : { type : String,                    default : '' },
-        'label'        : { type : String,                    default : 'Label' },
-        'modelValue'   : { type : [String, Number, Boolean], default : '' },
-        'optional'     : { type : Boolean,                   default : false },
-        'optionalText' : { type : String,                    default : '' },
-        'placeholder'  : { type : String,                    default : '' },
+        'autocomplete' : { type : String,                          default : 'off' },
+        'error'        : { type : String,                          default : '' },
+        'icon'         : { type : String,                          default : '' },
+        'id'           : { type : String,                          default : '' },
+        'label'        : { type : String,                          default : 'Label' },
+        'modelValue'   : { type : [String, Number, Boolean, Date], default : '' },
+        'optional'     : { type : Boolean,                         default : false },
+        'optionalText' : { type : String,                          default : '' },
+        'placeholder'  : { type : String,                          default : '' },
     },
 
     /**

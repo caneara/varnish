@@ -17,6 +17,7 @@
                    :placeholder="placeholder"
                    :autocomplete="autocomplete"
                    @input="change($event.target.value)"
+                   :readonly="readOnly ? 'readonly' : ''"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
                    class="varnish-control varnish-input w-full bg-inherit font-[470] text-gray-900 dark:text-gray-400 -tracking-[.2px] text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
 
@@ -37,10 +38,10 @@
             <!-- Label -->
             <v-label :icon="icon"
                      :value="label"
-                     :focus="focus"
                      :optional="optional"
                      :optionalText="optionalText"
-                     :filled="! blank(modelValue)">
+                     :filled="! blank(modelValue)"
+                     :focus="readOnly ? false : focus">
             </v-label>
 
             <!-- Clear -->
@@ -91,7 +92,8 @@
          *
          */
         props : {
-            'lines' : { type : Number,  default : 1 },
+            'lines'    : { type : Number,  default : 1 },
+            'readOnly' : { type : Boolean, default : false },
         },
     }
 </script>
