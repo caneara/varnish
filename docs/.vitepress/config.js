@@ -23,6 +23,7 @@ let sidebar = [
             { text : 'DateTime', link : '/pages/datetime' },
             { text : 'DropDown', link : '/pages/dropdown' },
             { text : 'Metric',   link : '/pages/metric' },
+            { text : 'Modal',    link : '/pages/modal' },
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Password', link : '/pages/password' },
             { text : 'Switch',   link : '/pages/switch' },
