@@ -486,14 +486,18 @@
              */
             selectDate(date)
             {
-                this.change(this.type === 'date' ? date : `${date}T${this.value.setZone('UTC').toISOTime()}`);
+                if (this.type === 'date') {
+                    return this.change(date);
+                }
+
+                this.selectTime(DateTime.fromISO(date).setZone('UTC'));
             },
 
             /**
              * Respond to the selection of a revised time.
              *
              */
-            selectTime()
+            selectTime(date = null)
             {
                 let changes = {
                     hours   : this.$refs.selector_hour.value,
@@ -504,7 +508,7 @@
                     changes.seconds = this.$refs.selector_second.value;
                 }
 
-                let date = this.value.set(changes).setZone('UTC');
+                date = date ?? this.value.set(changes).setZone('UTC');
 
                 this.change(this.type === 'time' ? date.toISOTime() : date.toISO());
             },
