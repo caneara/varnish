@@ -22,10 +22,10 @@
                  class="varnish-twitter bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-twitter text-[18px] text-sky-500 -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-twitter text-[18px] text-sky-500 -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Share on Twitter
                 </span>
 
@@ -36,10 +36,10 @@
                  class="varnish-facebook bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-facebook text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-facebook text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Share on Facebook
                 </span>
 
@@ -50,10 +50,10 @@
                  class="varnish-reddit bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-reddit-alien text-[18px] text-red-700/[.80] dark:text-red-400 -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-reddit-alien text-[18px] text-red-700/[.80] dark:text-red-400 -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Share on Reddit
                 </span>
 
@@ -64,10 +64,10 @@
                  class="varnish-linkedIn bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-linkedin text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fab fa-linkedin text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Share on LinkedIn
                 </span>
 
@@ -78,10 +78,10 @@
                  class="varnish-email bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fas fa-envelope text-16px text-emerald-600/[.80] dark:text-emerald-500 relative top-1px -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fas fa-envelope text-16px text-emerald-600/[.80] dark:text-emerald-500 relative top-1px -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Send via email
                 </span>
 
@@ -92,10 +92,10 @@
                  class="varnish-copy bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
-                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fas fa-link text-14px text-gray-500 dark:text-gray-400 relative top-1px -ml-4"></i>
+                <i class="varnish-icon w-[31px] max-varnish-icon w-[31px] min-varnish-icon w-[31px] fa-fw fas fa-link text-14px text-gray-500 dark:text-gray-400 relative top-1px -ml-3"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[6px]">
+                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-2">
                     Copy to clipboard
                 </span>
 
