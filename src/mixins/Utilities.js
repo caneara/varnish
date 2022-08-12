@@ -44,5 +44,24 @@ export default
 
             return ['', null, undefined].includes(value);
         },
+
+        /**
+         * Assign the given text to the clipboard.
+         *
+         */
+        copy(text)
+        {
+            let el = document.createElement('textarea');
+
+            el.value = text;
+
+            document.body.appendChild(el);
+
+            el.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(el);
+        },
     }
 }

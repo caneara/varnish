@@ -12,10 +12,10 @@
              class="varnish-modal varnish-font bg-gray-200 dark:bg-gray-800 flex justify-center items-center fixed inset-0 z-[9999]">
 
             <!-- Container -->
-            <div class="varnish-container bg-white/[.75] dark:bg-gray-700 border-y md:border-x border-gray-400/[.70] dark:border-gray-600 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] md:rounded-lg relative">
+            <div class="varnish-container bg-white/[.75] dark:bg-gray-700 border-y md:border-x border-gray-400/[.70] dark:border-gray-600 md:max-w-[600px] lg:max-w-[800px] md:rounded-lg relative">
 
                 <!-- Slot -->
-                <div class="varnish-slot min-h-[200px] p-10 md:p-20">
+                <div class="varnish-slot min-h-[200px] p-10 md:px-20 md:py-[72px]">
                     <slot></slot>
                 </div>
 
