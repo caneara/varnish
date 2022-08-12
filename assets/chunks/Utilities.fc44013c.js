@@ -1,1 +1,0 @@
-var r={methods:{automated(){let t=["cypress","dusk"];for(const e of t)if(document.body.classList.contains(e))return!0;return!1},blank(t){return Array.isArray(t)?t.length===0:t instanceof Date?!1:typeof t=="object"&&t!==null?Object.keys(t).length===0&&Object.getOwnPropertyNames(t).length===0:["",null,void 0].includes(t)}}};export{r as U};
