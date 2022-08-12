@@ -139,7 +139,7 @@
          *
          */
         props : {
-            'url'     : { type : String,  default : location.href },
+            'url'     : { type : String,  default : '' },
 			'visible' : { type : Boolean, default : false },
         },
 

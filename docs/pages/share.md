@@ -58,7 +58,7 @@ The following `props` are exposed by the component.
 ### url
 
 - Type: `String`
-- Default: `location.href`
+- Default: `'`
 
 The link that should be made available for sharing.
 
