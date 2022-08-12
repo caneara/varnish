@@ -18,7 +18,7 @@ You can use the toggle at the top right of the page to switch between light and 
     import { ref } from 'vue';
     import DateTimeComponent from '../../src/components/datetime.vue';
 
-    let content = ref(new Date());
+    let content = ref('2022-09-10T16:35:12.000Z');
 </script>
 
 <!-- Demo -->
@@ -70,17 +70,19 @@ More details can be found on [MDN](https://developer.mozilla.org/en-US/docs/Web/
 <v-datetime locale="de-AT"></v-datetime>
 ```
 
-### maxYear
+### maxDate
 
-- Type: `Number`
-- Default: `2050`
+- Type: `String`
+- Default: `'2100-12-31'`
 
-Specify the maximum year that is permitted.
+Specify the maximum date that may be selected.
 
-At this time, it is not possible to set a maximum date e.g. September 17, 2025.
+The value must be supplied in the form of an ISO 8601 date.
+
+> It is your responsibility to ensure that any value that you set via `v-model` is less than the maximum date. The component will not check for this.
 
 ```html
-<v-datetime :maxYear="2030"></v-datetime>
+<v-datetime maxDate="2030-10-07"></v-datetime>
 ```
 
 ### meridiem
@@ -94,17 +96,19 @@ Specify whether to include a meridiem (am / pm) hint alongside the 24 hour clock
 <v-datetime :meridiem="true"></v-datetime>
 ```
 
-### minYear
+### minDate
 
-- Type: `Number`
-- Default: `1950`
+- Type: `String`
+- Default: `'1900-01-01'`
 
-Specify the minimum year that is permitted.
+Specify the minimum date that may be selected.
 
-At this time, it is not possible to set a minimum date e.g. January 22, 1975.
+The value must be supplied in the form of an ISO 8601 date.
+
+> It is your responsibility to ensure that any value that you set via `v-model` is more than the minimum date. The component will not check for this.
 
 ```html
-<v-datetime :minYear="1970"></v-datetime>
+<v-datetime :minDate="1970-06-22"></v-datetime>
 ```
 
 ### showSeconds
@@ -136,15 +140,20 @@ Depending on the given value, certain UI elements will either be shown or hidden
 <v-datetime type="time"></v-datetime>
 ```
 
-## Parsing
+### v-model
 
-While the component will attempt to parse anything that you provide it, there is a chance that it won't get it right.
+- Type: `String`
+- Default: `''`
 
-Therefore, it is recommended that you use one of the following input types:
+The two-way, data-bound value used by the component. It must be supplied in the form of an ISO 8601 `string` e.g.
 
-* A Luxon `DateTime` object.
-* A JavaScript `Date` object.
-* An ISO 8601 `string` e.g. '2022-08-11T17:22:00.000Z'.
+* Date: `'2022-08-11'`
+* Time: `'17:22:00.000Z'`
+* DateTime: `'2022-08-11T17:22:00.000Z'`
+
+```html
+<v-datetime v-model="start_date"></v-datetime>
+```
 
 ## Time zones
 

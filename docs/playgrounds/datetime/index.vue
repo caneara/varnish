@@ -14,9 +14,9 @@
         <!-- Date -->
         <v-datetime type="date"
                     v-model="date"
-                    :minYear="2010"
-                    :maxYear="2030"
                     label="Start date"
+                    minDate="2010-02-05"
+                    maxDate="2030-11-12"
                     icon="fas fa-calendar">
         </v-datetime>
 
@@ -34,7 +34,7 @@
 
         <!-- Heading -->
         <h2 class="font-semibold my-6">
-            DateTime (with meridiem)
+            DateTime (with meridiem hint)
         </h2>
 
         <!-- DateTime -->
@@ -60,7 +60,7 @@
 
         data() {
             return {
-                date     : new Date(),
+                date     : '2022-08-10',
                 time     : '16:35:22.000Z',
                 datetime : '2022-09-10T16:35:12.000Z',
             }

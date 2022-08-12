@@ -107,13 +107,13 @@
                     <!-- Day -->
                     <div v-for="day in daysInMonth"
                          @click="selectDate(day.date)"
-                         :key="`${day.month}_${day.ordinal}`"
                          class="varnish-day flex justify-center"
-                         :class="day.month === 'previous' ? 'text-gray-300 dark:text-gray-700 pointer-events-none' : 'text-gray-700 dark:text-gray-400 cursor-pointer group'">
+                         :key="`${day.year}_${day.month}_${day.ordinal}`"
+                         :class="day.enabled ? 'text-gray-700 dark:text-gray-400 cursor-pointer group' : 'text-gray-300 dark:text-gray-700 pointer-events-none'">
 
                         <!-- Ordinal -->
                         <div class="varnish-ordinal h-[28px] w-[28px] text-[14px] text-center rounded-full transition duration-300 pt-[7px]"
-                             :class="[day.today ? 'font-semibold text-sky-600 dark:text-sky-400' : '', day.selected ? 'bg-emerald-600/[.30] dark:bg-emerald-600/[.60]' : 'group-hover:bg-emerald-600/[.30] dark:group-hover:bg-emerald-600/[.60]']">
+                             :class="[day.today ? 'font-semibold text-sky-600 dark:text-sky-400' : '', day.selected ? 'bg-emerald-600/[.30] dark:bg-emerald-600/[.60] dark:text-gray-300' : 'group-hover:bg-emerald-600/[.30] dark:group-hover:bg-emerald-600/[.60] dark:group-hover:text-gray-300']">
 
                             <!-- Text -->
                             {{ day.ordinal }}
@@ -237,7 +237,7 @@
 </template>
 
 <script>
-    import { DateTime } from 'luxon';
+    import { DateTime, Interval } from 'luxon';
     import Container from '../mixins/Container';
     import Utilities from '../mixins/Utilities';
     import TextBoxComponent from './textbox.vue';
@@ -270,13 +270,13 @@
         data() { return {
             calendar  : null,
             hours     : Array(24).fill('').map((v, i) => `${i}`.padStart(2, '0')),
+            limits    : { minimum : DateTime.fromISO(this.minDate), maximum : DateTime.fromISO(this.maxDate) },
             minutes   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             months    : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             seconds   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             selectors : { date : false, time : false },
             value     : null,
             week      : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            years     : Array(this.maxYear - this.minYear + 1).fill('').map((v, i) => this.maxYear - i).reverse(),
         }},
 
         /**
@@ -285,10 +285,10 @@
          */
         props : {
             'locale'      : { type : String,  default : 'en-US' },
-            'maxYear'     : { type : Number,  default : 2050 },
+            'maxDate'     : { type : String,  default : '2100-12-31' },
             'meridiem'    : { type : Boolean, default : false },
-            'minYear'     : { type : Number,  default : 1950 },
-            'showSeconds' : { type : Boolean,  default : false },
+            'minDate'     : { type : String,  default : '1900-01-01' },
+            'showSeconds' : { type : Boolean, default : false },
             'type'        : { type : String,  default : 'date' },
         },
 
@@ -309,7 +309,7 @@
                 for (let ordinal = 0; ordinal < (this.calendar.weekday - 1); ordinal++) {
                     days.push({
                         date     : null,
-                        month    : 'previous',
+                        enabled  : false,
                         ordinal  : this.calendar.startOf('month').minus({ months : 1 }).endOf('month').minus({ days : this.calendar.weekday - ordinal - 2 }).day,
                         selected : false,
                         today    : false,
@@ -319,7 +319,7 @@
                 for (let ordinal = 1; ordinal <= this.calendar.daysInMonth; ordinal++) {
                     days.push({
                         date     : this.calendar.set({ day : ordinal }).toISODate(),
-                        month    : 'active',
+                        enabled  : this.withinLimits(this.calendar.set({ day : ordinal })),
                         ordinal  : ordinal,
                         selected : this.value.toISODate() === this.calendar.set({ day : ordinal }).toISODate(),
                         today    : DateTime.now().setLocale(this.locale).toISODate() === this.calendar.set({ day : ordinal }).toISODate(),
@@ -357,6 +357,17 @@
 
                 throw 'Unknown type format';
             },
+
+            /**
+             * Determine the range of years that are permitted.
+             *
+             */
+            years()
+            {
+                let range = Array(this.limits.maximum.year - this.limits.minimum.year + 1);
+
+                return range.fill('').map((v, i) => this.limits.maximum.year - i).reverse();
+            },
         },
 
         /**
@@ -366,13 +377,31 @@
         watch :
         {
             /**
+             * Watch the 'maxDate' property.
+             *
+             */
+            maxDate : function(current, previous)
+            {
+                this.limits.maximum = DateTime.fromISO(current, { locale : this.locale });
+            },
+
+            /**
+             * Watch the 'minDate' property.
+             *
+             */
+            minDate : function(current, previous)
+            {
+                this.limits.minimum = DateTime.fromISO(current, { locale : this.locale });
+            },
+
+            /**
              * Watch the 'modelValue' property.
              *
              */
             modelValue : function(current, previous)
             {
-                this.value = this.blank(current) ? null : this.parse(current);
-            }
+                this.value = this.blank(current) ? null : DateTime.fromISO(current, { locale : this.locale });
+            },
         },
 
         /**
@@ -383,7 +412,7 @@
         {
             if (this.blank(this.modelValue)) return;
 
-            this.value = this.parse(this.modelValue);
+            this.value = DateTime.fromISO(this.modelValue, { locale : this.locale });
         },
 
 		/**
@@ -404,16 +433,23 @@
             },
 
             /**
+             * Adjust the calendar so that it shows the given month.
+             *
+             */
+            goToMonth(month)
+            {
+                if (this.withinLimits(month)) {
+                    this.calendar = month;
+                }
+            },
+
+            /**
              * Adjust the calendar so that it shows the next month.
              *
              */
             goToNextMonth()
             {
-                let revised = this.calendar.startOf('month').plus({ months : 1 })
-
-                if (revised.year > this.maxYear) return;
-
-                this.calendar = revised;
+                this.goToMonth(this.calendar.startOf('month').plus({ months : 1 }));
             },
 
             /**
@@ -422,11 +458,7 @@
              */
             goToPreviousMonth()
             {
-                let revised = this.calendar.startOf('month').minus({ months : 1 });
-
-                if (revised.year < this.minYear) return;
-
-                this.calendar = revised;
+                this.goToMonth(this.calendar.startOf('month').minus({ months : 1 }));
             },
 
 	    	/**
@@ -447,27 +479,6 @@
                 this.selectors.date = false;
                 this.selectors.time = false;
 	    	},
-
-            /**
-             * Convert the given source into a DateTime object.
-             *
-             */
-            parse(source)
-            {
-                if (source instanceof DateTime) {
-                    return source.setLocale(this.locale);
-                }
-
-                if (source instanceof Date) {
-                    return DateTime.fromJSDate(source, { locale : this.locale });
-                }
-
-                if (typeof source === 'string') {
-                    return DateTime.fromISO(source, { locale : this.locale });
-                }
-
-                throw 'Unknown source format';
-            },
 
             /**
              * Respond to the selection of a revised date.
@@ -517,6 +528,17 @@
                 if (['time', 'datetime'].includes(this.type)) {
                     this.selectors.time = true;
                 }
+            },
+
+            /**
+             * Determine if the given date falls between the minimum and maximum.
+             *
+             */
+            withinLimits(date)
+            {
+                let range = Interval.fromDateTimes(this.limits.minimum, this.limits.maximum);
+
+                return range.contains(date);
             },
         }
     }
