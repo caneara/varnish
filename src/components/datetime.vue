@@ -1,5 +1,5 @@
 <template>
-    <div class="varnish-datetime varnish-font min-w-[300px]">
+    <div class="varnish-datetime varnish-font min-w-[310px]">
 
         <!-- Hidden -->
         <input :id="name"
