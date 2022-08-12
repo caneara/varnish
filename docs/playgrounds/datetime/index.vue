@@ -41,6 +41,7 @@
         <v-datetime type="datetime"
                     :meridiem="true"
                     v-model="datetime"
+                    :showSeconds="true"
                     icon="fas fa-calendar"
                     label="Start date / time">
         </v-datetime>
@@ -60,8 +61,8 @@
         data() {
             return {
                 date     : new Date(),
-                time     : '16:35:00.000Z',
-                datetime : '2022-09-10T16:35:00.000Z',
+                time     : '16:35:22.000Z',
+                datetime : '2022-09-10T16:35:12.000Z',
             }
         },
     }

@@ -107,6 +107,21 @@ At this time, it is not possible to set a minimum date e.g. January 22, 1975.
 <v-datetime :minYear="1970"></v-datetime>
 ```
 
+### showSeconds
+
+- Type: `Boolean`
+- Default: `false`
+
+Specify whether to show and allow changing of seconds.
+
+When set to `false`, the 'seconds' element of the time value is preserved. It also remains preserved if the time is changed.
+
+If the time is cleared using the 'X' button, then 'seconds' is set to `'00'`.
+
+```html
+<v-datetime :showSeconds="true"></v-datetime>
+```
+
 ### type
 
 - Type: `Enum (String)`
@@ -130,10 +145,6 @@ Therefore, it is recommended that you use one of the following input types:
 * A Luxon `DateTime` object.
 * A JavaScript `Date` object.
 * An ISO 8601 `string` e.g. '2022-08-11T17:22:00.000Z'.
-
-## Caveats
-
-At this time, the component does not honor or use seconds. For most applications, this isn't a problem, as users rarely need such fine-grained control over times.
 
 ## Time zones
 
@@ -176,17 +187,18 @@ If you want to override any of the component's default styling, then you can do 
 .varnish-datetime .varnish-container .varnish-divider { }
 .varnish-datetime .varnish-container .varnish-selector-time { }
 .varnish-datetime .varnish-container .varnish-selector-time .varnish-zone { }
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour { }
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour .varnish-selector-hour { }
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour .varnish-separator { }
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour .varnish-selector-minute { }
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour .varnish-selector-meridiem { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-selector-hour { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-separator { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-selector-minute { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-selector-second { }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-selector-meridiem { }
 ```
 
 Here's an example that changes the meridiem text color to purple:
 
 ```css
-.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour .varnish-selector-meridiem { @apply text-purple-700 dark:text-purple-400 }
+.varnish-datetime .varnish-container .varnish-selector-time .varnish-selector-minute-hour-second .varnish-selector-meridiem { @apply text-purple-700 dark:text-purple-400 }
 ```
 
 > Be sure to use the full selector path when overriding any styles. That way, any changes will be scoped to the component in question.

@@ -143,8 +143,8 @@
 
                 </div>
 
-                <!-- Hour & Minute -->
-                <div class="varnish-selector-minute-hour flex items-center ">
+                <!-- Hour, Minute, Seconds -->
+                <div class="varnish-selector-minute-hour-second flex items-center ">
 
                     <!-- Hour -->
                     <select ref="selector_hour"
@@ -184,6 +184,35 @@
 
                             <!-- Text -->
                             {{ minute }}
+
+                        </option>
+
+                    </select>
+
+                    <!-- Separator -->
+                    <span v-if="showSeconds"
+                          class="varnish-separator relative -top-[1px] ml-[3px] mr-1">
+
+                        <!-- Text -->
+                        :
+
+                    </span>
+
+                    <!-- Second -->
+                    <select v-if="showSeconds"
+                            ref="selector_second"
+                            @change="selectTime()"
+                            :id="`${name}_select_second`"
+                            class="varnish-selector-second bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300 leading-normal -tracking-[.2px]">
+
+                        <!-- Options -->
+                        <option :key="second"
+                                :value="second"
+                                v-for="second in seconds"
+                                :selected="second === calendar.second.toString().padStart(2, '0')">
+
+                            <!-- Text -->
+                            {{ second }}
 
                         </option>
 
@@ -243,6 +272,7 @@
             hours     : Array(24).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             minutes   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             months    : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            seconds   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             selectors : { date : false, time : false },
             value     : null,
             week      : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -254,11 +284,12 @@
          *
          */
         props : {
-            'locale'   : { type : String,  default : 'en-US' },
-            'maxYear'  : { type : Number,  default : 2050 },
-            'meridiem' : { type : Boolean, default : false },
-            'minYear'  : { type : Number,  default : 1950 },
-            'type'     : { type : String,  default : 'date' },
+            'locale'      : { type : String,  default : 'en-US' },
+            'maxYear'     : { type : Number,  default : 2050 },
+            'meridiem'    : { type : Boolean, default : false },
+            'minYear'     : { type : Number,  default : 1950 },
+            'showSeconds' : { type : Boolean,  default : false },
+            'type'        : { type : String,  default : 'date' },
         },
 
         /**
@@ -304,6 +335,8 @@
              */
             format()
             {
+                let preset = this.showSeconds ? DateTime.TIME_24_WITH_SECONDS : DateTime.TIME_24_SIMPLE;
+
                 if (this.blank(this.modelValue)) {
                     return '';
                 }
@@ -313,12 +346,12 @@
                 }
 
                 if (this.type === 'time') {
-                    return this.value.toLocaleString(DateTime.TIME_24_SIMPLE);
+                    return this.value.toLocaleString(preset);
                 }
 
                 if (this.type === 'datetime') {
                     return this.value.toLocaleString(DateTime.DATE_MED) + ' - ' +
-                        this.value.toLocaleString(DateTime.TIME_24_SIMPLE) +
+                        this.value.toLocaleString(preset) +
                         (this.meridiem ? ` (${this.value.toFormat('a').toLowerCase()})` : '');
                 }
 
@@ -397,7 +430,7 @@
             },
 
 	    	/**
-	    	 * Determine if the component is currently being used.
+	    	 * Determine if the component currently has the user's attention.
 	    	 *
 	    	 */
 	    	hasUserAttention()
@@ -455,6 +488,10 @@
                     hours   : this.$refs.selector_hour.value,
                     minutes : this.$refs.selector_minute.value,
                 };
+
+                if (this.showSeconds) {
+                    changes.seconds = this.$refs.selector_second.value;
+                }
 
                 let date = this.value.set(changes).setZone('UTC');
 
