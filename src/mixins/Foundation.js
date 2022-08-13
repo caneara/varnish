@@ -31,7 +31,7 @@ export default
         'label'        : { type : String,                    default : 'Label' },
         'modelValue'   : { type : [String, Number, Boolean], default : '' },
         'optional'     : { type : Boolean,                   default : false },
-        'optionalText' : { type : String,                    default : '' },
+        'optionalText' : { type : String,                    default : 'Optional' },
         'placeholder'  : { type : String,                    default : '' },
     },
 
