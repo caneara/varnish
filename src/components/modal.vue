@@ -1,38 +1,38 @@
 <template>
-    <Transition leave-to-class="opacity-0 scale-110"
-                enter-from-class="opacity-0 scale-110"
-                enter-to-class="opacity-100 scale-100"
-                leave-from-class="opacity-100 scale-100"
-                enter-active-class="transition duration-300"
-                leave-active-class="transition duration-300">
+	<div class="varnish-modal varnish-font w-full h-full hidden fixed top-0 left-0 z-[1001] overflow-x-hidden overflow-y-auto transition duration-200">
 
-        <!-- Modal -->
-        <div v-if="visible"
-             @click="close()"
-             class="varnish-modal varnish-font bg-gray-200 dark:bg-gray-800 flex justify-center items-center fixed inset-0 z-[9999]">
+		<!-- Background -->
+		<div ref="background"
+			 @click="dismiss ? close() : null"
+             class="varnish-background bg-gray-200 dark:bg-gray-800 opacity-0 fixed inset-0 z-[1000] transition duration-200">
+		</div>
 
-            <!-- Container -->
-            <div class="varnish-container bg-white/[.75] dark:bg-gray-700 border-y md:border-x border-gray-400/[.70] dark:border-gray-600 md:max-w-[600px] lg:max-w-[800px] md:rounded-lg relative">
+		<!-- Container -->
+        <div class="varnish-container flex min-h-screen items-center py-14">
+
+            <!-- Content -->
+            <div ref="content"
+                 class="varnish-content relative z-[1001] max-w-600px md:rounded-lg transition duration-200 md:scale-110 mx-auto">
 
                 <!-- Slot -->
-                <div class="varnish-slot min-h-[200px] p-10 md:px-20 md:py-[72px]">
+                <div class="varnish-slot bg-white/[.75] dark:bg-gray-700 border-y md:border-x border-gray-400/[.80] dark:border-gray-600 md:rounded-lg p-10 md:p-20">
                     <slot></slot>
                 </div>
 
             </div>
 
-            <!-- Close -->
-            <i ref="close"
-               v-if="dismiss"
-               @click="close()"
-               dusk="modal-close"
-               title="Close the popup"
-               class="varnish-close fas fa-times text-[20px] text-gray-400 dark:text-gray-600 hover:text-gray-900 dark:hover:text-gray-400 cursor-pointer transition duration-300 absolute top-6 right-6">
-            </i>
-
         </div>
 
-    </Transition>
+        <!-- Close -->
+        <i ref="close"
+           v-if="dismiss"
+           @click="close()"
+           dusk="modal-close"
+           title="Close the popup"
+           class="varnish-close fas fa-times text-[20px] text-gray-400 dark:text-gray-600 hover:text-gray-900 dark:hover:text-gray-400 transition duration-200 cursor-pointer opacity-0 absolute z-[1001] top-[14px] right-[14px]">
+        </i>
+
+	</div>
 </template>
 
 <script>
@@ -53,6 +53,33 @@
 			'visible' : { type : Boolean, default : false },
 		},
 
+        /**
+         * Define the watch methods.
+         *
+         */
+        watch :
+        {
+            /**
+             * Watch the 'visible' property.
+             *
+             */
+            visible : function(current, previous)
+            {
+                return current ? this.open() : this.close();
+            }
+        },
+
+		/**
+		 * Execute actions when the component is mounted to the DOM.
+		 *
+		 */
+		mounted()
+		{
+			if (this.visible) {
+                this.open();
+            }
+		},
+
 		/**
 		 * Define the supporting methods.
 		 *
@@ -60,15 +87,41 @@
 		methods:
         {
 			/**
-			 * Close the component window.
+			 * Close the modal window.
 			 *
 			 */
 			close()
 			{
-				if (this.dismiss) {
-                    this.$emit('closed');
-                }
+				document.body.style.overflow = 'auto';
+
+				this.$refs.content.style.opacity   = 0;
+                this.$refs.content.style.transform = 'scale(1.1)';
+
+				setTimeout(() => this.$refs.close.style.opacity = 0, 100);
+				setTimeout(() => this.$refs.background.style.opacity = 0, 100);
+				setTimeout(() => this.$el.classList.add('hidden'), 600);
+				setTimeout(() => this.$emit('closed'), 650);
 			},
-        }
-    }
+
+			/**
+			 * Open the modal window.
+			 *
+			 */
+			open()
+			{
+				document.body.style.overflow = 'hidden';
+
+				this.$el.classList.remove('hidden');
+
+				this.$refs.content.style.opacity   = 0;
+				this.$refs.content.style.transform = '';
+
+				setTimeout(() => this.$el.scrollTop = 0, 50);
+                setTimeout(() => this.$refs.close.style.opacity = 1, 50);
+                setTimeout(() => this.$refs.background.style.opacity = 1, 50);
+				setTimeout(() => this.$refs.content.style.opacity = 1, 50);
+				setTimeout(() => this.$refs.content.style.transform = 'scale(1)', 50);
+			},
+		}
+	}
 </script>

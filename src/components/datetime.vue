@@ -111,8 +111,11 @@
                          :class="day.enabled ? 'text-gray-700 dark:text-gray-400 cursor-pointer group' : 'text-gray-300 dark:text-gray-700 pointer-events-none'">
 
                         <!-- Ordinal -->
-                        <div class="varnish-ordinal h-[28px] w-[28px] text-[14px] text-center rounded-full transition duration-300 pt-[7px]"
-                             :class="[day.today ? 'font-semibold text-sky-600 dark:text-sky-400' : '', day.selected ? 'bg-emerald-600/[.30] dark:bg-emerald-600/[.60] dark:text-gray-300' : 'group-hover:bg-emerald-600/[.30] dark:group-hover:bg-emerald-600/[.60] dark:group-hover:text-gray-300']">
+                        <div class="varnish-ordinal h-[28px] w-[28px] text-[14px] text-center rounded-full pt-[7px]"
+                             :class="[
+                                day.today ? 'font-semibold text-sky-600 dark:text-sky-400' : '',
+                                day.selected ? 'bg-emerald-600/[.30] dark:bg-emerald-600/[.60] dark:text-gray-300' : 'group-hover:bg-emerald-600/[.30] dark:group-hover:bg-emerald-600/[.60] dark:group-hover:text-gray-300'
+                            ]">
 
                             <!-- Text -->
                             {{ day.ordinal }}

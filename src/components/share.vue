@@ -88,15 +88,19 @@
             </div>
 
             <!-- Copy -->
-            <div @click="copy(url)"
+            <div @click.stop="() => { copy(url); $refs.copy_text.innerHTML = 'Copied!' }"
                  class="varnish-copy bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fas fa-link text-14px text-gray-500 dark:text-gray-400 relative top-1px -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span ref="copy_text"
+                      class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+
+                    <!-- Text -->
                     Copy to clipboard
+
                 </span>
 
             </div>
