@@ -5,6 +5,7 @@ let sidebar = [
             { text : 'Introduction', link : '/pages/introduction' },
             { text : 'Requirements', link : '/pages/requirements' },
             { text : 'Installation', link : '/pages/installation' },
+            { text : 'Contributing', link : '/pages/contributing' },
         ],
     }, {
         text  : 'Getting Started',
@@ -20,6 +21,7 @@ let sidebar = [
             { text : 'Badge',    link : '/pages/badge' },
             { text : 'Banner',   link : '/pages/banner' },
             { text : 'Button',   link : '/pages/button' },
+            { text : 'Confirm',  link : '/pages/confirm' },
             { text : 'DateTime', link : '/pages/datetime' },
             { text : 'DropDown', link : '/pages/dropdown' },
             { text : 'Metric',   link : '/pages/metric' },
