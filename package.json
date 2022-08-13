@@ -21,6 +21,7 @@
         "serve": "vitepress serve docs"
     },
     "dependencies": {
+        "@yaireo/tagify": "^4.15.3",
         "highlight.js": "^11.6.0",
         "luxon": "^3.0.1",
         "markdown-it": "^13.0.1",

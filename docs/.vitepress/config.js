@@ -27,6 +27,7 @@ let sidebar = [
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Password', link : '/pages/password' },
             { text : 'Share',    link : '/pages/share' },
+            { text : 'Sticker',  link : '/pages/sticker' },
             { text : 'Switch',   link : '/pages/switch' },
             { text : 'TextBox',  link : '/pages/textbox' },
             { text : 'Writer',   link : '/pages/writer' },
