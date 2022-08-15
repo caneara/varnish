@@ -62,7 +62,7 @@ The following `props` are exposed by the component.
 - Type: `Number`
 - Default: `1`
 
-The number of rows that the textbox should have.
+The number of rows that the component should have.
 
 When set to `1`, an `input` is used. When set to `2+`, a `textarea` is used.
 

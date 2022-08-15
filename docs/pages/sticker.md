@@ -1,6 +1,6 @@
 # Sticker
 
-A read-only text box component used to display information.
+A read-only text-box component used to display information.
 
 ## Features
 

@@ -28,6 +28,7 @@ let sidebar = [
             { text : 'Modal',    link : '/pages/modal' },
             { text : 'Notice',   link : '/pages/notice' },
             { text : 'Password', link : '/pages/password' },
+            { text : 'Prompt',   link : '/pages/prompt' },
             { text : 'Share',    link : '/pages/share' },
             { text : 'Sticker',  link : '/pages/sticker' },
             { text : 'Switch',   link : '/pages/switch' },
