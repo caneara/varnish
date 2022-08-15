@@ -5,7 +5,8 @@ A multi-tag component used to associate keywords with a piece of content.
 ## Features
 
 * Powered by [Tagify](https://yaireo.github.io/tagify/)
-* Supports up to four tags
+* Configure max number of tags
+* Configure max number of characters per tag
 
 ## Demo
 
@@ -16,16 +17,13 @@ You can use the toggle at the top right of the page to switch between light and 
     import { ref } from 'vue';
     import TagsComponent from '../../src/components/tags.vue';
 
-    let first_tag  = 'php';
-    let second_tag = 'laravel';
-    let third_tag  = 'vue';
-    let fourth_tag = '';
+    let tags = ref(['php', 'laravel', 'vue', '']);
 </script>
 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex justify-center rounded-md p-6 mt-8">
     <ClientOnly>
-        <TagsComponent :first="first_tag" :second="second_tag" :third="third_tag" :fourth="fourth_tag" @first="first_tag = $event" @second="second_tag = $event" @third="third_tag = $event" @fourth="fourth_tag = $event" :optional="true"></TagsComponent>
+        <TagsComponent v-model="tags" :optional="true"></TagsComponent>
     </ClientOnly>
 </div>
 
@@ -58,100 +56,37 @@ This component makes use of one or more parts of the [Foundation](/pages/foundat
 
 The following `props` are exposed by the component.
 
-### first
+### characters
 
-- Type: `String`
-- Default: `''`
+- Type: `Number`
+- Default: `20`
 
-The content that should be displayed in the first tag.
+The maximum number of characters that a tag may have.
 
 ```html
-<v-tags first="PHP"></v-tags>
+<v-tags :characters="30"></v-tags>
 ```
 
-### second
+### limit
 
-- Type: `String`
-- Default: `''`
+- Type: `Number`
+- Default: `4`
 
-The content that should be displayed in the second tag.
+The maximum number of tags that the component may have.
 
 ```html
-<v-tags second="Vue"></v-tags>
+<v-tags :limit="5"></v-tags>
 ```
 
-### third
+### v-model
 
-- Type: `String`
-- Default: `''`
+- Type: `Array`
+- Default: `[]`
 
-The content that should be displayed in the third tag.
-
-```html
-<v-tags third="MySQL"></v-tags>
-```
-
-### fourth
-
-- Type: `String`
-- Default: `''`
-
-The content that should be displayed in the fourth tag.
+The two-way, data-bound value used by the component.
 
 ```html
-<v-tags fourth="Tailwind"></v-tags>
-```
-
-## Events
-
-The following `events` are exposed by the component.
-
-### first
-
-- `$event` - revised tag content.
-
-Fired when the component's first tag is changed.
-
-You will likely want to register a listener for this event so that you can update the [first](#visible) property to be equal to the revised content.
-
-```html
-<v-tags @first="my_tags.first = $event"></v-tags>
-```
-
-### second
-
-- `$event` - revised tag content.
-
-Fired when the component's second tag is changed.
-
-You will likely want to register a listener for this event so that you can update the [second](#visible) property to be equal to the revised content.
-
-```html
-<v-tags @second="my_tags.second = $event"></v-tags>
-```
-
-### third
-
-- `$event` - revised tag content.
-
-Fired when the component's third tag is changed.
-
-You will likely want to register a listener for this event so that you can update the [third](#visible) property to be equal to the revised content.
-
-```html
-<v-tags @third="my_tags.third = $event"></v-tags>
-```
-
-### fourth
-
-- `$event` - revised tag content.
-
-Fired when the component's fourth tag is changed.
-
-You will likely want to register a listener for this event so that you can update the [fourth](#visible) property to be equal to the revised content.
-
-```html
-<v-tags @fourth="my_tags.fourth = $event"></v-tags>
+<v-tags v-model="['php', 'mysql']"></v-tags>
 ```
 
 ## Custom styling

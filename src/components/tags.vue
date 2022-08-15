@@ -15,7 +15,7 @@
             <!-- Optional -->
             <v-optional :value="optionalText"
                         class="-ml-[20px] mt-[19.5px]"
-                        v-if="optional && blank(current)">
+                        v-if="optional && blank(modelValue)">
             </v-optional>
 
         </div>
@@ -54,25 +54,16 @@
          *
          */
         data() { return {
-            tagify  : null,
-            current : '',
+            tagify : null,
         }},
-
-        /**
-         * Define the events.
-         *
-         */
-        emits : ['first', 'second', 'third', 'fourth'],
 
         /**
          * Define the public properties.
          *
          */
         props : {
-            'first'  : { type : String, default : '' },
-            'fourth' : { type : String, default : '' },
-            'second' : { type : String, default : '' },
-            'third'  : { type : String, default : '' },
+            'characters' : { type : Number, default : 20 },
+            'limit'      : { type : Number, default : 4 },
         },
 
 		/**
@@ -81,9 +72,13 @@
 		 */
 		mounted()
 		{
-            this.tagify = new Tagify(this.$refs.input, { pattern : /^.{0,20}$/, maxTags : 4 });
+            this.tagify = new Tagify(this.$refs.input, {
+                pattern      : `/^.{0,${this.characters}}$/`,
+                maxTags      : this.limit,
+                transformTag : (tag) => this.transform(tag),
+            });
 
-            this.tagify.addTags([this.first, this.second, this.third, this.fourth].filter(i => i));
+            this.format(this.modelValue);
 		},
 
 		/**
@@ -92,25 +87,40 @@
 		 */
 		methods:
         {
-			/**
-			 * Notify the parent component of a change in the tags.
-			 *
-			 */
-			process(tags)
-			{
-                this.current = tags;
+            /**
+             * Convert the given input source into tags.
+             *
+             */
+            format(source)
+            {
+                this.tagify.removeAllTags();
 
-                if (this.blank(tags)) {
-                    return ['first', 'second', 'third', 'fourth'].forEach(element => this.$emit(element, ''));
+                this.tagify.addTags(source.filter(item => item));
+            },
+
+            /**
+             * Prepare the tags for two-way data binding.
+             *
+             */
+            process(tags)
+            {
+                tags = this.blank(tags) ? [] : JSON.parse(tags);
+
+                this.change(tags.map(item => item.value));
+            },
+
+            /**
+             * Enforce the character limit for each tag.
+             *
+             */
+            transform(tag)
+            {
+                if (tag.value.length >= this.characters) {
+                    tag.value = tag.value.slice(0, this.characters);
                 }
 
-                tags = JSON.parse(tags);
-
-                this.$emit('first',  tags.length >= 1 ? tags[0].value : '');
-                this.$emit('second', tags.length >= 2 ? tags[1].value : '');
-                this.$emit('third',  tags.length >= 3 ? tags[2].value : '');
-                this.$emit('fourth', tags.length >= 4 ? tags[3].value : '');
-			},
+                return tag;
+            }
         },
     }
 </script>
