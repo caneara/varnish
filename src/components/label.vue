@@ -1,13 +1,15 @@
 <template>
     <label v-if="! automated()"
            :class="filled ? small : (focus ? small : large)"
-           style="width: calc(100% - 19px); transition: all 0.1s ease, background-color 0s"
+           style="width: calc(100% - 19px); transition: all 0.15s ease, background-color 0s"
            class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-[1px] left-1">
 
         <!-- Icon -->
-        <i :class="icon"
-           v-if="! filled && ! focus && icon"
-           class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] text-center relative top-[.5px] mr-[6px]">
+        <i :class="[icon, {
+            'w-[31px] min-w-[31px]': ! filled && ! focus && icon,
+            'w-0 opacity-0 -translate-x-2 -translate-y-1': !(! filled && ! focus && icon),
+        }]"
+           class="varnish-icon max-w-[31px] text-[14px] text-gray-500/[.40] dark:text-gray-500/[.50] text-center relative top-[.5px] mr-[6px] transition-all duration-150">
         </i>
 
         <!-- Value -->
