@@ -253,6 +253,7 @@
 <!-- Script -->
 <script>
 import markdownit from 'markdown-it';
+import Dialog from '../mixins/Dialog';
 import UndoManager from 'undo-manager';
 import ErrorComponent from './error.vue';
 import hljs from 'highlight.js/lib/common';
@@ -266,6 +267,7 @@ export default
      *
      */
     mixins : [
+        Dialog,
         Utilities,
         Foundation,
     ],
@@ -482,9 +484,11 @@ export default
          * Wrap the currently selected text within a code block.
          *
          */
-        insertCodeBlock()
+        async insertCodeBlock()
         {
-            let language = this.requestInput(this.languageText, '');
+            let language = await this.prompt(
+                'Awaiting your response...', this.languageText, 'Your response'
+            );
 
             this.wrapText(['\n\n```' + `${language}\n`, '\n```\n\n']);
         },
@@ -493,15 +497,19 @@ export default
          * Insert a hyperlink into the editor.
          *
          */
-        insertLink()
+        async insertLink()
         {
             this.saveSelectionRange(this.$refs.editor);
 
             let selected = this.modelValue.substring(this.selection.start, this.selection.end);
 
-            let link = this.requestInput(this.linkText, '');
+            let link = await this.prompt(
+                'Awaiting your response...', this.linkText, 'Your response'
+            );
 
-            let text = this.blank(selected) ? this.requestInput(this.displayText, '') : null;
+            let text = this.blank(selected) ? await this.prompt(
+                'Awaiting your response...', this.displayText, 'Your response'
+            ) : null;
 
             text ? this.prependText(`[${text}](${link})`) : this.wrapText(['[', `](${link})`]);
         },
@@ -612,19 +620,6 @@ export default
         renderMarkdown()
         {
             this.$refs.preview.innerHTML = this.renderer.render(this.modelValue);
-        },
-
-        /**
-         * Prompt the user to provide input.
-         *
-         */
-        requestInput(message, fallback = '')
-        {
-            let result = prompt(message, fallback);
-
-            this.$refs.editor.focus();
-
-            return result;
         },
 
         /**

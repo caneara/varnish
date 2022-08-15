@@ -51,7 +51,19 @@ Begin by importing the component and registering it like so:
 
 ## Mixins
 
-This component makes use of one or more parts of the [Foundation](/pages/foundation) mixin. Review the component's playground for further guidance.
+This component makes use of the following parts of the [Foundation](/pages/foundation) mixin:
+
+* [autocomplete](/pages/foundation#autocomplete)
+* [change](/pages/foundation#change)
+* [error](/pages/foundation#error)
+* [focus](/pages/foundation#focus)
+* [hover](/pages/foundation#hover)
+* [icon](/pages/foundation#icon)
+* [id](/pages/foundation#id)
+* [label](/pages/foundation#label)
+* [optional](/pages/foundation#optional)
+* [optionalText](/pages/foundation#optionalText)
+* [placeholder](/pages/foundation#placeholder)
 
 ## Properties
 

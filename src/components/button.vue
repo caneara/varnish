@@ -31,13 +31,6 @@
     </button>
 </template>
 
-<style>
-    @keyframes varnish-button-spin {
-        0%   { transform: rotate(0deg) }
-        100% { transform: rotate(359deg) }
-    }
-</style>
-
 <script>
     import Foundation from '../mixins/Foundation';
 
@@ -152,3 +145,10 @@
         }
     }
 </script>
+
+<style>
+    @keyframes varnish-button-spin {
+        0%   { transform: rotate(0deg) }
+        100% { transform: rotate(359deg) }
+    }
+</style>

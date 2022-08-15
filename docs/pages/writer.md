@@ -70,7 +70,12 @@ Begin by importing the component and registering it like so:
 
 ## Mixins
 
-This component makes use of one or more parts of the [Foundation](/pages/foundation) mixin. Review the component's playground for further guidance.
+This component makes use of the following parts of the [Foundation](/pages/foundation) mixin:
+
+* [change](/pages/foundation#change)
+* [error](/pages/foundation#error)
+* [id](/pages/foundation#id)
+* [placeholder](/pages/foundation#placeholder)
 
 ## Properties
 

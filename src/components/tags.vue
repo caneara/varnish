@@ -20,12 +20,16 @@
 
         </div>
 
+        <!-- Error -->
+        <v-error :value="fault"></v-error>
+
     </div>
 </template>
 
 <script>
     import Tagify from '@yaireo/tagify';
     import '@yaireo/tagify/dist/tagify.css';
+    import ErrorComponent from './error.vue';
     import Utilities from '../mixins/Utilities';
     import Foundation from '../mixins/Foundation';
     import OptionalComponent from './optional.vue';
@@ -46,6 +50,7 @@
          *
          */
         components : {
+            'v-error'    : ErrorComponent,
             'v-optional' : OptionalComponent,
         },
 

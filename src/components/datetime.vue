@@ -12,9 +12,11 @@
                    :label="label"
                    :readOnly="true"
                    @change="clear()"
+                   :optional="optional"
                    :modelValue="format"
                    :id="`${name}_text_box`"
-                   @click="showSelectors()">
+                   @click="showSelectors()"
+                   :optionalText="optionalText">
         </v-textbox>
 
         <!-- Container -->
@@ -235,10 +237,14 @@
 
         </div>
 
+        <!-- Error -->
+        <v-error :value="fault"></v-error>
+
     </div>
 </template>
 
 <script>
+    import ErrorComponent from './error.vue';
     import { DateTime, Interval } from 'luxon';
     import Container from '../mixins/Container';
     import Utilities from '../mixins/Utilities';
@@ -262,6 +268,7 @@
          *
          */
         components : {
+            'v-error'   : ErrorComponent,
             'v-textbox' : TextBoxComponent,
         },
 

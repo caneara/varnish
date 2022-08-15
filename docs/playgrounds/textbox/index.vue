@@ -15,7 +15,7 @@
             </h2>
 
             <!-- TextBox (plain) -->
-            <v-textbox></v-textbox>
+            <v-textbox v-model="one"></v-textbox>
 
             <!-- Heading -->
             <h2 class="font-semibold mt-6">
@@ -23,7 +23,9 @@
             </h2>
 
             <!-- TextBox (with icon) -->
-            <v-textbox icon="fas fa-user"></v-textbox>
+            <v-textbox v-model="two"
+                       icon="fas fa-user">
+            </v-textbox>
 
             <!-- Heading -->
             <h2 class="font-semibold mt-6">
@@ -31,7 +33,8 @@
             </h2>
 
             <!-- TextBox (with custom label) -->
-            <v-textbox label="First name"
+            <v-textbox v-model="three"
+                       label="First name"
                        icon="fas fa-user">
             </v-textbox>
 
@@ -42,6 +45,7 @@
 
             <!-- TextBox (Multi Line) -->
             <v-textbox :lines="5"
+                       v-model="four"
                        label="Biography"
                        icon="fas fa-comment">
             </v-textbox>
@@ -86,6 +90,10 @@
 
         data() {
             return {
+                one                : '',
+                two                : '',
+                three              : '',
+                four               : '',
                 input_content      : 'John',
                 multi_line_content : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, aperiam voluptas, labore error porro distinctio dolorem iure nam assumenda rerum laborum.',
             }

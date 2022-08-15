@@ -51,6 +51,8 @@ Begin by importing the component and registering it like so:
 </script>
 ```
 
+While you are free to use this approach, you might prefer to use the [inline option](#inlining) which does not require you to add components to your template.
+
 ## Properties
 
 The following `props` are exposed by the component.
@@ -115,6 +117,41 @@ You will likely want to register a listener for this event so that you can updat
 ```html
 <v-confirm @continue="show = false"></v-confirm>
 ```
+
+## Inlining
+
+It can be cumbersome to have to add the component everywhere that you want to use it, which is why an inline option is available that allows you to simply call a method and wait for the response (similar to the native browser option).
+
+To achieve this, first add the `Dialog` mixin to your component:
+
+```html
+<script>
+import Dialog from '@caneara/varnish/mixins/Dialog';
+
+export default
+{
+    mixins : [Dialog],
+}
+</script>
+```
+
+Then call the `confirm` method provided by the mixin.
+
+Since the underlying process is a little different that the native browser `confirm` method, you will need to use `async / await`:
+
+```js
+async deleteAccount()
+{
+    let result = await this.confirm(
+        'Are you sure you wish to proceed?',
+        'Note that in most cases, this action is not reversible.',
+    );
+
+    alert(result ? 'Continue' : 'Cancel');
+},
+```
+
+The `confirm` method accepts two parameters, which are used to set the [title](#title) and [summary](#summary) properties of the component.
 
 ## Custom styling
 

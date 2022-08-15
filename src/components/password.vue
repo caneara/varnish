@@ -1,5 +1,5 @@
 <template>
-    <div class="varnish-password varnish-font w-full">
+    <div class="varnish-password varnish-font w-full min-w-[250px]">
 
         <!-- Container -->
         <div @mouseover="hover = true"
@@ -23,8 +23,7 @@
             <v-label :icon="icon"
                      :value="label"
                      :focus="focus"
-                     :optional="optional"
-                     :optionalText="optionalText"
+                     :optional="false"
                      :filled="! blank(modelValue)">
             </v-label>
 

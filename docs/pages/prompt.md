@@ -52,6 +52,8 @@ Begin by importing the component and registering it like so:
 </script>
 ```
 
+While you are free to use this approach, you might prefer to use the [inline option](#inlining) which does not require you to add components to your template.
+
 ## Properties
 
 The following `props` are exposed by the component.
@@ -140,6 +142,44 @@ You will likely want to register a listener for this event so that you can updat
 ```html
 <v-prompt @continue="() => { feedback = $event; show = false }"></v-prompt>
 ```
+
+## Inlining
+
+It can be cumbersome to have to add the component everywhere that you want to use it, which is why an inline option is available that allows you to simply call a method and wait for the response (similar to the native browser option).
+
+To achieve this, first add the `Dialog` mixin to your component:
+
+```html
+<script>
+import Dialog from '@caneara/varnish/mixins/Dialog';
+
+export default
+{
+    mixins : [Dialog],
+}
+</script>
+```
+
+Then call the `prompt` method provided by the mixin.
+
+Since the underlying process is a little different that the native browser `prompt` method, you will need to use `async / await`:
+
+```js
+async provideFeedback()
+{
+    let result = await this.prompt(
+        'Awaiting your response...',
+        'In order to proceed, some input is required from you.',
+        'Your response',
+        '',
+        3
+    );
+
+    alert(result === '' ? 'Cancel' : 'Continue');
+},
+```
+
+The `prompt` method accepts five parameters, which are used to set the [title](#title), [summary](#summary), [label](#label), fallback text (if cancelled) and [lines](#lines) properties of the component.
 
 ## Custom styling
 

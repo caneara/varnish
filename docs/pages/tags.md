@@ -50,7 +50,11 @@ Begin by importing the component and registering it like so:
 
 ## Mixins
 
-This component makes use of one or more parts of the [Foundation](/pages/foundation) mixin. Review the component's playground for further guidance.
+This component makes use of the following parts of the [Foundation](/pages/foundation) mixin:
+
+* [id](/pages/foundation#id)
+* [optional](/pages/foundation#optional)
+* [optionalText](/pages/foundation#optionalText)
 
 ## Properties
 
