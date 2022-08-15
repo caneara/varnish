@@ -281,11 +281,11 @@
             hours     : Array(24).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             limits    : { minimum : DateTime.fromISO(this.minDate), maximum : DateTime.fromISO(this.maxDate) },
             minutes   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
-            months    : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            months    : Array(12).fill('').map((m, i) => new Intl.DateTimeFormat(this.locale, { month: 'short' }).format(new Date(Date.UTC(2021, (i)%12)))),
             seconds   : Array(60).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             selectors : { date : false, time : false },
             value     : null,
-            week      : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            week      : Array(7).fill('').map((m, i) => new Intl.DateTimeFormat(this.locale, { weekday: 'short' }).format(new Date(Date.UTC(2021, 5, i)))),
         }},
 
         /**
