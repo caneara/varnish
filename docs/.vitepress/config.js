@@ -24,6 +24,7 @@ let sidebar = [
             { text : 'Confirm',  link : '/pages/confirm' },
             { text : 'DateTime', link : '/pages/datetime' },
             { text : 'DropDown', link : '/pages/dropdown' },
+            { text : 'Menu',     link : '/pages/menu' },
             { text : 'Metric',   link : '/pages/metric' },
             { text : 'Modal',    link : '/pages/modal' },
             { text : 'Notice',   link : '/pages/notice' },
