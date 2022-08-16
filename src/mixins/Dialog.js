@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import PromptComponent from '../components/prompt.vue';
 import ConfirmComponent from '../components/confirm.vue';
+import NotificationComponent from '../components/notification.vue';
 
 export default
 {
@@ -9,8 +10,9 @@ export default
      *
      */
     components : {
-        'v-confirm' : ConfirmComponent,
-        'v-prompt'  : PromptComponent,
+        'v-confirm'       : ConfirmComponent,
+        'v-notification'  : NotificationComponent,
+        'v-prompt'        : PromptComponent,
     },
 
     /**
@@ -35,7 +37,7 @@ export default
          */
         createDialogElement()
         {
-            this.dialog.id = `prompt-${parseInt(performance.now())}`;
+            this.dialog.id = `dialog-${parseInt(performance.now())}`;
 
             let div = document.createElement('div');
 
@@ -89,6 +91,24 @@ export default
 
                 this.dialog.container.mount(`#${this.dialog.id}`);
             });
+        },
+
+        /**
+         * Advise the user that something has happened.
+         *
+         */
+        notify(type, message)
+        {
+            this.createDialogElement();
+
+            this.dialog.container = createApp(NotificationComponent, {
+                message : message,
+                type    : type,
+            });
+
+            this.dialog.container.mount(`#${this.dialog.id}`);
+
+            setTimeout(() => this.closeDialog(), 3500);
         },
 
         /**

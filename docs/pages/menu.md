@@ -19,7 +19,7 @@ You can use the toggle at the top right of the page to switch between light and 
     import MenuComponent from '../../src/components/menu.vue';
 
     let items = ref([
-        { type : 'link', show : true, icon : 'fas fa-user', label : 'Account' },
+        { type : 'link', show : true, icon : 'fas fa-user', label : 'Account', action: () => alert('clicked') },
         { type : 'separator', show : true },
         { type : 'link', show : true, icon : 'fas fa-right-to-bracket', label : 'Sign Out' },
     ]);
@@ -103,14 +103,22 @@ A `link` object is configured like so:
 
 ```js
 {
-    icon  : 'fas fa-user',
-    label : 'Account',
-    show  : true,
-    type  : 'link',
+    action : () => location.href = '/account',
+    icon   : 'fas fa-user',
+    label  : 'Account',
+    show   : true,
+    type   : 'link',
 }
 ```
 
 A summary of each property is provided below.
+
+#### action
+
+- Type: `Function`
+- Example: `() => location.href = '/account'`
+
+Specify the `closure` that should be executed when the menu item is clicked.
 
 #### icon
 

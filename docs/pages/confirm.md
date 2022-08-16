@@ -32,6 +32,8 @@ You can use the toggle at the top right of the page to switch between light and 
 
 ## Usage
 
+> While you are free to use the approach below, you are probably looking for the [inline option](#inlining) which does not require adding components to a template.
+
 Begin by importing the component and registering it like so:
 
 ```html
@@ -50,8 +52,6 @@ Begin by importing the component and registering it like so:
     }
 </script>
 ```
-
-While you are free to use this approach, you might prefer to use the [inline option](#inlining) which does not require you to add components to your template.
 
 ## Properties
 

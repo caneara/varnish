@@ -139,7 +139,7 @@
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag { @apply bg-sky-600/[.10] hover:bg-sky-600/[.10] dark:bg-sky-400/[.50] dark:hover:bg-sky-400/[.50] rounded top-[6px] left-[6px] m-[5px] px-1 }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag div:before { @apply shadow-none }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag:hover div:before { @apply shadow-none }
-    .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn { @apply bg-transparent relative top-[0.5px] }
+    .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn { @apply bg-transparent relative top-[.5px] }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:after { @apply text-gray-700 dark:text-gray-400 }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:hover { @apply bg-transparent }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:hover:after { @apply text-red-700 }
