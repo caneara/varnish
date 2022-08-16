@@ -3,7 +3,7 @@
             :id="`id-${name}`"
             :class="theme.join(' ')"
             @click.prevent="execute()"
-            class="varnish-button varnish-font min-h-[35px] min-w-[100px] border border-solid flex items-center justify-center relative rounded transition-all duration-300 cursor-pointer">
+            class="varnish-button varnish-font w-full md:w-auto min-h-[35px] min-w-[100px] border border-solid flex items-center justify-center relative rounded transition-all duration-300 cursor-pointer">
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"

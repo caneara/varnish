@@ -9,7 +9,7 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-title font-[650] text-[21px] text-gray-900 dark:text-white text-center -tracking-[.6px] mb-5">
+        <div class="varnish-title font-[650] text-[21px] text-gray-900 dark:text-white text-center leading-snug -tracking-[.6px] mb-5">
             {{ title }}
         </div>
 

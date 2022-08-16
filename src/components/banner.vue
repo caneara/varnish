@@ -17,7 +17,7 @@
             </span>
 
             <!-- Message -->
-            <span class="varnish-message text-[17px] text-gray-200 leading-normal -tracking-[.2px] break-words pr-[130px]">
+            <span class="varnish-message text-[17px] text-gray-200 leading-normal -tracking-[.2px] break-words md:pr-[130px]">
                 {{ message }}
             </span>
 

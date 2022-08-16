@@ -5,7 +5,7 @@
 
         <!-- Circle -->
         <div class="varnish-circle bg-purple-500/[.20] dark:bg-purple-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-8">
-            <i class="varnish-icon fas fa-question text-[30px] text-purple-600/[.80] dark:text-purple-500"></i>
+            <i class="varnish-icon fas fa-comment-dots text-[30px] text-purple-700/[.40] dark:text-purple-500"></i>
         </div>
 
         <!-- Title -->

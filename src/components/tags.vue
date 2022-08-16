@@ -131,7 +131,7 @@
 </script>
 
 <style>
-    .varnish-tags .varnish-container .varnish-input.tagify { @apply border-none }
+    .varnish-tags .varnish-container .varnish-input.tagify { @apply border-none pb-3 }
     .varnish-tags .varnish-container .varnish-input.tagify.tagify--focus + input + .varnish-optional { @apply hidden }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__input { @apply relative top-[6px] left-[6px] }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__input:before { @apply text-gray-600 dark:text-gray-400 top-[7px] pl-[28px] }

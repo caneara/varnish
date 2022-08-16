@@ -2,7 +2,7 @@
     <div class="demo py-[40px] px-[64px]">
 
         <!-- Title -->
-        <h1 class="text-[32px] font-semibold -tracking-[.7px] mb-12">
+        <h1 class="text-[32px] font-semibold leading-snug -tracking-[.7px] mb-12">
             DateTime - Playground
         </h1>
 

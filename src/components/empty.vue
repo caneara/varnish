@@ -9,7 +9,7 @@
         </i>
 
         <!-- Title -->
-        <span class="varnish-title font-semibold text-[19px] text-gray-800 dark:text-gray-300 -tracking-[.6px] mb-[5px]">
+        <span class="varnish-title font-semibold text-[18px] text-gray-800 dark:text-gray-300 -tracking-[.6px] mb-[5px]">
             {{ title }}
         </span>
 

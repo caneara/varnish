@@ -19,7 +19,7 @@ You can use the toggle at the top right of the page to switch between light and 
 </script>
 
 <!-- Demo -->
-<div class="bg-gray-100 dark:bg-black flex flex-wrap justify-center gap-x-3 rounded-md p-6 mt-8">
+<div class="bg-gray-100 dark:bg-black flex flex-wrap justify-center gap-3 rounded-md p-6 mt-8">
     <ClientOnly>
         <ButtonComponent label="Submit" color="blue" icon="fas fa-home"></ButtonComponent>
         <ButtonComponent label="Submit" color="green"></ButtonComponent>

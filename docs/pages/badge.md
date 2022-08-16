@@ -19,7 +19,7 @@ You can use the toggle at the top right of the page to switch between light and 
 </script>
 
 <!-- Demo -->
-<div class="border border-dashed border-gray-300 dark:border-gray-600 flex justify-center rounded-md gap-x-3 p-6 mt-8">
+<div class="border border-dashed border-gray-300 dark:border-gray-600 flex justify-center flex-wrap rounded-md gap-3 p-6 mt-8">
     <ClientOnly>
         <BadgeComponent color="blue" value="Blue"></BadgeComponent>
         <BadgeComponent color="green" value="Green"></BadgeComponent>

@@ -11,8 +11,12 @@
         </i>
 
         <!-- Value -->
-        <span class="varnish-value font-[450] -tracking-[.2px]">
+        <span :class="icon ? '' : 'ml-[6px]'"
+              class="varnish-value font-[450] -tracking-[.2px]">
+
+            <!-- Text -->
             {{ value }}
+
         </span>
 
         <!-- Optional -->

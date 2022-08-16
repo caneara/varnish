@@ -6,7 +6,7 @@
         <!-- Toolbar -->
         <div v-if="! readingMode"
              :class="[editing ? 'justify-between' : 'justify-end', fullscreen ? 'border-t-0' : 'rounded-t']"
-             class="varnish-toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex flex-wrap px-2">
+             class="varnish-toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex  px-2">
 
             <!-- Left Side -->
             <div class="varnish-toolbar-left flex flex-wrap justify-start"
