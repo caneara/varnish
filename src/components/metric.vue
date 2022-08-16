@@ -1,42 +1,43 @@
 <template>
     <div :id="id"
          :dusk="id"
-         class="varnish-metric varnish-font bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 w-full flex flex-col rounded-lg p-6 md:p-8">
+         class="varnish-metric varnish-font bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 w-full flex flex-col gap-3 rounded-lg p-6 md:px-8 md:py-7">
 
         <!-- Label -->
-        <span class="varnish-label font-medium text-[13px] text-gray-500/[.75] dark:text-gray-500 uppercase mb-[14px]">
+        <span class="varnish-label font-medium text-[14px] text-gray-500/[.75] dark:text-gray-500 uppercase">
             {{ label }}
         </span>
 
         <!-- Summary -->
-        <div class="varnish-summary flex">
+        <div class="varnish-summary flex gap-2 items-center">
 
             <!-- Current -->
-            <span class="varnish-current font-[550] text-[35px] text-gray-800 dark:text-gray-300 -tracking-[1px] mr-6">
+            <span class="varnish-current font-semibold text-[37px] text-gray-800 dark:text-gray-300 -tracking-[1px] mr-6 first-letter:pr-0.5 first-letter:opacity-50">
                 {{ formatted }}
             </span>
 
             <!-- Performance -->
-            <div :class="trends[direction].color"
-                 class="varnish-performance flex flex-col">
+            <div class="varnish-performance flex flex-col">
 
                 <!-- Direction -->
-                <div class="varnish-direction flex items-center font-semibold mb-[5px]">
+                <div
+                    :class="trends[direction].color"
+                    class="varnish-direction flex gap-2 items-center font-semibold px-2.5 py-1 rounded-full">
 
                     <!-- Icon -->
-                    <i class="varnish-icon fas text-[13px] mr-1"
+                    <i class="varnish-icon fas text-[13px]"
                        :class="trends[direction].icon">
                     </i>
 
                     <!-- Percentage -->
-                    <span class="varnish-percentage text-[15px] whitespace-nowrap">
+                    <span class="varnish-percentage text-sm whitespace-nowrap">
                         {{ Math.abs(percentage) > 999 ? '999' : Math.abs(percentage) }}%
                     </span>
 
                 </div>
 
                 <!-- Period -->
-                <span class="varnish-period text-[12.5px] text-gray-600 dark:text-gray-500 -tracking-[.2px]">
+                <span class="varnish-period font-medium text-[12px] text-gray-400 dark:text-gray-500 -tracking-[.2px] pt-1 pl-1">
                     vs. {{ period }}
                 </span>
 
@@ -56,9 +57,9 @@
          */
         data() { return {
             trends : {
-                down : { color : 'text-rose-700/[.90] dark:text-rose-400', icon : 'fa-arrow-down' },
-                same : { color : 'text-sky-600 dark:text-sky-400',         icon : 'fa-arrows-rotate' },
-                up   : { color : 'text-emerald-600 dark:text-emerald-400', icon : 'fa-arrow-up' },
+                down : { color : 'bg-rose-50 text-rose-600 dark:bg-rose-500 dark:text-rose-100', icon : 'fa-arrow-trend-down' },
+                same : { color : 'bg-sky-50 text-sky-500 dark:bg-sky-500 dark:text-sky-100',         icon : 'fa-arrows-rotate' },
+                up   : { color : 'bg-emerald-50 text-emerald-500 dark:bg-emerald-500 dark:text-emerald-100', icon : 'fa-arrow-trend-up' },
             }
         }},
 
