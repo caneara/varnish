@@ -67,13 +67,13 @@ let sidebar = [
 let head = [
 
     // Meta
-    ['meta', { property : 'og:title',            content : 'Varnish' }],
+    ['meta', { property : 'og:title',            content : 'Varnish UI' }],
     ['meta', { property : 'og:description',      content : 'A library of UI components built using Vue.js and TailwindCSS.' }],
     ['meta', { property : 'og:url',              content : 'https://varnish.caneara.com' }],
     ['meta', { property : 'og:image',            content : 'https://varnish.caneara.com/card.png' }],
     ['meta', { property : 'og:secure_url',       content : 'https://varnish.caneara.com/card.png' }],
     ['meta', { name     : 'twitter:card',        content : 'summary_large_image' }],
-    ['meta', { name     : 'twitter:title',       content : 'Varnish' }],
+    ['meta', { name     : 'twitter:title',       content : 'Varnish UI' }],
     ['meta', { name     : 'twitter:description', content : 'A library of UI components built using Vue.js and TailwindCSS.' }],
     ['meta', { name     : 'twitter:image',       content : 'https://varnish.caneara.com/card.png' }],
     ['meta', { name     : 'twitter:creator',     content : '@CanearaHQ' }],
@@ -102,7 +102,7 @@ let theme = {
 
 export default {
     head            : head,
-    title           : 'Varnish',
+    title           : 'Varnish UI',
     description     : 'A library of UI components built using Vue.js and TailwindCSS.',
     lastUpdated     : false,
     themeConfig     : theme,

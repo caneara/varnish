@@ -1,10 +1,10 @@
 ---
 layout: home
-title: 'Varnish'
+title: 'Varnish UI'
 titleTemplate: false
 
 hero:
-  name: Varnish
+  name: Varnish UI
   text: Supercharge your front-end
   tagline: A library of elegant, yet powerful UI components built using Vue.js and TailwindCSS.
   actions:
