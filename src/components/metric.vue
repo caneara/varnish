@@ -4,12 +4,12 @@
          class="varnish-metric varnish-font bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 w-full flex flex-col rounded-lg p-6 md:p-8">
 
         <!-- Label -->
-        <span class="varnish-label font-medium text-[13px] text-gray-500/[.75] dark:text-gray-500 uppercase mb-[14px]">
+        <span class="varnish-label font-medium text-[13px] text-gray-500/[.75] dark:text-gray-500 uppercase mb-4">
             {{ label }}
         </span>
 
         <!-- Summary -->
-        <div class="varnish-summary flex">
+        <div class="varnish-summary flex items-center">
 
             <!-- Current -->
             <span class="varnish-current font-[550] text-[35px] text-gray-800 dark:text-gray-300 -tracking-[1px] mr-6">
@@ -17,26 +17,26 @@
             </span>
 
             <!-- Performance -->
-            <div :class="trends[direction].color"
-                 class="varnish-performance flex flex-col">
+            <div class="varnish-performance flex flex-col">
 
                 <!-- Direction -->
-                <div class="varnish-direction flex items-center font-semibold mb-[5px]">
+                <div :class="trends[direction].color"
+                     class="varnish-direction flex items-center gap-2 font-semibold rounded-full px-2 py-[3px]">
 
                     <!-- Icon -->
-                    <i class="varnish-icon fas text-[13px] mr-1"
-                       :class="trends[direction].icon">
+                    <i :class="trends[direction].icon"
+                       class="varnish-icon fas text-[13px]">
                     </i>
 
                     <!-- Percentage -->
-                    <span class="varnish-percentage text-[15px] whitespace-nowrap">
+                    <span class="varnish-percentage text-[13px] whitespace-nowrap">
                         {{ Math.abs(percentage) > 999 ? '999' : Math.abs(percentage) }}%
                     </span>
 
                 </div>
 
                 <!-- Period -->
-                <span class="varnish-period text-[12.5px] text-gray-600 dark:text-gray-500 -tracking-[.2px]">
+                <span class="varnish-period font-medium text-[12px] text-gray-400 dark:text-gray-500 -tracking-[.2px] pl-[2px] pt-[5px]">
                     vs. {{ period }}
                 </span>
 
@@ -56,9 +56,18 @@
          */
         data() { return {
             trends : {
-                down : { color : 'text-rose-700/[.90] dark:text-rose-400', icon : 'fa-arrow-down' },
-                same : { color : 'text-sky-600 dark:text-sky-400',         icon : 'fa-arrows-rotate' },
-                up   : { color : 'text-emerald-600 dark:text-emerald-400', icon : 'fa-arrow-up' },
+                down : {
+                    color : 'bg-rose-50 text-rose-600/[.90] dark:bg-rose-500/[.50] dark:text-rose-100',
+                    icon  : 'fa-arrow-trend-down',
+                },
+                same : {
+                    color : 'bg-sky-50 text-sky-500 dark:bg-sky-500/[.40] dark:text-sky-100',
+                    icon  : 'fa-arrows-rotate',
+                },
+                up : {
+                    color : 'bg-emerald-50 text-emerald-600/[.90] dark:bg-emerald-500/[.40] dark:text-emerald-100',
+                    icon  : 'fa-arrow-trend-up',
+                },
             }
         }},
 
