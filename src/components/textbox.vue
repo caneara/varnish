@@ -19,7 +19,7 @@
                    @input="change($event.target.value)"
                    :readonly="readOnly ? 'readonly' : false"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
-                   class="varnish-control varnish-input w-full bg-inherit font-[470] text-gray-900 dark:text-gray-400 -tracking-[.2px] text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
+                   class="varnish-control varnish-input w-full bg-inherit text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
 
             <!-- Textarea -->
             <textarea :id="name"
@@ -32,7 +32,7 @@
                       :placeholder="placeholder"
                       :autocomplete="autocomplete"
                       @input="change($event.target.value)"
-                      class="varnish-control varnish-textarea w-full bg-inherit font-470 text-gray-900 dark:text-gray-400 leading-[24px] -tracking-[.2px] rounded appearance-none resize-none pl-3 pr-11 pt-[25px]">
+                      class="varnish-control varnish-textarea w-full bg-inherit text-gray-900 dark:text-gray-400 leading-[24px] rounded appearance-none resize-none pl-3 pr-11 pt-[25px]">
             </textarea>
 
             <!-- Label -->

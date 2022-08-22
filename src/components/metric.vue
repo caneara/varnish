@@ -12,7 +12,7 @@
         <div class="varnish-summary flex items-center">
 
             <!-- Current -->
-            <span class="varnish-current font-[550] text-[35px] text-gray-800 dark:text-gray-300 -tracking-[1px] mr-6">
+            <span class="varnish-current font-semibold text-[35px] text-gray-700 dark:text-gray-300 mr-6">
                 {{ formatted }}
             </span>
 
@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Period -->
-                <span class="varnish-period font-medium text-[12px] text-gray-400 dark:text-gray-500 -tracking-[.2px] pl-[2px] pt-[5px]">
+                <span class="varnish-period font-medium text-[12px] text-gray-400 dark:text-gray-500 pl-[2px] pt-[5px]">
                     vs. {{ period }}
                 </span>
 

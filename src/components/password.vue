@@ -17,7 +17,7 @@
                    :autocomplete="autocomplete"
                    @input="change($event.target.value)"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
-                   class="varnish-input w-full bg-inherit font-[470] text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
+                   class="varnish-input w-full bg-inherit font-medium text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
 
             <!-- Label -->
             <v-label :icon="icon"
@@ -52,10 +52,10 @@
 
         <!-- Generated -->
         <div v-if="! blank(password)"
-             class="varnish-generated font-[650] text-[14px] text-emerald-700 dark:text-emerald-300 -tracking-[.2px] mt-2">
+             class="varnish-generated font-semibold text-[14px] text-emerald-700 dark:text-emerald-300 mt-2">
 
             <!-- Text -->
-            <span class="mr-1">
+            <span class="mr-[2px]">
                 Password:
             </span>
 

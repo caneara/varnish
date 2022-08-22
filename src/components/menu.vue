@@ -24,12 +24,12 @@
                 <span :dusk="item.id"
                       v-if="item.show && item.type === 'link'"
                       @click.stop="open = false; item['action']()"
-                      class="varnish-link hover:bg-gray-200/[.75] dark:hover:bg-gray-600 text-[15px] text-gray-700/[.85] hover:text-gray-700 flex items-center select-none whitespace-nowrap cursor-pointer transition duration-300 pl-5 pr-6 pt-[10px] pb-[9px]">
+                      class="varnish-link hover:bg-gray-200/[.75] dark:hover:bg-gray-600 text-[15px] text-gray-700/[.85] hover:text-gray-700 flex items-center select-none whitespace-nowrap cursor-pointer transition duration-300 pl-5 pr-6 py-[10px]">
 
                     <!-- Icon -->
                     <i :class="item.icon"
                        v-if="! blank(item.icon)"
-                       class="varnish-icon fa-fw text-[14px] text-gray-500/[.50] dark:text-gray-400/[.70] relative mr-3">
+                       class="varnish-icon fa-fw text-[14px] text-gray-500/[.50] dark:text-gray-400/[.70] relative top-[.5px] mr-3">
                     </i>
 
                     <!-- Text -->

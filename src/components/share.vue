@@ -3,8 +3,13 @@
              class="varnish-share"
              @closed="$emit('closed')">
 
+        <!-- Circle -->
+        <div class="varnish-circle bg-emerald-500/[.20] dark:bg-emerald-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-8">
+            <i class="varnish-icon fas fa-share text-[30px] text-emerald-700/[.60] dark:text-emerald-600"></i>
+        </div>
+
         <!-- Title -->
-        <div class="varnish-header font-[650] text-[21px] text-gray-900 dark:text-white text-center -tracking-[.6px] mb-5">
+        <div class="varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug -tracking-[.3px] mb-5">
             Share a link with others
         </div>
 

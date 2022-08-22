@@ -20,7 +20,7 @@
  * General.
  *
  */
-.varnish-font { @apply leading-none ; font-family: var(--vp-font-family-base) }
+.varnish-font { @apply font-sans leading-none }
 .VPNav .title .logo { @apply mr-3 }
 .VPSidebar .nav .group .VPSidebarGroup { @apply pt-[20px] pb-[6px] }
 .VPContent .vp-doc h2 { @apply pt-[35px] mt-[40px] }

@@ -7,7 +7,7 @@
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"
-             class="varnish-label text-[12.2px] whitespace-nowrap select-none px-5">
+             class="varnish-label flex items-center text-[13px] whitespace-nowrap select-none px-5">
 
             <!-- Icon -->
             <i v-if="icon"
@@ -16,7 +16,7 @@
             </i>
 
             <!-- Text -->
-            <span class="varnish-text font-[650] uppercase relative top-[.5px]">
+            <span class="varnish-text font-bold -tracking-[.3px] uppercase">
                 {{ label }}
             </span>
 
@@ -61,7 +61,7 @@
                 },
                 outline : {
                     blue   : { button : 'border-sky-600 hover:bg-sky-600 text-sky-600 hover:text-white',          spinner : 'border-l-sky-600 border-b-sky-600' },
-                    gray   : { button : 'border-gray-500 hover:bg-gray-500 text-gray-500 hover:text-white',       spinner : 'border-l-gray-500 border-b-gray-500' },
+                    gray   : { button : 'border-gray-400 hover:bg-gray-400 text-gray-500 hover:text-white',       spinner : 'border-l-gray-500 border-b-gray-500' },
                     green  : { button : 'border-green-700 hover:bg-green-700 text-green-700 hover:text-white',    spinner : 'border-l-green-700 border-b-green-700' },
                     orange : { button : 'border-orange-600 hover:bg-orange-600 text-orange-600 hover:text-white', spinner : 'border-l-orange-600 border-b-orange-600' },
                     purple : { button : 'border-purple-600 hover:bg-purple-600 text-purple-600 hover:text-white', spinner : 'border-l-purple-600 border-b-purple-600' },

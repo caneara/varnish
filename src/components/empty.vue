@@ -9,19 +9,19 @@
         </i>
 
         <!-- Title -->
-        <span class="varnish-title font-semibold text-[18px] text-gray-800 dark:text-gray-300 -tracking-[.6px] mb-[5px]">
+        <span class="varnish-title font-semibold text-[18px] text-gray-800 dark:text-gray-300 -tracking-[.3px] mb-[5px]">
             {{ title }}
         </span>
 
         <!-- Message -->
-        <span class="varnish-message text-[15px] text-gray-600 dark:text-gray-400 text-center leading-normal -tracking-[.2px] max-w-450px">
+        <span class="varnish-message text-[15px] text-gray-600 dark:text-gray-400 text-center leading-normal max-w-450px">
             {{ message }}
         </span>
 
         <!-- Action -->
         <span @click="actionCommand()"
               v-if="! blank(actionLabel) && ! blank(actionCommand)"
-              class="varnish-action font-semibold text-[14px] text-sky-600 dark:text-sky-400 hover:text-rose-700 dark:hover:text-rose-400 -tracking-[.2px] uppercase cursor-pointer transition duration-300 mt-5">
+              class="varnish-action font-semibold text-[13px] text-sky-600 dark:text-sky-400 hover:text-rose-700 dark:hover:text-rose-400 uppercase cursor-pointer transition duration-300 mt-5">
 
             <!-- Text -->
             {{ actionLabel }}

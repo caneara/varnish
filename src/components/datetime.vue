@@ -45,7 +45,7 @@
                         <!-- Month -->
                         <select :id="`${name}_select_month`"
                                 @change="calendar = calendar.set({ month : $event.target.value })"
-                                class="varnish-selector-month bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal -tracking-[.2px] pr-[2px]">
+                                class="varnish-selector-month bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal pr-[2px]">
 
                             <!-- Options -->
                             <option :key="index"
@@ -63,7 +63,7 @@
                         <!-- Year -->
                         <select :id="`${name}_select_year`"
                                 @change="calendar = calendar.set({ year : $event.target.value })"
-                                class="varnish-selector-year bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal -tracking-[.2px]">
+                                class="varnish-selector-year bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal">
 
                             <!-- Options -->
                             <option :key="year"
@@ -140,7 +140,7 @@
 
                 <!-- Time Zone -->
                 <div :title="`UTC ${calendar.toFormat('Z')}`"
-                     class="varnish-zone basis-full text-[13px] text-gray-600 dark:text-gray-400/[.80] truncate mb-[6px]">
+                     class="varnish-zone basis-full text-[13px] text-gray-600 dark:text-gray-400/[.80] truncate mb-1">
 
                     <!-- Text -->
                     {{ calendar.toFormat('ZZZZZ') }}
@@ -148,13 +148,13 @@
                 </div>
 
                 <!-- Hour, Minute, Seconds -->
-                <div class="varnish-selector-minute-hour-second flex items-center ">
+                <div class="varnish-selector-minute-hour-second flex items-center">
 
                     <!-- Hour -->
                     <select ref="selector_hour"
                             @change="selectTime()"
                             :id="`${name}_select_hour`"
-                            class="varnish-selector-hour bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300 leading-normal -tracking-[.2px] pr-[2px]">
+                            class="varnish-selector-hour bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal pr-[2px]">
 
                         <!-- Options -->
                         <option :key="hour"
@@ -170,7 +170,7 @@
                     </select>
 
                     <!-- Separator -->
-                    <span class="varnish-separator relative -top-[1px] mr-1">
+                    <span class="varnish-separator relative -top-[1px] -ml-[3px] mr-[3px]">
                         :
                     </span>
 
@@ -178,7 +178,7 @@
                     <select ref="selector_minute"
                             @change="selectTime()"
                             :id="`${name}_select_minute`"
-                            class="varnish-selector-minute bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300 leading-normal -tracking-[.2px]">
+                            class="varnish-selector-minute bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="minute"
@@ -195,7 +195,7 @@
 
                     <!-- Separator -->
                     <span v-if="showSeconds"
-                          class="varnish-separator relative -top-[1px] ml-[3px] mr-1">
+                          class="varnish-separator relative -top-[1px] ml-[2px] mr-[3px]">
 
                         <!-- Text -->
                         :
@@ -207,7 +207,7 @@
                             ref="selector_second"
                             @change="selectTime()"
                             :id="`${name}_select_second`"
-                            class="varnish-selector-second bg-inherit font-[650] text-[15px] text-gray-800 dark:text-gray-300 leading-normal -tracking-[.2px]">
+                            class="varnish-selector-second bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="second"

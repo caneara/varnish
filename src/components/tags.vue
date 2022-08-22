@@ -10,7 +10,7 @@
                    ref="input"
                    placeholder="Tags"
                    @change="process($event.target.value)"
-                   class="varnish-input bg-inherit font-[470] text-gray-900 dark:text-gray-400 -tracking-[.2px] rounded appearance-none" />
+                   class="varnish-input bg-inherit font-medium text-gray-900 dark:text-gray-400 rounded appearance-none" />
 
             <!-- Optional -->
             <v-optional :value="optionalText"
@@ -131,10 +131,11 @@
 </script>
 
 <style>
+    .varnish-tags .varnish-container .varnish-optional { @apply top-[1px] }
     .varnish-tags .varnish-container .varnish-input.tagify { @apply border-none pb-3 }
     .varnish-tags .varnish-container .varnish-input.tagify.tagify--focus + input + .varnish-optional { @apply hidden }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__input { @apply relative top-[6px] left-[6px] }
-    .varnish-tags .varnish-container .varnish-input.tagify .tagify__input:before { @apply text-gray-600 dark:text-gray-400 top-[7px] pl-[28px] }
+    .varnish-tags .varnish-container .varnish-input.tagify .tagify__input:before { @apply font-normal text-gray-600 dark:text-gray-400 top-[7px] pl-[28px] }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__input:after { @apply inline font-bold text-[14px] text-gray-700/[.80] dark:text-gray-300 relative -left-[64px] ; font-family: 'Font Awesome 6 Free'; content: '\f02c' }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag { @apply bg-sky-600/[.10] hover:bg-sky-600/[.10] dark:bg-sky-400/[.50] dark:hover:bg-sky-400/[.50] rounded top-[6px] left-[6px] m-[5px] px-1 }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag div:before { @apply shadow-none }

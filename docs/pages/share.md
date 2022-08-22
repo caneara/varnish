@@ -99,6 +99,8 @@ If you want to override any of the component's default styling, then you can do 
 
 ```css
 .varnish-share { }
+.varnish-share .varnish-circle { }
+.varnish-share .varnish-circle .varnish-icon { }
 .varnish-share .varnish-header { }
 .varnish-share .varnish-summary { }
 .varnish-share .varnish-platforms { }

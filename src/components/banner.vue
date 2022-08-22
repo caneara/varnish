@@ -12,12 +12,12 @@
             </i>
 
             <!-- Title -->
-            <span class="varnish-title font-semibold text-[22px] -tracking-[.4px] text-white mb-4">
+            <span class="varnish-title font-semibold text-[22px] text-white mb-4">
                 {{ title }}
             </span>
 
             <!-- Message -->
-            <span class="varnish-message text-[17px] text-gray-200 leading-normal -tracking-[.2px] break-words md:pr-[130px]">
+            <span class="varnish-message text-[17px] text-gray-200 leading-normal break-words md:pr-[130px]">
                 {{ message }}
             </span>
 
