@@ -49,11 +49,12 @@ let sidebar = [
     }, {
         text  : 'Components',
         items : [
-            { text : 'Clear',    link : '/pages/clear' },
-            { text : 'Empty',    link : '/pages/empty' },
-            { text : 'Error',    link : '/pages/error' },
-            { text : 'Label',    link : '/pages/label' },
-            { text : 'Optional', link : '/pages/optional' },
+            { text : 'Clear',     link : '/pages/clear' },
+            { text : 'Empty',     link : '/pages/empty' },
+            { text : 'Error',     link : '/pages/error' },
+            { text : 'Label',     link : '/pages/label' },
+            { text : 'Optional',  link : '/pages/optional' },
+            { text : 'Remaining', link : '/pages/remaining' },
         ],
     }, {
         text  : 'Products',
