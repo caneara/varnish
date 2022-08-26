@@ -1,0 +1,1 @@
+const i={created(){document.addEventListener("click",this.pageClicked)},unmounted(){document.removeEventListener("click",this.pageClicked)},methods:{pageClicked(t){let e=this.$refs.trigger?this.$refs.trigger:this.$el;!this.hasUserAttention()||e===t.target||e.contains(t.target)||this.lostUserAttention()}}};export{i as C};
