@@ -11,7 +11,7 @@
                    :value="active ? 1 : 0">
 
             <!-- Label -->
-            <label class="varnish-label font-semibold text-[13px] text-gray-600/[.75] dark:text-gray-400 uppercase relative mr-5">
+            <label class="varnish-label font-semibold text-[13px] text-gray-600/[.65] dark:text-gray-500 uppercase relative mr-5">
                 {{ label }}
             </label>
 
@@ -20,8 +20,8 @@
                     :id="`toggle-${name}`"
                     @click.prevent="change(active ? 0 : 1)"
                     class="varnish-toggle w-[60px] h-[31px] relative transition-all duration-200 rounded-full cursor-pointer
-                           after:h-[25px] after:w-[25px] after:bg-white after:absolute after:transition-all after:duration-200 after:top-[3px] after:rounded-full"
-                    :class="active ? 'varnish-active after:left-[32px] bg-emerald-600/[.80] dark:bg-emerald-600' : 'after:left-[3px] bg-gray-400/[.45] dark:bg-gray-700'">
+                           after:h-[25px] after:w-[25px] after:bg-white dark:after:bg-gray-300 after:absolute after:transition-all after:duration-200 after:top-[3px] after:rounded-full"
+                    :class="active ? 'varnish-active after:left-[32px] bg-emerald-600/[.80] dark:bg-emerald-600' : 'after:left-[3px] bg-gray-400/[.40] dark:bg-gray-700'">
             </button>
 
         </div>

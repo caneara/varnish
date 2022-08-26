@@ -6,7 +6,7 @@
         <!-- Toolbar -->
         <div v-if="! readingMode"
              :class="[editing ? 'justify-between' : 'justify-end', fullscreen ? 'border-t-0' : 'rounded-t']"
-             class="varnish-toolbar bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-none flex  px-2">
+             class="varnish-toolbar bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-none flex  px-2">
 
             <!-- Left Side -->
             <div class="varnish-toolbar-left flex flex-wrap justify-start"
@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
+                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-700/[.80] mx-3"></div>
 
                 <!-- Headings -->
                 <div title="Headings"
@@ -128,7 +128,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3"></div>
+                <div class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-700/[.80] mx-3"></div>
 
                 <!-- Blockquote -->
                 <div title="Blockquote"
@@ -163,7 +163,7 @@
 
                 <!-- Divider -->
                 <div v-if="editing"
-                     class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-600 mx-3">
+                     class="varnish-toolbar-divider hidden md:block border-l border-gray-300/[.70] dark:border-gray-700/[.80] mx-3">
                 </div>
 
                 <!-- Edit -->
@@ -200,7 +200,7 @@
 
         <!-- Container -->
         <div :style="`min-height: ${height}px`"
-             class="varnish-container flex flex-1 relative bg-white dark:bg-gray-800"
+             class="varnish-container flex flex-1 relative bg-white dark:bg-gray-900"
              :class="[fullscreen ? '' : 'rounded-b', readingMode ? '' : 'border border-gray-300 border-t-0 dark:border-none']">
 
             <!-- Progress Bar -->
@@ -285,7 +285,7 @@ export default
      *
      */
     data() { return {
-        editing    : true,
+        editing    : ! this.readingMode,
         fullscreen : false,
         headings   : false,
         history    : new UndoManager(),
@@ -356,6 +356,15 @@ export default
             if (current) return;
 
             this.renderMarkdown();
+        },
+
+        /**
+         * Watch the 'modelValue' property.
+         *
+         */
+        modelValue : function(current, previous)
+        {
+            if (this.readingMode) this.renderMarkdown();
         },
 
         /**
@@ -628,7 +637,7 @@ export default
          */
         resizeEditorToContent()
         {
-            if (this.fullscreen) return;
+            if (this.fullscreen || this.readingMode) return;
 
             this.$nextTick(() => this.$refs.editor.style.height = `${this.$refs.editor.scrollHeight}px`);
         },

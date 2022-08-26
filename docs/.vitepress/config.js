@@ -44,6 +44,7 @@ let sidebar = [
             { text : 'Menu',   link : '/pages/menu' },
             { text : 'Metric', link : '/pages/metric' },
             { text : 'Notice', link : '/pages/notice' },
+            { text : 'Tabs',   link : '/pages/tabs' },
             { text : 'Writer', link : '/pages/writer' },
         ],
     }, {
