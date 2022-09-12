@@ -1,8 +1,9 @@
 <template>
-    <button :dusk="name"
-            :id="`id-${name}`"
-            :class="theme.join(' ')"
-            @click.prevent="execute()"
+    <button ref="btn"
+            :id="name"
+            :dusk="name"
+            :class="[theme.join(' '), $attrs?.class ?? '']"
+            @click.prevent="simple ? $refs.simple.click() : execute()"
             class="varnish-button varnish-font w-full md:w-auto min-h-[35px] min-w-[100px] border border-solid flex items-center justify-center relative rounded transition-all duration-300 cursor-pointer">
 
         <!-- Label -->
@@ -28,6 +29,9 @@
              class="varnish-spinner h-[15px] w-[15px] rounded-full border-2 border-r-transparent border-t-transparent">
         </div>
 
+    </button>
+    <button ref="simple"
+            class="hidden">
     </button>
 </template>
 
@@ -86,6 +90,7 @@
             'disabled'   : { type : Boolean, default : false },
             'mode'       : { type : String,  default : 'opaque' },
             'processing' : { type : Boolean, default : false },
+            'simple'     : { type : Boolean, default : false },
         },
 
         /**
@@ -122,7 +127,7 @@
              */
             processing : function(current, previous)
             {
-                this.$el.style.width = current ? `${this.$el.offsetWidth}px` : '';
+                this.$refs.btn.style.width = current ? `${this.$refs.btn.offsetWidth}px` : '';
             }
         },
 

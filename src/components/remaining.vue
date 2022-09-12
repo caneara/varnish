@@ -1,5 +1,5 @@
 <template>
-    <div class="varnish-remaining varnish-font flex items-center justify-center overflow-hidden rounded-full">
+    <div class="varnish-remaining varnish-font flex items-center justify-center rounded-full relative left-[2px]">
 
         <!-- Ring -->
         <svg class="varnish-ring w-[30px] h-[30px]">
@@ -35,7 +35,7 @@
               :class="percentage <= 75 ? colors.green : (percentage <= 90 ? colors.yellow : colors.red)">
 
             <!-- Text -->
-            {{ maximum - value }}
+            {{ figure }}
 
         </span>
 
@@ -72,6 +72,19 @@
          */
         computed :
         {
+            /**
+             * Determine the appropriate label to display as an indicator.
+             *
+             */
+            figure()
+            {
+                if ((this.maximum - this.value) >= 0) {
+                    return (this.maximum - this.value) > 99 ? '' : this.maximum - this.value;
+                }
+
+                return `${(this.maximum - this.value) <= -10 ? '!' : this.maximum - this.value}`;
+            },
+
             /**
              * Calculate the current percentage to use for the ring.
              *

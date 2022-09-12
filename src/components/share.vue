@@ -9,14 +9,15 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug -tracking-[.3px] mb-5">
+        <div class="varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
             Share a link with others
         </div>
 
         <!-- Information -->
         <div class="varnish-summary text-gray-700 dark:text-gray-400 text-center leading-[1.6rem] max-w-[475px] mb-8">
-            Select one of the available platforms to share the link on.
-            You can also send the link via email, or copy it to the clipboard.
+            Select one of the platforms to share the link on.
+            You can also send the link via your email, or
+            copy it to the clipboard.
         </div>
 
         <!-- Platforms -->

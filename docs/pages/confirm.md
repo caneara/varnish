@@ -60,7 +60,7 @@ The following `props` are exposed by the component.
 ### summary
 
 - Type: `String`
-- Default: `'Note that in most cases, this action is not reversible. If you need help, then please contact support for assistance.'`
+- Default: `'Note that in most cases, this action is not reversible. If you need some help, then please contact support.'`
 
 Specify the content / body text to display within the component.
 

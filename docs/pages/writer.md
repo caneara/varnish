@@ -18,7 +18,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Setup -->
 <script setup>
     import { ref } from 'vue';
-    import '../playgrounds/writer/styles.css';
+    import '../../src/styles/writer.css';
     import WriterComponent from '../../src/components/writer.vue';
 
     let content = ref("Opportunities don't *happen*, you **create** them...");
@@ -28,14 +28,10 @@ You can use the toggle at the top right of the page to switch between light and 
 <style>
     .vp-doc .varnish-writer h2 { @apply border-none py-1 mt-0 mb-1 }
     .vp-doc .varnish-writer h3 { @apply py-1 mt-0 mb-1 }
-    .vp-doc .varnish-writer .content .preview .hljs .code-block { @apply -my-[60px] }
-    .vp-doc .varnish-writer .content .preview .hljs .code-block tr { @apply border-none }
-    .vp-doc .varnish-writer .content .preview .hljs .code-block tr td { @apply border-none }
-    .vp-doc .varnish-writer .content .preview .hljs .code-block tr td.code-line { @apply w-full }
 </style>
 
 <!-- Demo -->
-<div class="mt-8">
+<div class="bg-white dark:bg-gray-800 mt-8">
     <ClientOnly>
         <WriterComponent v-model="content"></WriterComponent>
     </ClientOnly>
@@ -129,17 +125,6 @@ Set the prompt text to show when asking for a code block's language.
 <v-writer languageText="Especificar el idioma"></v-writer>
 ```
 
-### lineNumbers
-
-- Type: `Boolean`
-- Default: `true'`
-
-Toggle whether code blocks should include visible line numbers.
-
-```html
-<v-writer :lineNumbers="false"></v-writer>
-```
-
 ### linkText
 
 - Type: `String`
@@ -149,6 +134,21 @@ Set the prompt text to show when asking for a url e.g. when inserting a link.
 
 ```html
 <v-writer linkText="Especificar la URL"></v-writer>
+```
+
+### maxLength
+
+- Type: `Number`
+- Default: `100`
+
+Set the maximum number of characters that should be allowed.
+
+Note that this not actually enforced, it is simply used by the [remaining](#remaining) indicator.
+
+This value has no effect if [remaining](#remaining) is set to `false`.
+
+```html
+<v-writer :maxLength="1000"></v-writer>
 ```
 
 ### maxUndo
@@ -190,6 +190,28 @@ You'll likely want to enable reading mode when you need to display read-only, re
 
 ```html
 <v-writer :readingMode="true"></v-writer>
+```
+
+### remaining
+
+- Type: `Boolean`
+- Default: `false`
+
+Toggle whether to display a [remaining](/pages/remaining) indicator in the toolbar.
+
+```html
+<v-writer :remaining="true"></v-writer>
+```
+
+### toolbar
+
+- Type: `Boolean`
+- Default: `true`
+
+Toggle whether to show the toolbar.
+
+```html
+<v-writer :toolbar="false"></v-writer>
 ```
 
 ### uploads
@@ -344,7 +366,7 @@ For example, to style a rendered `h1` tag, you'd write the following CSS:
 .varnish-writer .varnish-container .varnish-preview h1 { color: red }
 ```
 
-While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/caneara/varnish/docs/playgrounds/writer/styles.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
+While you can create styles using this approach, you'll probably find it much faster to simply [copy the stylesheet](https://github.com/caneara/varnish/src/styles/writer.css) used by the demo and make adjustments to it. This stylesheet also includes support for dark mode, as well as syntax highlighting.
 
 ## Syntax highlighting
 

@@ -54,7 +54,9 @@ When left blank, no icon is shown and any padding & spacing is removed.
 - Type: `String`
 - Default: `''`
 
-The identifier used by the component. If left blank, `window.performance.now` is used to generate a unique identifier using the format `id-{number}`.
+The unique identifier used by the component.
+
+If left blank, then a "snake case" version of [label](#label) will be used. If the label property is also blank, then `window.performance.now` is used to generate a unique identifier using the format `id-{number}`.
 
 When the component serves as a wrapper for an `input` or other HTML element that could be used within a `form`, it will also be assigned to the `name` attribute.
 

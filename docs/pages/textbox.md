@@ -93,6 +93,20 @@ Specify whether the component's content can be edited by the user.
 <v-textbox :readOnly="true"></v-textbox>
 ```
 
+## Events
+
+The following `events` are exposed by the component.
+
+### return
+
+- `$event` - not provided.
+
+Fired when the user presses the 'return' key on their keyboard.
+
+```html
+<v-textbox @return="performSearch()"></v-textbox>
+```
+
 ## Custom styling
 
 If you want to override any of the component's default styling, then you can do so by using the following CSS selector:

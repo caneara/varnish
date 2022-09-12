@@ -14,16 +14,16 @@
 
         <!-- Drawer -->
         <div :class="[position, open ? 'opacity-100 scale-100 pointer-events-auto z-[20]' : 'opacity-0 scale-90 pointer-events-none -z-[1]']"
-             class="varnish-drawer bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 flex flex-col transition-all duration-300 rounded absolute py-2">
+             class="varnish-drawer bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 flex flex-col transition-all duration-300 rounded absolute py-[6px]">
 
             <!-- Slot -->
             <div class="varnish-item"
                  v-for="item in (items.filter(item => item.show).length ? items : empty)">
 
                 <!-- Link -->
-                <span :dusk="item.id"
-                      v-if="item.show && item.type === 'link'"
+                <span v-if="item.show && item.type === 'link'"
                       @click.stop="open = false; item['action']()"
+                      :dusk="`menu-${id.toLowerCase()}-${item.id}`"
                       class="varnish-link hover:bg-gray-200/[.75] dark:hover:bg-gray-600 text-[15px] text-gray-700/[.85] hover:text-gray-700 flex items-center select-none whitespace-nowrap cursor-pointer transition duration-300 pl-5 pr-6 py-[10px]">
 
                     <!-- Icon -->
@@ -41,7 +41,7 @@
 
                 <!-- Separator -->
                 <div v-if="item.show && item.type === 'separator'"
-                     class="varnish-separator border-t border-gray-300 dark:border-gray-600 my-2">
+                     class="varnish-separator border-t border-gray-200 dark:border-gray-600 my-[6px]">
                 </div>
 
                 <!-- Empty -->

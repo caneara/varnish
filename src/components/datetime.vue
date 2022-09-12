@@ -1,5 +1,5 @@
 <template>
-    <div class="varnish-datetime varnish-font min-w-[310px]">
+    <div class="varnish-datetime varnish-font">
 
         <!-- Hidden -->
         <input :id="name"
@@ -16,6 +16,7 @@
                    :modelValue="format"
                    :id="`${name}_text_box`"
                    @click="showSelectors()"
+                   :dusk="`${name}_text_box`"
                    :optionalText="optionalText">
         </v-textbox>
 
@@ -44,8 +45,10 @@
 
                         <!-- Month -->
                         <select :id="`${name}_select_month`"
+                                :name="`${name}_select_month`"
+                                :dusk="`${name}_select_month`"
                                 @change="calendar = calendar.set({ month : $event.target.value })"
-                                class="varnish-selector-month bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal pr-[2px]">
+                                class="varnish-selector-month appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal pr-[2px]">
 
                             <!-- Options -->
                             <option :key="index"
@@ -62,8 +65,10 @@
 
                         <!-- Year -->
                         <select :id="`${name}_select_year`"
+                                :name="`${name}_select_year`"
+                                :dusk="`${name}_select_year`"
                                 @change="calendar = calendar.set({ year : $event.target.value })"
-                                class="varnish-selector-year bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal">
+                                class="varnish-selector-year appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300/[.80] leading-normal">
 
                             <!-- Options -->
                             <option :key="year"
@@ -110,6 +115,7 @@
                     <div v-for="day in daysInMonth"
                          @click="selectDate(day.date)"
                          class="varnish-day flex justify-center"
+                         :dusk="`${name}_select_day_${day.ordinal}`"
                          :class="day.enabled ? 'text-gray-700 dark:text-gray-400 cursor-pointer group' : 'text-gray-300 dark:text-gray-700 pointer-events-none'">
 
                         <!-- Ordinal -->
@@ -154,7 +160,9 @@
                     <select ref="selector_hour"
                             @change="selectTime()"
                             :id="`${name}_select_hour`"
-                            class="varnish-selector-hour bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal pr-[2px]">
+                            :name="`${name}_select_hour`"
+                            :dusk="`${name}_select_hour`"
+                            class="varnish-selector-hour appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal pr-[6px]">
 
                         <!-- Options -->
                         <option :key="hour"
@@ -178,7 +186,9 @@
                     <select ref="selector_minute"
                             @change="selectTime()"
                             :id="`${name}_select_minute`"
-                            class="varnish-selector-minute bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
+                            :name="`${name}_select_minute`"
+                            :dusk="`${name}_select_minute`"
+                            class="varnish-selector-minute appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="minute"
@@ -207,7 +217,9 @@
                             ref="selector_second"
                             @change="selectTime()"
                             :id="`${name}_select_second`"
-                            class="varnish-selector-second bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
+                            :name="`${name}_select_second`"
+                            :dusk="`${name}_select_second`"
+                            class="varnish-selector-second appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="second"
@@ -224,7 +236,7 @@
 
                     <!-- Meridiem -->
                     <span v-if="meridiem"
-                        class="varnish-meridiem text-[14px] text-gray-400 dark:text-gray-400/[.60] relative -top-[1px] ml-2">
+                        class="varnish-meridiem text-[14px] text-gray-400 dark:text-gray-400/[.60] ml-2">
 
                         <!-- Text -->
                         {{ value.toFormat('a').toLowerCase() }}
@@ -517,7 +529,7 @@
                     changes.seconds = this.$refs.selector_second.value;
                 }
 
-                date = (date ?? this.value).set(changes).setZone('UTC');
+                date = (date ?? this.value).set(changes).startOf('second').setZone('UTC');
 
                 this.change(this.type === 'time' ? date.toISOTime() : date.toISO());
             },

@@ -18,7 +18,7 @@ You can use the toggle at the top right of the page to switch between light and 
     import { ref } from 'vue';
     import DateTimeComponent from '../../src/components/datetime.vue';
 
-    let content = ref('2022-09-10T16:35:12.000Z');
+    let content = ref('2022-09-10T16:35:12.871002Z');
 </script>
 
 <!-- Demo -->

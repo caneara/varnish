@@ -6,7 +6,7 @@ layout: page
 <!-- Setup -->
 <script setup>
     import Playground from './index.vue';
-    import './styles.css';
+    import '../../../src/styles/writer.css';
 </script>
 
 <!-- Component -->

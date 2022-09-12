@@ -105,6 +105,7 @@ A `link` object is configured like so:
 {
     action : () => location.href = '/account',
     icon   : 'fas fa-user',
+    id     : 'account',
     label  : 'Account',
     show   : true,
     type   : 'link',
@@ -119,6 +120,13 @@ A summary of each property is provided below.
 - Example: `() => location.href = '/account'`
 
 Specify the `closure` that should be executed when the menu item is clicked.
+
+#### id
+
+- Type: `String`
+- Example: `'delete'`
+
+The unique identifier for the menu item.
 
 #### icon
 

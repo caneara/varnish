@@ -2,7 +2,7 @@
     <label v-if="! automated()"
            style="width: calc(100% - 19px)"
            :class="filled ? small : (focus ? small : large)"
-           class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-700/[.90] dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-[1px] left-1">
+           class="varnish-label varnish-font bg-white dark:bg-gray-800 text-gray-700/[.90] dark:text-gray-400 flex items-center cursor-text select-none pointer-events-none absolute top-0 left-1">
 
         <!-- Icon -->
         <i :class="icon"

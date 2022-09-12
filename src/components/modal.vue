@@ -97,7 +97,10 @@
 				this.$refs.content.style.opacity   = 0;
                 this.$refs.content.style.transform = 'scale(1.1)';
 
-				setTimeout(() => this.$refs.close.style.opacity = 0, 100);
+                if (this.$refs['close'] ?? null) {
+				    setTimeout(() => this.$refs.close.style.opacity = 0, 100);
+                }
+
 				setTimeout(() => this.$refs.background.style.opacity = 0, 100);
 				setTimeout(() => this.$el.classList.add('hidden'), 600);
 				setTimeout(() => this.$emit('closed'), 650);
@@ -116,8 +119,11 @@
 				this.$refs.content.style.opacity   = 0;
 				this.$refs.content.style.transform = '';
 
+                if (this.$refs['close'] ?? null) {
+				    setTimeout(() => this.$refs.close.style.opacity = 1, 50);
+                }
+
 				setTimeout(() => this.$el.scrollTop = 0, 50);
-                setTimeout(() => this.$refs.close.style.opacity = 1, 50);
                 setTimeout(() => this.$refs.background.style.opacity = 1, 50);
 				setTimeout(() => this.$refs.content.style.opacity = 1, 50);
 				setTimeout(() => this.$refs.content.style.transform = 'scale(1)', 50);

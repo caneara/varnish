@@ -14,10 +14,7 @@ export default
      * Define the events.
      *
      */
-    emits : [
-        'change',
-        'update:modelValue',
-    ],
+    emits : ['change', 'update:modelValue'],
 
     /**
      * Define the public properties.
@@ -47,7 +44,11 @@ export default
          */
         name()
         {
-            return this.id ? this.id : `id-${parseInt(performance.now())}`;
+            if (this.id) return this.id;
+
+            if (this.label) return this.label.toLowerCase().replaceAll(' ', '_');
+
+            return `id-${parseInt(performance.now())}`;
         },
     },
 

@@ -9,7 +9,7 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug -tracking-[.3px] mb-5">
+        <div class="varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
             {{ title }}
         </div>
 
@@ -25,13 +25,15 @@
             <v-button color="gray"
                       mode="outline"
                       label="Cancel"
-                      @click="$emit('cancel')">
+                      @click="$emit('cancel')"
+                      id="dialog_confirm_cancel">
             </v-button>
 
             <!-- Continue -->
             <v-button color="blue"
                       label="Continue"
-                      @click="$emit('continue')">
+                      @click="$emit('continue')"
+                      id="dialog_confirm_continue">
             </v-button>
 
         </div>
@@ -74,7 +76,7 @@
          *
          */
         props : {
-            'summary' : { type : String,  default : 'Note that in most cases, this action is not reversible. If you need help, then please contact support for assistance.' },
+            'summary' : { type : String,  default : 'Note that in most cases, this action is not reversible. If you need some help, then please contact support.' },
             'title'   : { type : String,  default : 'Are you sure you wish to proceed?' },
 			'visible' : { type : Boolean, default : false },
         },

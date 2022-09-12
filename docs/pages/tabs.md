@@ -57,6 +57,21 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
+### id
+
+- Type: `String`
+- Default: `''`
+
+The unique identifier for the component.
+
+This identifier should be unique across your entire application as it will be used within `localStorage` to remember the currently active tab.
+
+See [remembering last used tab](#remembering-the-last-used-tab) for more details.
+
+```html
+<v-tabs id="account"></v-tabs>
+```
+
 ### items
 
 - Type: `Array`
@@ -161,6 +176,24 @@ When the property is omitted, the tab will be shown.
 
 ```html
 <v-tabs :items="[{ visible : false }]"></v-tabs>
+```
+
+## Remembering the last used tab
+
+The component will automatically save the current tab's ID into `localStorage` when it is changed. You can then use this value to display the associated tab e.g. when the user navigates away and (then later) returns to the page.
+
+For example, if you assigned `'account'` as the [id](#id) property of the component, you would load `'varnish_tabs_account'` from `localStorage` and assign it to the component's [v-model](#v-model) like so:
+
+```html
+<v-tabs id="account"
+        v-model="active">
+</v-tabs>
+
+<script>
+    data() { return {
+        active : localStorage.getItem('varnish_tabs_account') ?? 'home',
+    }},
+</script>
 ```
 
 ## Custom styling

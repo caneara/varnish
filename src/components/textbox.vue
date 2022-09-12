@@ -10,6 +10,7 @@
             <input :id="name"
                    type="text"
                    :name="name"
+                   :dusk="name"
                    v-if="lines === 1"
                    :value="modelValue"
                    @focus="focus = true"
@@ -17,6 +18,7 @@
                    :placeholder="placeholder"
                    :autocomplete="autocomplete"
                    @input="change($event.target.value)"
+                   @keydown="interceptKeystroke($event)"
                    :readonly="readOnly ? 'readonly' : false"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
                    class="varnish-control varnish-input w-full bg-inherit text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
@@ -24,6 +26,7 @@
             <!-- Textarea -->
             <textarea :id="name"
                       :name="name"
+                      :dusk="name"
                       :rows="lines"
                       v-if="lines !== 1"
                       :value="modelValue"
@@ -32,6 +35,7 @@
                       :placeholder="placeholder"
                       :autocomplete="autocomplete"
                       @input="change($event.target.value)"
+                      @keydown="interceptKeystroke($event)"
                       class="varnish-control varnish-textarea w-full bg-inherit text-gray-900 dark:text-gray-400 leading-[24px] rounded appearance-none resize-none pl-3 pr-11 pt-[25px]">
             </textarea>
 
@@ -88,6 +92,12 @@
         },
 
         /**
+         * Define the events.
+         *
+         */
+        emits : ['return'],
+
+        /**
          * Define the public properties.
          *
          */
@@ -95,5 +105,21 @@
             'lines'    : { type : Number,  default : 1 },
             'readOnly' : { type : Boolean, default : false },
         },
+
+        /**
+         * Define the supporting methods.
+         *
+         */
+        methods :
+        {
+            /**
+             * Intercept certain keyboard events and handle them accordingly.
+             *
+             */
+            interceptKeystroke(event)
+            {
+                if (event.key === 'Enter') this.$emit('return');
+            },
+        }
     }
 </script>

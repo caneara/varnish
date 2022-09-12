@@ -146,7 +146,7 @@
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:hover:after { @apply text-red-700 }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:hover + div:before { box-shadow: 0 0 #0000 !important }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag__removeBtn:hover + div > span.tagify__tag-text { @apply opacity-100 }
-    .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag-text { @apply text-[15px] text-gray-700 dark:text-gray-300 overflow-visible relative top-0 }
+    .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag .tagify__tag-text { @apply font-normal text-[15px] text-gray-700 dark:text-gray-300 overflow-visible relative top-[2px] }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag + .tagify__input { @apply relative top-[6px] left-[6px] }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag + .tagify__input:before { @apply hidden }
     .varnish-tags .varnish-container .varnish-input.tagify .tagify__tag + .tagify__input:after { @apply hidden }

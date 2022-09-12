@@ -1,16 +1,15 @@
-.varnish-writer .varnish-container .varnish-preview h1 { @apply text-[30px] text-black dark:text-white font-bold mb-7 }
-.varnish-writer .varnish-container .varnish-preview h2 { @apply text-[26px] text-black dark:text-white font-bold mb-6 }
-.varnish-writer .varnish-container .varnish-preview h3 { @apply text-[24px] text-black dark:text-white font-semibold mb-5 }
-.varnish-writer .varnish-container .varnish-preview h4 { @apply text-[22px] text-black dark:text-white font-semibold mb-4 }
-.varnish-writer .varnish-container .varnish-preview h5 { @apply text-[20px] text-black dark:text-white font-medium mb-3 }
-.varnish-writer .varnish-container .varnish-preview h6 { @apply text-[18px] text-black dark:text-white font-medium mb-3 }
-.varnish-writer .varnish-container .varnish-preview p { @apply text-[16px] font-medium text-black dark:text-gray-400 mb-6 }
-.varnish-writer .varnish-container .varnish-preview p + pre { @apply -mt-6 }
-.varnish-writer .varnish-container .varnish-preview a { @apply text-sky-600 hover:text-rose-700 dark:hover:text-rose-400 transition duration-300 }
-.varnish-writer .varnish-container .varnish-preview ol { @apply pl-11 list-decimal }
-.varnish-writer .varnish-container .varnish-preview ul { @apply pl-11 list-disc }
-.varnish-writer .varnish-container .varnish-preview li { @apply text-gray-700 dark:text-gray-400 leading-normal mb-2 first-of-type:mt-5 last-of-type:mb-6 }
-.varnish-writer .varnish-container .varnish-preview li a { @apply text-sky-600 hover:text-rose-700 dark:text-sky-600 dark:hover:text-rose-400 }
+.varnish-writer .varnish-container .varnish-preview h1 { @apply font-bold text-[30px] text-gray-900 dark:text-gray-300 mb-8 }
+.varnish-writer .varnish-container .varnish-preview h2 { @apply font-bold text-[27px] text-gray-900 dark:text-gray-300 mb-7 }
+.varnish-writer .varnish-container .varnish-preview h3 { @apply font-semibold text-[23px] text-gray-900 dark:text-gray-300 mb-6 }
+.varnish-writer .varnish-container .varnish-preview h4 { @apply font-semibold text-[21px] text-gray-900 dark:text-gray-300 mb-5 }
+.varnish-writer .varnish-container .varnish-preview h5 { @apply font-semibold text-[19px] text-gray-900 dark:text-gray-400 mb-5 }
+.varnish-writer .varnish-container .varnish-preview h6 { @apply font-medium text-[17px] text-gray-900 dark:text-gray-400 mb-5 }
+.varnish-writer .varnish-container .varnish-preview p { @apply text-[16px] text-gray-700/[.90] dark:text-gray-400/[.80] leading-relaxed mb-6 }
+.varnish-writer .varnish-container .varnish-preview a { @apply text-sky-600 dark:text-sky-500 hover:text-rose-700 dark:hover:text-rose-400 transition duration-300 }
+.varnish-writer .varnish-container .varnish-preview ol { @apply pl-3 list-decimal }
+.varnish-writer .varnish-container .varnish-preview ul { @apply pl-3 list-disc }
+.varnish-writer .varnish-container .varnish-preview li { @apply pl-1 text-[16px] text-gray-700/[.90] dark:text-gray-400/[.80] leading-normal mb-2 first-of-type:mt-5 last-of-type:mb-6 }
+.varnish-writer .varnish-container .varnish-preview li a { @apply text-sky-600 dark:text-sky-500 hover:text-rose-700 dark:hover:text-rose-400 }
 .varnish-writer .varnish-container .varnish-preview hr { @apply w-1/2 border-dashed border-gray-400 dark:border-gray-600 mx-auto my-12 md:my-16 }
 .varnish-writer .varnish-container .varnish-preview img { @apply my-12 }
 .varnish-writer .varnish-container .varnish-preview strong { @apply font-bold }
@@ -22,20 +21,7 @@
 .varnish-writer .varnish-container .varnish-preview blockquote p { @apply mb-0 }
 .varnish-writer .varnish-container .varnish-preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .varnish-container .varnish-preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
-.varnish-writer .varnish-container .varnish-preview .hljs { @apply rounded border dark:border-none bg-white overflow-x-auto overflow-y-hidden text-[15px] -my-3 ; border-color: #e2e8f0 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block { @apply w-full table-fixed -my-[30px] ; background: #f7fafc40 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block .line-number { @apply w-[50px] text-center select-none dark:opacity-80 ; background: #edf2f799; color: #a0aec0 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block .line-number-hidden { @apply invisible w-0 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block .line-number-hidden + .code-line { @apply pl-2 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block .code-line { @apply pl-[11px] opacity-80 text-gray-700 dark:text-gray-400 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block .code-line .hljs-comment { @apply text-gray-700 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block tr:first-of-type .line-number { @apply pt-2 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block tr:first-of-type .code-line { @apply pt-2 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block tr:last-of-type .line-number { @apply pb-2 }
-.varnish-writer .varnish-container .varnish-preview .hljs .code-block tr:last-of-type .code-line { @apply pb-2 }
-.dark .varnish-writer .varnish-container .varnish-preview .hljs { background: #0d131f }
-.dark .varnish-writer .varnish-container .varnish-preview .hljs .code-block .code-line { background: #0d131f }
-.dark .varnish-writer .varnish-container .varnish-preview .hljs .code-block .line-number { background: #080c12; color: #464d56 }
+.varnish-writer .varnish-container .varnish-preview .hljs { @apply w-full overflow-auto rounded bg-gray-100/[.30] dark:bg-gray-700/[.30] border dark:border-none text-[15px] p-6 }
 .varnish-writer .varnish-container .varnish-preview .hljs-subst { color: #2f3337 }
 .varnish-writer .varnish-container .varnish-preview .hljs-comment { @apply dark:italic ; color: #656e77 }
 .varnish-writer .varnish-container .varnish-preview .hljs-attr { color: #015692 }

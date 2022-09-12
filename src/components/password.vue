@@ -9,6 +9,7 @@
             <!-- Input -->
             <input :id="name"
                    :name="name"
+                   :dusk="name"
                    type="password"
                    :value="modelValue"
                    @focus="focus = true"

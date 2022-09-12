@@ -9,7 +9,7 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug -tracking-[.3px] mb-5">
+        <div class="varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
             {{ title }}
         </div>
 
@@ -96,7 +96,7 @@
         props : {
             'label'   : { type : String,  default : 'Your response' },
             'lines'   : { type : Number,  default : 1 },
-            'summary' : { type : String,  default : 'In order to proceed, some input is required from you. Please enter it below, then press continue. Otherwise, press cancel.' },
+            'summary' : { type : String,  default : 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.' },
             'title'   : { type : String,  default : 'Awaiting your response...' },
 			'visible' : { type : Boolean, default : false },
         },

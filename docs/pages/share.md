@@ -32,6 +32,8 @@ You can use the toggle at the top right of the page to switch between light and 
 
 ## Usage
 
+> While you are free to use the approach below, you are probably looking for the [inline option](#inlining) which does not require adding components to a template.
+
 Begin by importing the component and registering it like so:
 
 ```html
@@ -58,7 +60,7 @@ The following `props` are exposed by the component.
 ### url
 
 - Type: `String`
-- Default: `'`
+- Default: `''`
 
 The link that should be made available for sharing.
 
@@ -92,6 +94,27 @@ You will likely want to register a listener for this event so that you can updat
 ```html
 <v-share @closed="show = false"></v-share>
 ```
+
+## Inlining
+
+It can be cumbersome to have to add the component everywhere that you want to use it, which is why an inline option is available using just a method.
+
+To achieve this, first add the `Dialog` mixin to your component:
+
+```html
+<script>
+import Dialog from '@caneara/varnish/mixins/Dialog';
+
+export default
+{
+    mixins : [Dialog],
+}
+</script>
+```
+
+Then call the `share` method provided by the mixin.
+
+The `share` method accepts a single parameter, which is used to set the [url](#url) property of the component.
 
 ## Custom styling
 

@@ -7,14 +7,15 @@
         </h1>
 
         <!-- Writer -->
-        <v-writer :html="true"
-                  :height="600"
-                  v-model="text"
-                  :uploads="true"
-                  :lineNumbers="true"
-                  :progress="progress"
-                  @upload="upload($event)">
-        </v-writer>
+        <div class="bg-white dark:bg-gray-800">
+            <v-writer :html="true"
+                      :height="600"
+                      v-model="text"
+                      :uploads="true"
+                      :progress="progress"
+                      @upload="upload($event)">
+            </v-writer>
+        </div>
 
     </div>
 </template>

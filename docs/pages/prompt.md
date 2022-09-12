@@ -85,7 +85,7 @@ When set to `1`, an `input` is used. When set to `2+`, a `textarea` is used.
 ### summary
 
 - Type: `String`
-- Default: `In order to proceed, some input is required from you. Please enter it below, then press continue. Otherwise, press cancel.'`
+- Default: `'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.'`
 
 Specify the content / body text to display within the component.
 

@@ -9,7 +9,7 @@
             <!-- Tab -->
             <span v-if="format === 'tab'"
                   :class="modes[mode][type].tab"
-                  class="varnish-tab absolute top-0 left-3 rounded-b font-bold text-[10px] text-white dark:text-gray-300 uppercase px-2 pt-[3px] pb-1">
+                  class="varnish-tab absolute top-0 left-3 rounded-b font-bold text-[10px] text-white dark:text-gray-300 uppercase select-none px-2 pt-[3px] dark:pt-1 pb-1">
 
                 <!-- Text -->
                 {{ type }}
@@ -17,8 +17,8 @@
             </span>
 
             <!-- Content -->
-            <div class="varnish-content rounded-md font-medium flex items-center"
-                 :class="[modes[mode][type].content, format === 'tab' ? 'px-5 pt-8 pb-4' : 'px-5 py-4']">
+            <div class="varnish-content rounded-md flex items-center"
+                 :class="[modes[mode][type].content, format === 'tab' ? 'pt-8 pb-4' : 'py-4', dismiss ? 'pl-5 pr-10' : 'px-5']">
 
                 <!-- Icon -->
                 <i v-if="format === 'icon'"
@@ -27,11 +27,10 @@
                 </i>
 
                 <!-- Value -->
-                <div class="leading-normal relative"
-                     :class="format === 'tab' ? '' : 'top-[1px]'">
+                <div class="text-gray-600 dark:text-gray-400 leading-normal relative">
 
                     <!-- Text -->
-                    {{ value }}
+                    <slot></slot>
 
                 </div>
 
@@ -82,6 +81,12 @@
                         icon    : 'fa-circle-info',
                         tab     : 'bg-sky-600/[.40] dark:bg-sky-700/[.30]',
                     },
+                    question : {
+                        border  : 'border-purple-700/[.30] dark:border-none',
+                        content : 'bg-purple-500/[.05] dark:bg-purple-700/[.30] text-purple-800/[.80] dark:text-purple-300',
+                        icon    : 'fa-question-circle',
+                        tab     : 'bg-purple-700/[.30] dark:bg-purple-700/[.30]',
+                    },
                     success : {
                         border  : 'border-emerald-600/[.40] dark:border-none',
                         content : 'bg-emerald-500/[.05] dark:bg-emerald-700/[.30] text-emerald-700/[.90] dark:text-emerald-400',
@@ -107,6 +112,12 @@
                         content : 'bg-transparent text-sky-700 dark:text-blue-300',
                         icon    : 'fa-circle-info',
                         tab     : 'bg-sky-600/[.40]',
+                    },
+                    question : {
+                        border  : 'border-purple-700/[.30] dark:border-purple-700/[.60]',
+                        content : 'bg-transparent text-purple-800/[.80] dark:text-purple-400',
+                        icon    : 'fa-question-circle',
+                        tab     : 'bg-purple-600/[.40]',
                     },
                     success : {
                         border  : 'border-emerald-600/[.40] dark:border-emerald-700/[.60]',
@@ -134,7 +145,6 @@
             'id'      : { type : String,  default : '' },
             'mode'    : { type : String,  default : 'opaque' },
             'type'    : { type : String,  default : 'info' },
-            'value'   : { type : String,  default : '' },
         },
 
         /**

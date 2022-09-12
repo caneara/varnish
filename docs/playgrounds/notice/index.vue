@@ -13,10 +13,11 @@
 
         <!-- Notices -->
         <div class="flex flex-col gap-y-5 ml-4">
-            <v-notice type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice type="danger" :dismiss="true" id="test" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
+            <v-notice type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice type="danger" :dismiss="true" id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
         </div>
 
         <!-- Header -->
@@ -26,10 +27,11 @@
 
         <!-- Notices -->
         <div class="flex flex-col gap-y-4 ml-4">
-            <v-notice mode="transparent" type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" type="danger" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
+            <v-notice mode="transparent" type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" type="danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
         </div>
 
         <!-- Header -->
@@ -39,10 +41,11 @@
 
         <!-- Notices -->
         <div class="flex flex-col gap-y-5 ml-4">
-            <v-notice format="icon" type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice format="icon" type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice format="icon" type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice format="icon" type="danger" :dismiss="true" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
+            <v-notice format="icon" type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice format="icon" type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice format="icon" type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice format="icon" type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice format="icon" type="danger" :dismiss="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
         </div>
 
         <!-- Header -->
@@ -52,10 +55,11 @@
 
         <!-- Notices -->
         <div class="flex flex-col gap-y-4 ml-4">
-            <v-notice mode="transparent" format="icon" type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" format="icon" type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" format="icon" type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
-            <v-notice mode="transparent" format="icon" type="danger" :dismiss="true" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?"></v-notice>
+            <v-notice mode="transparent" format="icon" type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" format="icon" type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" format="icon" type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" format="icon" type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
+            <v-notice mode="transparent" format="icon" type="danger" :dismiss="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid rerum aliquam ullam impedit a cum debitis vitae ipsum aperiam pariatur voluptatibus, libero provident accusantium odit saepe ad totam?</v-notice>
         </div>
 
     </div>

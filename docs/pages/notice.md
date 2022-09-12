@@ -4,7 +4,7 @@ A simple notice or alert component, usually used to advise the user of something
 
 ## Features
 
-* Available in four colors
+* Available in five colors
 * Tab or icon-based format
 * Opaque and transparent backgrounds
 * Optionally dismissable (with browser persistence)
@@ -21,14 +21,16 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="flex flex-col gap-y-6 mt-8">
     <ClientOnly>
-        <NoticeComponent type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent type="danger" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent format="icon" type="info" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent format="icon" type="success" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent format="icon" type="warning" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
-        <NoticeComponent format="icon" type="danger" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></NoticeComponent>
+        <NoticeComponent type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent type="danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent format="icon" type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent format="icon" type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent format="icon" type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent format="icon" type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
+        <NoticeComponent format="icon" type="danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</NoticeComponent>
     </ClientOnly>
 </div>
 
@@ -115,7 +117,7 @@ When set to `'opaque'`, the background is shown. When set to `'transparent'`, th
 
 - Type: `Enum (String)`
 - Default: `'info'`
-- Options: `'info'`, `'success'`, `'warning'`, `'danger'`
+- Options: `'info'`, `'question'`, `'success'`, `'warning'`, `'danger'`
 
 The type of notice that should be shown.
 
@@ -125,15 +127,14 @@ See the [demo](#demo) for the color schemes associated with each type.
 <v-notice type="success"></v-notice>
 ```
 
-### value
+## Slot
 
-- Type: `String`
-- Default: `''`
-
-Specify the text to display within the component.
+Specify the text / HTML to display within the component using the default slot.
 
 ```html
-<v-notice value="Welcome to your dashboard"></v-notice>
+<v-notice>
+    Welcome to your dashboard
+</v-notice>
 ```
 
 ## Custom styling

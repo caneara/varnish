@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import ShareComponent from '../components/share.vue';
 import PromptComponent from '../components/prompt.vue';
 import ConfirmComponent from '../components/confirm.vue';
 import NotificationComponent from '../components/notification.vue';
@@ -13,6 +14,7 @@ export default
         'v-confirm'       : ConfirmComponent,
         'v-notification'  : NotificationComponent,
         'v-prompt'        : PromptComponent,
+        'v-share'         : ShareComponent,
     },
 
     /**
@@ -21,7 +23,7 @@ export default
      */
     data() {
         return {
-            dialog : { container : null, id : null },
+            dialogs : [],
         }
     },
 
@@ -37,29 +39,31 @@ export default
          */
         createDialogElement()
         {
-            this.dialog.id = `dialog-${parseInt(performance.now())}`;
-
             let div = document.createElement('div');
 
-            div.id = this.dialog.id;
+            div.id = `dialog-${parseInt(performance.now())}`;
 
             document.body.appendChild(div);
+
+            this.dialogs.push({ container : null, id : div.id })
+
+            return this.dialogs.slice(-1)[0];
         },
 
         /**
          * Remove the open dialog from the viewport.
          *
          */
-        closeDialog()
+        closeDialog(dialog)
         {
-            this.dialog.container._instance.props.visible = false;
+            dialog.container._instance.props.visible = false;
 
             setTimeout(() => {
-                this.dialog.container.unmount();
+                dialog.container.unmount();
 
-                this.dialog.container = undefined;
+                dialog.container = undefined;
 
-                document.body.removeChild(document.getElementById(this.dialog.id));
+                document.body.removeChild(document.getElementById(dialog.id));
             }, 300);
         },
 
@@ -67,29 +71,29 @@ export default
          * Request that the user confirm a particular action.
          *
          */
-        confirm(title, summary)
+        confirm(title = null, summary = null)
         {
-            this.createDialogElement();
+            let dialog = this.createDialogElement();
 
             return new Promise((resolve, reject) =>
             {
-                this.dialog.container = createApp(ConfirmComponent, {
-                    summary : summary,
-                    title   : title,
+                dialog.container = createApp(ConfirmComponent, {
+                    summary : summary ?? 'Note that in most cases, this action is not reversible. If you need some help, then please contact support.',
+                    title   : title ?? 'Are you sure you wish to proceed?',
                     visible : true,
                     onCancel : () => {
                         resolve(false);
 
-                        this.closeDialog();
+                        this.closeDialog(dialog);
                     },
                     onContinue : () => {
                         resolve(true);
 
-                        this.closeDialog();
+                        this.closeDialog(dialog);
                     },
                 });
 
-                this.dialog.container.mount(`#${this.dialog.id}`);
+                dialog.container.mount(`#${dialog.id}`);
             });
         },
 
@@ -99,48 +103,64 @@ export default
          */
         notify(type, message)
         {
-            this.createDialogElement();
+            let dialog = this.createDialogElement();
 
-            this.dialog.container = createApp(NotificationComponent, {
+            dialog.container = createApp(NotificationComponent, {
                 message : message,
                 type    : type,
             });
 
-            this.dialog.container.mount(`#${this.dialog.id}`);
+            dialog.container.mount(`#${dialog.id}`);
 
-            setTimeout(() => this.closeDialog(), 3500);
+            setTimeout(() => this.closeDialog(dialog), 3500);
         },
 
         /**
          * Request that the user provide some feedback.
          *
          */
-        prompt(title, summary, label, fallback = '', lines = 1)
+        prompt(title = null, summary = null, label = null, fallback = '', lines = 1)
         {
-            this.createDialogElement();
+            let dialog = this.createDialogElement();
 
             return new Promise((resolve, reject) =>
             {
-                this.dialog.container = createApp(PromptComponent, {
-                    label   : label,
+                dialog.container = createApp(PromptComponent, {
+                    label   : label ?? 'Your response',
                     lines   : lines,
-                    summary : summary,
-                    title   : title,
+                    summary : summary ?? 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.',
+                    title   : title ?? 'Awaiting your response...',
                     visible : true,
                     onCancel : () => {
                         resolve(fallback);
 
-                        this.closeDialog();
+                        this.closeDialog(dialog);
                     },
                     onContinue : (event) => {
                         resolve(['', null, undefined].includes(event) ? fallback : event);
 
-                        this.closeDialog();
+                        this.closeDialog(dialog);
                     },
                 });
 
-                this.dialog.container.mount(`#${this.dialog.id}`);
+                dialog.container.mount(`#${dialog.id}`);
             });
+        },
+
+        /**
+         * Allow the user to share the given link.
+         *
+         */
+        share(url)
+        {
+            let dialog = this.createDialogElement();
+
+            dialog.container = createApp(ShareComponent, {
+                url     : url,
+                visible : true,
+            });
+
+            dialog.container.mount(`#${dialog.id}`);
         },
     }
 }

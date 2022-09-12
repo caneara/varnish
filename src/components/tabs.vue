@@ -3,23 +3,22 @@
 
         <!-- Tabs -->
         <div @click="switchTab(tab)"
-             :dusk="`set-tab-${tab.id}`"
+             :dusk="`select-tab-${tab.id}`"
              v-for="(tab, index) in items.filter(tab => tab?.visible ?? true)"
              class="varnish-tab group cursor-pointer whitespace-nowrap select-none transition duration-300 relative z-[1]">
 
             <!-- Content -->
-            <div :class="index === 0 ? 'md:-ml-1 md:mr-1' : 'md:mx-1'"
-                 class="varnish-content flex items-center px-4 md:px-3 py-3">
+            <div class="varnish-content flex items-center px-4 py-3 md:mx-1">
 
                 <!-- Icon -->
                 <i :title="tab.label"
-                   class="varnish-icon text-[16px] lg:text-[13px] transition duration-300 lg:mr-3"
-                   :class="[tab.icon, tab.id === modelValue ? 'text-sky-600 dark:text-sky-400 mr-3' : 'text-gray-500/[.65] dark:text-gray-400']">
+                   class="varnish-icon text-[16px] lg:text-[13px] transition duration-300 md:mr-3"
+                   :class="[tab.icon, tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-500/[.65] dark:text-gray-400']">
                 </i>
 
                 <!-- Label -->
                 <span v-html="tab.label"
-                      class="varnish-label font-semibold text-[12px] uppercase transition duration-300"
+                      class="varnish-label font-semibold text-[12px] uppercase transition duration-300 hidden md:inline"
                       :class="tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-600 dark:text-gray-400 hidden lg:inline'">
                 </span>
 
@@ -50,16 +49,14 @@
          * Define the events.
          *
          */
-        emits : [
-            'change',
-            'update:modelValue',
-        ],
+        emits : ['change', 'update:modelValue'],
 
 		/**
 		 * Define the public properties.
 		 *
 		 */
 		props : {
+			'id'         : { type : String, default : '' },
 			'items'      : { type : Array,  default : [] },
 			'modelValue' : { type : String, default : '' },
 		},
@@ -79,6 +76,8 @@
                 if (tab?.action) {
                     tab.action();
                 }
+
+                localStorage.setItem(`varnish_tabs_${this.id}`, tab.id);
 
                 this.$emit('change', tab.id);
                 this.$emit('update:modelValue', tab.id);
