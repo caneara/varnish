@@ -1,7 +1,7 @@
 {
     "name": "@caneara/varnish",
     "author": "Caneara",
-    "version": "0.8.10",
+    "version": "0.8.12",
     "license": "MIT",
     "description": "A library of UI components built using Vue.js and TailwindCSS.",
     "repository": {
@@ -15,6 +15,7 @@
         "tailwind",
         "component"
     ],
+    "files": ["src"],
     "scripts": {
         "watch": "vitepress dev docs",
         "build": "vitepress build docs",
