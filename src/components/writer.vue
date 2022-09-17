@@ -21,7 +21,7 @@
 
                 <!-- Redo -->
                 <div title="Redo"
-                     @click="history.hasRedo() ? history.red() : null"
+                     @click="history.hasRedo() ? history.redo() : null"
                      :class="history.hasRedo() ? 'text-black hover:text-sky-700 dark:text-gray-400 dark:hover:text-white' : 'text-gray-300 dark:text-gray-500'"
                      class="fas fa-rotate-right text-[15px] md:text-[16px] varnish-toolbar-button varnish-toolbar-button-redo flex items-center cursor-pointer transition duration-300 p-2 md:p-3">
                 </div>
