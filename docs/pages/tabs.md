@@ -42,7 +42,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import TabsComponent from '@caneara/varnish/components/tabs.vue';
+    import TabsComponent from '@caneara/varnish/src/components/tabs.vue';
 
     export default
     {

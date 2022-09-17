@@ -40,7 +40,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import RemainingComponent from '@caneara/varnish/components/remaining.vue';
+    import RemainingComponent from '@caneara/varnish/src/components/remaining.vue';
 
     export default
     {

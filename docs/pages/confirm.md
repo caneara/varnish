@@ -42,7 +42,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ConfirmComponent from '@caneara/varnish/components/confirm.vue';
+    import ConfirmComponent from '@caneara/varnish/src/components/confirm.vue';
 
     export default
     {

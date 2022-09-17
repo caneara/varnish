@@ -16,11 +16,3 @@ Varnish adds a blank `varnish-font` CSS class to each component. You can use thi
 ```css
 .varnish-font { font-family: 'Inter' }
 ```
-
-### Are there downsides to doing this?
-
-Each of the Varnish components have been styled (padding, spacing, size, weight etc.) in such a way as to give the best overall visual experience. Using another font will require that you spend time tweaking the styling so that it looks right.
-
-## Further tweaking
-
-Regardless of the font that you use, you may still want to alter the visual look of one or more components. To make this easy, each component's documentation page includes a 'custom styling' section.

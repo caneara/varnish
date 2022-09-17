@@ -44,7 +44,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import NoticeComponent from '@caneara/varnish/components/notice.vue';
+    import NoticeComponent from '@caneara/varnish/src/components/notice.vue';
 
     export default
     {

@@ -42,7 +42,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import DropDownComponent from '@caneara/varnish/components/dropdown.vue';
+    import DropDownComponent from '@caneara/varnish/src/components/dropdown.vue';
 
     export default
     {

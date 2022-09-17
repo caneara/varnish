@@ -38,7 +38,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import TextBoxComponent from '@caneara/varnish/components/textbox.vue';
+    import TextBoxComponent from '@caneara/varnish/src/components/textbox.vue';
 
     export default
     {

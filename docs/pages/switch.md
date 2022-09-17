@@ -36,7 +36,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import SwitchComponent from '@caneara/varnish/components/switch.vue';
+    import SwitchComponent from '@caneara/varnish/src/components/switch.vue';
 
     export default
     {

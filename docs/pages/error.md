@@ -37,7 +37,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ErrorComponent from '@caneara/varnish/components/error.vue';
+    import ErrorComponent from '@caneara/varnish/src/components/error.vue';
 
     export default
     {

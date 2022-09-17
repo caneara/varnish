@@ -40,7 +40,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import LabelComponent from '@caneara/varnish/components/label.vue';
+    import LabelComponent from '@caneara/varnish/src/components/label.vue';
 
     export default
     {

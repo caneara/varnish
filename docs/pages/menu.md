@@ -43,7 +43,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import MenuComponent from '@caneara/varnish/components/menu.vue';
+    import MenuComponent from '@caneara/varnish/src/components/menu.vue';
 
     export default
     {

@@ -39,7 +39,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import MetricComponent from '@caneara/varnish/components/metric.vue';
+    import MetricComponent from '@caneara/varnish/src/components/metric.vue';
 
     export default
     {

@@ -37,7 +37,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import PasswordComponent from '@caneara/varnish/components/password.vue';
+    import PasswordComponent from '@caneara/varnish/src/components/password.vue';
 
     export default
     {

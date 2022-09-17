@@ -34,7 +34,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import OptionalComponent from '@caneara/varnish/components/optional.vue';
+    import OptionalComponent from '@caneara/varnish/src/components/optional.vue';
 
     export default
     {

@@ -39,7 +39,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ButtonComponent from '@caneara/varnish/components/button.vue';
+    import ButtonComponent from '@caneara/varnish/src/components/button.vue';
 
     export default
     {

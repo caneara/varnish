@@ -33,7 +33,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import BannerComponent from '@caneara/varnish/components/banner.vue';
+    import BannerComponent from '@caneara/varnish/src/components/banner.vue';
 
     export default
     {

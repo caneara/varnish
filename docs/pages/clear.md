@@ -38,7 +38,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ClearComponent from '@caneara/varnish/components/clear.vue';
+    import ClearComponent from '@caneara/varnish/src/components/clear.vue';
 
     export default
     {

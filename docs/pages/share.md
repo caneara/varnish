@@ -42,7 +42,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ShareComponent from '@caneara/varnish/components/share.vue';
+    import ShareComponent from '@caneara/varnish/src/components/share.vue';
 
     export default
     {

@@ -38,7 +38,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import DateTimeComponent from '@caneara/varnish/components/datetime.vue';
+    import DateTimeComponent from '@caneara/varnish/src/components/datetime.vue';
 
     export default
     {

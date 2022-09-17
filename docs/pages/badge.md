@@ -40,7 +40,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import BadgeComponent from '@caneara/varnish/components/badge.vue';
+    import BadgeComponent from '@caneara/varnish/src/components/badge.vue';
 
     export default
     {

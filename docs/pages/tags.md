@@ -37,7 +37,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import TagsComponent from '@caneara/varnish/components/tags.vue';
+    import TagsComponent from '@caneara/varnish/src/components/tags.vue';
 
     export default
     {

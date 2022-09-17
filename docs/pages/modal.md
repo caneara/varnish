@@ -44,7 +44,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import ModalComponent from '@caneara/varnish/components/modal.vue';
+    import ModalComponent from '@caneara/varnish/src/components/modal.vue';
 
     export default
     {

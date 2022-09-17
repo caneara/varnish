@@ -43,7 +43,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import PromptComponent from '@caneara/varnish/components/prompt.vue';
+    import PromptComponent from '@caneara/varnish/src/components/prompt.vue';
 
     export default
     {

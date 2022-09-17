@@ -47,7 +47,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import WriterComponent from '@caneara/varnish/components/writer.vue';
+    import WriterComponent from '@caneara/varnish/src/components/writer.vue';
 
     export default
     {

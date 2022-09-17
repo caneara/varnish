@@ -36,7 +36,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import EmptyComponent from '@caneara/varnish/components/empty.vue';
+    import EmptyComponent from '@caneara/varnish/src/components/empty.vue';
 
     export default
     {

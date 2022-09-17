@@ -35,7 +35,7 @@ Begin by importing the component and registering it like so:
 </template>
 
 <script>
-    import StickerComponent from '@caneara/varnish/components/sticker.vue';
+    import StickerComponent from '@caneara/varnish/src/components/sticker.vue';
 
     export default
     {
