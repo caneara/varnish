@@ -15,7 +15,7 @@ npm install @caneara/varnish
 Next, you will need to instruct Tailwind's JIT compiler to recognize Varnish by adding the following path to your `content` array:
 
 ```js
-'./node_modules/@caneara/varnish/src/components/*.vue'
+'./node_modules/@caneara/varnish/src/**/*.{css,js,vue}'
 ```
 
 For example, within your `tailwind.config.js` file:
