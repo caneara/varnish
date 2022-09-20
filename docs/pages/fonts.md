@@ -16,3 +16,7 @@ Varnish adds a blank `varnish-font` CSS class to each component. You can use thi
 ```css
 .varnish-font { font-family: 'Inter' }
 ```
+
+## Further tweaking
+
+Regardless of the font that you use, you may still want to alter the visual look of one or more components. To make this easy, each component's documentation page includes a 'custom styling' section.

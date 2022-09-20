@@ -677,6 +677,7 @@
             {
                 this.resizeEditorToContent();
 
+                this.$emit('change', content);
                 this.$emit('update:modelValue', content);
             },
 
