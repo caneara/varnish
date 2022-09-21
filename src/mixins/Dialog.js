@@ -119,18 +119,19 @@ export default
          * Request that the user provide some feedback.
          *
          */
-        prompt(title = null, summary = null, label = null, fallback = '', lines = 1)
+        prompt(title = null, summary = null, label = null, fallback = '', lines = 1, maxLength = null)
         {
             let dialog = this.createDialogElement();
 
             return new Promise((resolve, reject) =>
             {
                 dialog.container = createApp(PromptComponent, {
-                    label   : label ?? 'Your response',
-                    lines   : lines,
-                    summary : summary ?? 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.',
-                    title   : title ?? 'Awaiting your response...',
-                    visible : true,
+                    label     : label ?? 'Your response',
+                    lines     : lines,
+                    maxLength : maxLength,
+                    summary   : summary ?? 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.',
+                    title     : title ?? 'Awaiting your response...',
+                    visible   : true,
                     onCancel : () => {
                         resolve(fallback);
 

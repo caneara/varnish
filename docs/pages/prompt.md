@@ -23,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex justify-center rounded-md p-6 mt-8">
     <ClientOnly>
-        <PromptComponent :visible="show" @cancel="show = false" :lines="3" @continue="show = false"></PromptComponent>
+        <PromptComponent :visible="show" @cancel="show = false" :lines="3" :maxLength="15" @continue="show = false"></PromptComponent>
     </ClientOnly>
     <button @click="show = true"
             class="bg-sky-700 text-white px-3 py-1 mt-10 mb-12 rounded-md">
@@ -80,6 +80,19 @@ When set to `1`, an `input` is used. When set to `2+`, a `textarea` is used.
 
 ```html
 <v-prompt :lines="6"></v-prompt>
+```
+
+### maxLength
+
+- Type: `Number`
+- Default: `null`
+
+Set the maximum number of characters that should be allowed.
+
+When set to `null`, no limit is enforced by the browser.
+
+```html
+<v-prompt :maxLength="30"></v-prompt>
 ```
 
 ### summary
@@ -172,14 +185,15 @@ async provideFeedback()
         'In order to proceed, some input is required from you.',
         'Your response',
         '',
-        3
+        3,
+        100
     );
 
     alert(result === '' ? 'Cancel' : 'Continue');
 },
 ```
 
-The `prompt` method accepts five parameters, which are used to set the [title](#title), [summary](#summary), [label](#label), fallback text (if cancelled) and [lines](#lines) properties of the component.
+The `prompt` method accepts six parameters, which are used to set the [title](#title), [summary](#summary), [label](#label), fallback text (if cancelled), [lines](#lines) and  [maxLength](#maxlength) properties of the component.
 
 ## Custom styling
 

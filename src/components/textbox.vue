@@ -121,7 +121,15 @@
              */
             interceptKeystroke(event)
             {
-                if (event.key === 'Enter') this.$emit('return');
+                if (event.key === 'Enter' && event.shiftKey) {
+                    return 13;
+                }
+
+                if (event.key === 'Enter' && ! event.shiftKey) {
+                    event.preventDefault();
+
+                    return this.$emit('return');
+                }
             },
         }
     }

@@ -23,7 +23,9 @@
                    :label="label"
                    :lines="lines"
                    v-model="content"
-                   icon="fas fa-signature">
+                   :maxLength="maxLength"
+                   icon="fas fa-signature"
+                   @return="$emit('continue', content)">
         </v-textbox>
 
         <!-- Actions -->
@@ -94,11 +96,12 @@
          *
          */
         props : {
-            'label'   : { type : String,  default : 'Your response' },
-            'lines'   : { type : Number,  default : 1 },
-            'summary' : { type : String,  default : 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.' },
-            'title'   : { type : String,  default : 'Awaiting your response...' },
-			'visible' : { type : Boolean, default : false },
+            'label'     : { type : String,  default : 'Your response' },
+            'lines'     : { type : Number,  default : 1 },
+            'maxLength' : { type : Number,  default : null },
+            'summary'   : { type : String,  default : 'In order to proceed, some input is required. Please enter it below, then press continue, or press cancel.' },
+            'title'     : { type : String,  default : 'Awaiting your response...' },
+			'visible'   : { type : Boolean, default : false },
         },
     }
 </script>
