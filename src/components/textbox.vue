@@ -14,6 +14,7 @@
                    v-if="lines === 1"
                    :value="modelValue"
                    @focus="focus = true"
+                   :maxLength="maxLength"
                    @focusout="focus = false"
                    :placeholder="placeholder"
                    :autocomplete="autocomplete"
@@ -31,6 +32,7 @@
                       v-if="lines !== 1"
                       :value="modelValue"
                       @focus="focus = true"
+                      :maxLength="maxLength"
                       @focusout="focus = false"
                       :placeholder="placeholder"
                       :autocomplete="autocomplete"
@@ -102,8 +104,9 @@
          *
          */
         props : {
-            'lines'    : { type : Number,  default : 1 },
-            'readOnly' : { type : Boolean, default : false },
+            'lines'     : { type : Number,  default : 1 },
+            'readOnly'  : { type : Boolean, default : false },
+            'maxLength' : { type : Number,  default : null },
         },
 
         /**

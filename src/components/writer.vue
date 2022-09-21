@@ -236,6 +236,7 @@
                       autocomplete="off"
                       :value="modelValue"
                       v-if="! readingMode"
+                      :maxLength="maxLength"
                       @click="hideOverlays()"
                       :placeholder="placeholder"
                       @keydown="interceptKeystroke($event)"
@@ -324,7 +325,7 @@
             'html'         : { type : Boolean, default : false },
             'languageText' : { type : String,  default : "Specify the language e.g. 'js', 'php', 'json' etc." },
             'linkText'     : { type : String,  default : "Specify the url e.g. 'https://google.com'." },
-            'maxLength'    : { type : Number,  default : 100 },
+            'maxLength'    : { type : Number,  default : null },
             'maxUndo'      : { type : Number,  default : 20 },
             'progress'     : { type : Number,  default : 0 },
             'remaining'    : { type : Boolean, default : false },

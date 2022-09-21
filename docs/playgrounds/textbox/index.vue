@@ -34,6 +34,7 @@
 
             <!-- TextBox (with custom label) -->
             <v-textbox v-model="three"
+                       :maxLength="12"
                        label="First name"
                        icon="fas fa-user">
             </v-textbox>

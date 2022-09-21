@@ -139,13 +139,11 @@ Set the prompt text to show when asking for a url e.g. when inserting a link.
 ### maxLength
 
 - Type: `Number`
-- Default: `100`
+- Default: `null`
 
 Set the maximum number of characters that should be allowed.
 
-Note that this not actually enforced, it is simply used by the [remaining](#remaining) indicator.
-
-This value has no effect if [remaining](#remaining) is set to `false`.
+When set to `null`, no limit is enforced by the browser.
 
 ```html
 <v-writer :maxLength="1000"></v-writer>

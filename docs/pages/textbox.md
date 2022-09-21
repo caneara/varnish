@@ -82,6 +82,19 @@ When set to `1`, an `input` is used. When set to `2+`, a `textarea` is used.
 <v-textbox :lines="6"></v-textbox>
 ```
 
+### maxLength
+
+- Type: `Number`
+- Default: `null`
+
+Set the maximum number of characters that should be allowed.
+
+When set to `null`, no limit is enforced by the browser.
+
+```html
+<v-textbox :maxLength="30"></v-textbox>
+```
+
 ### readOnly
 
 - Type: `Boolean`
