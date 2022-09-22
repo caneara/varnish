@@ -22,41 +22,32 @@
 .varnish-writer .varnish-container .varnish-preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .varnish-container .varnish-preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .varnish-container .varnish-preview .hljs { @apply w-full overflow-auto rounded bg-gray-100/[.30] dark:bg-gray-700/[.30] border dark:border-none text-[15px] p-6 }
-.varnish-writer .varnish-container .varnish-preview .hljs-subst { color: #2f3337 }
-.varnish-writer .varnish-container .varnish-preview .hljs-comment { @apply dark:italic ; color: #656e77 }
-.varnish-writer .varnish-container .varnish-preview .hljs-attr { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-doctag { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-keyword { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-meta { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-keyword { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-section { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-selector-tag { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-attribute { color: #803378 }
-.varnish-writer .varnish-container .varnish-preview .hljs-name { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-number { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-quote { @apply dark:italic ; color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-selector-id { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-template-tag { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-type { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-selector-class { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-link { @apply dark:underline ; color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-regexp { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-selector-attr { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-string { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-symbol { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-template-variable { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-variable { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-meta { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-selector-pseudo { color: #015692 }
-.varnish-writer .varnish-container .varnish-preview .hljs-built_in { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-literal { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-title { color: #b75501 }
-.varnish-writer .varnish-container .varnish-preview .hljs-bullet { color: #535a60 }
-.varnish-writer .varnish-container .varnish-preview .hljs-code { color: #535a60 }
-.varnish-writer .varnish-container .varnish-preview .hljs-meta { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-string { color: #54790d }
-.varnish-writer .varnish-container .varnish-preview .hljs-deletion { color: #c02d2e }
-.varnish-writer .varnish-container .varnish-preview .hljs-addition { color: #2f6f44 }
+.varnish-writer .varnish-container .varnish-preview .hljs-comment { color:#696969 }
+.varnish-writer .varnish-container .varnish-preview .hljs-quote { color:#696969 }
+.varnish-writer .varnish-container .varnish-preview .hljs-deletion { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-name { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-regexp { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-selector-class { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-selector-id { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-tag { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-template-variable { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-variable { color:#d91e18 }
+.varnish-writer .varnish-container .varnish-preview .hljs-attribute { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-built_in { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-link { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-literal { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-meta { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-number { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-params { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-type { color:#aa5d00 }
+.varnish-writer .varnish-container .varnish-preview .hljs-addition { color:green }
+.varnish-writer .varnish-container .varnish-preview .hljs-bullet { color:green }
+.varnish-writer .varnish-container .varnish-preview .hljs-string { color:green }
+.varnish-writer .varnish-container .varnish-preview .hljs-symbol { color:green }
+.varnish-writer .varnish-container .varnish-preview .hljs-section { color:#007faa }
+.varnish-writer .varnish-container .varnish-preview .hljs-title { color:#007faa }
+.varnish-writer .varnish-container .varnish-preview .hljs-keyword { color:#7928a1 }
+.varnish-writer .varnish-container .varnish-preview .hljs-selector-tag { color:#7928a1 }
 .varnish-writer .varnish-container .varnish-preview .hljs-emphasis { @apply italic }
 .varnish-writer .varnish-container .varnish-preview .hljs-strong { @apply font-bold }
 .dark .varnish-writer .varnish-container .varnish-preview .hljs-comment { color: #5c6370 }
