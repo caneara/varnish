@@ -19,8 +19,8 @@
 .varnish-writer .varnish-container .varnish-preview table:not(.code-block) tr:last-of-type td { @apply border-b-gray-300 dark:border-b-gray-500 }
 .varnish-writer .varnish-container .varnish-preview blockquote { @apply my-6 border-l-4 rounded-r px-6 py-5 bg-orange-100 border-yellow-500 dark:bg-yellow-700 dark:bg-opacity-50 dark:border-yellow-600 }
 .varnish-writer .varnish-container .varnish-preview blockquote p { @apply mb-0 }
-.varnish-writer .varnish-container .varnish-preview p code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
-.varnish-writer .varnish-container .varnish-preview li code { @apply bg-gray-200 dark:bg-gray-700 font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.varnish-writer .varnish-container .varnish-preview p code { @apply bg-gray-200/[.50] dark:bg-gray-700/[.50] font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
+.varnish-writer .varnish-container .varnish-preview li code { @apply bg-gray-200/[.50] dark:bg-gray-700/[.50] font-mono text-[14px] rounded px-1 py-[2px] mx-1 }
 .varnish-writer .varnish-container .varnish-preview .hljs { @apply w-full overflow-auto rounded bg-gray-100/[.30] dark:bg-gray-700/[.30] border dark:border-none text-[15px] p-6 }
 .varnish-writer .varnish-container .varnish-preview .hljs-comment { color:#696969 }
 .varnish-writer .varnish-container .varnish-preview .hljs-quote { color:#696969 }
