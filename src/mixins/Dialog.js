@@ -47,23 +47,23 @@ export default
 
             this.dialogs.push({ container : null, id : div.id })
 
-            return this.dialogs.slice(-1)[0];
+            return div.id;
         },
 
         /**
          * Remove the open dialog from the viewport.
          *
          */
-        closeDialog(dialog)
+        closeDialog(id)
         {
-            dialog.container._instance.props.visible = false;
+            this.dialogs.find(item => item.id === id).container._instance.props.visible = false;
 
             setTimeout(() => {
-                dialog.container.unmount();
+                this.dialogs.find(item => item.id === id).container.unmount();
 
-                dialog.container = undefined;
+                this.dialogs.find(item => item.id === id).container = undefined;
 
-                document.body.removeChild(document.getElementById(dialog.id));
+                document.body.removeChild(document.getElementById(id));
             }, 300);
         },
 
@@ -73,28 +73,39 @@ export default
          */
         confirm(title = null, summary = null)
         {
-            let dialog = this.createDialogElement();
+            let id = this.createDialogElement();
 
             return new Promise((resolve, reject) =>
             {
-                dialog.container = createApp(ConfirmComponent, {
+                let container = createApp(ConfirmComponent, {
                     summary : summary ?? 'Note that in most cases, this action is not reversible. If you need some help, then please contact support.',
                     title   : title ?? 'Are you sure you wish to proceed?',
                     visible : true,
                     onCancel : () => {
                         resolve(false);
 
-                        this.closeDialog(dialog);
+                        this.closeDialog(id);
                     },
                     onContinue : () => {
                         resolve(true);
 
-                        this.closeDialog(dialog);
+                        this.closeDialog(id);
                     },
                 });
 
-                dialog.container.mount(`#${dialog.id}`);
+                this.mountDialog(id, container);
             });
+        },
+
+        /**
+         * Attach the given container to the browser window.
+         *
+         */
+        mountDialog(id, container)
+        {
+            this.dialogs.find(item => item.id === id).container = container;
+
+            this.dialogs.find(item => item.id === id).container.mount(`#${id}`);
         },
 
         /**
@@ -103,16 +114,16 @@ export default
          */
         notify(type, message)
         {
-            let dialog = this.createDialogElement();
+            let id = this.createDialogElement();
 
-            dialog.container = createApp(NotificationComponent, {
+            let container = createApp(NotificationComponent, {
                 message : message,
                 type    : type,
             });
 
-            dialog.container.mount(`#${dialog.id}`);
+            this.mountDialog(id, container);
 
-            setTimeout(() => this.closeDialog(dialog), 3500);
+            setTimeout(() => this.closeDialog(id), 3500);
         },
 
         /**
@@ -121,11 +132,11 @@ export default
          */
         prompt(title = null, summary = null, label = null, fallback = '', lines = 1, maxLength = null)
         {
-            let dialog = this.createDialogElement();
+            let id = this.createDialogElement();
 
             return new Promise((resolve, reject) =>
             {
-                dialog.container = createApp(PromptComponent, {
+                let container = createApp(PromptComponent, {
                     label     : label ?? 'Your response',
                     lines     : lines,
                     maxLength : maxLength,
@@ -135,16 +146,16 @@ export default
                     onCancel : () => {
                         resolve(fallback);
 
-                        this.closeDialog(dialog);
+                        this.closeDialog(id);
                     },
                     onContinue : (event) => {
                         resolve(['', null, undefined].includes(event) ? fallback : event);
 
-                        this.closeDialog(dialog);
+                        this.closeDialog(id);
                     },
                 });
 
-                dialog.container.mount(`#${dialog.id}`);
+                this.mountDialog(id, container);
             });
         },
 
@@ -154,14 +165,12 @@ export default
          */
         share(url)
         {
-            let dialog = this.createDialogElement();
-
-            dialog.container = createApp(ShareComponent, {
+            let container = createApp(ShareComponent, {
                 url     : url,
                 visible : true,
             });
 
-            dialog.container.mount(`#${dialog.id}`);
+            this.mountDialog(this.createDialogElement(), container);
         },
     }
 }
