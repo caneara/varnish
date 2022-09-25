@@ -56,19 +56,15 @@ export default
          */
         closeDialog(dialog)
         {
-            try {
-                dialog.container._instance.props.visible = false;
+            dialog.container._instance.props.visible = false;
 
-                setTimeout(() => {
-                    try {
-                        dialog.container.unmount();
+            setTimeout(() => {
+                dialog.container.unmount();
 
-                        dialog.container = undefined;
+                dialog.container = undefined;
 
-                        document.body.removeChild(document.getElementById(dialog.id));
-                    } catch (error) {}
-                }, 300);
-            } catch (error) {}
+                document.body.removeChild(document.getElementById(dialog.id));
+            }, 300);
         },
 
         /**
