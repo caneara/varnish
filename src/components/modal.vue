@@ -92,7 +92,7 @@
 			 */
 			close()
 			{
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'visible';
 
 				this.$refs.content.style.opacity   = 0;
                 this.$refs.content.style.transform = 'scale(1.1)';

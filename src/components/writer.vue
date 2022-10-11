@@ -421,7 +421,7 @@
             {
                 this.fullscreen = false;
 
-                document.body.style.overflow = 'auto';
+                document.body.style.overflow = 'visible';
 
                 setTimeout(() => this.resizeEditorToContent(), 10);
             },
