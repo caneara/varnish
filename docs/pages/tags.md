@@ -53,6 +53,7 @@ Begin by importing the component and registering it like so:
 This component makes use of the following parts of the [Foundation](/pages/foundation) mixin:
 
 * [id](/pages/foundation#id)
+* [label](/pages/foundation#label)
 * [optional](/pages/foundation#optional)
 * [optionalText](/pages/foundation#optionalText)
 

@@ -44,7 +44,7 @@
                 <!-- Icon -->
                 <i title="Generate a random password"
                    @click.stop="createRandomPassword()"
-                   class="varnish-icon fas fa-cog text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 relative top-[1.5px] left-[1.5px] cursor-pointer transition duration-300">
+                   class="varnish-icon fas fa-plus text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 relative top-[1.5px] left-[1.5px] cursor-pointer transition duration-300">
                 </i>
 
             </div>
