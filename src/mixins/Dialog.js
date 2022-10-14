@@ -126,6 +126,7 @@ export default
             return new Promise((resolve, reject) =>
             {
                 dialog.container = createApp(PromptComponent, {
+                    fallback  : fallback,
                     label     : label ?? 'Your response',
                     lines     : lines,
                     maxLength : maxLength,

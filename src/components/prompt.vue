@@ -81,7 +81,7 @@
          */
         data() {
             return {
-                content : '',
+                content : this.fallback,
             }
         },
 
@@ -96,6 +96,7 @@
          *
          */
         props : {
+            'fallback'  : { type : String,  default : '' },
             'label'     : { type : String,  default : 'Your response' },
             'lines'     : { type : Number,  default : 1 },
             'maxLength' : { type : Number,  default : null },

@@ -58,6 +58,19 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
+### fallback
+
+- Type: `String`
+- Default: `''`
+
+Specify the text that will be returned if the user presses cancel.
+
+> Setting this property also sets the content of the text box within the prompt. This is useful if you're using a prompt to alter some content e.g. editing a comment.
+
+```html
+<v-prompt fallback="I'm what you get if you click cancel"></v-prompt>
+```
+
 ### label
 
 - Type: `String`
