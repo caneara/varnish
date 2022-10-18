@@ -249,7 +249,7 @@
             <div ref="preview"
                  v-show="! editing || readingMode"
                  :class="readingMode ? '' : 'p-6'"
-                 class="varnish-preview w-full overflow-auto break-words rounded-b">
+                 class="varnish-preview w-full overflow-visible break-words rounded-b">
 
                 <!-- Slot -->
 
