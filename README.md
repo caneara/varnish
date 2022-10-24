@@ -13,9 +13,7 @@
 
 # Varnish UI
 
-This library contains a set of UI components. They range from something as simple as a button, to as complex as a fully-featured, Markdown-based text editor. Originally, these components were part of Lumeno's codebase, however they have since been extracted, extended and made available for open-source use.
-
-> [Lumeno](https://lumeno.dev) centralizes your IT résumé, project portfolio and blog content. It aids in building a following, helps you to discover other creatives, and gets you invited to relevant jobs that match your personal requirements, such as minimum salary, availability, location, commute distance, technical skills, and more... [sign up for free!](https://lumeno.dev)
+This library contains a set of UI components. They range from something as simple as a button, to as complex as a fully-featured, Markdown-based text editor. Originally, these components were part of [Lumeno's](https://lumeno.dev) codebase, however they have since been extracted, extended and made available for open-source use.
 
 ## Getting Started
 
