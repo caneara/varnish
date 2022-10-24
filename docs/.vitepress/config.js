@@ -78,8 +78,6 @@ let head = [
     ['meta', { name     : 'twitter:title',       content : 'Varnish UI' }],
     ['meta', { name     : 'twitter:description', content : 'A library of UI components built using Vue.js and TailwindCSS.' }],
     ['meta', { name     : 'twitter:image',       content : 'https://varnish.caneara.com/card.png' }],
-    ['meta', { name     : 'twitter:creator',     content : '@CanearaHQ' }],
-    ['meta', { name     : 'twitter:site',        content : '@CanearaHQ' }],
 
     // Icons
     ['link', { rel : 'icon', href : '/logo.png', type : 'image/png' }],
@@ -93,8 +91,7 @@ let theme = {
     logo        : '/logo.png',
     sidebar     : sidebar,
     socialLinks : [
-        { icon : 'github',   link : 'https://github.com/caneara/varnish' },
-        { icon : 'twitter',  link : 'https://twitter.com/CanearaHQ' },
+        { icon : 'github', link : 'https://github.com/caneara/varnish' },
     ],
     editLink    : {
         text    : 'Edit page',
