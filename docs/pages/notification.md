@@ -94,7 +94,7 @@ To achieve this, first add the `Dialog` mixin to your component:
 
 ```html
 <script>
-import Dialog from '@caneara/varnish/mixins/Dialog';
+import Dialog from '@caneara/varnish/src/mixins/Dialog';
 
 export default
 {
