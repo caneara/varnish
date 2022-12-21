@@ -57,12 +57,6 @@ let sidebar = [
             { text : 'Optional',  link : '/pages/optional' },
             { text : 'Remaining', link : '/pages/remaining' },
         ],
-    }, {
-        text  : 'Products',
-        items : [
-            { text : 'Lumeno', link : 'https://lumeno.dev' },
-            { text : 'TipSea', link : 'https://tipsea.app' },
-        ],
     },
 ];
 
