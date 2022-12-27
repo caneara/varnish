@@ -9,12 +9,12 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
+        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
             {{ title }}
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary text-gray-700 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
+        <div class="varnish-summary font-medium text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
             {{ summary }}
         </div>
 

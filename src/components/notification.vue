@@ -38,7 +38,7 @@
 
                 <!-- Message -->
                 <span v-html="message"
-                    class="varnish-message text-[14px] text-gray-800 dark:text-gray-300 leading-normal break-words relative top-[.5px]">
+                    class="varnish-message text-[16px] text-gray-800 dark:text-gray-300 leading-normal break-words relative top-[.5px]">
                 </span>
 
             </div>

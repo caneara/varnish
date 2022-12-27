@@ -18,7 +18,7 @@
                    :autocomplete="autocomplete"
                    @input="change($event.target.value)"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
-                   class="varnish-input w-full bg-inherit font-medium text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
+                   class="varnish-input w-full bg-inherit font-medium text-[17px] text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[6px]" />
 
             <!-- Label -->
             <v-label :icon="icon"
@@ -44,7 +44,7 @@
                 <!-- Icon -->
                 <i title="Generate a random password"
                    @click.stop="createRandomPassword()"
-                   class="varnish-icon fas fa-plus text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 relative top-[1.5px] left-[1.5px] cursor-pointer transition duration-300">
+                   class="varnish-icon fas fa-plus text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 relative top-[.5px] left-[1.5px] cursor-pointer transition duration-300">
                 </i>
 
             </div>
@@ -53,10 +53,10 @@
 
         <!-- Generated -->
         <div v-if="! blank(password)"
-             class="varnish-generated font-semibold text-[14px] text-emerald-700 dark:text-emerald-300 mt-2">
+             class="varnish-generated font-semibold text-[14px] text-purple-700 dark:text-purple-300 mt-2">
 
             <!-- Text -->
-            <span class="mr-[2px]">
+            <span class="text-gray-700 dark:text-gray-300 mr-[2px]">
                 Password:
             </span>
 

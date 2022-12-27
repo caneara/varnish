@@ -119,7 +119,7 @@
                          :class="day.enabled ? 'text-gray-700 dark:text-gray-400 cursor-pointer group' : 'text-gray-300 dark:text-gray-700 pointer-events-none'">
 
                         <!-- Ordinal -->
-                        <div class="varnish-ordinal h-[28px] w-[28px] text-[14px] text-center rounded-full pt-[7px]"
+                        <div class="varnish-ordinal h-[28px] w-[28px] text-[15px] text-center rounded-full pt-[6px] pb-[4px]"
                              :class="[
                                 day.today ? 'font-semibold text-sky-600 dark:text-sky-400' : '',
                                 day.selected ? 'bg-emerald-600/[.30] dark:bg-emerald-600/[.60] dark:text-gray-300' : 'group-hover:bg-emerald-600/[.30] dark:group-hover:bg-emerald-600/[.60] dark:group-hover:text-gray-300'
@@ -146,7 +146,7 @@
 
                 <!-- Time Zone -->
                 <div :title="`UTC ${calendar.toFormat('Z')}`"
-                     class="varnish-zone basis-full text-[13px] text-gray-600 dark:text-gray-400/[.80] truncate mb-1">
+                     class="varnish-zone font-medium basis-full text-[13px] text-gray-500 dark:text-gray-400/[.80] truncate mb-1">
 
                     <!-- Text -->
                     {{ calendar.toFormat('ZZZZZ') }}
@@ -162,7 +162,7 @@
                             :id="`${name}_select_hour`"
                             :name="`${name}_select_hour`"
                             :dusk="`${name}_select_hour`"
-                            class="varnish-selector-hour appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal pr-[6px]">
+                            class="varnish-selector-hour appearance-none bg-inherit font-medium text-[15px] text-gray-800 dark:text-gray-300 leading-normal pr-[6px]">
 
                         <!-- Options -->
                         <option :key="hour"
@@ -188,7 +188,7 @@
                             :id="`${name}_select_minute`"
                             :name="`${name}_select_minute`"
                             :dusk="`${name}_select_minute`"
-                            class="varnish-selector-minute appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
+                            class="varnish-selector-minute appearance-none bg-inherit font-medium text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="minute"
@@ -219,7 +219,7 @@
                             :id="`${name}_select_second`"
                             :name="`${name}_select_second`"
                             :dusk="`${name}_select_second`"
-                            class="varnish-selector-second appearance-none bg-inherit font-semibold text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
+                            class="varnish-selector-second appearance-none bg-inherit font-medium text-[15px] text-gray-800 dark:text-gray-300 leading-normal">
 
                         <!-- Options -->
                         <option :key="second"

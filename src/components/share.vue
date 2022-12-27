@@ -9,14 +9,14 @@
         </div>
 
         <!-- Title -->
-        <div class="varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
+        <div class="varnish-font-native varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
             Share a link with others
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary text-gray-700 dark:text-gray-400 text-center leading-[1.6rem] max-w-[475px] mb-8">
+        <div class="varnish-summary font-medium text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] max-w-[475px] mb-8">
             Select one of the platforms to share the link on.
-            You can also send the link via your email, or
+            You can also send the link via email, or
             copy it to the clipboard.
         </div>
 
@@ -31,7 +31,7 @@
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fab fa-twitter text-[18px] text-sky-500 -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span class="varnish-text font-medium text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
                     Share on Twitter
                 </span>
 
@@ -45,7 +45,7 @@
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fab fa-facebook text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span class="varnish-text font-medium text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
                     Share on Facebook
                 </span>
 
@@ -59,7 +59,7 @@
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fab fa-reddit-alien text-[18px] text-red-700/[.80] dark:text-red-400 -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span class="varnish-text font-medium text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
                     Share on Reddit
                 </span>
 
@@ -73,7 +73,7 @@
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fab fa-linkedin text-[18px] text-blue-800/[.80] dark:text-blue-500 -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span class="varnish-text font-medium text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
                     Share on LinkedIn
                 </span>
 
@@ -87,7 +87,7 @@
                 <i class="varnish-icon w-[31px] min-w-[31px] max-w-[31px] fa-fw fas fa-envelope text-16px text-emerald-600/[.80] dark:text-emerald-500 relative top-1px -ml-4"></i>
 
                 <!-- Text -->
-                <span class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                <span class="varnish-text font-medium text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
                     Send via email
                 </span>
 
@@ -102,7 +102,7 @@
 
                 <!-- Text -->
                 <span ref="copy_text"
-                      class="varnish-text text-[15px] text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
+                      class="varnish-text font-medium text-[15px] text-gray-600 dark:text-gray-300 dark:group-hover:text-gray-700 ml-[5px]">
 
                     <!-- Text -->
                     Copy to clipboard

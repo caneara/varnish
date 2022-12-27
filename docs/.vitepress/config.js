@@ -5,6 +5,7 @@ let sidebar = [
             { text : 'Introduction', link : '/pages/introduction' },
             { text : 'Requirements', link : '/pages/requirements' },
             { text : 'Installation', link : '/pages/installation' },
+            { text : 'Upgrading',    link : '/pages/upgrading' },
             { text : 'Contributing', link : '/pages/contributing' },
         ],
     }, {

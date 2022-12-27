@@ -17,10 +17,23 @@
 }
 
 /**
+ * Proxima Vara.
+ *
+ */
+@font-face {
+    font-family: 'Proxima Vara';
+    font-style: normal;
+    font-weight: 100 900;
+    font-variant-numeric: proportional-nums;
+    src: url('/ProximaVara.woff2') format('woff2')
+}
+
+/**
  * General.
  *
  */
 .varnish-font { @apply font-sans leading-none }
+.varnish-font-native { font-family: 'ui-sans-serif', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' }
 .VPNav .title .logo { @apply mr-3 }
 .VPSidebar .nav .group .VPSidebarGroup { @apply pt-[20px] pb-[6px] }
 .VPContent .vp-doc h2 { @apply pt-[35px] mt-[40px] }

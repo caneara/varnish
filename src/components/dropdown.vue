@@ -14,9 +14,9 @@
                     @focus="focus = true"
                     @focusout="focus = false"
 					@change="change($event.target.value)"
-                    :class="blank(modelValue) ? '' : 'pt-[25px] pb-[6px]'"
+                    :class="blank(modelValue) ? '' : 'pt-[24px] pb-[7px]'"
 					style="line-height: 1.3; padding-right: 50px; -webkit-padding-end: 50px !important"
-					class="varnish-input w-full h-[51px] bg-inherit text-gray-900 dark:text-gray-400 align-middle text-ellipsis overflow-hidden rounded appearance-none cursor-pointer pl-3">
+					class="varnish-input w-full h-[51px] bg-inherit text-[17px] text-gray-900 dark:text-gray-400 align-middle text-ellipsis overflow-hidden rounded appearance-none cursor-pointer pl-3">
 
 				<!-- Items -->
 				<option v-for="item in items"
@@ -41,7 +41,7 @@
 
 			<!-- Caret -->
 			<i :class="blank(modelValue) || (! blank(modelValue) && ! hover) ? 'opacity-100' : 'opacity-0'"
-               class="varnish-caret fas fa-caret-down text-gray-400 dark:text-gray-500 cursor-pointer pointer-events-none absolute top-[19px] right-[19px]">
+               class="varnish-caret fas fa-caret-down text-gray-400 dark:text-gray-500 cursor-pointer pointer-events-none absolute top-[18px] right-[19px]">
             </i>
 
             <!-- Clear -->

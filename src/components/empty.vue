@@ -9,12 +9,12 @@
         </i>
 
         <!-- Title -->
-        <span class="varnish-title font-semibold text-[18px] text-gray-800 dark:text-gray-300 -tracking-[.3px] mb-[5px]">
+        <span class="varnish-title varnish-font-native font-semibold text-[18px] text-gray-800 dark:text-gray-300 -tracking-[.3px] mb-[5px]">
             {{ title }}
         </span>
 
         <!-- Message -->
-        <span class="varnish-message text-[15px] text-gray-600 dark:text-gray-400 text-center leading-normal max-w-450px">
+        <span class="varnish-message text-[16px] text-gray-700 dark:text-gray-400 text-center leading-normal max-w-450px">
             {{ message }}
         </span>
 

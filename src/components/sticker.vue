@@ -10,7 +10,7 @@
                    :name="name"
                    :value="value"
                    :readonly="true"
-                   class="varnish-content w-full bg-inherit text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none px-3 pt-[25px] pb-[7px]" />
+                   class="varnish-content w-full bg-inherit text-[17px] text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none px-3 pt-[25px] pb-[6px]" />
 
             <!-- Label -->
             <v-label :value="label"

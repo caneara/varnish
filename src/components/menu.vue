@@ -24,7 +24,7 @@
                 <span v-if="item.show && item.type === 'link'"
                       @click.stop="open = false; item['action']()"
                       :dusk="`menu-${id.toLowerCase()}-${item.id}`"
-                      class="varnish-link hover:bg-gray-200/[.75] dark:hover:bg-gray-600 text-[15px] text-gray-700/[.85] hover:text-gray-700 flex items-center select-none whitespace-nowrap cursor-pointer transition duration-300 pl-5 pr-6 py-[10px]">
+                      class="varnish-link hover:bg-gray-200/[.75] dark:hover:bg-gray-600 text-[16px] text-gray-700/[.85] hover:text-gray-700 flex items-center select-none whitespace-nowrap cursor-pointer transition duration-300 pl-5 pr-6 py-[10px]">
 
                     <!-- Icon -->
                     <i :class="item.icon"

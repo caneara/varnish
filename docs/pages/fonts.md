@@ -9,6 +9,8 @@ Varnish is designed and built around this same philosophy, which means that if y
 
 However, if you're using a different font on your site and you want Varnish to use it too, then you will need to configure Varnish to use a custom font...
 
+> **UPDATE:** Version 2+ of Varnish is more opinionated and now uses the commercial font 'Proxima Vara' instead of native system fonts. For more information on how to handle this, read the [upgrade guide](/pages/upgrading).
+
 ## Setting a custom font
 
 Varnish adds a blank `varnish-font` CSS class to each component. You can use this (in your main CSS file) to assign your chosen font:

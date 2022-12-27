@@ -17,7 +17,7 @@
             </i>
 
             <!-- Text -->
-            <span class="varnish-text font-semibold uppercase">
+            <span class="varnish-text font-semibold uppercase tracking-[.1px]">
                 {{ label }}
             </span>
 

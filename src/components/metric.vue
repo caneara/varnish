@@ -4,7 +4,7 @@
          class="varnish-metric varnish-font bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 w-full flex flex-col rounded-lg p-6 md:p-8">
 
         <!-- Label -->
-        <span class="varnish-label font-medium text-[13px] text-gray-500/[.75] dark:text-gray-500 uppercase mb-4">
+        <span class="varnish-label font-medium text-[13px] text-gray-500/[.85] dark:text-gray-500 uppercase mb-4">
             {{ label }}
         </span>
 
@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Period -->
-                <span class="varnish-period font-medium text-[12px] text-gray-400 dark:text-gray-500 pl-[2px] pt-[5px]">
+                <span class="varnish-period font-medium text-[13px] text-gray-500/[.70] dark:text-gray-500 pl-[2px] pt-[5px]">
                     vs. {{ period }}
                 </span>
 

@@ -9,7 +9,7 @@
             <!-- Tab -->
             <span v-if="format === 'tab'"
                   :class="modes[mode][type].tab"
-                  class="varnish-tab absolute top-0 left-3 rounded-b font-bold text-[10px] text-white dark:text-gray-300 uppercase select-none px-2 pt-[3px] dark:pt-1 pb-1">
+                  class="varnish-tab absolute top-0 left-3 rounded-b font-bold text-[11px] text-white dark:text-gray-300 uppercase tracking-[.3px] select-none px-2 pt-[3px] dark:pt-1 pb-1">
 
                 <!-- Text -->
                 {{ type }}
@@ -27,7 +27,7 @@
                 </i>
 
                 <!-- Value -->
-                <div class="text-gray-600 dark:text-gray-400 text-left leading-normal relative">
+                <div class="text-[17px] text-gray-700 dark:text-gray-400 text-left leading-normal relative">
 
                     <!-- Text -->
                     <slot></slot>

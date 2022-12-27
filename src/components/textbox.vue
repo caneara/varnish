@@ -22,7 +22,7 @@
                    @keydown="interceptKeystroke($event)"
                    :readonly="readOnly ? 'readonly' : false"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
-                   class="varnish-control varnish-input w-full bg-inherit text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[7px]" />
+                   class="varnish-control varnish-input w-full bg-inherit text-[17px] text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[6px]" />
 
             <!-- Textarea -->
             <textarea :id="name"

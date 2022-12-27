@@ -12,13 +12,13 @@
 
                 <!-- Icon -->
                 <i :title="tab.label"
-                   class="varnish-icon text-[16px] lg:text-[13px] transition duration-300 md:mr-3"
+                   class="varnish-icon text-[16px] lg:text-[14px] transition duration-300 md:mr-3"
                    :class="[tab.icon, tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-500/[.65] dark:text-gray-400']">
                 </i>
 
                 <!-- Label -->
                 <span v-html="tab.label"
-                      class="varnish-label font-semibold text-[12px] uppercase transition duration-300 hidden md:inline"
+                      class="varnish-label font-semibold text-[13px] uppercase transition duration-300 hidden md:inline"
                       :class="tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-600 dark:text-gray-400 hidden lg:inline'">
                 </span>
 

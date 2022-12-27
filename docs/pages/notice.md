@@ -1,6 +1,6 @@
 # Notice
 
-A simple notice or alert component, usually used to advise the user of something.
+A simple notice component, usually used to advise the user of something.
 
 ## Features
 
