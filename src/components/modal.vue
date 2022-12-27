@@ -15,7 +15,7 @@
                  class="varnish-content relative z-[1001] w-full md:max-w-[600px] md:rounded-lg transition duration-200 md:scale-110 mx-auto">
 
                 <!-- Slot -->
-                <div class="varnish-slot bg-white dark:bg-gray-700 border-y md:border-x border-gray-400/[.60] dark:border-gray-600 md:rounded-lg p-10 md:p-20">
+                <div class="varnish-slot bg-white dark:bg-gray-700 md:rounded-lg p-10 md:p-20">
                     <slot></slot>
                 </div>
 
