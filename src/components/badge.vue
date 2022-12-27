@@ -5,7 +5,7 @@
 
         <!-- Content -->
         <div :class="[modes[mode][color], uppercase ? 'uppercase' : '']"
-             class="varnish-content inline-block rounded-full font-bold text-[12px] tracking-[.1px] select-none whitespace-nowrap px-[10px] pt-1 pb-1">
+             class="varnish-content inline-block rounded-full font-semibold text-[12px] tracking-[.1px] select-none whitespace-nowrap px-[10px] pt-1 pb-1">
 
             <!-- Text -->
             {{ value }}
