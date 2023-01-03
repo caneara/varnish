@@ -2,9 +2,9 @@
     <button ref="btn"
             :id="name"
             :dusk="name"
-            :class="[theme.join(' '), $attrs?.class ?? '']"
             @click.prevent="simple ? $refs.simple.click() : execute()"
-            class="varnish-button varnish-font w-full md:w-auto min-h-[35px] min-w-[100px] border border-solid flex items-center justify-center relative rounded transition-all duration-300 cursor-pointer">
+            :class="[theme.join(' '), mode === 'link' ? '' : 'min-w-[100px]', $attrs?.class ?? '']"
+            class="varnish-button varnish-font w-full md:w-auto min-h-[35px] border border-solid flex items-center justify-center relative rounded transition-all duration-300 cursor-pointer">
 
         <!-- Label -->
         <div :class="processing ? 'text-transparent hidden' : ''"
@@ -54,6 +54,15 @@
          */
         data() { return {
             modes : {
+                link : {
+                    blue   : { button : 'border-transparent text-sky-600 hover:text-sky-800',       spinner : 'border-l-sky-600 border-b-sky-600' },
+                    gray   : { button : 'border-transparent text-gray-500 hover:text-gray-700',     spinner : 'border-l-gray-500 border-b-gray-500' },
+                    green  : { button : 'border-transparent text-green-700 hover:text-green-900',   spinner : 'border-l-green-700 border-b-green-700' },
+                    orange : { button : 'border-transparent text-orange-600 hover:text-orange-800', spinner : 'border-l-orange-600 border-b-orange-600' },
+                    purple : { button : 'border-transparent text-purple-600 hover:text-purple-800', spinner : 'border-l-purple-600 border-b-purple-600' },
+                    red    : { button : 'border-transparent text-red-700 hover:text-red-900',       spinner : 'border-l-red-700 border-b-red-700' },
+                    teal   : { button : 'border-transparent text-teal-600 hover:text-teal-800',     spinner : 'border-l-teal-600 border-b-teal-600' },
+                },
                 opaque : {
                     blue   : { button : 'border-transparent bg-sky-600 hover:bg-sky-700 text-white',       spinner : 'border-l-white border-b-white' },
                     gray   : { button : 'border-transparent bg-gray-500 hover:bg-gray-600 text-white',     spinner : 'border-l-white border-b-white' },

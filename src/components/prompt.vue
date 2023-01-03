@@ -4,17 +4,17 @@
              class="varnish-prompt">
 
         <!-- Circle -->
-        <div class="varnish-circle bg-purple-500/[.20] dark:bg-purple-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-8">
+        <div class="varnish-circle bg-purple-500/[.20] dark:bg-purple-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-6">
             <i class="varnish-icon fas fa-comment-dots text-[30px] text-purple-700/[.40] dark:text-purple-500"></i>
         </div>
 
         <!-- Title -->
-        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
+        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-4">
             {{ title }}
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary font-medium text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
+        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
             {{ summary }}
         </div>
 

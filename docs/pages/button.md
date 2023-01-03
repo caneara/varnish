@@ -4,7 +4,7 @@ A button component that the user may click or tap on to initiate an action.
 
 ## Features
 
-* Opaque or outline format
+* Opaque, outline or link format
 * Available in seven colors
 * Supports setting an icon
 * Disabled mode and processing mode (with spinner)
@@ -24,7 +24,7 @@ You can use the toggle at the top right of the page to switch between light and 
         <ButtonComponent label="Submit" color="blue" icon="fas fa-home"></ButtonComponent>
         <ButtonComponent label="Submit" color="green"></ButtonComponent>
         <ButtonComponent label="Submit" color="red" :processing="true"></ButtonComponent>
-        <ButtonComponent label="Submit" color="orange" mode="outline"></ButtonComponent>
+        <ButtonComponent label="Submit" color="orange" mode="link"></ButtonComponent>
         <ButtonComponent label="Submit" color="purple" mode="outline" :processing="true"></ButtonComponent>
     </ClientOnly>
 </div>
@@ -89,11 +89,11 @@ Specify whether the component should be enabled or disabled.
 
 - Type: `Enum (String)`
 - Default: `'opaque'`
-- Options: `'opaque'`, `'outline'`
+- Options: `'link'`, `'opaque'`, `'outline'`
 
-Control whether the component should use a background color or a just a border.
+Control whether the component should use a background color, a border or just text.
 
-When set to `'opaque'`, the background is shown. When set to `'outline'`, the background is hidden.
+When set to `'opaque'`, the background is shown. When set to `'outline'`, the background is hidden, but a border is shown. When set to `'link'`, only text is shown.
 
 ```html
 <v-button mode="outline"></v-button>

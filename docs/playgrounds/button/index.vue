@@ -36,6 +36,21 @@
             <v-button mode="outline" color="gray" label="Disabled" :disabled="true"></v-button>
         </div>
 
+        <!-- Header -->
+        <h2 class="font-semibold mt-10 mb-6">
+            Link
+        </h2>
+
+        <!-- Badges -->
+        <div class="flex flex-col gap-y-2 max-w-[200px] ml-4">
+            <v-button mode="link" color="blue" label="Button"></v-button>
+            <v-button mode="link" color="green" label="Button" icon="fas fa-home"></v-button>
+            <v-button mode="link" color="red" label="Button" icon="fas fa-cog"></v-button>
+            <v-button mode="link" color="orange" label="Button"></v-button>
+            <v-button mode="link" color="purple" label="Button" :processing="true"></v-button>
+            <v-button mode="link" color="gray" label="Disabled" :disabled="true"></v-button>
+        </div>
+
     </div>
 </template>
 

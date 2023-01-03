@@ -8,7 +8,7 @@
 
         <!-- Notification -->
         <div v-if="show"
-             class="varnish-notification varnish-font min-w-[250px] max-w-[350px] fixed top-20 right-0 z-[1002]">
+             class="varnish-notification varnish-font min-w-[250px] max-w-[350px] fixed top-[74px] right-0 z-[1002]">
 
             <!-- Container -->
             <div ref="container"

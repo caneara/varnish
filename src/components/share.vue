@@ -4,17 +4,17 @@
              @closed="$emit('closed')">
 
         <!-- Circle -->
-        <div class="varnish-circle bg-emerald-500/[.20] dark:bg-emerald-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-8">
+        <div class="varnish-circle bg-emerald-500/[.20] dark:bg-emerald-600/[.30] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-6">
             <i class="varnish-icon fas fa-share text-[30px] text-emerald-700/[.60] dark:text-emerald-600"></i>
         </div>
 
         <!-- Title -->
-        <div class="varnish-font-native varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
+        <div class="varnish-font-native varnish-header font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-4">
             Share a link with others
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary font-medium text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] max-w-[475px] mb-8">
+        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] max-w-[475px] mb-8">
             Select one of the platforms to share the link on.
             You can also send the link via email, or
             copy it to the clipboard.

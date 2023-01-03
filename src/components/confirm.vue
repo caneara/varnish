@@ -4,17 +4,17 @@
              class="varnish-confirm">
 
         <!-- Circle -->
-        <div class="varnish-circle bg-yellow-500/[.30] dark:bg-yellow-800/[.50] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-8">
+        <div class="varnish-circle bg-yellow-500/[.30] dark:bg-yellow-800/[.50] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-6">
             <i class="varnish-icon fas fa-exclamation text-[30px] text-yellow-600"></i>
         </div>
 
         <!-- Title -->
-        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-5">
+        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-4">
             {{ title }}
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary font-medium text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
+        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
             {{ summary }}
         </div>
 
