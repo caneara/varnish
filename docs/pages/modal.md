@@ -23,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <div class="bg-gray-100 dark:bg-black flex justify-center rounded-md p-6 mt-8">
     <ClientOnly>
         <ModalComponent :visible="show" @closed="show = false">
-            I am some modal content
+            <p>I am some modal content</p>
         </ModalComponent>
     </ClientOnly>
     <button @click="show = true"

@@ -13,7 +13,7 @@
 
 # Varnish UI
 
-This library contains a set of UI components. They range from something as simple as a button, to as complex as a fully-featured, Markdown-based text editor. Originally, these components were part of [Lumeno's](https://github.com/caneara/lumeno) codebase, however they have since been extracted, extended and made available for open-source use.
+This library contains a set of UI components. Originally, these components were part of [Lumeno's](https://github.com/caneara/lumeno) codebase, however they have since been extracted, extended and made available for open-source use.
 
 ## Getting Started
 

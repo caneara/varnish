@@ -81,6 +81,15 @@
 		},
 
 		/**
+		 * Execute actions when the component is unmounted from the DOM.
+		 *
+		 */
+		unmounted()
+		{
+            document.body.style.overflow = 'visible';
+		},
+
+		/**
 		 * Define the supporting methods.
 		 *
 		 */
