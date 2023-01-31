@@ -27,7 +27,7 @@
                 </i>
 
                 <!-- Value -->
-                <div class="text-[17px] text-gray-700 dark:text-gray-400 text-left leading-normal relative">
+                <div class="text-[16px] text-gray-700 dark:text-gray-400 text-left leading-normal relative">
 
                     <!-- Text -->
                     <slot></slot>
