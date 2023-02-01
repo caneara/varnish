@@ -36,6 +36,7 @@ let sidebar = [
             { text : 'Notification', link : '/pages/notification' },
             { text : 'Prompt',       link : '/pages/prompt' },
             { text : 'Share',        link : '/pages/share' },
+            { text : 'Tip',          link : '/pages/tip' },
         ],
     }, {
         text  : 'Interface',

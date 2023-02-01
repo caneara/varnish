@@ -38,6 +38,7 @@
 
                     <!-- Continue -->
                     <v-button color="blue"
+                              mode="outline"
                               label="Continue"
                               @click="$emit('continue')"
                               id="dialog_confirm_continue">

@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import TipComponent from '../components/tip.vue';
 import ShareComponent from '../components/share.vue';
 import PromptComponent from '../components/prompt.vue';
 import ConfirmComponent from '../components/confirm.vue';
@@ -15,6 +16,7 @@ export default
         'v-notification'  : NotificationComponent,
         'v-prompt'        : PromptComponent,
         'v-share'         : ShareComponent,
+        'v-tip'           : TipComponent,
     },
 
     /**
@@ -159,6 +161,22 @@ export default
 
             dialog.container = createApp(ShareComponent, {
                 url     : url,
+                visible : true,
+            });
+
+            dialog.container.mount(`#${dialog.id}`);
+        },
+
+        /**
+         * Display some information to the user.
+         *
+         */
+        tip(message = '')
+        {
+            let dialog = this.createDialogElement();
+
+            dialog.container = createApp(TipComponent, {
+                message : message,
                 visible : true,
             });
 

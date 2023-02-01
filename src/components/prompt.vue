@@ -41,6 +41,7 @@
 
             <!-- Continue -->
             <v-button color="blue"
+                      mode="outline"
                       label="Continue"
                       @click="$emit('continue', content)">
             </v-button>

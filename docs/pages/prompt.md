@@ -188,7 +188,7 @@ export default
 
 Then call the `prompt` method provided by the mixin.
 
-Since the underlying process is a little different that the native browser `prompt` method, you will need to use `async / await`:
+Since the underlying process is a little different than the native browser `prompt` method, you will need to use `async / await`:
 
 ```js
 async provideFeedback()
