@@ -1,43 +1,43 @@
 <template>
-	<div class="varnish-tabs varnish-font flex items-end overflow-x-auto">
+	<div class="flex items-end overflow-x-auto">
 
         <!-- Tabs -->
         <div @click="switchTab(tab)"
              :dusk="`select-tab-${tab.id}`"
              v-for="(tab, index) in items.filter(tab => tab?.visible ?? true)"
-             class="varnish-tab group cursor-pointer whitespace-nowrap select-none transition duration-300 relative z-[1]">
+             class="group cursor-pointer whitespace-nowrap select-none animated relative z-1">
 
             <!-- Content -->
-            <div class="varnish-content flex items-center px-4 py-3 md:mx-1">
+            <div class="flex items-center px-4 py-3 md:mx-1">
 
                 <!-- Icon -->
                 <i :title="tab.label"
-                   class="varnish-icon text-[16px] lg:text-[14px] transition duration-300 md:mr-3"
-                   :class="[tab.icon, tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-500/[.65] dark:text-gray-400']">
+                   class="text-17px md:text-15px animated mx-1 md:ml-0 md:mr-3"
+                   :class="[tab.icon, tab.id === modelValue ? 'text-sky-600' : 'text-gray-500/[.65]']">
                 </i>
 
                 <!-- Label -->
                 <span v-html="tab.label"
-                      class="varnish-label font-semibold text-[13px] uppercase transition duration-300 hidden md:inline"
-                      :class="tab.id === modelValue ? 'text-sky-600 dark:text-sky-400' : 'text-gray-600 dark:text-gray-400 hidden lg:inline'">
+                      class="font-medium text-16px animated hidden md:inline"
+                      :class="tab.id === modelValue ? 'text-sky-600' : 'text-gray-600 hidden lg:inline'">
                 </span>
 
             </div>
 
             <!-- Border (Top) -->
-            <div class="varnish-border-top w-full h-[1px] transition duration-300 relative z-[1]"
-                 :class="tab.id === modelValue ? 'bg-sky-600/[.80] dark:bg-sky-400' : 'group-hover:bg-sky-600/[.80] dark:group-hover:bg-sky-400'">
+            <div class="w-full h-1px animated relative z-1"
+                 :class="tab.id === modelValue ? 'bg-sky-600/80' : 'group-hover:bg-sky-600/80'">
             </div>
 
             <!-- Border (Bottom) -->
-            <div class="varnish-border-bottom w-full h-[1px] transition duration-300 relative z-[1]"
-                 :class="tab.id === modelValue ? 'bg-sky-600/[.80] dark:bg-sky-400' : 'bg-gray-300 dark:bg-gray-600 group-hover:bg-sky-600/80 dark:group-hover:bg-sky-400'">
+            <div class="w-full h-1px animated relative z-1"
+                 :class="tab.id === modelValue ? 'bg-sky-600/80' : 'bg-gray-200 group-hover:bg-sky-600/80'">
             </div>
 
         </div>
 
         <!-- Track -->
-        <div class="varnish-track w-full h-[1px] bg-gray-300 dark:bg-gray-600 rounded-lg relative z-[2]"></div>
+        <div class="bg-gray-200 w-full h-1px rounded-lg relative z-2"></div>
 
 	</div>
 </template>
@@ -81,6 +81,8 @@
 
                 this.$emit('change', tab.id);
                 this.$emit('update:modelValue', tab.id);
+
+                localStorage.setItem(`pionear_tabs_${this.id}`, tab.id);
             },
         },
 	}

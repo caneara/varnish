@@ -3,38 +3,49 @@
              :visible="visible"
              class="varnish-confirm">
 
-        <!-- Circle -->
-        <div class="varnish-circle bg-yellow-500/[.30] dark:bg-yellow-800/[.50] h-[60px] w-[60px] flex justify-center items-center rounded-full mx-auto mb-6">
-            <i class="varnish-icon fas fa-exclamation text-[30px] text-yellow-600"></i>
-        </div>
+        <!-- Container -->
+        <div class="flex flex-col md:flex-row md:-m-6 md:-ml-7 md:-mb-7">
 
-        <!-- Title -->
-        <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center leading-snug mb-4">
-            {{ title }}
-        </div>
+            <!-- Circle -->
+            <div class="varnish-circle bg-yellow-500/[.30] dark:bg-yellow-800/[.50] h-[60px] w-[60px] min-w-[60px] flex justify-center items-center mx-auto rounded-full">
+                <i class="varnish-icon fas fa-exclamation text-[30px] text-yellow-600"></i>
+            </div>
 
-        <!-- Information -->
-        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
-            {{ summary }}
-        </div>
+            <!-- Content -->
+            <div class="mt-6 md:ml-8 md:mt-0">
 
-        <!-- Actions -->
-        <div class="varnish-actions flex justify-center gap-x-4">
+                <!-- Title -->
+                <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center md:text-left leading-snug mb-4">
+                    {{ title }}
+                </div>
 
-            <!-- Cancel -->
-            <v-button color="gray"
-                      mode="outline"
-                      label="Cancel"
-                      @click="$emit('cancel')"
-                      id="dialog_confirm_cancel">
-            </v-button>
+                <!-- Information -->
+                <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center md:text-left leading-[1.6rem] mb-8">
+                    {{ summary }}
+                </div>
 
-            <!-- Continue -->
-            <v-button color="blue"
-                      label="Continue"
-                      @click="$emit('continue')"
-                      id="dialog_confirm_continue">
-            </v-button>
+                <!-- Actions -->
+                <div class="varnish-actions flex flex-col-reverse md:flex-row justify-end gap-x-4">
+
+                    <!-- Cancel -->
+                    <v-button mode="link"
+                              color="gray"
+                              label="Cancel"
+                              class="mt-1 md:mt-0"
+                              @click="$emit('cancel')"
+                              id="dialog_confirm_cancel">
+                    </v-button>
+
+                    <!-- Continue -->
+                    <v-button color="blue"
+                              label="Continue"
+                              @click="$emit('continue')"
+                              id="dialog_confirm_continue">
+                    </v-button>
+
+                </div>
+
+            </div>
 
         </div>
 

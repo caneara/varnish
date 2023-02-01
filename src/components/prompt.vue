@@ -14,7 +14,7 @@
         </div>
 
         <!-- Information -->
-        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] px-6 mb-8">
+        <div class="varnish-summary text-[17px] text-gray-500 dark:text-gray-400 text-center leading-[1.6rem] md:px-6 mb-8">
             {{ summary }}
         </div>
 
@@ -29,12 +29,13 @@
         </v-textbox>
 
         <!-- Actions -->
-        <div class="varnish-actions flex justify-center gap-x-4">
+        <div class="varnish-actions flex flex-col-reverse md:flex-row justify-end gap-x-4">
 
             <!-- Cancel -->
-            <v-button color="gray"
-                      mode="outline"
+            <v-button mode="link"
+                      color="gray"
                       label="Cancel"
+                      class="mt-1 md:mt-0"
                       @click="$emit('cancel')">
             </v-button>
 
