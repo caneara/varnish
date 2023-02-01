@@ -15,8 +15,8 @@
             <div class="w-full mt-6 md:ml-7 md:mt-0">
 
                 <!-- Information -->
-                <div class="varnish-message text-[17px] text-gray-500 dark:text-gray-400 text-center md:text-left leading-[1.6rem] md:mr-7 mb-8">
-                    {{ message }}
+                <div v-html="message"
+                     class="varnish-message text-[17px] text-gray-500 dark:text-gray-400 text-center md:text-left leading-[1.6rem] md:mr-7 mb-8">
                 </div>
 
                 <!-- Actions -->
