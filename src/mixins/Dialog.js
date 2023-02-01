@@ -178,6 +178,7 @@ export default
             dialog.container = createApp(TipComponent, {
                 message : message,
                 visible : true,
+                onClose : () => this.closeDialog(dialog),
             });
 
             dialog.container.mount(`#${dialog.id}`);
