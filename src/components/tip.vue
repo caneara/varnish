@@ -16,7 +16,7 @@
 
                 <!-- Information -->
                 <div v-html="message"
-                     class="varnish-message text-[17px] text-gray-500 dark:text-gray-400 text-center md:text-left leading-[1.6rem] md:mr-7 mb-8">
+                     class="varnish-message text-[17px] text-gray-600 dark:text-gray-400 text-center md:text-left leading-[1.6rem] md:mr-7 mb-8">
                 </div>
 
                 <!-- Actions -->
