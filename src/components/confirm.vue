@@ -12,10 +12,10 @@
             </div>
 
             <!-- Content -->
-            <div class="mt-6 md:ml-8 md:mt-0">
+            <div class="mt-6 md:ml-7 md:mt-0">
 
                 <!-- Title -->
-                <div class="varnish-font-native varnish-title font-bold text-[21px] text-gray-900 dark:text-white text-center md:text-left leading-snug mb-4">
+                <div class="varnish-font-native varnish-title font-semibold text-[21px] text-gray-900 dark:text-white text-center md:text-left leading-snug mb-3">
                     {{ title }}
                 </div>
 
