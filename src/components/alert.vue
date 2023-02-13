@@ -30,7 +30,7 @@
             <!-- Icon -->
             <i v-if="! title"
                :class="types[type].icon"
-               class="varnish-icon fas text-[20px] relative top-[1.5px] mr-2">
+               class="varnish-icon fas text-[20px] relative top-[1.5px] mr-[10px]">
             </i>
 
             <!-- Slot -->
