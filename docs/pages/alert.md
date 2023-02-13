@@ -20,7 +20,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="flex flex-col gap-y-6 mt-8">
     <ClientOnly>
-        <AlertComponent type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</AlertComponent>
+        <AlertComponent type="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</AlertComponent>
         <AlertComponent type="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</AlertComponent>
         <AlertComponent type="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</AlertComponent>
         <AlertComponent type="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</AlertComponent>

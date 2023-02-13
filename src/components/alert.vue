@@ -24,13 +24,13 @@
         </div>
 
         <!-- Content -->
-        <div :class="[types[type].content, title ? 'px-6' : 'px-5']"
-             class="varnish-content text-left leading-normal -mb-[2px]">
+        <div class="varnish-content text-left leading-normal -mb-[2px]"
+             :class="[types[type].content, title ? 'px-6' : 'flex items-center px-5']">
 
             <!-- Icon -->
             <i v-if="! title"
                :class="types[type].icon"
-               class="varnish-icon fas text-[20px] relative top-[1.5px] mr-[10px]">
+               class="varnish-icon fas text-[20px] relative mr-[10px]">
             </i>
 
             <!-- Slot -->
