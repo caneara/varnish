@@ -1,7 +1,7 @@
 <template>
     <div v-if="display"
-         class="varnish-alert varnish-font rounded-lg"
-         :class="[types[type].background, title ? 'py-6' : 'py-5']">
+         class="varnish-alert varnish-font rounded-md"
+         :class="[types[type].background, title ? 'py-6' : 'py-5', title ? '' : types[type].border]">
 
         <!-- Content -->
         <div v-if="title"
@@ -24,13 +24,13 @@
         </div>
 
         <!-- Content -->
-        <div class="varnish-content text-left leading-normal"
-             :class="[types[type].content, title ? 'px-6' : 'px-5']">
+        <div :class="[types[type].content, title ? 'px-6' : 'px-5']"
+             class="varnish-content text-left leading-normal -mb-[2px]">
 
             <!-- Icon -->
             <i v-if="! title"
                :class="types[type].icon"
-               class="varnish-icon fas text-[20px] relative top-[2.5px] mr-4">
+               class="varnish-icon fas text-[20px] relative top-[1.5px] mr-2">
             </i>
 
             <!-- Slot -->
@@ -61,30 +61,35 @@
             types : {
                 danger : {
                     background : 'bg-red-500/[.12] dark:bg-red-700/[.40]',
+                    border     : 'border border-red-600/[.40] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
                     icon       : 'fa-circle-exclamation text-red-600/80 dark:text-red-500',
                     title      : 'text-gray-800 dark:text-gray-300',
                 },
                 info : {
                     background : 'bg-sky-500/10 dark:bg-sky-700/[.40]',
+                    border     : 'border border-sky-600/[.40] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
                     icon       : 'fa-circle-info text-sky-600/80 dark:text-sky-500',
                     title      : 'text-gray-800 dark:text-gray-300',
                 },
                 question : {
                     background : 'bg-purple-500/[.12] dark:bg-purple-700/[.40]',
+                    border     : 'border border-purple-700/[.30] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
                     icon       : 'fa-check-circle text-purple-600/80 dark:text-purple-500',
                     title      : 'text-gray-800 dark:text-gray-300',
                 },
                 success : {
                     background : 'bg-emerald-500/[.12] dark:bg-emerald-700/[.40]',
+                    border     : 'border border-emerald-600/[.40] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
                     icon       : 'fa-check-circle text-emerald-600/80 dark:text-emerald-500',
                     title      : 'text-gray-800 dark:text-gray-300',
                 },
                 warning : {
                     background : 'bg-orange-100/60 dark:bg-orange-700/[.40]',
+                    border     : 'border border-yellow-600/[.40] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
                     icon       : 'fa-triangle-exclamation text-yellow-600/80 dark:text-yellow-500',
                     title      : 'text-gray-800 dark:text-gray-300',
