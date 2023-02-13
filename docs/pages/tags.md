@@ -10,7 +10,7 @@ A multi-tag component used to associate keywords with a piece of content.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. Owing to its simplicity, no component playground is provided.
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

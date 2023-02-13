@@ -6,6 +6,7 @@ let sidebar = [
             { text : 'Requirements', link : '/pages/requirements' },
             { text : 'Installation', link : '/pages/installation' },
             { text : 'Upgrading',    link : '/pages/upgrading' },
+            { text : 'Undocumented', link : '/pages/undocumented' },
             { text : 'Contributing', link : '/pages/contributing' },
         ],
     }, {
@@ -41,11 +42,12 @@ let sidebar = [
     }, {
         text  : 'Interface',
         items : [
+            { text : 'Alert',  link : '/pages/alert' },
             { text : 'Badge',  link : '/pages/badge' },
             { text : 'Banner', link : '/pages/banner' },
+            { text : 'Cards',  link : '/pages/cards' },
             { text : 'Menu',   link : '/pages/menu' },
             { text : 'Metric', link : '/pages/metric' },
-            { text : 'Notice', link : '/pages/notice' },
             { text : 'Tabs',   link : '/pages/tabs' },
         ],
     }, {

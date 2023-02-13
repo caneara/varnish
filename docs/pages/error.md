@@ -13,7 +13,7 @@ An error message component used to indicate the presence of a problem (usually i
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/error/index).
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

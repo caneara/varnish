@@ -9,7 +9,7 @@ A share sheet component used to inform others about a url.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. Owing to its simplicity, no component playground is provided.
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

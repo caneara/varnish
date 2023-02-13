@@ -10,7 +10,7 @@ A simple flag component, usually used to indicate that its associated component 
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/optional/index).
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

@@ -12,7 +12,7 @@ A label component, used to advise the user of the appropriate content to input.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/label/index).
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

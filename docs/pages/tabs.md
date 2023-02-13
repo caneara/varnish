@@ -9,7 +9,7 @@ A navigation element that can be used to divide content on a site or page.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. Owing to its simplicity, no component playground is provided.
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>
@@ -28,7 +28,7 @@ You can use the toggle at the top right of the page to switch between light and 
 <!-- Demo -->
 <div class="border border-dashed border-gray-300 dark:border-gray-600 rounded-md p-10 pt-6 mt-8">
     <ClientOnly>
-        <TabsComponent v-model="active" :items="tabs" @change="active = $event"></TabsComponent>
+        <TabsComponent :active="active" :items="tabs"></TabsComponent>
     </ClientOnly>
 </div>
 
@@ -57,19 +57,15 @@ Begin by importing the component and registering it like so:
 
 The following `props` are exposed by the component.
 
-### id
+### active
 
 - Type: `String`
 - Default: `''`
 
-The unique identifier for the component.
-
-This identifier should be unique across your entire application as it will be used within `localStorage` to remember the currently active tab.
-
-See [remembering last used tab](#remembering-the-last-used-tab) for more details.
+Specify which tab should be selected. The value should be equal to the tab item's ID.
 
 ```html
-<v-tabs id="account"></v-tabs>
+<v-tabs active="account"></v-tabs>
 ```
 
 ### items
@@ -85,33 +81,6 @@ See [Managing tab content](#managing-tab-content) for configuration options.
 <v-tabs :items="[{ id : 'home', icon : 'fas fa-home', label : 'Home', visible : true, 'action' : () => alert('Clicked Home') }]"></v-tabs>
 ```
 
-### v-model
-
-- Type: `String`
-- Default: `''`
-
-The two-way, data-bound value used to control the currently active tab.
-
-```html
-<v-tabs v-model="home"></v-tabs>
-```
-
-## Events
-
-The following `events` are exposed by the component.
-
-### change
-
-- `$event` - the ID of the newly-selected tab.
-
-Fired when the component's value changes.
-
-Note that, in many cases, you can rely on the two-way data-binding provided by `v-model` for this. However, if you need to react to changes, this is the best way.
-
-```html
-<v-tabs @change="console.log($event)"></v-tabs>
-```
-
 ## Managing tab content
 
 As outlined in [items](#items), the component's content is controlled by an `array` of `objects`. Each `object` has the following supported properties:
@@ -119,11 +88,9 @@ As outlined in [items](#items), the component's content is controlled by an `arr
 ### action
 
 - Type: `Function`
-- Required: `false`
+- Required: `true`
 
 The closure that should be executed when the tab is selected.
-
-Alternatively, you can listen for the [change](#change) event and respond accordingly.
 
 ```html
 <v-tabs :items="[{ action : () => alert('clicked') }]"></v-tabs>
@@ -132,7 +99,6 @@ Alternatively, you can listen for the [change](#change) event and respond accord
 ### icon
 
 - Type: `String`
-- Default: `''`
 - Required: `true`
 
 The FontAwesome icon to display within the individual tab.
@@ -144,7 +110,6 @@ The FontAwesome icon to display within the individual tab.
 ### id
 
 - Type: `String`
-- Default: `''`
 - Required: `true`
 
 The unique identifier for the individual tab.
@@ -156,7 +121,6 @@ The unique identifier for the individual tab.
 ### label
 
 - Type: `String`
-- Default: `''`
 - Required: `true`
 
 The text to display within the individual tab.
@@ -176,24 +140,6 @@ When the property is omitted, the tab will be shown.
 
 ```html
 <v-tabs :items="[{ visible : false }]"></v-tabs>
-```
-
-## Remembering the last used tab
-
-The component will automatically save the current tab's ID into `localStorage` when it is changed. You can then use this value to display the associated tab e.g. when the user navigates away and (then later) returns to the page.
-
-For example, if you assigned `'account'` as the [id](#id) property of the component, you would load `'varnish_tabs_account'` from `localStorage` and assign it to the component's [v-model](#v-model) like so:
-
-```html
-<v-tabs id="account"
-        v-model="active">
-</v-tabs>
-
-<script>
-    data() { return {
-        active : localStorage.getItem('varnish_tabs_account') ?? 'home',
-    }},
-</script>
 ```
 
 ## Custom styling

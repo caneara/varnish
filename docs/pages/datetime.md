@@ -11,7 +11,7 @@ A date and / or time picker used to select a date, a time, or both.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/datetime/index).
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 
 <!-- Setup -->
 <script setup>

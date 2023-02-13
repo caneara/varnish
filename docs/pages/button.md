@@ -11,8 +11,7 @@ A button component that the user may click or tap on to initiate an action.
 
 ## Demo
 
-You can use the toggle at the top right of the page to switch between light and dark-modes. For a more extensive demo, [check out the playground](/playgrounds/button/index).
-
+You can use the toggle at the top right of the page to switch between light and dark-modes.
 <!-- Setup -->
 <script setup>
     import ButtonComponent from '../../src/components/button.vue';
