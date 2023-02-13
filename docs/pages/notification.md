@@ -9,22 +9,6 @@ A context notification component that can be used to provide additional options.
 * Supports separators to 'group' related notification options
 * Automatic orientation to prevent items being cut off at the edge of the browser
 
-## Demo
-
-You can use the toggle at the top right of the page to switch between light and dark-modes.
-
-<!-- Setup -->
-<script setup>
-    import NotificationComponent from '../playgrounds/notification/index.vue';
-</script>
-
-<!-- Demo -->
-<div class="bg-gray-100 dark:bg-black rounded-md p-6 mt-8">
-    <ClientOnly>
-        <NotificationComponent></NotificationComponent>
-    </ClientOnly>
-</div>
-
 ## Usage
 
 > While you are free to use the approach below, you are probably looking for the [inline option](#inlining) which does not require adding components to a template.

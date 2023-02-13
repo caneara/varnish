@@ -34,7 +34,7 @@ Click the resulting link in the terminal to open Vitepress.
 
 ## Next steps
 
-You should now review the `/docs/pages/` and `/docs/playgrounds/` directories to discover how Varnish is using Vitepress to render Vue components.
+You should now review the `/docs/pages/` directory to discover how Varnish is using Vitepress to render Vue components.
 
 The components and mixins can be found within the `/src/` directory.
 
