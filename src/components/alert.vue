@@ -1,7 +1,7 @@
 <template>
     <div v-if="display"
-         :class="types[type].background"
-         class="varnish-alert varnish-font rounded-lg py-6">
+         class="varnish-alert varnish-font rounded-lg"
+         :class="[types[type].background, title ? 'py-6' : 'py-5']">
 
         <!-- Content -->
         <div v-if="title"
@@ -24,8 +24,14 @@
         </div>
 
         <!-- Content -->
-        <div :class="types[type].content"
-             class="varnish-content leading-normal px-6">
+        <div class="varnish-content text-left leading-normal"
+             :class="[types[type].content, title ? 'px-6' : 'px-5']">
+
+            <!-- Icon -->
+            <i v-if="! title"
+               :class="types[type].icon"
+               class="varnish-icon fas text-[20px] relative top-[2.5px] mr-4">
+            </i>
 
             <!-- Slot -->
             <slot></slot>

@@ -93,8 +93,6 @@ When enabling [dismiss](#dismiss), this property must be set. Failure to do so, 
 
 The header that should appear at the top of the component.
 
-When set, an icon that matches the [type](#type) is shown. When the property is blank, no icon is displayed.
-
 ```html
 <v-alert title="Information"></v-alert>
 ```
