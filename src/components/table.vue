@@ -4,6 +4,7 @@
         <!-- Paginator -->
         <v-paginator class="mb-4"
                      :source="source"
+                     :download="download"
                      :reset="!! queryString('search')"
                      :search="() => search = (search !== null) ? ! search : (queryString('search') ? false : true)">
         </v-paginator>
@@ -122,6 +123,7 @@
          */
         props : {
             'action'       : { type : Function, default : null },
+            'download'     : { type : Function, default : null },
             'emptyAction'  : { type : Function, default : null },
             'emptyLabel'   : { type : String,   default : 'Create one now' },
             'emptyMessage' : { type : String,   default : '' },

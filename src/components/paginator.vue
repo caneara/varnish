@@ -79,6 +79,19 @@
 
             </div>
 
+            <!-- Download -->
+            <div v-if="download"
+                 title="Download"
+                 @click="download()"
+                 :class="search ? '' : 'rounded-l'"
+                 dusk="varnish_paginator_button_download"
+                 class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 cursor-pointer group transition duration-300 px-3 py-2">
+
+                <!-- Link -->
+                <i class="fas fa-download text-[14px] text-gray-800/[.50] dark:text-gray-500"></i>
+
+            </div>
+
             <!-- Previous Page (Disabled) -->
             <div :class="search ? '' : 'rounded-l'"
                  v-if="blank(source.pagination.prev_page_url)"
@@ -134,9 +147,10 @@
          *
          */
         props : {
-            'reset'  : { type : Boolean,  default : false },
-            'search' : { type : Function, default : null },
-            'source' : { type : Object,   default : {} },
+            'download' : { type : Function, default : null },
+            'reset'    : { type : Boolean,  default : false },
+            'search'   : { type : Function, default : null },
+            'source'   : { type : Object,   default : {} },
         },
 
         /**
