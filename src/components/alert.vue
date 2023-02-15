@@ -1,6 +1,6 @@
 <template>
     <div v-if="display"
-         class="varnish-alert varnish-font rounded-md"
+         class="varnish-alert varnish-font relative rounded-md"
          :class="[types[type].background, title ? 'py-6' : 'py-5', title ? '' : types[type].border]">
 
         <!-- Content -->
