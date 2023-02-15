@@ -34,7 +34,9 @@
             </i>
 
             <!-- Slot -->
-            <slot></slot>
+            <div class="varnish-slot">
+                <slot></slot>
+            </div>
 
         </div>
 
