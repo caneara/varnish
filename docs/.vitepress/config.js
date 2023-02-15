@@ -20,14 +20,15 @@ let sidebar = [
     }, {
         text  : 'Forms',
         items : [
-            { text : 'Button',   link : '/pages/button' },
-            { text : 'DateTime', link : '/pages/datetime' },
-            { text : 'DropDown', link : '/pages/dropdown' },
-            { text : 'Password', link : '/pages/password' },
-            { text : 'Sticker',  link : '/pages/sticker' },
-            { text : 'Switch',   link : '/pages/switch' },
-            { text : 'Tags',     link : '/pages/tags' },
-            { text : 'TextBox',  link : '/pages/textbox' },
+            { text : 'Button',    link : '/pages/button' },
+            { text : 'DateTime',  link : '/pages/datetime' },
+            { text : 'DropDown',  link : '/pages/dropdown' },
+            { text : 'Password',  link : '/pages/password' },
+            { text : 'Period',    link : '/pages/period' },
+            { text : 'Sticker',   link : '/pages/sticker' },
+            { text : 'Switch',    link : '/pages/switch' },
+            { text : 'Tags',      link : '/pages/tags' },
+            { text : 'TextBox',   link : '/pages/textbox' },
         ],
     }, {
         text  : 'Dialogs',

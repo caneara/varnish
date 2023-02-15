@@ -17,7 +17,8 @@
                    :id="`${name}_text_box`"
                    @click="showSelectors()"
                    :dusk="`${name}_text_box`"
-                   :optionalText="optionalText">
+                   :optionalText="optionalText"
+                   :class="hideTextbox ? 'hidden' : ''">
         </v-textbox>
 
         <!-- Container -->
@@ -285,10 +286,17 @@
         },
 
         /**
+         * Define the events.
+         *
+         */
+        emits : ['lostFocus'],
+
+        /**
          * Define the data model.
          *
          */
         data() { return {
+            attention : false,
             calendar  : null,
             hours     : Array(24).fill('').map((v, i) => `${i}`.padStart(2, '0')),
             limits    : { minimum : DateTime.fromISO(this.minDate), maximum : DateTime.fromISO(this.maxDate) },
@@ -305,12 +313,14 @@
          *
          */
         props : {
-            'locale'      : { type : String,  default : 'en-US' },
-            'maxDate'     : { type : String,  default : '2100-12-31' },
-            'meridiem'    : { type : Boolean, default : false },
-            'minDate'     : { type : String,  default : '1900-01-01' },
-            'showSeconds' : { type : Boolean, default : false },
-            'type'        : { type : String,  default : 'date' },
+            'hideTextbox'  : { type : Boolean, default : false },
+            'locale'       : { type : String,  default : 'en-US' },
+            'maxDate'      : { type : String,  default : '2100-12-31' },
+            'meridiem'     : { type : Boolean, default : false },
+            'minDate'      : { type : String,  default : '1900-01-01' },
+            'showCalendar' : { type : Boolean, default : false },
+            'showSeconds'  : { type : Boolean, default : false },
+            'type'         : { type : String,  default : 'date' },
         },
 
         /**
@@ -423,6 +433,19 @@
             {
                 this.value = this.blank(current) ? null : DateTime.fromISO(current, { locale : this.locale });
             },
+
+            /**
+             * Watch the 'showCalendar' property.
+             *
+             */
+            showCalendar : function(current, previous)
+            {
+                if (! current) return this.lostUserAttention();
+
+                this.attention = true;
+
+                this.showSelectors();
+            },
         },
 
         /**
@@ -497,8 +520,14 @@
 	    	 */
 	    	lostUserAttention()
 	    	{
+                if (this.attention) {
+                    return this.attention = false;
+                }
+
                 this.selectors.date = false;
                 this.selectors.time = false;
+
+                this.$emit('lostFocus');
 	    	},
 
             /**

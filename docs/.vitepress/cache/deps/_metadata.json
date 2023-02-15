@@ -1,11 +1,17 @@
 {
   "hash": "cde9966f",
-  "browserHash": "b9c5bbc5",
+  "browserHash": "342a92f9",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
       "fileHash": "242425bc",
+      "needsInterop": false
+    },
+    "luxon": {
+      "src": "../../../../node_modules/luxon/src/luxon.js",
+      "file": "luxon.js",
+      "fileHash": "5dcbff7b",
       "needsInterop": false
     }
   },
