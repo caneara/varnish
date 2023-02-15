@@ -42,8 +42,17 @@
                             v-if="! Array.isArray(field.control) && field.control === 'Date'">
                 </v-datetime>
 
-            </div>
+                <!-- Period -->
+                <v-period :icon="field.icon"
+                          :label="field.label"
+                          :title="field.label"
+                          v-model="form[field.id]"
+                          :error="form.errors[field.id]"
+                          :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
+                          v-if="! Array.isArray(field.control) && field.control === 'Period'">
+                </v-period>
 
+            </div>
 
         </div>
 
@@ -92,6 +101,7 @@
 
 <script>
     import ButtonComponent from './button.vue';
+    import PeriodComponent from './period.vue';
     import TextBoxComponent from './textbox.vue';
     import DateTimeComponent from './datetime.vue';
     import DropDownComponent from './dropdown.vue';
@@ -106,6 +116,7 @@
             'v-button'   : ButtonComponent,
             'v-datetime' : DateTimeComponent,
             'v-dropdown' : DropDownComponent,
+            'v-period'   : PeriodComponent,
             'v-textbox'  : TextBoxComponent,
         },
 
