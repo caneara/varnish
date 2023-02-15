@@ -2,7 +2,7 @@
     <div class="varnish-search bg-gray-50/[.50] border border-gray-200 lg:border-0 rounded lg:rounded-none w-full p-5 mb-4 lg:mb-0">
 
         <!-- Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
             <!-- Controls -->
             <div :key="field.id"
