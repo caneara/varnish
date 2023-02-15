@@ -54,11 +54,6 @@
 
             </div>
 
-        </div>
-
-        <!-- Footer -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
             <!-- Ordering -->
             <v-dropdown label="Order by"
             			title="Order by"
@@ -72,7 +67,8 @@
             </v-dropdown>
 
             <!-- Actions -->
-            <div class="flex flex-col-reverse md:flex-row md:justify-end md:mb-0">
+            <div class="flex flex-col-reverse md:flex-row md:justify-end md:mb-0"
+                 :class="(source.search.filtering.length + 1) % 2 === 0 ? 'md:col-span-2' : 'md:col-span-1'">
 
                 <!-- Reset -->
                 <v-button mode="link"
