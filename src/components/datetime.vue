@@ -320,6 +320,7 @@
             'minDate'      : { type : String,  default : '1900-01-01' },
             'showCalendar' : { type : Boolean, default : false },
             'showSeconds'  : { type : Boolean, default : false },
+            'startDate'    : { type : String,  default : '' },
             'type'         : { type : String,  default : 'date' },
         },
 
@@ -570,7 +571,11 @@
             showSelectors()
             {
                 if (this.blank(this.value)) {
-                    this.value = DateTime.now().startOf('day').setLocale(this.locale);
+                    if (this.startDate) {
+                        this.value = DateTime.fromISO(this.startDate).startOf('day').setLocale(this.locale);
+                    } else {
+                        this.value = DateTime.now().startOf('day').setLocale(this.locale);
+                    }
                 }
 
                 this.calendar = this.value;

@@ -37,6 +37,7 @@
                     v-model="to"
                     :minDate="from"
                     :locale="locale"
+                    :startDate="from"
                     :maxDate="maxDate"
                     :hideTextbox="true"
                     :showCalendar="show_to_calendar"
@@ -198,6 +199,9 @@
             {
                 this.to   = '';
                 this.from = '';
+
+                this.show_from_calendar = false;
+                this.show_to_calendar   = false;
 
                 this.change('');
             },
