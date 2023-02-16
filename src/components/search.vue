@@ -184,16 +184,3 @@
         },
     }
 </script>
-
-<style lang="postcss">
-    .varnish-search .varnish-label { @apply pl-0 pt-[9px] }
-    .varnish-search .varnish-label.pl-2 { @apply hidden }
-    .varnish-search .varnish-clear { @apply w-[35px] h-[35px] }
-    .varnish-search .varnish-caret { @apply top-[9px] right-[11px] }
-    .varnish-search .varnish-textbox .varnish-input { @apply h-[35px] pt-[6px] pb-[7px] }
-    .varnish-search .varnish-datetime .varnish-textbox .varnish-input { @apply h-[35px] }
-    .varnish-search .varnish-datetime .varnish-textbox .varnish-label { @apply pt-[9px] }
-    .varnish-search .varnish-dropdown .varnish-input { @apply h-[35px] pt-[6px] }
-    .varnish-search .varnish-dropdown .varnish-label { @apply pt-[9px] }
-    .varnish-search .varnish-button .varnish-label { @apply pt-0 pl-5 }
-</style>
