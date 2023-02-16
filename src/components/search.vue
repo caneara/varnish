@@ -68,7 +68,7 @@
             </v-dropdown>
 
             <!-- Actions -->
-            <div class="flex flex-col-reverse md:flex-row md:justify-end md:mb-0"
+            <div class="flex flex-col-reverse md:flex-row md:items-start md:justify-end md:mb-0"
                  :class="(source.search.filtering.length + (source.search.ordering.length ? 1 : 0)) % 2 === 0 ? 'md:col-span-2' : 'md:col-span-1'">
 
                 <!-- Reset -->
