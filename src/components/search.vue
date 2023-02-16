@@ -61,6 +61,7 @@
                         itemTextKey="label"
                         icon="fas fa-arrow-down-a-z"
                         :items="source.search.ordering"
+                        v-if="source.search.ordering.length"
                         v-model="form[source.search.order_key]"
                         :id="`search_${source.search.order_key}`"
                         :error="form.errors[source.search.order_key]">
@@ -68,7 +69,7 @@
 
             <!-- Actions -->
             <div class="flex flex-col-reverse md:flex-row md:justify-end md:mb-0"
-                 :class="(source.search.filtering.length + 1) % 2 === 0 ? 'md:col-span-2' : 'md:col-span-1'">
+                 :class="(source.search.filtering.length + (source.search.ordering.length ? 1 : 0)) % 2 === 0 ? 'md:col-span-2' : 'md:col-span-1'">
 
                 <!-- Reset -->
                 <v-button mode="link"
