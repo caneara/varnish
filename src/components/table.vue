@@ -3,6 +3,7 @@
 
         <!-- Paginator -->
         <v-paginator class="mb-4"
+                     v-if="toolbar"
                      :source="source"
                      :download="download"
                      :reset="!! queryString('search')"
@@ -87,7 +88,9 @@
         </div>
 
         <!-- Paginator -->
-        <v-paginator :source="source"></v-paginator>
+        <v-paginator v-if="toolbar"
+                     :source="source">
+        </v-paginator>
 
     </div>
 </template>
@@ -129,6 +132,7 @@
             'emptyMessage' : { type : String,   default : '' },
             'rowKey'       : { type : String,   default : 'id' },
             'source'       : { type : Object,   default : {} },
+            'toolbar'      : { type : Boolean,  default : true },
         },
     }
 </script>
