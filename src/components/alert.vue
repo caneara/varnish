@@ -79,7 +79,7 @@
                     background : 'bg-purple-500/[.12] dark:bg-purple-700/[.40]',
                     border     : 'border border-purple-700/[.30] dark:border-none',
                     content    : 'text-gray-600/[.90] dark:text-gray-400',
-                    icon       : 'fa-check-circle text-purple-600/80 dark:text-purple-500',
+                    icon       : 'fa-question-circle text-purple-600/80 dark:text-purple-500',
                     title      : 'text-gray-800 dark:text-gray-300',
                 },
                 success : {
