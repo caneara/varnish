@@ -20,8 +20,8 @@
 
                 <!-- DropDown -->
                 <v-dropdown itemValueKey="id"
-                            itemTextKey="name"
                             :icon="field.icon"
+                            itemTextKey="label"
                             :label="field.label"
                             :title="field.label"
                             v-model="form[field.id]"
