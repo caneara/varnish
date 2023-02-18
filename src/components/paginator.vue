@@ -58,7 +58,7 @@
             <div v-if="reset"
                  title="Clear search filters"
                  dusk="varnish_paginator_button_reset"
-                 @click="submitForm(createForm(), resetUrl(), 'get', { preserveScroll : true })"
+                 @click="submitForm(createForm(), resetUrl(), 'get', { preserveScroll : true }, true)"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 rounded-l cursor-pointer group transition duration-300 px-[13px] py-2">
 
                 <!-- Link -->
