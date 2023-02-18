@@ -78,7 +78,7 @@
                           id="reset-search"
                           v-if="isBeingUsed()"
                           class="mt-2 -mb-2 md:mt-0 md:mb-0 md:mr-4"
-                          @click="submitForm(createForm(), url(), 'get', { preserveScroll : true })">
+                          @click="submitForm(createForm(), url(), 'get', { preserveScroll : true }, true)">
                 </v-button>
 
                 <!-- Search -->
@@ -86,7 +86,7 @@
                           mode="outline"
                           id="run-search"
                           :processing="form.processing"
-                          @click="submitForm(form, url(), 'get', { preserveScroll : true })">
+                          @click="submitForm(form, url(), 'get', { preserveScroll : true }, true)">
                 </v-button>
 
             </div>
