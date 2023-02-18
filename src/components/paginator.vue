@@ -58,7 +58,7 @@
             <div v-if="reset"
                  title="Clear search filters"
                  dusk="varnish_paginator_button_reset"
-                 @click="submitForm(createForm(), route().current(), 'get', { preserveScroll : true })"
+                 @click="submitForm(createForm(), reset(), 'get', { preserveScroll : true })"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 rounded-l cursor-pointer group transition duration-300 px-[13px] py-2">
 
                 <!-- Link -->
@@ -159,6 +159,15 @@
          */
         methods :
         {
+            /**
+             * Generate the URL to send the request to.
+             *
+             */
+            reset()
+            {
+                return `${window.location.origin}${window.location.pathname}`
+            },
+
             /**
              * Remove extraneous content from the given value.
              *
