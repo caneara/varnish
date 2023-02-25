@@ -20,19 +20,21 @@
             <div class="varnish-performance flex flex-col">
 
                 <!-- Direction -->
-                <div :class="trends[direction].color"
-                     class="varnish-direction flex items-center gap-2 font-semibold rounded-full px-2 py-[3px]">
+                <div class="varnish-direction flex items-center font-semibold">
+                    <div :class="trends[direction].color"
+                         class="flex items-center gap-2 rounded-full px-2 py-[3px]">
 
-                    <!-- Icon -->
-                    <i :class="trends[direction].icon"
-                       class="varnish-icon fas text-[13px]">
-                    </i>
+                        <!-- Icon -->
+                        <i :class="trends[direction].icon"
+                           class="varnish-icon fas text-[13px]">
+                        </i>
 
-                    <!-- Percentage -->
-                    <span class="varnish-percentage text-[13px] whitespace-nowrap">
-                        {{ Math.abs(percentage) > 999 ? '999' : Math.abs(percentage) }}%
-                    </span>
+                        <!-- Percentage -->
+                        <span class="varnish-percentage text-[13px] whitespace-nowrap">
+                            {{ Math.abs(percentage) > 999 ? '999' : Math.abs(percentage) }}%
+                        </span>
 
+                    </div>
                 </div>
 
                 <!-- Period -->

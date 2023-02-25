@@ -23,7 +23,7 @@ You can use the toggle at the top right of the page to switch between light and 
     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         <ClientOnly>
             <MetricComponent label="Current MRR" type="financial" period="May" :current="534" :previous="1000"></MetricComponent>
-            <MetricComponent label="Current MRR" type="financial" period="June" :current="1000" :previous="1000"></MetricComponent>
+            <MetricComponent label="Current MRR" type="financial" period="Last June" :current="1000" :previous="1000"></MetricComponent>
             <MetricComponent label="Current MRR" type="financial" period="July" :current="2168" :previous="1000"></MetricComponent>
         </ClientOnly>
     </div>
