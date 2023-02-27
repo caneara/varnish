@@ -31,11 +31,13 @@
 
             <!-- To -->
             <span class="font-medium text-gray-700 dark:text-gray-400 ml-[1px]">
-                {{ trim(source.pagination?.to ?? '0') }},
+                {{ trim(source.pagination?.to ?? '0') }}
+                {{ source.type === 'LengthAwarePaginator' ? ',' : '' }}
             </span>
 
             <!-- Total -->
-            <span class="block md:inline mt-[6px] md:ml-1 md:mt-0">
+            <span v-if="source.type === 'LengthAwarePaginator'"
+                  class="block md:inline mt-[6px] md:ml-1 md:mt-0">
 
                 <!-- Text -->
                 <span>
