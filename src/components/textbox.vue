@@ -8,8 +8,8 @@
 
             <!-- Input -->
             <input :id="name"
-                   type="text"
                    :name="name"
+                   :type="type"
                    :dusk="name"
                    v-if="lines === 1"
                    :value="modelValue"
@@ -17,11 +17,12 @@
                    :maxLength="maxLength"
                    @focusout="focus = false"
                    :placeholder="placeholder"
-                   :autocomplete="autocomplete"
                    @input="change($event.target.value)"
                    @keydown="interceptKeystroke($event)"
                    :readonly="readOnly ? 'readonly' : false"
                    :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
+                   :list="blank(items) ? null : `${name}_datalist`"
+                   :autocomplete="blank(items) ? autocomplete : 'off'"
                    class="varnish-control varnish-input w-full bg-inherit text-[17px] text-gray-900 dark:text-gray-400 text-ellipsis overflow-hidden rounded appearance-none pl-3 pt-[25px] pb-[6px]" />
 
             <!-- Textarea -->
@@ -56,6 +57,17 @@
                      @click="change('')"
                      :filled="! blank(modelValue)">
             </v-clear>
+
+            <!-- Options -->
+            <datalist v-if="! blank(items)"
+                      :id="`${name}_datalist`">
+
+                <!-- Option -->
+                <option v-for="item in items">
+                    {{ item[itemValueKey] }}
+                </option>
+
+            </datalist>
 
         </div>
 
@@ -104,9 +116,12 @@
          *
          */
         props : {
-            'lines'     : { type : Number,  default : 1 },
-            'readOnly'  : { type : Boolean, default : false },
-            'maxLength' : { type : Number,  default : null },
+			'items'        : { type : [Array, Object], default : [] },
+			'itemValueKey' : { type : String,          default : '' },
+            'lines'        : { type : Number,          default : 1 },
+            'maxLength'    : { type : Number,          default : null },
+            'readOnly'     : { type : Boolean,         default : false },
+            'type'         : { type : String,          default : 'text' },
         },
 
         /**

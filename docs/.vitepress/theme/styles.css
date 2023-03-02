@@ -29,6 +29,12 @@
 }
 
 /**
+ * Overrides.
+ *
+ */
+[list]::-webkit-calendar-picker-indicator { display: none !important }
+
+/**
  * General.
  *
  */

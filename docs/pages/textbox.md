@@ -18,13 +18,20 @@ You can use the toggle at the top right of the page to switch between light and 
     import { ref } from 'vue';
     import TextBoxComponent from '../../src/components/textbox.vue';
 
+    let items = [
+        { value : 'First' },
+        { value : 'Second' },
+        { value : 'Third' },
+        { value : 'Fourth' },
+    ]
+
     let content = ref("Opportunities don't happen, you create them...");
 </script>
 
 <!-- Demo -->
 <div class="bg-gray-100 dark:bg-black flex justify-center gap-x-3 rounded-md p-6 mt-8">
     <ClientOnly>
-        <TextBoxComponent icon="fas fa-user" label="Write something insightful" v-model="content"></TextBoxComponent>
+        <TextBoxComponent icon="fas fa-user" label="Write something insightful" v-model="content" :items="items" itemValueKey="value"></TextBoxComponent>
     </ClientOnly>
 </div>
 
@@ -69,6 +76,32 @@ This component makes use of the following parts of the [Foundation](/pages/found
 
 The following `props` are exposed by the component.
 
+### items
+
+- Type: `Array | Object`
+- Default: `[]`
+
+Assign a data source to the component that will be used as an autocomplete list.
+
+This has no effect when the component's [lines](#lines) value is greater than `1`.
+
+```html
+<v-textbox :items="[{ text : 'First',  value : 1 }, { text : 'Second', value : 2 }]"></v-textbox>
+```
+
+### itemValueKey
+
+- Type: `String`
+- Default: `''`
+
+Specify the key within each item that should be used for the autocomplete `option` value.
+
+This has no effect when the component's [lines](#lines) value is greater than `1`.
+
+```html
+<v-textbox itemValueKey="value"></v-textbox>
+```
+
 ### lines
 
 - Type: `Number`
@@ -104,6 +137,19 @@ Specify whether the component's content can be edited by the user.
 
 ```html
 <v-textbox :readOnly="true"></v-textbox>
+```
+
+### type
+
+- Type: `String`
+- Default: `'text'`
+
+Specify the component's input type e.g. 'tel', 'email' etc.
+
+This has no effect when the component's [lines](#lines) value is greater than `1`.
+
+```html
+<v-textbox type="tel"></v-textbox>
 ```
 
 ## Events
