@@ -43,13 +43,14 @@ let sidebar = [
     }, {
         text  : 'Interface',
         items : [
-            { text : 'Alert',  link : '/pages/alert' },
-            { text : 'Badge',  link : '/pages/badge' },
-            { text : 'Banner', link : '/pages/banner' },
-            { text : 'Cards',  link : '/pages/cards' },
-            { text : 'Menu',   link : '/pages/menu' },
-            { text : 'Metric', link : '/pages/metric' },
-            { text : 'Tabs',   link : '/pages/tabs' },
+            { text : 'Alert',    link : '/pages/alert' },
+            { text : 'Badge',    link : '/pages/badge' },
+            { text : 'Banner',   link : '/pages/banner' },
+            { text : 'Cards',    link : '/pages/cards' },
+            { text : 'Menu',     link : '/pages/menu' },
+            { text : 'Metric',   link : '/pages/metric' },
+            { text : 'Progress', link : '/pages/progress' },
+            { text : 'Tabs',     link : '/pages/tabs' },
         ],
     }, {
         text  : 'Components',
