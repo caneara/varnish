@@ -1,27 +1,38 @@
 <template>
     <div class="varnish-upload varnish-font relative">
 
-        <!-- Control -->
-        <div @mouseover="hover = true"
+        <!-- Hidden -->
+        <input type="hidden"
+               :value="modelValue"
+               :id="`${name}_file_value`"
+               :name="`${name}_file_value`" />
+
+        <!-- Input -->
+        <input :id="name"
+               ref="file"
+               type="file"
+               :name="name"
+               :dusk="name"
+			   :accept="types"
+               @change="upload()"
+               :class="automated() ? '' : 'hidden'" />
+
+        <!-- Button -->
+        <label v-if="format === 'button'"
+               @click="disabled || display ? null : selectNew()"
+               class="font-semibold text-[13px] uppercase flex justify-center items-center select-none transition duration-300"
+               :class="disabled || display ? 'text-gray-400 dark:text-gray-600 cursor-not-allowed' : 'text-sky-600 dark:text-sky-500 hover:text-rose-700 dark:hover:text-rose-400 cursor-pointer'">
+
+            <!-- Value -->
+            {{ label }}
+
+        </label>
+
+        <!-- Field -->
+        <div v-if="format === 'field'"
+             @mouseover="hover = true"
              @mouseout="hover = false"
-             class="varnish-container rounded relative transition duration-300"
-             :class="minimal ? '' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 overflow-hidden'">
-
-            <!-- Hidden -->
-            <input type="hidden"
-                   :value="modelValue"
-                   :id="`${name}_file_value`"
-                   :name="`${name}_file_value`" />
-
-            <!-- Input -->
-            <input :id="name"
-                   ref="file"
-                   type="file"
-                   :name="name"
-                   :dusk="name"
-				   :accept="types"
-                   @change="upload()"
-                   :class="automated() ? '' : 'hidden'" />
+             class="varnish-container bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded relative overflow-hidden transition duration-300">
 
 			<!-- File Name -->
 			<input readonly
@@ -29,8 +40,8 @@
 				   :value="display"
                    :id="`${name}_file_name`"
                    :name="`${name}_file_name`"
-				   @click="disabled ? null : selectNew()"
-                   :class="[minimal ? 'hidden' : '', hover || focus ? 'pr-[50px]' : 'pr-3']"
+                   :class="hover || focus ? 'pr-[50px]' : 'pr-3'"
+				   @click="disabled || display ? null : selectNew()"
 				   class="bg-inherit text-gray-900 dark:text-gray-400 w-full text-ellipsis overflow-hidden rounded appearance-none cursor-pointer pl-3 pt-[25px] pb-[7px]" />
 
             <!-- Label -->
@@ -38,42 +49,52 @@
                      :value="label"
                      :focus="focus"
                      :optional="optional"
-                     :filled="! blank(display)"
-                     :class="minimal ? 'hidden' : ''">
+                     :filled="! blank(display)">
             </v-label>
 
             <!-- Clear -->
             <v-clear :focus="focus"
                      :hover="hover"
                      @click="reset()"
-                     v-if="! minimal"
                      :filled="! blank(display)">
             </v-clear>
 
-            <!-- Minimal -->
-            <label v-if="minimal"
-                   @click="disabled || display ? null : selectNew()"
-                   class="font-semibold text-[13px] uppercase flex justify-center items-center select-none transition duration-300"
-                   :class="disabled || display ? 'text-gray-400 dark:text-gray-600 cursor-not-allowed' : 'text-sky-600 dark:text-sky-500 hover:text-rose-700 dark:hover:text-rose-400 cursor-pointer'">
-
-                <!-- Value -->
-                {{ label }}
-
-            </label>
-
         </div>
 
-        <!-- Progress Bar -->
-        <div ref="bar"
-             :class="minimal ? 'opacity-0' : ''"
-             class="w-full h-[5px] overflow-hidden rounded-t hidden absolute top-0">
+        <!-- Drag and Drop -->
+        <div @dragover.prevent
+             v-if="format === 'drag'"
+             @click="disabled || display ? null : selectNew()"
+             @drop.prevent="disabled || display ? null : upload($event.dataTransfer.files[0])"
+             class="bg-gray-50/[.60] border-[1.5px] border-dashed border-gray-300 flex flex-col justify-center items-center rounded-md cursor-pointer p-14 pb-11 mt-10">
 
-            <!-- Progress -->
-            <div ref="progress"
-                 class="bg-sky-600/[.70] dark:bg-sky-400 h-[5px] rounded-t absolute top-0 left-0 transition-all duration-300">
+            <!-- Icon -->
+            <i class="fas text-[35px] text-gray-400/[.80] mb-5"
+               :class="display ? 'fa-cog fa-spin' : 'fa-file-upload'">
+            </i>
+
+            <!-- Instructions -->
+            <div class="text-gray-600/[.90] text-center leading-normal max-w-[230px]">
+
+                <!-- Uploading -->
+                <span v-if="display">
+                    The selected file is now being uploaded. Just one moment&hellip;
+                </span>
+
+                <!-- Waiting -->
+                <span v-if="! display">
+                    Drag and drop a file to upload, or click here to select one.
+                </span>
+
             </div>
 
         </div>
+
+        <!-- Progress -->
+        <v-progress class="mt-4"
+                    :value="current"
+                    v-if="format !== 'button' && current !== 0">
+        </v-progress>
 
         <!-- Error -->
         <v-error :value="fault"></v-error>
@@ -88,6 +109,7 @@
     import LabelComponent from './label.vue';
     import Utilities from '../mixins/Utilities';
     import Foundation from '../mixins/Foundation';
+    import ProgressBarComponent from './progress.vue';
 
     export default
     {
@@ -105,9 +127,10 @@
          *
          */
         components : {
-            'v-clear' : ClearComponent,
-            'v-error' : ErrorComponent,
-            'v-label' : LabelComponent,
+            'v-clear'    : ClearComponent,
+            'v-error'    : ErrorComponent,
+            'v-label'    : LabelComponent,
+            'v-progress' : ProgressBarComponent,
         },
 
         /**
@@ -116,6 +139,7 @@
          */
         data() { return {
             display : '',
+            current : 0,
         }},
 
         /**
@@ -130,7 +154,7 @@
          */
         props : {
             'disabled' : { type : Boolean, default : false },
-            'minimal'  : { type : Boolean, default : false },
+            'format'   : { type : String,  default : 'field' },
             'size'     : { type : Number,  default : 1048576 },
             'types'    : { type : String,  default : 'image/png, image/jpeg' },
         },
@@ -147,9 +171,9 @@
              */
             finish()
             {
+                this.current = 0;
+
                 this.$refs.file.value = null;
-                this.$refs.bar.classList.add('hidden');
-                this.$refs.progress.style.width = '0px';
             },
 
             /**
@@ -179,38 +203,27 @@
             },
 
             /**
-             * Update the current upload progress.
-             *
-             */
-            setProgress(progress)
-            {
-                this.$refs.progress.style.width = `${Math.round(progress * 100)}%`;
-            },
-
-            /**
              * Stream the chosen file to the server.
              *
              */
-            upload()
+            upload(file = null)
             {
-                let file = this.$refs.file.files[0];
+                file = file ?? this.$refs.file.files[0];
 
 				if (file.size > this.size) {
                     return this.reset('The file must be less than 1 MB.');
 				}
 
 				if (! this.types.replaceAll(' ', '').split(',').includes(file.type.toLowerCase())) {
-                    return this.reset('The file must in a JPEG or PNG format.');
+                    return this.reset('The file must be in the correct format.');
 				}
 
-                this.fault    = '';
+                this.fault   = '';
                 this.display = file.name;
 
                 this.$emit('uploading', file);
 
-                this.$refs.bar.classList.remove('hidden');
-
-                Vapor.store(file, { progress : progress => this.setProgress(progress) })
+                Vapor.store(file, { progress : progress => this.current = Math.round(progress) })
                      .then(response => { this.$emit('uploaded', response.uuid); this.finish() });
             },
         }
