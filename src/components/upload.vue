@@ -66,7 +66,7 @@
              v-if="format === 'drag'"
              @click="disabled || display ? null : selectNew()"
              @drop.prevent="disabled || display ? null : upload($event.dataTransfer.files[0])"
-             class="bg-gray-50/[.60] border-[1.5px] border-dashed border-gray-300 flex flex-col justify-center items-center rounded-md cursor-pointer p-14 pb-11 mt-10">
+             class="bg-gray-50/[.60] border-[1.5px] border-dashed border-gray-300 flex flex-col justify-center items-center rounded-md cursor-pointer p-14 pb-11">
 
             <!-- Icon -->
             <i class="fas text-[35px] text-gray-400/[.80] mb-5"
