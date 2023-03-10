@@ -84,7 +84,7 @@
             'emptyAction'  : { type : Function, default : null },
             'emptyLabel'   : { type : String,   default : 'Create one now' },
             'emptyMessage' : { type : String,   default : '' },
-            'layout'       : { type : String,   default : 'md:grid-cols-2 lg:grid-cols-3' },
+            'layout'       : { type : String,   default : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2' },
             'rowKey'       : { type : String,   default : 'id' },
             'source'       : { type : Object,   default : {} },
             'toolbar'      : { type : Boolean,  default : true },
