@@ -37,8 +37,7 @@
         </div>
 
         <!-- Empty -->
-        <v-empty class="mt-4"
-                 :message="emptyMessage"
+        <v-empty :message="emptyMessage"
                  :actionLabel="emptyLabel"
                  :actionCommand="emptyAction"
                  :visible="! (source.data.rows ?? []).length">
