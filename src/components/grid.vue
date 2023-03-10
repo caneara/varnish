@@ -13,12 +13,13 @@
         <!-- Search -->
         <v-search :source="source"
                   @closed="search = false"
+                  class="lg:border-1 lg:rounded lg:mb-4"
                   v-if="search ? true : (search === null ? queryString('search') : false)">
         </v-search>
 
         <!-- Content -->
         <div :class="layout"
-             class="grid grid-cols-1 gap-4">
+             class="grid grid-cols-1 gap-4 mt-4">
 
             <!-- Item -->
             <div :key="row[rowKey]"
@@ -35,7 +36,8 @@
         </div>
 
         <!-- Empty -->
-        <v-empty :message="emptyMessage"
+        <v-empty class="mt-4"
+                 :message="emptyMessage"
                  :actionLabel="emptyLabel"
                  :actionCommand="emptyAction"
                  :visible="! (source.data.rows ?? []).length">
