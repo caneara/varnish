@@ -65,7 +65,7 @@
         <div @dragover.prevent
              v-if="format === 'drag'"
              @click="disabled || display ? null : selectNew()"
-             @drop.prevent="disabled || display ? null : upload($event.dataTransfer.files[0])"
+             @drop.prevent="disabled || display ? null : uploadMany($event.dataTransfer.files)"
              class="bg-gray-50/[.60] border-[1.5px] border-dashed border-gray-300 flex flex-col justify-center items-center rounded-md cursor-pointer p-14 pb-11">
 
             <!-- Icon -->
@@ -78,12 +78,12 @@
 
                 <!-- Uploading -->
                 <span v-if="display">
-                    The selected file is now being uploaded. Just one moment&hellip;
+                    The selected {{ multiple ? 'file(s) are' : 'file is now'}} being uploaded. Just one moment&hellip;
                 </span>
 
                 <!-- Waiting -->
                 <span v-if="! display">
-                    Drag and drop a file to upload, or click here to select one.
+                    Drag and drop {{ multiple ? 'file(s)' : 'a file'}} to upload, or click here to select one.
                 </span>
 
             </div>
@@ -155,6 +155,7 @@
         props : {
             'disabled' : { type : Boolean, default : false },
             'format'   : { type : String,  default : 'field' },
+            'multiple' : { type : Boolean, default : false },
             'size'     : { type : Number,  default : 1048576 },
             'types'    : { type : String,  default : 'image/png, image/jpeg' },
         },
@@ -206,12 +207,12 @@
              * Stream the chosen file to the server.
              *
              */
-            upload(file = null)
+            async upload(file = null)
             {
                 file = file ?? this.$refs.file.files[0];
 
 				if (file.size > this.size) {
-                    return this.reset('The file must be less than 1 MB.');
+                    return this.reset(`The file must be less than ${this.size / 1048576} MB.`);
 				}
 
 				if (! this.types.replaceAll(' ', '').split(',').includes(file.type.toLowerCase())) {
@@ -223,8 +224,23 @@
 
                 this.$emit('uploading', file);
 
-                Vapor.store(file, { progress : progress => this.current = Math.round(progress) })
+                await Vapor.store(file, { progress : progress => this.current = Math.round(progress) })
                      .then(response => { this.$emit('uploaded', response.uuid); this.finish() });
+            },
+
+            /**
+             * Stream one or more files to the server.
+             *
+             */
+            async uploadMany(files)
+            {
+                if (! this.multiple) {
+                    return await this.upload(files[0]);
+                }
+
+                for (const file of files) {
+                    await this.upload(file);
+                }
             },
         }
     }
