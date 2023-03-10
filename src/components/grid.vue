@@ -11,10 +11,10 @@
         </v-paginator>
 
         <!-- Search -->
-        <v-search :source="source"
+        <v-search class="lg:mb-4"
+                  :source="source"
                   @closed="search = false"
-                  style="border-width: 1px"
-                  class="lg:rounded lg:mb-4"
+                  style="border-width: 1px; border-radius: 0.25rem"
                   v-if="search ? true : (search === null ? queryString('search') : false)">
         </v-search>
 
