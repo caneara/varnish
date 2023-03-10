@@ -1,7 +1,7 @@
 {
     "name": "@caneara/varnish",
     "author": "Caneara",
-    "version": "4.3.4",
+    "version": "4.3.5",
     "license": "MIT",
     "description": "A library of UI components built using Vue.js and TailwindCSS.",
     "repository": {

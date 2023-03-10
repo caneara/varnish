@@ -13,7 +13,8 @@
         <!-- Search -->
         <v-search :source="source"
                   @closed="search = false"
-                  class="lg:border-1 lg:rounded lg:mb-4"
+                  style="border-width: 1px"
+                  class="lg:rounded lg:mb-4"
                   v-if="search ? true : (search === null ? queryString('search') : false)">
         </v-search>
 
