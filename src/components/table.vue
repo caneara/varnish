@@ -11,7 +11,7 @@
         </v-paginator>
 
         <!-- Content -->
-        <div class="lg:border border-gray-300/[.80] rounded">
+        <div class="lg:border border-gray-300/[.70] rounded">
 
             <!-- Table -->
             <table>
