@@ -215,7 +215,7 @@
                     return this.reset(`The file must be less than ${this.size / 1048576} MB.`);
 				}
 
-				if (! this.types.replaceAll(' ', '').split(',').includes(file.type.toLowerCase())) {
+				if (this.types !== '*' && ! this.types.replaceAll(' ', '').split(',').includes(file.type.toLowerCase())) {
                     return this.reset('The file must be in the correct format.');
 				}
 
