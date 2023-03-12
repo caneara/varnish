@@ -225,7 +225,7 @@
                 this.$emit('uploading', file);
 
                 await Vapor.store(file, { progress : progress => this.current = Math.round(progress) })
-                     .then(response => { this.$emit('uploaded', response.uuid); this.finish() });
+                     .then(response => { this.$emit('uploaded', { uuid : response.uuid, file : file }); this.finish() });
             },
 
             /**
