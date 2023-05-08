@@ -143,9 +143,18 @@
 
 <script>
     import { router } from '@inertiajs/vue3';
+    import Utilities from '../mixins/Utilities';
 
     export default
     {
+        /**
+         * Define the mixins.
+         *
+         */
+        mixins : [
+            Utilities,
+        ],
+
         /**
          * Define the public properties.
          *

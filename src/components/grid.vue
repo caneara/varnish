@@ -54,10 +54,19 @@
 <script>
     import EmptyComponent from './empty.vue';
     import SearchComponent from './search.vue';
+    import Utilities from '../mixins/Utilities';
     import PaginatorComponent from './paginator.vue';
 
     export default
     {
+        /**
+         * Define the mixins.
+         *
+         */
+        mixins : [
+            Utilities,
+        ],
+
         /**
          * Define the components.
          *
