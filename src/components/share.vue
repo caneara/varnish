@@ -94,7 +94,7 @@
             </div>
 
             <!-- Copy -->
-            <div @click.stop="() => { copy(url); $refs.copy_text.innerHTML = 'Copied!' }"
+            <div @click.stop="() => copy(url, () => $refs.copy_text.innerHTML = 'Copied!')"
                  class="varnish-copy bg-white dark:bg-gray-600 hover:bg-orange-100/[.25] dark:hover:bg-orange-100 border border-gray-300 dark:border-gray-600 flex items-center transition duration-300 rounded-md cursor-pointer group px-6 py-3">
 
                 <!-- Icon -->

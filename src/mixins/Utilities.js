@@ -46,22 +46,14 @@ export default
         },
 
         /**
-         * Assign the given text to the clipboard.
+         * Assign the given value to the clipboard.
          *
          */
-        copy(text)
+        copy(value, closure = null)
         {
-            let el = document.createElement('textarea');
+            let promise = window.navigator.clipboard.writeText(value);
 
-            el.value = text;
-
-            document.body.appendChild(el);
-
-            el.select();
-
-            document.execCommand('copy');
-
-            document.body.removeChild(el);
+            return closure ? promise.then(() => closure()) : null;
         },
     }
 }

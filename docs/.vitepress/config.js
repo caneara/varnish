@@ -3,11 +3,7 @@ let sidebar = [
         text  : 'Overview',
         items : [
             { text : 'Introduction', link : '/pages/introduction' },
-            { text : 'Requirements', link : '/pages/requirements' },
             { text : 'Installation', link : '/pages/installation' },
-            { text : 'Upgrading',    link : '/pages/upgrading' },
-            { text : 'Undocumented', link : '/pages/undocumented' },
-            { text : 'Contributing', link : '/pages/contributing' },
         ],
     }, {
         text  : 'Getting Started',
