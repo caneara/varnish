@@ -1,7 +1,7 @@
 <!-- Banner -->
 <p align="center">
-    <a href="https://varnish.caneara.com">
-        <img src="docs/public/banner.png" />
+    <a href="https://github.com/caneara/varnish">
+        <img src="art/banner.png" />
     </a>
 </p>
 
