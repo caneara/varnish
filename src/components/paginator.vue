@@ -108,7 +108,7 @@
             <div title="Previous Page"
                  :class="search ? '' : 'rounded-l'"
                  v-if="source.pagination.prev_page_url"
-                 @click="router.visit(url(source.pagination.prev_page_url), { preserveScroll : true })"
+                 @click="goToPage(url(source.pagination.prev_page_url), { preserveScroll : true })"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 cursor-pointer group transition duration-300 px-3 py-2">
 
                 <!-- Link -->
@@ -119,7 +119,7 @@
             <!-- Next Page (Enabled) -->
             <div title="Next Page"
                  v-if="source.pagination.next_page_url"
-                 @click="router.visit(url(source.pagination.next_page_url), { preserveScroll : true })"
+                 @click="goToPage(url(source.pagination.next_page_url), { preserveScroll : true })"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-r cursor-pointer group transition duration-300 px-3 py-2">
 
                 <!-- Link -->
@@ -142,7 +142,6 @@
 </template>
 
 <script>
-    import { router } from '@inertiajs/vue3';
     import Utilities from '../mixins/Utilities';
 
     export default
@@ -172,6 +171,15 @@
          */
         methods :
         {
+            /**
+             * Redirect the user to a different page.
+             *
+             */
+            goToPage(url, options)
+            {
+                window.app.config.globalProperties.$inertia.visit(url, options);
+            },
+
             /**
              * Generate the URL to send the request to.
              *
