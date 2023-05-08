@@ -14,8 +14,8 @@
                            :title="field.label"
                            v-model="form[field.id]"
                            :error="form.errors[field.id]"
-                           v-if="! Is.array(field.control) && field.control === 'TextBox'"
-                           :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
+                           :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
+                           v-if="! System.Is.array(field.control) && field.control === 'TextBox'">
                 </v-textbox>
 
                 <!-- DropDown -->
@@ -28,7 +28,7 @@
                             :error="form.errors[field.id]"
                             :items="System.Page.property(field.control[1])"
                             :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
-                            v-if="Is.array(field.control) && field.control[0] === 'DropDown'">
+                            v-if="System.Is.array(field.control) && field.control[0] === 'DropDown'">
                 </v-dropdown>
 
                 <!-- Date -->
@@ -38,8 +38,8 @@
                             :title="field.label"
                             v-model="form[field.id]"
                             :error="form.errors[field.id]"
-                            v-if="! Is.array(field.control) && field.control === 'Date'"
-                            :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
+                            :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
+                            v-if="! System.Is.array(field.control) && field.control === 'Date'">
                 </v-datetime>
 
                 <!-- Period -->
@@ -48,8 +48,8 @@
                           :title="field.label"
                           v-model="form[field.id]"
                           :error="form.errors[field.id]"
-                          v-if="! Is.array(field.control) && field.control === 'Period'"
-                          :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
+                          :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
+                          v-if="! System.Is.array(field.control) && field.control === 'Period'">
                 </v-period>
 
             </div>
@@ -152,7 +152,7 @@
                 : '';
 
             this.source.search.filtering.forEach(field => {
-                attributes[field.id] = Is.array(field.control) && field.control[0] === 'DropDown'
+                attributes[field.id] = System.Is.array(field.control) && field.control[0] === 'DropDown'
                     ? parseInt(System.Browser.queryString(field.id))
                     : System.Browser.queryString(field.id);
             });
