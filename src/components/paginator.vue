@@ -60,7 +60,7 @@
             <div v-if="reset"
                  title="Clear search filters"
                  dusk="varnish_paginator_button_reset"
-                 @click="submitForm(createForm(), resetUrl(), 'get', { preserveScroll : true }, true)"
+                 @click="System.Form.submit(System.Form.create(), resetUrl(), 'get', { preserveScroll : true }, true)"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 rounded-l cursor-pointer group transition duration-300 px-[13px] py-2">
 
                 <!-- Link -->
@@ -108,7 +108,7 @@
             <div title="Previous Page"
                  :class="search ? '' : 'rounded-l'"
                  v-if="source.pagination.prev_page_url"
-                 @click="app('inertia').visit(url(source.pagination.prev_page_url), { preserveScroll : true })"
+                 @click="router.visit(url(source.pagination.prev_page_url), { preserveScroll : true })"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-r-0 border-gray-300 dark:border-gray-500 cursor-pointer group transition duration-300 px-3 py-2">
 
                 <!-- Link -->
@@ -119,7 +119,7 @@
             <!-- Next Page (Enabled) -->
             <div title="Next Page"
                  v-if="source.pagination.next_page_url"
-                 @click="app('inertia').visit(url(source.pagination.next_page_url), { preserveScroll : true })"
+                 @click="router.visit(url(source.pagination.next_page_url), { preserveScroll : true })"
                  class="bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover-bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-r cursor-pointer group transition duration-300 px-3 py-2">
 
                 <!-- Link -->
@@ -142,6 +142,8 @@
 </template>
 
 <script>
+    import { router } from '@inertiajs/vue3';
+
     export default
     {
         /**
@@ -187,7 +189,7 @@
             {
                 let pair = link.split('?')[1].split('=');
 
-                let query = this.queryString();
+                let query = System.Browser.queryString();
 
                 query.set(pair[0], pair[1]);
 

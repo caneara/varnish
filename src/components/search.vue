@@ -14,8 +14,8 @@
                            :title="field.label"
                            v-model="form[field.id]"
                            :error="form.errors[field.id]"
-                           :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
-                           v-if="! Array.isArray(field.control) && field.control === 'TextBox'">
+                           v-if="! Is.array(field.control) && field.control === 'TextBox'"
+                           :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
                 </v-textbox>
 
                 <!-- DropDown -->
@@ -26,9 +26,9 @@
                             :title="field.label"
                             v-model="form[field.id]"
                             :error="form.errors[field.id]"
-                            :items="prop(field.control[1])"
+                            :items="System.Page.property(field.control[1])"
                             :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
-                            v-if="Array.isArray(field.control) && field.control[0] === 'DropDown'">
+                            v-if="Is.array(field.control) && field.control[0] === 'DropDown'">
                 </v-dropdown>
 
                 <!-- Date -->
@@ -38,8 +38,8 @@
                             :title="field.label"
                             v-model="form[field.id]"
                             :error="form.errors[field.id]"
-                            :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
-                            v-if="! Array.isArray(field.control) && field.control === 'Date'">
+                            v-if="! Is.array(field.control) && field.control === 'Date'"
+                            :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
                 </v-datetime>
 
                 <!-- Period -->
@@ -48,8 +48,8 @@
                           :title="field.label"
                           v-model="form[field.id]"
                           :error="form.errors[field.id]"
-                          :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`"
-                          v-if="! Array.isArray(field.control) && field.control === 'Period'">
+                          v-if="! Is.array(field.control) && field.control === 'Period'"
+                          :id="`search_${field.label.toLowerCase().replaceAll(' ', '_')}`">
                 </v-period>
 
             </div>
@@ -78,7 +78,7 @@
                           id="reset-search"
                           v-if="isBeingUsed()"
                           class="mt-2 -mb-2 md:mt-0 md:mb-0 md:mr-4"
-                          @click="submitForm(createForm(), url(), 'get', { preserveScroll : true }, true)">
+                          @click="System.Form.submit(System.Form.create(), url(), 'get', { preserveScroll : true }, true)">
                 </v-button>
 
                 <!-- Search -->
@@ -86,7 +86,7 @@
                           mode="outline"
                           id="run-search"
                           :processing="form.processing"
-                          @click="submitForm(form, url(), 'get', { preserveScroll : true }, true)">
+                          @click="System.Form.submit(form, url(), 'get', { preserveScroll : true }, true)">
                 </v-button>
 
             </div>
@@ -147,17 +147,17 @@
         {
             let attributes = { search : true };
 
-            attributes[this.source.search.order_key] = this.queryString(this.source.search.order_key)
-                ? parseInt(this.queryString(this.source.search.order_key))
+            attributes[this.source.search.order_key] = System.Browser.queryString(this.source.search.order_key)
+                ? parseInt(System.Browser.queryString(this.source.search.order_key))
                 : '';
 
             this.source.search.filtering.forEach(field => {
-                attributes[field.id] = Array.isArray(field.control) && field.control[0] === 'DropDown'
-                    ? parseInt(this.queryString(field.id))
-                    : this.queryString(field.id);
+                attributes[field.id] = Is.array(field.control) && field.control[0] === 'DropDown'
+                    ? parseInt(System.Browser.queryString(field.id))
+                    : System.Browser.queryString(field.id);
             });
 
-            this.form = this.createForm(attributes);
+            this.form = System.Form.create(attributes);
         },
 
         /**
@@ -172,12 +172,12 @@
              */
             isBeingUsed()
             {
-                if (this.queryString(this.source.search.order_key)) {
+                if (System.Browser.queryString(this.source.search.order_key)) {
                     return true;
                 }
 
                 return !! this.source.search.filtering
-                    .map(field => this.queryString(field.id))
+                    .map(field => System.Browser.queryString(field.id))
                     .filter(field => field)
                     .length;
             },

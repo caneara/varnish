@@ -6,8 +6,8 @@
                      v-if="toolbar"
                      :source="source"
                      :download="download"
-                     :reset="!! queryString('search')"
-                     :search="() => search = (search !== null) ? ! search : (queryString('search') ? false : true)">
+                     :reset="!! System.Browser.queryString('search')"
+                     :search="() => search = (search !== null) ? ! search : (System.Browser.queryString('search') ? false : true)">
         </v-paginator>
 
         <!-- Search -->
@@ -15,7 +15,7 @@
                   :source="source"
                   @closed="search = false"
                   style="border-width: 1px; border-radius: 0.25rem"
-                  v-if="search ? true : (search === null ? queryString('search') : false)">
+                  v-if="search ? true : (search === null ? System.Browser.queryString('search') : false)">
         </v-search>
 
         <!-- Content -->
